@@ -1,0 +1,12 @@
+*.csr
+*.crt
+*.key
+*.pem
+*.sh
+*.db
+*.log
+*.mp3
+.*/
+.uuid
+.HA_VERSION
+secrets.yaml

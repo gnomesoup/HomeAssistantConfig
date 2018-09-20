@@ -52,6 +52,12 @@ logbook:
 # Enables a map showing the location of tracked devices
 map:
 
+device_tracker:
+  - platform: icloud
+    username: !secret icloud_1
+    password: !secret icloud_1_password
+    account_name: !secret icloud_1_descriptive
+
 # Track the sun
 sun:
 

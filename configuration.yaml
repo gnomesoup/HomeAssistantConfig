@@ -76,6 +76,17 @@ cloud:
 mqtt:
   broker: 10.0.0.120
 
+# Devices
+# Perhaps this moves to a seperate file
+switch:
+  platform: mqtt
+  name: "Metal Lamp"
+  state_topic: "smartthings/Metal Lamp/switch"
+  command_topic: "smartthings/Metal Lamp/switch"
+  payload_on: "on"
+  payload_off: "off"
+
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml

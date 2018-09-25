@@ -97,6 +97,10 @@ switch:
     payload_off: "off"
     retain: true
     
+sensor:
+  - platform: mqtt
+    name: Bedroom Sensor Temperature
+    state_topic: smartthings/Bedroom Sensor/temperature
 
 
 group: !include groups.yaml

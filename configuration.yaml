@@ -100,8 +100,20 @@ sensor:
   - platform: yr
   # Smartthings MQTT
   - platform: mqtt
-    name: Bedroom Sensor Temperature
-    state_topic: smartthings/Bedroom Sensor/temperature
+    name: "Bedroom Sensor Motion"
+    state_topic: "smartthings/Bedroom Sensor/motion"
+  - platform: mqtt
+    name: "Bedroom Sensor Temperature"
+    state_topic: "smartthings/Bedroom Sensor/temperature"
+  - platform: mqtt
+    name: "Bedroom Sensor Humidity"
+    state_topic: "smartthings/Bedroom Sensor/humidity"
+  - platform: mqtt
+    name: "Bedroom Sensor Illuminance"
+    state_topic: "smartthings/Bedroom Sensor/illuminance"
+  - platform: mqtt
+    name: "Bedroom Sensor Battery"
+    state_topic: "smartthings/Bedroom Sensor/battery"
 
 
 group: !include groups.yaml
@@ -118,11 +130,7 @@ script: !include scripts.yaml
 # smartthings/Bedroom Canopy/switch": "off",
 # smartthings/Bedroom Closet/switch": "off",
 # smartthings/Bedroom Lamp/switch": "off",
-# smartthings/Bedroom Sensor/battery": "44",
-# smartthings/Bedroom Sensor/humidity": "73",
-# smartthings/Bedroom Sensor/illuminance": "1",
 # smartthings/Bedroom Sensor/motion": "inactive",
-# smartthings/Bedroom Sensor/temperature": "72.9",
 # smartthings/Bedroom Thermostat/coolingSetpoint": "74",
 # smartthings/Bedroom Thermostat/temperature": "74",
 # smartthings/Bedroom Thermostat/thermostatOperatingState": "fan only",

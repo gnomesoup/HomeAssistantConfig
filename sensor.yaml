@@ -1,0 +1,44 @@
+# Weather prediction
+- platform: yr
+
+# Smartthings MQTT
+- platform: mqtt
+  name: "Bedroom Sensor Motion"
+  state_topic: "smartthings/Bedroom Sensor/motion"
+- platform: mqtt
+  name: "Bedroom Sensor Temperature"
+  state_topic: "smartthings/Bedroom Sensor/temperature"
+  unit_of_measurement: "°"
+- platform: mqtt
+  name: "Bedroom Sensor Humidity"
+  state_topic: "smartthings/Bedroom Sensor/humidity"
+  unit_of_measurement: "%"
+- platform: mqtt
+  name: "Bedroom Sensor Illuminance"
+  state_topic: "smartthings/Bedroom Sensor/illuminance"
+  unit_of_measurement: "lux"
+- platform: mqtt
+  name: "Bedroom Sensor Battery"
+  state_topic: "smartthings/Bedroom Sensor/battery"
+- platform: mqtt
+  name: "Living Room Sensor Motion"
+  state_topic: "smartthings/Living Room Sensor/motion"
+- platform: mqtt
+  name: "Living Room Sensor Temperature"
+  state_topic: "smartthings/Living Room Sensor/temperature"
+  unit_of_measurement: "°"
+- platform: mqtt
+  name: "Living Room Sensor Humidity"
+  state_topic: "smartthings/Living Room Sensor/humidity"
+  unit_of_measurement: "%"
+- platform: mqtt
+  name: "Living Room Sensor Illuminance"
+  state_topic: "smartthings/Living Room Sensor/illuminance"
+  unit_of_measurement: "lux"
+- platform: mqtt
+  name: "Living Room Sensor Battery"
+  state_topic: "smartthings/Living Room Sensor/battery"
+- platform: mqtt
+  name: "Water Leak Sensor Temperature"
+  state_topic: "smartthings/Water Leak Sensor/temperature"
+  unit_of_measurement: "°"

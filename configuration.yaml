@@ -73,87 +73,27 @@ cloud:
 mqtt:
   broker: 10.0.0.120
 
-# Devices
-# Perhaps this moves to a seperate file
-switch:
-  # Smartthing MQTT
-  - platform: mqtt
-    name: "Metal Lamp"
-    state_topic: "smartthings/Metal Lamp/switch"
-    command_topic: "smartthings/Metal Lamp/switch"
-    payload_on: "on"
-    payload_off: "off"
-    retain: true
-  - platform: mqtt
-    name: "Grandma's Lamp"
-    state_topic: "smartthings/Grandma's Lamp/switch"
-    command_topic: "smartthings/Grandma's Lamp/switch"
-    brightness_state_topic: "smartthings/Grandma's Lamp/level"
-    brightness_command_topic: "smartthings/Grandma's Lamp/level"
-    brightness_scale: 100
-    payload_on: "on"
-    payload_off: "off"
-    retain: true
     
-sensor:
-  # Weather prediction
-  - platform: yr
-  # Smartthings MQTT
-  - platform: mqtt
-    name: "Bedroom Sensor Motion"
-    state_topic: "smartthings/Bedroom Sensor/motion"
-  - platform: mqtt
-    name: "Bedroom Sensor Temperature"
-    state_topic: "smartthings/Bedroom Sensor/temperature"
-  - platform: mqtt
-    name: "Bedroom Sensor Humidity"
-    state_topic: "smartthings/Bedroom Sensor/humidity"
-  - platform: mqtt
-    name: "Bedroom Sensor Illuminance"
-    state_topic: "smartthings/Bedroom Sensor/illuminance"
-  - platform: mqtt
-    name: "Bedroom Sensor Battery"
-    state_topic: "smartthings/Bedroom Sensor/battery"
-
-
+switch: !include switch.yaml
+sensor: !include sensor.yaml
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 
 # Smartthings MQTT json state
 
-# smartthings/Aquarium Light/energy": "63.623",
-# smartthings/Aquarium Light/power": "0.000",
-# smartthings/Aquarium Light/switch": "off",
 # smartthings/Bedroom Canopy/energy": "125.472",
 # smartthings/Bedroom Canopy/power": "0",
-# smartthings/Bedroom Canopy/switch": "off",
-# smartthings/Bedroom Closet/switch": "off",
-# smartthings/Bedroom Lamp/switch": "off",
-# smartthings/Bedroom Sensor/motion": "inactive",
 # smartthings/Bedroom Thermostat/coolingSetpoint": "74",
 # smartthings/Bedroom Thermostat/temperature": "74",
 # smartthings/Bedroom Thermostat/thermostatOperatingState": "fan only",
 # smartthings/Bedroom Thermostat/thermostatSetpoint": "74",
-# smartthings/Camille's Desk Lamp/switch": "off",
-# smartthings/Entry Light/level": "70",
-# smartthings/Entry Light/switch": "on",
-# smartthings/Grandma's Lamp/level": "99",
-# smartthings/Grandma's Lamp/switch": "off",
-# smartthings/Hallway Light/level": "99",
-# smartthings/Hallway Light/switch": "off",
-# smartthings/Living Room Sensor/acceleration": "inactive",
-# smartthings/Living Room Sensor/humidity": "71",
-# smartthings/Living Room Sensor/illuminance": "6",
-# smartthings/Living Room Sensor/temperature": "73.5",
-# smartthings/Living room/battery": "100",
 # smartthings/Livingroom Thermostat/coolingSetpoint": "75",
 # smartthings/Livingroom Thermostat/temperature": "75",
 # smartthings/Livingroom Thermostat/thermostatOperatingState": "fan only",
 # smartthings/Livingroom Thermostat/thermostatSetpoint": "75",
 # smartthings/Metal Lamp/energy": "31.014",
 # smartthings/Metal Lamp/power": "0",
-# smartthings/Metal Lamp/switch": "off",
 # smartthings/Minimote Bedroom button 1/button": "pushed",
 # smartthings/Minimote Bedroom button 2/button": "pushed",
 # smartthings/Minimote Bedroom/button": "pushed",
@@ -164,5 +104,4 @@ script: !include scripts.yaml
 # smartthings/Patio Camera/switch": "on",
 # smartthings/Pop Socket Light/energy": "4.730",
 # smartthings/Pop Socket Light/power": "0",
-# smartthings/Pop Socket Light/switch": "off",
 # smartthings/Water Leak Sensor/temperature": "73",

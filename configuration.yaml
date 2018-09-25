@@ -61,9 +61,6 @@ device_tracker:
 # Track the sun
 sun:
 
-# Weather prediction
-sensor:
-  - platform: yr
 
 # Text to speech
 tts:
@@ -79,6 +76,7 @@ mqtt:
 # Devices
 # Perhaps this moves to a seperate file
 switch:
+  # Smartthing MQTT
   - platform: mqtt
     name: "Metal Lamp"
     state_topic: "smartthings/Metal Lamp/switch"
@@ -98,6 +96,9 @@ switch:
     retain: true
     
 sensor:
+  # Weather prediction
+  - platform: yr
+  # Smartthings MQTT
   - platform: mqtt
     name: Bedroom Sensor Temperature
     state_topic: smartthings/Bedroom Sensor/temperature

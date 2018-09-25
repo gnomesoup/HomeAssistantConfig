@@ -92,6 +92,7 @@ switch:
     command_topic: "smartthings/Grandma's Lamp/switch"
     brightness_state_topic: "smartthings/Grandma's Lamp/level"
     brightness_command_topic: "smartthings/Grandma's Lamp/level"
+    brightness_scale: 100
     payload_on: "on"
     payload_off: "off"
     retain: true

@@ -79,12 +79,23 @@ mqtt:
 # Devices
 # Perhaps this moves to a seperate file
 switch:
-  platform: mqtt
-  name: "Metal Lamp"
-  state_topic: "smartthings/Metal Lamp/switch"
-  command_topic: "smartthings/Metal Lamp/switch"
-  payload_on: "on"
-  payload_off: "off"
+  - platform: mqtt
+    name: "Metal Lamp"
+    state_topic: "smartthings/Metal Lamp/switch"
+    command_topic: "smartthings/Metal Lamp/switch"
+    payload_on: "on"
+    payload_off: "off"
+    retain: true
+  - platform: mqtt
+    name: "Grandma's Lamp"
+    state_topic: "smartthings/Grandma's Lamp/switch"
+    command_topic: "smartthings/Grandma's Lamp/switch"
+    brightness_state_topic: "smartthings/Grandma's Lamp/level"
+    brightness_command_topic: "smartthings/Grandma's Lamp/level"
+    payload_on: "on"
+    payload_off: "off"
+    retain: true
+    
 
 
 group: !include groups.yaml

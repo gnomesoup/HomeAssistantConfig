@@ -2,8 +2,7 @@
 - platform: yr
 
 # Smartthings MQTT
-- platform: mqtt
-  name: "Bedroom Sensor Motion"
+- platform: mqtt name: "Bedroom Sensor Motion"
   state_topic: "smartthings/Bedroom Sensor/motion"
 - platform: mqtt
   name: "Bedroom Sensor Temperature"
@@ -38,7 +37,12 @@
 - platform: mqtt
   name: "Living Room Sensor Battery"
   state_topic: "smartthings/Living Room Sensor/battery"
+  unit_of_measurement: "%"
 - platform: mqtt
   name: "Water Leak Sensor Temperature"
   state_topic: "smartthings/Water Leak Sensor/temperature"
   unit_of_measurement: "°"
+- platform: mqtt
+  name: "Water Leak Sensor Battery"
+  state_topic: "smartthings/Water Leak Sensor/battery"
+  unit_of_measurement: "%"

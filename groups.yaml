@@ -72,7 +72,7 @@ livingRoomMedia:
 bedroomMedia:
   name: Bedroom
   entities:
-    - media_player.bedorrom_speaker
+    - media_player.bedroom_speaker
 # Security View
 livingRoomSecurity:
   name: Living Room

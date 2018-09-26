@@ -2,7 +2,8 @@
 - platform: yr
 
 # Smartthings MQTT
-- platform: mqtt name: "Bedroom Sensor Motion"
+- platform: mqtt
+  name: "Bedroom Sensor Motion"
   state_topic: "smartthings/Bedroom Sensor/motion"
 - platform: mqtt
   name: "Bedroom Sensor Temperature"

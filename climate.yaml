@@ -5,10 +5,11 @@
     - cool
     - auto
     - emergency heat
-    - off
+    - "off"
   fan_modes:
-    - on
+    - "on"
     - auto
+  unit_of_measurement: °F 
   current_temperature_topic: "smartthings/Livingroom Thermostat/temperature"
   temperature_command_topic: "smartthings/Livingroom Thermostat/thermostatSetpoint"
   temperature_state_topic: "smartthings/Livingroom Thermostat/thermostatSetpoint"

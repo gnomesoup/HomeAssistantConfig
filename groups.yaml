@@ -1,0 +1,103 @@
+## Views
+Lights:
+  view: yes
+  entities:
+    - group.livingRoomLights
+    - group.bedroomLights
+Climate:
+  view: yes
+  entities:
+    - group.livingRoomClimate
+    - group.bedroomClimate
+    - group.weather
+Media:
+  view: yes
+  entities:
+    - group.allRoomsMedia
+    - group.livingRoomMedia
+    - group.bedroomMedia
+Security:
+  view: yes
+  entities:
+    - group.outdoorSecurity
+    - group.livingRoomSecurity
+    - group.bedroomSecurity
+Batteries:
+  view: yes
+  entities:
+    - group.livingRoomBatteries
+    - group.bedroomBatteries
+    - group.outdoorBatteries
+## Groups
+# Lights view
+livingRoomLights:
+  name: Living Room
+  entities:
+    - switch.grandmas_lamp
+    - switch.entry_light
+    - switch.hallway_light
+    - switch.metal_lamp
+    - switch.pop_socket_light
+bedroomLights:
+  name: Bedroom
+  entities:
+    - switch.bedroom_canopy
+    - switch.bedroom_lamp
+    - switch.camilles_desk_lamp
+    - switch.bedroom_closet
+# Climate view
+livingRoomClimate:
+  name: Living Room
+  entities:
+    - sensor.living_room_sensor_temperature
+    - sensor.living_room_sensor_humidity
+    - sensor.living_room_sensor_illuminance
+    - sensor.water_leak_sensor_temperature
+bedroomClimate:
+  name: Bedroom
+  entities:
+    - sensor.bedroom_sensor_temperature
+    - sensor.bedroom_sensor_humidity
+    - sensor.bedroom_sensor_illuminance
+# Media View
+allRoomsMedia:
+  name: All Rooms
+  entities:
+    - media_player.all_rooms
+livingRoomMedia:
+  name: Living Room
+  entities:
+    - media_player.living_room_speaker
+    - media_player.denon
+bedroomMedia:
+  name: Bedroom
+  entities:
+    - media_player.bedorrom_speaker
+# Security View
+livingRoomSecurity:
+  name: Living Room
+  entities:
+    - sensor.living_room_sensor_motion
+    # - sensor.water_leak_sensor_wet
+outdoorSecurity:
+  name: Patio
+  # entities:
+  #   - sensor
+bedroomSecurity:
+  name: Bedroom
+  entities:
+    - sensor.bedroom_sensor_motion
+# Battery View
+outdoorBatteries:
+  name: Patio
+  # entities:
+    # - sensor.
+livingRoomBatteries:
+  name: Living Room
+  entities:
+    - sensor.living_room_sensor_battery
+    - sensor.water_leak_sensor_battery
+bedroomBatteries:
+  name: Bedroom
+  entities:
+    - sensor.bedroom_sensor_battery

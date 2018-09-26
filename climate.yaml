@@ -11,7 +11,7 @@
     - auto
   current_temperature_topic: "smartthings/Livingroom Thermostat/temperature"
   temperature_command_topic: "smartthings/Livingroom Thermostat/thermostatSetpoint"
-  temperature_state_topic:
+  temperature_state_topic: "smartthings/Livingroom Thermostat/thermostatSetpoint"
   mode_command: "smartthings/Livingroom Thermostat/thermostatMode"
   mode_state_topic: "smartthings/Livingroom Thermostat/thermostatOperatingState"
   fan_mode_command_topic: "smartthings/Livingroom Thermostat/thermostatFanMode"

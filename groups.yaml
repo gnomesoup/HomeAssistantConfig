@@ -46,13 +46,17 @@ bedroomLights:
     - switch.camilles_desk_lamp
     - switch.bedroom_closet
 # Climate view
-livingRoomClimate:
-  name: Living Room
+livingroomthermostat:
+  name: Livingroom Thermostat
   entities:
-    - sensor.living_room_sensor_temperature
-    - sensor.living_room_sensor_humidity
-    - sensor.living_room_sensor_illuminance
-    - sensor.water_leak_sensor_temperature
+    - sensor.livingroom_temperature
+    - sensor.livingroom_humidity
+    - input_select.livingroom_thermostat_mode
+    - switch.livingroom_thermostat_fan_mode
+    - sensor.livingroom_thermostat_current_state
+    - input_number.livingroom_heating_target
+    - input_number.livingroom_cooling_target
+    - sensor.livingroom_thermostat_battery
 bedroomClimate:
   name: Bedroom
   entities:
@@ -101,14 +105,3 @@ bedroomBatteries:
   name: Bedroom
   entities:
     - sensor.bedroom_sensor_battery
-livingroomthermostat:
-  name: Livingroom Thermostat
-  entities:
-    - sensor.livingroom_temperature
-    - sensor.livingroom_humidity
-    - input_select.livingroom_thermostat_mode
-    - switch.livingroom_thermostat_fan_mode
-    - sensor.livingroom_thermostat_current_state
-    - input_number.livingroom_heating_target
-    - input_number.livingroom_cooling_target
-    - sensor.livingroom_thermostat_battery

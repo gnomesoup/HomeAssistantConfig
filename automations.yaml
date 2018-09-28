@@ -33,7 +33,7 @@
       entity_id: input_number.livingroom_heating_target
       value: '{{ trigger.payload}}'
 
- - id: livingroom_thermostat_set_heating_target
+- id: livingroom_thermostat_set_heating_target
   alias: Set heating target
   trigger:
   - platform: state
@@ -57,7 +57,7 @@
       entity_id: input_number.livingroom_cooling_target
       value: '{{ trigger.payload}}'
  
- - id: livingroom_thermostat_set_cooling_target
+- id: livingroom_thermostat_set_cooling_target
   alias: Set cooling target
   trigger:
   - platform: state

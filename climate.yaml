@@ -1,20 +1,20 @@
-- platform: mqtt
-  name: Living Room Thermostat
-  modes:
-    - heat
-    - cool
-    - auto
-    - emergency heat
-    - "off"
-  fan_modes:
-    - "on"
-    - auto
-  unit_of_measurement: °F 
-  current_temperature_topic: "smartthings/Livingroom Thermostat/temperature"
-  temperature_command_topic: "smartthings/Livingroom Thermostat/thermostatSetpoint"
-  temperature_state_topic: "smartthings/Livingroom Thermostat/thermostatSetpoint"
-  mode_command: "smartthings/Livingroom Thermostat/thermostatMode"
-  mode_state_topic: "smartthings/Livingroom Thermostat/thermostatOperatingState"
-  fan_mode_command_topic: "smartthings/Livingroom Thermostat/thermostatFanMode"
-  fan_mode_state_topic: "smartthings/Livingroom Thermostat/thermostatFanMode"
+# - platform: mqtt
+#   name: Living Room Thermostat
+#   modes:
+#     - heat
+#     - cool
+#     - auto
+#     - emergency heat
+#     - "off"
+#   fan_modes:
+#     - "on"
+#     - auto
+#   unit_of_measurement: "F" 
+#   current_temperature_topic: "smartthings/Livingroom Thermostat/temperature"
+#   temperature_command_topic: "smartthings/Livingroom Thermostat/thermostatSetpoint"
+#   temperature_state_topic: "smartthings/Livingroom Thermostat/thermostatSetpoint"
+#   mode_command: "smartthings/Livingroom Thermostat/thermostatMode"
+#   mode_state_topic: "smartthings/Livingroom Thermostat/thermostatOperatingState"
+#   fan_mode_command_topic: "smartthings/Livingroom Thermostat/thermostatFanMode"
+#   fan_mode_state_topic: "smartthings/Livingroom Thermostat/thermostatFanMode"
   

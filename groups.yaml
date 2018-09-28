@@ -101,3 +101,14 @@ bedroomBatteries:
   name: Bedroom
   entities:
     - sensor.bedroom_sensor_battery
+livingroomthermostat:
+  name: Livingroom Thermostat
+  entities:
+    - sensor.livingroom_temperature
+    - sensor.livingroom_humidity
+    - input_select.livingroom_thermostat_mode
+    - switch.livingroom_thermostat_fan_mode
+    - sensor.livingroom_thermostat_current_state
+    - input_number.livingroom_heating_target
+    - input_number.livingroom_cooling_target
+    - sensor.livingroom_thermostat_battery

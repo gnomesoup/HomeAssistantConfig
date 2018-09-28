@@ -80,28 +80,28 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 
-# Smartthings MQTT json state
+input_select:
+  thermostat_mode:
+    name: Thermostat Mode
+    options:
+      - "heat"
+      - "cool"
+      - "auto"
+      - "emergency heat"
+      - "off"
+    icon: mdi:air-conditioner
 
-# smartthings/Bedroom Canopy/energy": "125.472",
-# smartthings/Bedroom Canopy/power": "0",
-# smartthings/Bedroom Thermostat/coolingSetpoint": "74",
-# smartthings/Bedroom Thermostat/temperature": "74",
-# smartthings/Bedroom Thermostat/thermostatOperatingState": "fan only",
-# smartthings/Bedroom Thermostat/thermostatSetpoint": "74",
-# smartthings/Livingroom Thermostat/coolingSetpoint": "75",
-# smartthings/Livingroom Thermostat/temperature": "75",
-# smartthings/Livingroom Thermostat/thermostatOperatingState": "fan only",
-# smartthings/Livingroom Thermostat/thermostatSetpoint": "75",
-# smartthings/Metal Lamp/energy": "31.014",
-# smartthings/Metal Lamp/power": "0",
-# smartthings/Minimote Bedroom button 1/button": "pushed",
-# smartthings/Minimote Bedroom button 2/button": "pushed",
-# smartthings/Minimote Bedroom/button": "pushed",
-# smartthings/Minimote Door button 2/button": "pushed",
-# smartthings/Minimote Door/button": "pushed"
-# smartthings/Patio Camera/motion": "inactive",
-# smartthings/Patio Camera/sound": "not detected",
-# smartthings/Patio Camera/switch": "on",
-# smartthings/Pop Socket Light/energy": "4.730",
-# smartthings/Pop Socket Light/power": "0",
-# smartthings/Water Leak Sensor/temperature": "73",
+input_number:
+  heating_target:
+    name: Heating Target
+    initial: 68
+    min: 60
+    max: 80
+    step: 1
+
+  cooling_target:
+    name: Cooling Target
+    initial: 72
+    min: 60
+    max: 80
+    step: 1

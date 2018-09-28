@@ -80,3 +80,10 @@
   payload_on: "on"
   payload_off: "off"
   retain: true
+# Thermostat
+- platform: mqtt
+  name: Living Room Thermostat Fan
+  state_topic: "smartthings/Thermostat/thermostatFanMode"   # auto | on
+  command_topic: "smartthings/Thermostat/thermostatFanMode"   # auto | on
+  payload_on: "on"
+  payload_off: "auto"

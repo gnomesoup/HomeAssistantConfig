@@ -49,12 +49,12 @@ bedroomLights:
 livingroomthermostat:
   name: Living Room Thermostat
   entities:
-    - sensor.living_room_temperature
+    - sensor.living_room_thermostat_temperature
     - input_select.living_room_thermostat_mode
     - switch.living_room_thermostat_fan
-    - sensor.living_room_thermostat_current_state
-    - input_number.living_room_heating_target
-    - input_number.living_room_cooling_target
+    - sensor.sensor.living_room_thermostat_current_mode
+    - input_number.heating_target
+    - input_number.cooling_target
 bedroomClimate:
   name: Bedroom
   entities:

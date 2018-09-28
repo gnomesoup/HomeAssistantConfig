@@ -1,25 +1,25 @@
-# ## These two automations make sure the dropdown box and thermostat are always the same no matter where you change it.
-# - id: living_room_thermostat_set_mode_selector
-#   alias: Set Thermostat Mode Selector
-#   trigger:
-#     - platform: mqtt
-#       topic: "smartthings/Livingroom Thermostat/thermostatMode"
-#   action:
-#     - service: input_select.select_option
-#       data_template:
-#         entity_id: input_select.living_room_thermostat_mode
-#         option: '{{ trigger.payload }}'
-# - id: living_room_thermostat_set_mode
-#   alias: Set Thermostat Mode
-#   trigger:
-#     - platform: state
-#       entity_id: input_select.living_room_thermostat_mode
-#   action:
-#     - service: mqtt.publish
-#       data_template:
-#         topic: "smartthings/Livingroom Thermostat/thermostatMode"
-#         retain: true
-#         payload: '{{ states.input_select.living_room_thermostat_mode.state }}'
+## These two automations make sure the dropdown box and thermostat are always the same no matter where you change it.
+- id: living_room_thermostat_set_mode_selector
+  alias: Set Thermostat Mode Selector
+  trigger:
+    - platform: mqtt
+      topic: "smartthings/Livingroom Thermostat/thermostatMode"
+  action:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.living_room_thermostat_mode
+        option: '{{ trigger.payload }}'
+- id: living_room_thermostat_set_mode
+  alias: Set Thermostat Mode
+  trigger:
+    - platform: state
+      entity_id: input_select.living_room_thermostat_mode
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "smartthings/Livingroom Thermostat/thermostatMode"
+        retain: true
+        payload: '{{ states.input_select.living_room_thermostat_mode.state }}'
 
 # ## These two automations make sure the heating slider and thermostat are always the same no matter where you change it.
 # - id: living_room_thermostat_set_heating

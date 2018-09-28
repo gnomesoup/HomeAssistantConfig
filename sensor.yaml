@@ -50,7 +50,6 @@
   name: "Water Leak Sensor Battery"
   state_topic: "smartthings/Water Leak Sensor/battery"
   unit_of_measurement: "%"
-
 # Thermostat Sensors
 - platform: mqtt
   name: Living Room Thermostat Temperature
@@ -59,4 +58,3 @@
 - platform: mqtt
   name: Living Room Thermostat Current Mode
   state_topic: "smartthings/Livingroom Thermostat/thermostatOperatingState"
-  

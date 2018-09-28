@@ -83,7 +83,7 @@
 # Thermostat
 - platform: mqtt
   name: Living Room Thermostat Fan
-  state_topic: "smartthings/Thermostat/thermostatFanMode"   # auto | on
-  command_topic: "smartthings/Thermostat/thermostatFanMode"   # auto | on
+  state_topic: "smartthings/Livingroom Thermostat/thermostatFanMode"   # auto | on
+  command_topic: "smartthings/Livingroom Thermostat/thermostatFanMode"   # auto | on
   payload_on: "on"
   payload_off: "auto"

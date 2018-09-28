@@ -47,16 +47,14 @@ bedroomLights:
     - switch.bedroom_closet
 # Climate view
 livingroomthermostat:
-  name: Livingroom Thermostat
+  name: Living Room Thermostat
   entities:
-    - sensor.livingroom_temperature
-    - sensor.livingroom_humidity
-    - input_select.livingroom_thermostat_mode
-    - switch.livingroom_thermostat_fan_mode
-    - sensor.livingroom_thermostat_current_state
-    - input_number.livingroom_heating_target
-    - input_number.livingroom_cooling_target
-    - sensor.livingroom_thermostat_battery
+    - sensor.living_room_temperature
+    - input_select.living_room_thermostat_mode
+    - switch.living_room_thermostat_fan
+    - sensor.living_room_thermostat_current_state
+    - input_number.living_room_heating_target
+    - input_number.living_room_cooling_target
 bedroomClimate:
   name: Bedroom
   entities:

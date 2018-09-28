@@ -82,7 +82,7 @@ script: !include scripts.yaml
 
 input_select:
   thermostat_mode:
-    name: Thermostat Mode
+    name: Living Room Thermostat Mode
     options:
       - "heat"
       - "cool"
@@ -93,14 +93,14 @@ input_select:
 
 input_number:
   heating_target:
-    name: Heating Target
+    name: Living Room Heating Target
     initial: 68
     min: 60
     max: 80
     step: 1
 
   cooling_target:
-    name: Cooling Target
+    name: Living Room Cooling Target
     initial: 72
     min: 60
     max: 80

@@ -21,29 +21,29 @@
         retain: true
         payload: '{{ states.input_select.living_room_thermostat_mode.state }}'
 
-# ## These two automations make sure the heating slider and thermostat are always the same no matter where you change it.
-# - id: living_room_thermostat_set_heating
-#   alias: Heating target set
-#   trigger:
-#     - platform: mqtt
-#       topic: "smartthings/Livingroom Thermostat/heatingSetpoint"
-#   action:
-#     - service: input_number.set_value
-#       data_template:
-#         entity_id: input_number.living_room_heating_target
-#         value: '{{ trigger.payload}}'
+## These two automations make sure the heating slider and thermostat are always the same no matter where you change it.
+- id: living_room_thermostat_set_heating
+  alias: Heating target set
+  trigger:
+    - platform: mqtt
+      topic: "smartthings/Livingroom Thermostat/heatingSetpoint"
+  action:
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.living_room_heating_target
+        value: '{{ trigger.payload}}'
 
-# - id: living_room_thermostat_set_heating_target
-#   alias: Set heating target
-#   trigger:
-#     - platform: state
-#       entity_id: input_number.living_room_heating_target
-#   action:
-#     - service: mqtt.publish
-#       data_template:
-#         topic: "smartthings/Livingroom Thermostat/heatingSetpoint"
-#         retain: true
-#         payload: '{{ states.input_number.living_room_heating_target.state | int }}'
+- id: living_room_thermostat_set_heating_target
+  alias: Set heating target
+  trigger:
+    - platform: state
+      entity_id: input_number.living_room_heating_target
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "smartthings/Livingroom Thermostat/heatingSetpoint"
+        retain: true
+        payload: '{{ states.input_number.living_room_heating_target.state | int }}'
 
 # ## These two automations make sure the cooling slider and thermostat are always the same no matter where you change it.
 # - id: living_room_thermostat_set_cooling

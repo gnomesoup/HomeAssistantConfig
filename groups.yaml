@@ -1,9 +1,34 @@
 ## Views
+Living Room:
+  view: yes
+  entities:
+    - group.grandmaslamp
+    - group.entrylight
+    - group.hallwaylight
+    - group.metallamp
+    - group.hallwaylight
+    - group.popsocketlight
+    - group.livingroomthermostat
+Bedroom:
+  view: yes
+  entities:
+    - group.bedroomcanopy
+    - group.bedroomlamp
+    - group.camillesdesklamp
+    - group.bedroomcloset
 Lights:
   view: yes
   entities:
-    - group.livingRoomLights
-    - group.bedroomLights
+    - group.grandmaslamp
+    - group.entrylight
+    - group.hallwaylight
+    - group.metallamp
+    - group.hallwaylight
+    - group.popsocketlight
+    - group.bedroomcanopy
+    - group.bedroomlamp
+    - group.camillesdesklamp
+    - group.bedroomcloset
 Climate:
   view: yes
   entities:
@@ -30,27 +55,48 @@ Batteries:
     - group.outdoorBatteries
 ## Groups
 # Lights view
-livingRoomLights:
-  name: Living Room
+grandmaslamp:
+  name: Grandma's Lamp
   entities:
     - switch.grandmas_lamp
+entrylight:
+  name: Entry Light
+  entities:
     - switch.entry_light
+hallwaylight:
+  name: Hallway Light
+  entities:
     - switch.hallway_light
+metallamp:
+  name: Metal Lamp
+  entities:
     - switch.metal_lamp
+popsocketlight:
+  name: Pop Socket Light
+  entities:
     - switch.pop_socket_light
-bedroomLights:
-  name: Bedroom
+bedroomcanopy:
+  name: Bedroom Canopy
   entities:
     - switch.bedroom_canopy
+bedroomlamp:
+  name: Bedroom Lamp
+  entities:
     - switch.bedroom_lamp
+camillesdesklamp:
+  name: Camille's Desk Lamp
+  entities:
     - switch.camilles_desk_lamp
+bedroomcloset:
+  name: Bedroom Closet
+  entities:
     - switch.bedroom_closet
 # Climate view
 livingroomthermostat:
   name: Living Room Thermostat
   entities:
     - sensor.living_room_thermostat_temperature
-    - input_select.living_room_thermostat_mode
+    - input_select.thermostat_mode
     - switch.living_room_thermostat_fan
     - sensor.living_room_thermostat_current_mode
     - input_number.heating_target

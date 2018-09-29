@@ -52,7 +52,7 @@ livingroomthermostat:
     - sensor.living_room_thermostat_temperature
     - input_select.living_room_thermostat_mode
     - switch.living_room_thermostat_fan
-    - sensor.sensor.living_room_thermostat_current_mode
+    - sensor.living_room_thermostat_current_mode
     - input_number.heating_target
     - input_number.cooling_target
 bedroomClimate:

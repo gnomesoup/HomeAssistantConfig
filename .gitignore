@@ -10,3 +10,6 @@
 .uuid
 .HA_VERSION
 secrets.yaml
+core
+icloud/
+/known_devices.yaml

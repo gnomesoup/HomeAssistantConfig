@@ -7,13 +7,13 @@
   action:
     - service: input_select.select_option
       data_template:
-        entity_id: input_select.living_room_thermostat_mode
+        entity_id: input_select.thermostat_mode
         option: '{{ trigger.payload }}'
 - id: living_room_thermostat_set_mode
   alias: Set Thermostat Mode
   trigger:
     - platform: state
-      entity_id: input_select.living_room_thermostat_mode
+      entity_id: input_select.thermostat_mode
   action:
     - service: mqtt.publish
       data_template:
@@ -30,14 +30,14 @@
   action:
     - service: input_number.set_value
       data_template:
-        entity_id: input_number.living_room_heating_target
+        entity_id: input_number.heating_target
         value: '{{ trigger.payload}}'
 
 - id: living_room_thermostat_set_heating_target
   alias: Set heating target
   trigger:
     - platform: state
-      entity_id: input_number.living_room_heating_target
+      entity_id: input_number.heating_target
   action:
     - service: mqtt.publish
       data_template:
@@ -45,26 +45,26 @@
         retain: true
         payload: '{{ states.input_number.living_room_heating_target.state | int }}'
 
-# ## These two automations make sure the cooling slider and thermostat are always the same no matter where you change it.
-# - id: living_room_thermostat_set_cooling
-#   alias: Cooling target set
-#   trigger:
-#     - platform: mqtt
-#       topic: "smartthings/Livingroom Thermostat/coolingSetpoint"
-#   action:
-#     - service: input_number.set_value
-#       data_template:
-#       entity_id: input_number.living_room_cooling_target
-#       value: '{{ trigger.payload}}'
+## These two automations make sure the cooling slider and thermostat are always the same no matter where you change it.
+- id: living_room_thermostat_set_cooling
+  alias: Cooling target set
+  trigger:
+    - platform: mqtt
+      topic: "smartthings/Livingroom Thermostat/coolingSetpoint"
+  action:
+    - service: input_number.set_value
+      data_template:
+      entity_id: input_number.cooling_target
+      value: '{{ trigger.payload}}'
  
-# - id: living_room_thermostat_set_cooling_target
-#   alias: Set cooling target
-#   trigger:
-#     - platform: state
-#       entity_id: input_number.living_room_cooling_target
-#   action:
-#     - service: mqtt.publish
-#       data_template:
-#         topic: "smartthings/Livingroom Thermostat/coolingSetpoint"
-#         retain: true
-#         payload: '{{ states.input_number.living_room_cooling_target.state | int }}'
+- id: living_room_thermostat_set_cooling_target
+  alias: Set cooling target
+  trigger:
+    - platform: state
+      entity_id: input_number.cooling_target
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "smartthings/Livingroom Thermostat/coolingSetpoint"
+        retain: true
+        payload: '{{ states.input_number.living_room_cooling_target.state | int }}'

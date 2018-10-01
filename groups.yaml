@@ -126,9 +126,9 @@ livingRoomSecurity:
   name: Living Room
   entities:
     - sensor.living_room_sensor_motion
-    # - sensor.water_leak_sensor_wet
-outdoorSecurity:
-  name: Patio
+    - sensor.water_leak_sensor_water
+# outdoorSecurity:
+#   name: Patio
   # entities:
   #   - sensor
 bedroomSecurity:
@@ -136,8 +136,8 @@ bedroomSecurity:
   entities:
     - sensor.bedroom_sensor_motion
 # Battery View
-outdoorBatteries:
-  name: Patio
+# outdoorBatteries:
+#   name: Patio
   # entities:
     # - sensor.
 livingRoomBatteries:

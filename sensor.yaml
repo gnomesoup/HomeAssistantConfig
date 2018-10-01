@@ -44,7 +44,7 @@
   state_topic: "smartthings/Water Leak Sensor/temperature"
   unit_of_measurement: "°"
 - platform: mqtt
-  name: "Water Leak Sensor Temperature"
+  name: "Water Leak Sensor Water"
   state_topic: "smartthings/Water Leak Sensor/water"
 - platform: mqtt
   name: "Water Leak Sensor Battery"

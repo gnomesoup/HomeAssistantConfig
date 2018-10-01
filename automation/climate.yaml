@@ -54,8 +54,8 @@
   action:
     - service: input_number.set_value
       data_template:
-      entity_id: input_number.cooling_target
-      value: '{{ trigger.payload}}'
+        entity_id: input_number.cooling_target
+        value: '{{ trigger.payload}}'
  
 - id: living_room_thermostat_set_cooling_target
   alias: Set cooling target

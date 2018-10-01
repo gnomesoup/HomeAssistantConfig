@@ -1,13 +1,14 @@
 ## Views
-Default:
+Home:
   view: yes
   entities:
+    - device_tracker.ergisch
+    - device_tracker.angelapfammattersiphone
+    - sun.sun
     - group.allRoomsMedia
     - group.all_automations
     - group.all_lights
     - group.all_switches
-    - device_tracker.ergisch
-    - device_tracker.angelapfammattersiphone
 Living Room:
   view: yes
   entities:
@@ -89,9 +90,9 @@ livingRoomThermostat:
 bedroomSensorClimate:
   name: Bedroom Sensor Climate
   entities:
-    - sensor.bedroom_sensor_temperature
-    - sensor.bedroom_sensor_humidity
-    - sensor.bedroom_sensor_illuminance
+    - sensor.bedroomm_sensor_temperature
+    - sensor.bedroomm_sensor_humidity
+    - sensor.bedroomm_sensor_illuminance
 bedroomThermostat:
   name: Bedroom Thermostat
   entities:
@@ -142,4 +143,4 @@ livingRoomBatteries:
 bedroomBatteries:
   name: Bedroom Batteries
   entities:
-    - sensor.bedroom_sensor_battery
+    - sensor.bedroomm_sensor_battery

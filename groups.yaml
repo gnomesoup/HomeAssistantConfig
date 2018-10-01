@@ -8,7 +8,8 @@ Living Room:
     - group.metallamp
     - group.hallwaylight
     - group.popsocketlight
-    - group.livingroomthermostat
+    - group.livingRoomSensorClimate
+    - group.livingRoomThermostat
 Bedroom:
   view: yes
   entities:
@@ -16,6 +17,8 @@ Bedroom:
     - group.bedroomlamp
     - group.camillesdesklamp
     - group.bedroomcloset
+    - group.bedroomSensorClimate
+    - group.bedroomThermostat
 Lights:
   view: yes
   entities:
@@ -32,8 +35,10 @@ Lights:
 Climate:
   view: yes
   entities:
-    - group.livingRoomClimate
-    - group.bedroomClimate
+    - group.livingRoomThermostat
+    - group.livingRoomSensorClimate
+    - group.bedroomRoomThermostat
+    - group.bedroomSensorClimate
     - group.weather
 Media:
   view: yes
@@ -92,7 +97,13 @@ bedroomcloset:
   entities:
     - switch.bedroom_closet
 # Climate view
-livingroomthermostat:
+livingRoomSensorClimate:
+  name: Bedroom
+  entities:
+    - sensor.living_room_sensor_temperature
+    - sensor.living_room_sensor_humidity
+    - sensor.living_room_sensor_illuminance
+livingRoomThermostat:
   name: Living Room Thermostat
   entities:
     - sensor.living_room_thermostat_temperature
@@ -101,12 +112,21 @@ livingroomthermostat:
     - sensor.living_room_thermostat_current_mode
     - input_number.heating_target
     - input_number.cooling_target
-bedroomClimate:
+bedroomSensorClimate:
   name: Bedroom
   entities:
     - sensor.bedroom_sensor_temperature
     - sensor.bedroom_sensor_humidity
     - sensor.bedroom_sensor_illuminance
+bedroomThermostat:
+  name: Bedroom Thermostat
+  entities:
+    - sensor.bedroom_thermostat_temperature
+    - input_select.bedroom_thermostat_mode
+    - switch.bedroom_thermostat_fan
+    - sensor.bedroom_thermostat_current_mode
+    - input_number.bedroom_heating_target
+    - input_number.bedroom_cooling_target
 # Media View
 allRoomsMedia:
   name: All Rooms

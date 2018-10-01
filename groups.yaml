@@ -1,4 +1,33 @@
-
+## Views
+Living Room:
+  view: yes
+  entities:
+    - group.grandmaslamp
+    - light.grandmas_lamp
+    - group.entrylight
+    - group.hallwaylight
+    - group.metallamp
+    - group.hallwaylight
+    - group.popsocketlight
+    - group.livingRoomSensorClimate
+    - group.livingRoomThermostat
+Bedroom:
+  view: yes
+  entities:
+    - group.bedroomcanopy
+    - group.bedroomlamp
+    - group.camillesdesklamp
+    - group.bedroomcloset
+    - group.bedroomSensorClimate
+    - group.bedroomThermostat
+Lights:
+  view: yes
+  entities:
+    - group.grandmaslamp
+    - light.grandmas_lamp
+    - group.entrylight
+    - group.hallwaylight
+    - group.metallamp
     - group.hallwaylight
     - group.popsocketlight
     - group.bedroomcanopy

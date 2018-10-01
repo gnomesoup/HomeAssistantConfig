@@ -1,0 +1,11 @@
+- platform: mqtt
+  name: Grandma's Lamp
+  command_topic: "smartthings/Grandma's Lamp/switch"
+  state_topic: "smartthings/Grandma's Lamp/switch"
+  payload_on: "on"
+  payload_off: "off"
+  brightness_command_topic: "smartthings/Grandma's Lamp/level"
+  brightness_scale: 100
+  brightness_state_topic: "smartthings/Grandma's Lamp/level"
+  retain: true
+  optimistic: true

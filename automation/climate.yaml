@@ -19,7 +19,7 @@
       data_template:
         topic: "smartthings/Livingroom Thermostat/thermostatMode"
         retain: true
-        payload: '{{ states.input_select.living_room_thermostat_mode.state }}'
+        payload: '{{ states.input_select.thermostat_mode.state }}'
 
 ## These two automations make sure the heating slider and thermostat are always the same no matter where you change it.
 - id: living_room_thermostat_set_heating
@@ -43,7 +43,7 @@
       data_template:
         topic: "smartthings/Livingroom Thermostat/heatingSetpoint"
         retain: true
-        payload: '{{ states.input_number.living_room_heating_target.state | int }}'
+        payload: '{{ states.input_number.heating_target.state | int }}'
 
 ## These two automations make sure the cooling slider and thermostat are always the same no matter where you change it.
 - id: living_room_thermostat_set_cooling
@@ -67,4 +67,4 @@
       data_template:
         topic: "smartthings/Livingroom Thermostat/coolingSetpoint"
         retain: true
-        payload: '{{ states.input_number.living_room_cooling_target.state | int }}'
+        payload: '{{ states.input_number.cooling_target.state | int }}'

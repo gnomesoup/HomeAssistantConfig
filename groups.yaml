@@ -1,6 +1,7 @@
 ## Views
 default_view:
   view: yes
+  name: Home
   entities:
     - device_tracker.ergisch
     - device_tracker.angelapfammattersiphone

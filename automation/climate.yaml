@@ -1,4 +1,5 @@
-## These two automations make sure the dropdown box and thermostat are always the same no matter where you change it.
+## These two automations make sure the dropdown box and thermostat are always
+## the same no matter where you change it.
 - id: living_room_thermostat_set_mode_selector
   alias: Set Thermostat Mode Selector
   trigger:
@@ -21,7 +22,8 @@
         retain: true
         payload: '{{ states.input_select.thermostat_mode.state }}'
 
-## These two automations make sure the heating slider and thermostat are always the same no matter where you change it.
+## These two automations make sure the heating slider and thermostat are always
+## the same no matter where you change it.
 - id: living_room_thermostat_set_heating
   alias: Heating target set
   trigger:
@@ -45,7 +47,8 @@
         retain: true
         payload: '{{ states.input_number.heating_target.state | int }}'
 
-## These two automations make sure the cooling slider and thermostat are always the same no matter where you change it.
+## These two automations make sure the cooling slider and thermostat are always
+## the same no matter where you change it.
 - id: living_room_thermostat_set_cooling
   alias: Cooling target set
   trigger:
@@ -69,7 +72,8 @@
         retain: true
         payload: '{{ states.input_number.cooling_target.state | int }}'
 
-## These two automations make sure the dropdown box and thermostat are always the same no matter where you change it.
+## These two automations make sure the dropdown box and thermostat are always
+## the same no matter where you change it.
 - id: bedroom_thermostat_set_mode_selector
   alias: Set Thermostat Mode Selector
   trigger:

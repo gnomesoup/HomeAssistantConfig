@@ -3,8 +3,8 @@
   alias: Bedroom Minimote Button 1 Pushed
   trigger:
     - platform: mqtt
-      topic: "smartthings/Minimote Bedroom/button1/button pushed"
+      topic: "smartthings/Minimote Bedroom button 1/button pushed"
   action:
-    - service: switch.turn_on
+    - service: switch.toggle
       entity_id:
         - switch.metal_lamp

@@ -2,38 +2,37 @@
 Living Room:
   view: yes
   entities:
-    - group.grandmaslamp
     - light.grandmas_lamp
-    - group.entrylight
-    - group.hallwaylight
-    - group.metallamp
-    - group.hallwaylight
-    - group.popsocketlight
+    - light.entry_light
+    - light.hallway_light
+    - switch.metal_lamp
+    - switch.pop_socket_light
     - group.livingRoomSensorClimate
     - group.livingRoomThermostat
+    - media_player.living_room_speaker
+    - media_player.denon
 Bedroom:
   view: yes
   entities:
-    - group.bedroomcanopy
-    - group.bedroomlamp
-    - group.camillesdesklamp
-    - group.bedroomcloset
+    - switch.bedroom_canopy
+    - light.bedroom_lamp
+    - light.camilles_desk_lamp
+    - light.bedroom_closet
     - group.bedroomSensorClimate
     - group.bedroomThermostat
+    - media_player.bedroom_speaker
 Lights:
   view: yes
   entities:
-    - group.grandmaslamp
     - light.grandmas_lamp
-    - group.entrylight
-    - group.hallwaylight
-    - group.metallamp
-    - group.hallwaylight
-    - group.popsocketlight
-    - group.bedroomcanopy
-    - group.bedroomlamp
-    - group.camillesdesklamp
-    - group.bedroomcloset
+    - light.entry_light
+    - light.hallway_light
+    - switch.metal_lamp
+    - switch.pop_socket_light
+    - switch.bedroom_canopy
+    - light.bedroom_lamp
+    - light.camilles_desk_lamp
+    - light.bedroom_closet
 Climate:
   view: yes
   entities:
@@ -62,42 +61,6 @@ Batteries:
     - group.outdoorBatteries
 ## Groups
 # Lights view
-grandmaslamp:
-  name: Grandma's Lamp
-  entities:
-    - switch.grandmas_lamp
-entrylight:
-  name: Entry Light
-  entities:
-    - switch.entry_light
-hallwaylight:
-  name: Hallway Light
-  entities:
-    - switch.hallway_light
-metallamp:
-  name: Metal Lamp
-  entities:
-    - switch.metal_lamp
-popsocketlight:
-  name: Pop Socket Light
-  entities:
-    - switch.pop_socket_light
-bedroomcanopy:
-  name: Bedroom Canopy
-  entities:
-    - switch.bedroom_canopy
-bedroomlamp:
-  name: Bedroom Lamp
-  entities:
-    - switch.bedroom_lamp
-camillesdesklamp:
-  name: Camille's Desk Lamp
-  entities:
-    - switch.camilles_desk_lamp
-bedroomcloset:
-  name: Bedroom Closet
-  entities:
-    - switch.bedroom_closet
 # Climate view
 livingRoomSensorClimate:
   name: Livingroom Sensor

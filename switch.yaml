@@ -7,16 +7,6 @@
   payload_off: "off"
   retain: true
 - platform: mqtt
-  name: "Grandma's Lamp"
-  state_topic: "smartthings/Grandma's Lamp/switch"
-  command_topic: "smartthings/Grandma's Lamp/switch"
-  brightness_state_topic: "smartthings/Grandma's Lamp/level"
-  brightness_command_topic: "smartthings/Grandma's Lamp/level"
-  brightness_scale: 100
-  payload_on: "on"
-  payload_off: "off"
-  retain: true
-- platform: mqtt
   name: "Bedroom Canopy"
   state_topic: "smartthings/Bedroom Canopy/switch"
   command_topic: "smartthings/Bedroom Canopy/switch"
@@ -24,59 +14,9 @@
   payload_off: "off"
   retain: true
 - platform: mqtt
-  name: "Bedroom Closet"
-  state_topic: "smartthings/Bedroom Closet/switch"
-  command_topic: "smartthings/Bedroom Closet/switch"
-  brightness_state_topic: "smartthings/Bedroom Closet/level"
-  brightness_command_topic: "smartthings/Bedroom Closet/level"
-  brightness_scale: 100
-  payload_on: "on"
-  payload_off: "off"
-  retain: true
-- platform: mqtt
-  name: "Bedroom Lamp"
-  state_topic: "smartthings/Bedroom Lamp/switch"
-  command_topic: "smartthings/Bedroom Lamp/switch"
-  brightness_state_topic: "smartthings/Bedroom Lamp/level"
-  brightness_command_topic: "smartthings/Bedroom Lamp/level"
-  brightness_scale: 100
-  payload_on: "on"
-  payload_off: "off"
-  retain: true
-- platform: mqtt
-  name: "Camille's Desk Lamp"
-  state_topic: "smartthings/Camille's Desk Lamp/switch"
-  command_topic: "smartthings/Camille's Desk Lamp/switch"
-  brightness_state_topic: "smartthings/Camille's Desk Lamp/level"
-  brightness_command_topic: "smartthings/Camille's Desk Lamp/level"
-  brightness_scale: 100
-  payload_on: "on"
-  payload_off: "off"
-  retain: true
-- platform: mqtt
   name: "Pop Socket Light"
   state_topic: "smartthings/Pop Socket Light/switch"
   command_topic: "smartthings/Pop Socket Light/switch"
-  payload_on: "on"
-  payload_off: "off"
-  retain: true
-- platform: mqtt
-  name: "Entry Light"
-  state_topic: "smartthings/Entry Light/switch"
-  command_topic: "smartthings/Entry Light/switch"
-  brightness_state_topic: "smartthings/Entry Light/level"
-  brightness_command_topic: "smartthings/Entry Light/level"
-  brightness_scale: 100
-  payload_on: "on"
-  payload_off: "off"
-  retain: true
-- platform: mqtt
-  name: "Hallway Light"
-  state_topic: "smartthings/Hallway Light/switch"
-  command_topic: "smartthings/Hallway Light/switch"
-  brightness_state_topic: "smartthings/Hallway Light/level"
-  brightness_command_topic: "smartthings/Hallway Light/level"
-  brightness_scale: 100
   payload_on: "on"
   payload_off: "off"
   retain: true

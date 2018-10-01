@@ -68,3 +68,74 @@
         topic: "smartthings/Livingroom Thermostat/coolingSetpoint"
         retain: true
         payload: '{{ states.input_number.cooling_target.state | int }}'
+
+## These two automations make sure the dropdown box and thermostat are always the same no matter where you change it.
+- id: bedroom_thermostat_set_mode_selector
+  alias: Set Thermostat Mode Selector
+  trigger:
+    - platform: mqtt
+      topic: "smartthings/Bedroom Thermostat/thermostatMode"
+  action:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.bedroom_thermostat_mode
+        option: '{{ trigger.payload }}'
+- id: bedroom_thermostat_set_mode
+  alias: Set Thermostat Mode
+  trigger:
+    - platform: state
+      entity_id: input_select.bedroom_thermostat_mode
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "smartthings/Bedroom Thermostat/thermostatMode"
+        retain: true
+        payload: '{{ states.input_select.bedroom_thermostat_mode.state }}'
+
+## These two automations make sure the heating slider and thermostat are always the same no matter where you change it.
+- id: bedroom_thermostat_set_heating
+  alias: Heating target set
+  trigger:
+    - platform: mqtt
+      topic: "smartthings/Bedroom Thermostat/heatingSetpoint"
+  action:
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.bedroom_heating_target
+        value: '{{ trigger.payload}}'
+
+- id: bedroom_thermostat_set_heating_target
+  alias: Set heating target
+  trigger:
+    - platform: state
+      entity_id: input_number.bedroom_heating_target
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "smartthings/Bedroom Thermostat/heatingSetpoint"
+        retain: true
+        payload: '{{ states.input_number.bedroom_heating_target.state | int }}'
+
+## These two automations make sure the cooling slider and thermostat are always the same no matter where you change it.
+- id: bedroom_thermostat_set_cooling
+  alias: Cooling target set
+  trigger:
+    - platform: mqtt
+      topic: "smartthings/Bedroom Thermostat/coolingSetpoint"
+  action:
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.bedroom_cooling_target
+        value: '{{ trigger.payload}}'
+ 
+- id: bedroom_thermostat_set_cooling_target
+  alias: Set cooling target
+  trigger:
+    - platform: state
+      entity_id: input_number.bedroom_cooling_target
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "smartthings/Bedroom Thermostat/coolingSetpoint"
+        retain: true
+        payload: '{{ states.input_number.bedroom_cooling_target.state | int }}'

@@ -3,23 +3,23 @@
 
 # Smartthings MQTT
 - platform: mqtt
-  name: "Bedroom Sensor Motion"
-  state_topic: "smartthings/Bedroom Sensor/motion"
+  name: "Bedroomm Sensor Motion"
+  state_topic: "smartthings/Bedroomm Sensor/motion"
 - platform: mqtt
-  name: "Bedroom Sensor Temperature"
-  state_topic: "smartthings/Bedroom Sensor/temperature"
+  name: "Bedroomm Sensor Temperature"
+  state_topic: "smartthings/Bedroomm Sensor/temperature"
   unit_of_measurement: "°"
 - platform: mqtt
-  name: "Bedroom Sensor Humidity"
-  state_topic: "smartthings/Bedroom Sensor/humidity"
+  name: "Bedroomm Sensor Humidity"
+  state_topic: "smartthings/Bedroomm Sensor/humidity"
   unit_of_measurement: "%"
 - platform: mqtt
-  name: "Bedroom Sensor Illuminance"
-  state_topic: "smartthings/Bedroom Sensor/illuminance"
+  name: "Bedroomm Sensor Illuminance"
+  state_topic: "smartthings/Bedroomm Sensor/illuminance"
   unit_of_measurement: "lux"
 - platform: mqtt
-  name: "Bedroom Sensor Battery"
-  state_topic: "smartthings/Bedroom Sensor/battery"
+  name: "Bedroomm Sensor Battery"
+  state_topic: "smartthings/Bedroomm Sensor/battery"
 - platform: mqtt
   name: "Living Room Sensor Motion"
   state_topic: "smartthings/Living Room Sensor/motion"
@@ -54,7 +54,14 @@
 - platform: mqtt
   name: Living Room Thermostat Temperature
   state_topic: "smartthings/Livingroom Thermostat/temperature"
-  unit_of_measurement: "°F"
+  unit_of_measurement: "°"
 - platform: mqtt
   name: Living Room Thermostat Current Mode
   state_topic: "smartthings/Livingroom Thermostat/thermostatOperatingState"
+- platform: mqtt
+  name: Bedroom Thermostat Temperature
+  state_topic: "smartthings/Bedroom Thermostat/temperature"
+  unit_of_measurement: "°"
+- platform: mqtt
+  name: Bedroom Thermostat Current Mode
+  state_topic: "smartthings/Bedroom Thermostat/thermostatOperatingState"

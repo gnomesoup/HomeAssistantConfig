@@ -3,23 +3,23 @@
 
 # Smartthings MQTT
 - platform: mqtt
-  name: "Bedroomm Sensor Motion"
-  state_topic: "smartthings/Bedroomm Sensor/motion"
+  name: "Bedroom Sensor Motion"
+  state_topic: "smartthings/Bedroom Sensor/motion"
 - platform: mqtt
-  name: "Bedroomm Sensor Temperature"
-  state_topic: "smartthings/Bedroomm Sensor/temperature"
+  name: "Bedroom Sensor Temperature"
+  state_topic: "smartthings/Bedroom Sensor/temperature"
   unit_of_measurement: "°"
 - platform: mqtt
-  name: "Bedroomm Sensor Humidity"
-  state_topic: "smartthings/Bedroomm Sensor/humidity"
+  name: "Bedroom Sensor Humidity"
+  state_topic: "smartthings/Bedroom Sensor/humidity"
   unit_of_measurement: "%"
 - platform: mqtt
-  name: "Bedroomm Sensor Illuminance"
-  state_topic: "smartthings/Bedroomm Sensor/illuminance"
+  name: "Bedroom Sensor Illuminance"
+  state_topic: "smartthings/Bedroom Sensor/illuminance"
   unit_of_measurement: "lux"
 - platform: mqtt
-  name: "Bedroomm Sensor Battery"
-  state_topic: "smartthings/Bedroomm Sensor/battery"
+  name: "Bedroom Sensor Battery"
+  state_topic: "smartthings/Bedroom Sensor/battery"
 - platform: mqtt
   name: "Living Room Sensor Motion"
   state_topic: "smartthings/Living Room Sensor/motion"
@@ -72,15 +72,16 @@
     bedroom_average_temperature:
       friendly_name: Bedroom Average Temperature
       value_template: >-
-        {{(
-        float(states.sensor.bedroom_sensor_temperature.state) +
-        float(states.sensor.bedroom_thermostat.state)) / 2}}
+        {{((float(states.sensor.bedroom_sensor_temperature.state) + float(states.sensor.bedroom_thermostat_temperature.state)) / 2)|round(2)}}
       unit_of_measurement: "°"
+
+- platform: template
+  sensors:
     living_room_average_temperature:
       friendly_name: Living Room Average Temperature
       value_template: >-
-        {{(
-        float(states.sensor.living_room_sensor_temperature.state) +
+        {{((float(states.sensor.living_room_sensor_temperature.state) +
         float(states.sensor.water_leak_sensor_temperature.state) +
-        float(states.sensor.living_room_thermostat.state)) / 3}}
+        float(states.sensor.living_room_thermostat_temperature.state)) / 3) | round(precision=2)}}
       unit_of_measurement: "°"
+

@@ -85,3 +85,16 @@
         float(states.sensor.living_room_thermostat_temperature.state)) / 3) | round(precision=2)}}
       unit_of_measurement: "°"
 
+## System Monitor
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: "/"
+    - type: disk_free
+      arg: "/"
+    - type: memory_use_percent
+    - type: memory_free
+    - type: load_1m
+    - type: load_5m
+    - type: load_15m
+    - type: since_last_boot

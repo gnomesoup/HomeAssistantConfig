@@ -6,8 +6,7 @@ default_view:
     - device_tracker.ergisch
     - device_tracker.angelapfammattersiphone
     - sun.sun
-    - input_select.home_mode
-    - input_select.presence
+    - group.homeStatus
     - group.allRoomsMedia
     - group.cleaningSetup
 Living Room:
@@ -149,6 +148,11 @@ bedroomBatteries:
   name: Bedroom Batteries
   entities:
     - sensor.bedroom_sensor_battery
+homeStatus:
+  name: Home Status
+  entities:
+    - input_select.home_mode
+    - input_select.presence
 cleaningSetup:
   name: Cleaner Window Setup
   entities:

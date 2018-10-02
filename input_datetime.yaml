@@ -1,0 +1,8 @@
+clean_start:
+  name: "Start of cleaning window"
+  has_date: false
+  has_time: true
+clean_end:
+  name: "End of cleaning window"
+  has_date: false
+  has_time: true

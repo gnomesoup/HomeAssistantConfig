@@ -6,10 +6,10 @@ default_view:
     - device_tracker.ergisch
     - device_tracker.angelapfammattersiphone
     - sun.sun
+    - input_select.home_mode
+    - input_select.presence
     - group.allRoomsMedia
-    - group.all_automations
-    - group.all_lights
-    - group.all_switches
+    - group.cleaningSetup
 Living Room:
   view: yes
   entities:
@@ -149,3 +149,9 @@ bedroomBatteries:
   name: Bedroom Batteries
   entities:
     - sensor.bedroom_sensor_battery
+cleaningSetup:
+  name: Cleaner Window Setup
+  entities:
+    - input_select.clean_day
+    - input_datetime.clean_start
+    - input_datetime.clean_end

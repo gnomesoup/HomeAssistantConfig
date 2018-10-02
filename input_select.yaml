@@ -1,0 +1,46 @@
+thermostat_mode:
+  name: Living Room Thermostat Mode
+  options:
+    - "heat"
+    - "cool"
+    - "auto"
+    - "emergency heat"
+    - "off"
+  icon: mdi:air-conditioner
+bedroom_thermostat_mode:
+  name: Bedroom Thermostat Mode
+  options:
+    - "heat"
+    - "cool"
+    - "auto"
+    - "emergency heat"
+    - "off"
+  icon: mdi:air-conditioner
+
+presence:
+  name: Presence
+  options:
+    - "Home"
+    - "Away"
+  initial: "Home"
+home_mode:
+  name: Home Mode
+  options:
+    - "Day"
+    - "Evening"
+    - "Night"
+    - "Cleaning"
+    - "Guest"
+    - "Manual"
+  initial: "Day"
+clean_day:
+  name: "Cleaning Day"
+  options:
+    - "Saturday"
+    - "Monday"
+    - "Tuesday"
+    - "Wednesday"
+    - "Thursday"
+    - "Friday"
+    - "Sunday"
+  initial: "Wednesday"

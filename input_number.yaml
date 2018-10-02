@@ -1,0 +1,25 @@
+heating_target:
+  name: Living Room Heating Target
+  initial: 68
+  min: 60
+  max: 80
+  step: 1
+cooling_target:
+  name: Living Room Cooling Target
+  initial: 72
+  min: 60
+  max: 80
+  step: 1
+
+bedroom_heating_target:
+  name: Bedroom Heating Target
+  initial: 68
+  min: 60
+  max: 80
+  step: 1
+bedroom_cooling_target:
+  name: Bedroom Cooling Target
+  initial: 72
+  min: 60
+  max: 80
+  step: 1

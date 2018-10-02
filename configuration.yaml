@@ -52,11 +52,12 @@ logbook:
 # Enables a map showing the location of tracked devices
 map:
 
-device_tracker:
-  - platform: icloud
-    username: !secret icloud_1
-    password: !secret icloud_1_password
-    account_name: !secret icloud_1_descriptive
+# Uses a lot of batteries. Need to find a better device tracker
+# device_tracker:
+#   - platform: icloud
+#     username: !secret icloud_1
+#     password: !secret icloud_1_password
+#     account_name: !secret icloud_1_descriptive
 
 # Track the sun
 sun:
@@ -79,50 +80,6 @@ light: !include light.yaml
 group: !include groups.yaml
 automation: !include_dir_merge_list automation/
 script: !include scripts.yaml
-
-input_select:
-  thermostat_mode:
-    name: Living Room Thermostat Mode
-    options:
-      - "heat"
-      - "cool"
-      - "auto"
-      - "emergency heat"
-      - "off"
-    icon: mdi:air-conditioner
-  bedroom_thermostat_mode:
-    name: Bedroom Thermostat Mode
-    options:
-      - "heat"
-      - "cool"
-      - "auto"
-      - "emergency heat"
-      - "off"
-    icon: mdi:air-conditioner
-
-input_number:
-  heating_target:
-    name: Living Room Heating Target
-    initial: 68
-    min: 60
-    max: 80
-    step: 1
-  cooling_target:
-    name: Living Room Cooling Target
-    initial: 72
-    min: 60
-    max: 80
-    step: 1
-
-  bedroom_heating_target:
-    name: Bedroom Heating Target
-    initial: 68
-    min: 60
-    max: 80
-    step: 1
-  bedroom_cooling_target:
-    name: Bedroom Cooling Target
-    initial: 72
-    min: 60
-    max: 80
-    step: 1
+input_select: !include input_select.yaml
+input_number: !include input_number.yaml
+input_datetime: !include input_datetime.yaml

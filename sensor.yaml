@@ -65,3 +65,20 @@
 - platform: mqtt
   name: Bedroom Thermostat Current Mode
   state_topic: "smartthings/Bedroom Thermostat/thermostatOperatingState"
+
+## Virtual sensors
+- platform: template
+  name: Living Room Average Temperature
+  value_template: >-
+    {{(
+    float(states.sensor.living_room_sensor_temperature.state) +
+    float(states.sensor.water_leak_sensor_temperature.state) +
+    float(states.sensor.living_room_thermostat.state)) / 3}}
+  unit_of_measurement: "°"
+- platform: template
+  name: Bedroom Average Temperature
+  value_template: >-
+    {{(
+    float(states.sensor.bedroom_sensor_temperature.state) +
+    float(states.sensor.bedroom_thermostat.state)) / 2}}
+  unit_of_measurement: "°"

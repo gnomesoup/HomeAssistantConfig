@@ -6,5 +6,4 @@
       topic: "smartthings/Minimote Bedroom button 1/button pushed"
   action:
     - service: switch.toggle
-      entity_id:
-        - switch.metal_lamp
+      entity_id: switch.metal_lamp

@@ -143,3 +143,12 @@
         topic: "smartthings/Bedroom Thermostat/coolingSetpoint"
         retain: true
         payload: '{{ states.input_number.bedroom_cooling_target.state | int }}'
+
+## Average out living room temperatures
+# Can this be done with a template sensor
+# - id: living_room_temperature_average
+#   alias: Living Room Temperature Average
+#   trigger:
+#     - platform: state
+#       entity_id: sensor.living_room_sensor_temperature, sensor.living_room_thermostat_temperature, sensor.water_leak_sensor_temperature
+#   action:

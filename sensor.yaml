@@ -68,17 +68,19 @@
 
 ## Virtual sensors
 - platform: template
-  name: Living Room Average Temperature
-  value_template: >-
-    {{(
-    float(states.sensor.living_room_sensor_temperature.state) +
-    float(states.sensor.water_leak_sensor_temperature.state) +
-    float(states.sensor.living_room_thermostat.state)) / 3}}
-  unit_of_measurement: "°"
-- platform: template
-  name: Bedroom Average Temperature
-  value_template: >-
-    {{(
-    float(states.sensor.bedroom_sensor_temperature.state) +
-    float(states.sensor.bedroom_thermostat.state)) / 2}}
-  unit_of_measurement: "°"
+  sensors:
+    bedroom_average_temperature:
+      friendly_name: Bedroom Average Temperature
+      value_template: >-
+        {{(
+        float(states.sensor.bedroom_sensor_temperature.state) +
+        float(states.sensor.bedroom_thermostat.state)) / 2}}
+      unit_of_measurement: "°"
+    living_room_average_temperature:
+      friendly_name: Living Room Average Temperature
+      value_template: >-
+        {{(
+        float(states.sensor.living_room_sensor_temperature.state) +
+        float(states.sensor.water_leak_sensor_temperature.state) +
+        float(states.sensor.living_room_thermostat.state)) / 3}}
+      unit_of_measurement: "°"

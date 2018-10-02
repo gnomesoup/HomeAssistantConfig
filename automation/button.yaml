@@ -2,8 +2,9 @@
 - id: minimote_bedroom_button1_pushed_reset
   alias: Bedroom Minimote Button 1 Pushed Reset
   trigger:
-    - platform: state
-      entity_id: binary_sensor.bedroom_minimote_button_1_pushed
+    - platform: mqtt
+      topic: "smartthings/Minimote Bedroom button 1/button"
+      payload: "pushed"
   action:
     - service: switch.toggle
       entity_id: switch.metal_lamp

@@ -8,7 +8,6 @@ default_view:
     - sun.sun
     - group.homeStatus
     - group.allRoomsMedia
-    - group.cleaningSetup
 Living Room:
   view: yes
   entities:
@@ -67,12 +66,14 @@ Security:
     - group.outdoorSecurity
     - group.livingRoomSecurity
     - group.bedroomSecurity
-Batteries:
+Setup:
   view: yes
   entities:
     - group.livingRoomBatteries
     - group.bedroomBatteries
     - group.outdoorBatteries
+    - group.cleaningSetup
+    - group.systemMonitor
 ## Groups
 # Lights view
 # Climate view
@@ -159,3 +160,13 @@ cleaningSetup:
     - input_select.clean_day
     - input_datetime.clean_start
     - input_datetime.clean_end
+
+# System Monitor
+systemMonitor:
+  name: Server Status
+  entities:
+    - sensor.disk_free_
+    - sensor.disk_use_percent_
+    - sensor.memory_free
+    - sensor.memory_use_percent
+    - sensor.since_last_boot

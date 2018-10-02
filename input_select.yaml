@@ -36,11 +36,11 @@ home_mode:
 clean_day:
   name: "Cleaning Day"
   options:
-    - "Saturday"
     - "Monday"
     - "Tuesday"
     - "Wednesday"
     - "Thursday"
     - "Friday"
+    - "Saturday"
     - "Sunday"
   initial: "Wednesday"

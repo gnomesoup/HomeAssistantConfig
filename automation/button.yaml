@@ -12,12 +12,12 @@
   action:
     - service: switch.toggle
       entity_id: switch.metal_lamp
-- id: minimote_bedroom_button1_pressed
+- id: minimote_bedroom_button1_held
   alias: Bedroom Minimote Button 1 Pressed
   trigger:
     - platform: mqtt
       topic: "smartthings/Minimote Bedroom button 1/button"
-      payload: "pressed"
+      payload: "held"
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
@@ -39,12 +39,12 @@
   action:
     - service: switch.toggle
       entity_id: switch.metal_lamp
-- id: minimote_bedroom_button2_pressed
+- id: minimote_bedroom_button2_held
   alias: Bedroom Minimote Button 2 Pressed
   trigger:
     - platform: mqtt
       topic: "smartthings/Minimote Bedroom button 2/button"
-      payload: "pressed"
+      payload: "held"
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
@@ -66,12 +66,12 @@
   action:
     - service: switch.toggle
       entity_id: switch.metal_lamp
-- id: minimote_bedroom_button3_pressed
+- id: minimote_bedroom_button3_held
   alias: Bedroom Minimote Button 3 Pressed
   trigger:
     - platform: mqtt
       topic: "smartthings/Minimote Bedroom button 3/button"
-      payload: "pressed"
+      payload: "held"
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
@@ -93,12 +93,12 @@
   action:
     - service: switch.toggle
       entity_id: switch.metal_lamp
-- id: minimote_bedroom_button4_pressed
+- id: minimote_bedroom_button4_held
   alias: Bedroom Minimote Button 4 Pressed
   trigger:
     - platform: mqtt
       topic: "smartthings/Minimote Bedroom button 4/button"
-      payload: "pressed"
+      payload: "held"
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
@@ -121,12 +121,12 @@
   action:
     - service: switch.toggle
       entity_id: switch.bedroom_canopy
-- id: minimote_camille_button1_pressed
+- id: minimote_camille_button1_held
   alias: Camille Minimote Button 1 Pressed
   trigger:
     - platform: mqtt
       topic: "smartthings/Minimote Camille button 1/button"
-      payload: "pressed"
+      payload: "held"
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
@@ -148,12 +148,12 @@
   action:
     - service: light.toggle
       entity_id: light.bedroom_closet
-- id: minimote_camille_button2_pressed
+- id: minimote_camille_button2_held
   alias: Camille Minimote Button 2 Pressed
   trigger:
     - platform: mqtt
       topic: "smartthings/Minimote Camille button 2/button"
-      payload: "pressed"
+      payload: "held"
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
@@ -175,12 +175,12 @@
   action:
     - service: light.toggle
       entity_id: light.bedroom_lamp
-- id: minimote_camille_button3_pressed
+- id: minimote_camille_button3_held
   alias: Camille Minimote Button 3 Pressed
   trigger:
     - platform: mqtt
       topic: "smartthings/Minimote Camille button 3/button"
-      payload: "pressed"
+      payload: "held"
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
@@ -202,12 +202,12 @@
   action:
     - service: light.toggle
       entity_id: light.camilles_desk_lamp
-- id: minimote_camille_button4_pressed
+- id: minimote_camille_button4_held
   alias: Camille Minimote Button 4 Pressed
   trigger:
     - platform: mqtt
       topic: "smartthings/Minimote Camille button 4/button"
-      payload: "pressed"
+      payload: "held"
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay

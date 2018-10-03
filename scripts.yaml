@@ -1,0 +1,10 @@
+# routine for camille's bedtime
+bedtime:
+  alias: Goodnight Camille
+  sequence:
+    - service: notify.notify
+      data:
+        message: "Bedtime for Camille"
+    - service: light.turn_off
+      data:
+        entity_id: group.Bedroom

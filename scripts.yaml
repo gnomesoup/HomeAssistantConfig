@@ -15,9 +15,9 @@ bedtime:
 getmellowed:
   alias: Get Mellowed
   sequence:
-    - service: notify.notify
-      data:
-        message: "Getting mellowed"
+    # - service: notify.notify
+    #   data:
+    #     message: "Getting mellowed"
     - service: light.turn_off
       data:
         entity_id: light.entry_light

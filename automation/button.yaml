@@ -7,7 +7,7 @@
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
-      state: false
+      state: "on"
   action:
     - service: switch.toggle
       entity_id: switch.metal_lamp
@@ -20,7 +20,7 @@
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
-      state: false
+      state: "on"
   action:
     - service: script.turn_on
       entity_id: script.bedtime
@@ -33,7 +33,7 @@
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
-      state: false
+      state: "on"
   action:
     - service: switch.toggle
       entity_id: switch.metal_lamp
@@ -46,7 +46,7 @@
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
-      state: false
+      state: "on"
   action:
     - service: script.turn_on
       entity_id: script.bedtime
@@ -60,7 +60,7 @@
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
-      state: false
+      state: "on"
   action:
     - service: switch.toggle
       entity_id: switch.bedroom_canopy
@@ -73,7 +73,7 @@
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
-      state: false
+      state: "on"
   action:
     - service: script.turn_on
       entity_id: script.bedtime
@@ -87,7 +87,7 @@
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
-      state: false
+      state: "on"
   action:
     - service: light.toggle
       entity_id: light.bedroom_closet
@@ -100,7 +100,7 @@
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
-      state: false
+      state: "on"
   action:
     - service: script.turn_on
       entity_id: script.bedtime
@@ -114,7 +114,7 @@
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
-      state: false
+      state: "on"
   action:
     - service: light.toggle
       entity_id: light.bedroom_lamp
@@ -127,7 +127,7 @@
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
-      state: false
+      state: "on"
   action:
     - service: script.turn_on
       entity_id: script.bedtime
@@ -141,7 +141,7 @@
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
-      state: false
+      state: "on"
   action:
     - service: light.toggle
       entity_id: light.camilles_desk_lamp
@@ -154,7 +154,7 @@
   condition:
     - condition: state
       entity_id: input_boolean.mqtt_delay
-      state: false
+      state: "on"
   action:
     - service: script.turn_on
       entity_id: script.bedtime

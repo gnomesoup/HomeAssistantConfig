@@ -43,7 +43,7 @@ goodbye:
 imback:
   alias: I'm Back
   sequence:
-    - services: homeassistant.turn_on
+    - service: homeassistant.turn_on
       data:
         brightness: 100
         entity_id:

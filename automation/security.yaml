@@ -1,0 +1,29 @@
+- id: arm_when_away
+  alias: Arm Home When Away
+  trigger:
+    - platform: state
+      entity_id: input_select.presence
+      from: "Home"
+      to: "Away"
+  action:
+    - service: alarm_control_panel.alarm_arm_away
+      data:
+        entity_id: alarm_control_panel.grand_ohio
+    - service: notify.notify
+      data:
+        message: "System is armed"
+- id: disarm_when_home
+  alias: Disarm Home When Home
+  trigger:
+    - platform: state
+      entity_id: input_select.presence
+      from: "Home"
+      to: "Away"
+  action:
+    - service: alarm_control_panel.alarm_disarm
+      data:
+        entity_id: alarm_control_panel.grand_ohio
+    - service: notify.notify
+      data:
+        message: "System is disarmed"
+    

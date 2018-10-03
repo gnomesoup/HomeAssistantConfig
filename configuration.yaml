@@ -79,6 +79,9 @@ arlo:
   username: !secret arloUsername
   password: !secret arloPassword
 
+# ffmpeg
+ffmpeg:
+
 switch: !include switch.yaml
 sensor: !include sensor.yaml
 light: !include light.yaml
@@ -98,6 +101,7 @@ binary_sensor:
 
 camera:
   - platform: arlo
+    ffmpeg_arguments: '-pred 1 -q:v 2'
 
 alarm_control_panel:
   - platform: arlo

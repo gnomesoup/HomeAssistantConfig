@@ -2,22 +2,19 @@
 bedtime:
   alias: Goodnight Camille
   sequence:
-    - service: notify.notify
-      data:
-        message: "Bedtime for Camille"
     - service: light.turn_off
       data:
         entity_id: group.Bedroom
     - service: switch.turn_off
       data:
         entity_id: switch.bedroom_canopy
+    - service: notify.notify
+      data:
+        message: "Bedtime for Camille"
 #routine for evenings
 getmellowed:
   alias: Get Mellowed
   sequence:
-    # - service: notify.notify
-    #   data:
-    #     message: "Getting mellowed"
     - service: light.turn_off
       data:
         entity_id: light.entry_light
@@ -32,3 +29,6 @@ getmellowed:
         entity_id:
           - light.grandmas_lamp
           - light.hallway_light
+    - service: notify.notify
+      data:
+        message: "Getting mellowed"

@@ -74,6 +74,11 @@ cloud:
 mqtt:
   broker: 10.0.0.120
 
+# Arlo
+arlo:
+  username: !secret arloUsername
+  password: !secret arloPassword
+
 switch: !include switch.yaml
 sensor: !include sensor.yaml
 light: !include light.yaml

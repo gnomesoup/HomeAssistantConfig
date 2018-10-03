@@ -11,3 +11,24 @@ bedtime:
     - service: switch.turn_off
       data:
         entity_id: switch.bedroom_canopy
+#routine for evenings
+getmellowed:
+  alias: Get Mellowed
+  sequence:
+    - service: notify.notify
+      data:
+        message: "Getting mellowed"
+    - service: light.turn_off
+      data:
+        entity_id: light.entry_light
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.pop_socket_light
+          - switch.metal_lamp
+    - service: light.turn_on 
+      data:
+        brightness: 50
+        entity_id:
+          - light.grandmas_lamp
+          - light.hallway_light

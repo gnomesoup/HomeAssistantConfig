@@ -98,3 +98,6 @@ binary_sensor:
 
 camera:
   - platform: arlo
+
+alarm_control_panel:
+  - platform: arlo

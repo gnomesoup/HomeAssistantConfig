@@ -34,6 +34,7 @@
   action:
     - service: script.turn_on
       entity_id: script.bedtime
+
 - id: minimote_camille_button1_pushed
   alias: Camille Minimote Button 1 Pushed
   trigger:
@@ -52,6 +53,7 @@
   action:
     - service: script.turn_on
       entity_id: script.bedtime
+
 - id: minimote_camille_button2_pushed
   alias: Camille Minimote Button 2 Pushed
   trigger:
@@ -59,8 +61,8 @@
       topic: "smartthings/Minimote Camille button 2/button"
       payload: "pushed"
   action:
-    - service: switch.toggle
-      entity_id: switch.bedroom_closet
+    - service: light.toggle
+      entity_id: light.bedroom_closet
 - id: minimote_camille_button2_pressed
   alias: Camille Minimote Button 2 Pressed
   trigger:
@@ -70,6 +72,7 @@
   action:
     - service: script.turn_on
       entity_id: script.bedtime
+
 - id: minimote_camille_button3_pushed
   alias: Camille Minimote Button 3 Pushed
   trigger:
@@ -78,7 +81,7 @@
       payload: "pushed"
   action:
     - service: switch.toggle
-      entity_id: switch.bedroom_lamp
+      entity_id: light.bedroom_lamp
 - id: minimote_camille_button3_pressed
   alias: Camille Minimote Button 3 Pressed
   trigger:
@@ -88,6 +91,7 @@
   action:
     - service: script.turn_on
       entity_id: script.bedtime
+
 - id: minimote_camille_button4_pushed
   alias: Camille Minimote Button 4 Pushed
   trigger:
@@ -95,8 +99,8 @@
       topic: "smartthings/Minimote Camille button 4/button"
       payload: "pushed"
   action:
-    - service: switch.toggle
-      entity_id: switch.camilles_desk_lamp
+    - service: light.toggle
+      entity_id: light.camilles_desk_lamp
 - id: minimote_camille_button4_pressed
   alias: Camille Minimote Button 4 Pressed
   trigger:

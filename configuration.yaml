@@ -95,3 +95,6 @@ binary_sensor:
     name: "Bedroom Minimote Button 1 Pushed"
     state_topic: "smartthings/Bedroom Minimote button 1/button pushed"
     payload_on: ""
+
+camera:
+  - platform: arlo

@@ -1,0 +1,11 @@
+- id: mqtt_startup_delay
+  alias: MQTT Automation Startup Delay
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+    - delay:
+        seconds: 30
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.mqtt_delay

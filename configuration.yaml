@@ -83,6 +83,7 @@ script: !include scripts.yaml
 input_select: !include input_select.yaml
 input_number: !include input_number.yaml
 input_datetime: !include input_datetime.yaml
+input_boolean: !include input_boolean.yaml
 
 binary_sensor:
   - platform: mqtt

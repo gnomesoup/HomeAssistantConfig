@@ -8,3 +8,6 @@ bedtime:
     - service: light.turn_off
       data:
         entity_id: group.Bedroom
+    - service: switch.turn_off
+      data:
+        entity_id: switch.bedroom_canopy

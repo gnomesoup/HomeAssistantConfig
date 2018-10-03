@@ -74,8 +74,12 @@ Setup:
     - group.outdoorBatteries
     - group.cleaningSetup
     - group.systemMonitor
+    - group.all_automations
+    - group.all_scripts
+
 ## Groups
 # Lights view
+
 # Climate view
 livingRoomSensorClimate:
   name: Living Room Sensor Climate
@@ -107,6 +111,7 @@ bedroomThermostat:
     - sensor.bedroom_thermostat_current_mode
     - input_number.bedroom_heating_target
     - input_number.bedroom_cooling_target
+
 # Media View
 allRoomsMedia:
   name: All Rooms Media
@@ -121,12 +126,14 @@ bedroomMedia:
   name: Bedroom Media
   entities:
     - media_player.bedroom_speaker
+
 # Security View
 livingRoomSecurity:
   name: Living Room Security
   entities:
     - sensor.living_room_sensor_motion
     - sensor.water_leak_sensor_water
+
 # outdoorSecurity:
 #   name: Patio
   # entities:
@@ -135,6 +142,7 @@ bedroomSecurity:
   name: Bedroom Security
   entities:
     - sensor.bedroom_sensor_motion
+
 # Battery View
 # outdoorBatteries:
 #   name: Patio

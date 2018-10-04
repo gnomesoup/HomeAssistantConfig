@@ -12,7 +12,8 @@
       - wed
       - thu
       - fri
-  action: script.makecoffee
+  action:
+    - service: script.makecoffee
 
 # time to wakeup
 - id: good_morning_automation
@@ -28,4 +29,5 @@
       - wed
       - thu
       - fri
-  action: script.goodmorning
+  action:
+    - service: script.goodmorning

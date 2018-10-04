@@ -33,7 +33,7 @@
     - service: input_number.set_value
       data_template:
         entity_id: input_number.heating_target
-        value: '{{ trigger.payload}}'
+        value: '{{ trigger.payload }}'
 
 - id: living_room_thermostat_set_heating_target
   alias: Set heating target
@@ -58,7 +58,7 @@
     - service: input_number.set_value
       data_template:
         entity_id: input_number.cooling_target
-        value: '{{ trigger.payload}}'
+        value: '{{ trigger.payload }}'
  
 - id: living_room_thermostat_set_cooling_target
   alias: Set cooling target
@@ -106,7 +106,7 @@
     - service: input_number.set_value
       data_template:
         entity_id: input_number.bedroom_heating_target
-        value: '{{ trigger.payload}}'
+        value: '{{ trigger.payload }}'
 
 - id: bedroom_thermostat_set_heating_target
   alias: Set heating target
@@ -130,7 +130,7 @@
     - service: input_number.set_value
       data_template:
         entity_id: input_number.bedroom_cooling_target
-        value: '{{ trigger.payload}}'
+        value: '{{ trigger.payload }}'
  
 - id: bedroom_thermostat_set_cooling_target
   alias: Set cooling target

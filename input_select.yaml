@@ -17,6 +17,13 @@ bedroom_thermostat_mode:
     - "off"
   icon: mdi:air-conditioner
 
+hvac_mode:
+  name: HVAC Mode
+  options:
+    - "heat"
+    - "cool"
+  icon: mdi:fan
+
 presence:
   name: Presence
   options:

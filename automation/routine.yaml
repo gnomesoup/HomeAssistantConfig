@@ -1,0 +1,33 @@
+# prep the morning
+- id: make_the_coffee_automation
+  alias: Run make the coffee at 6am
+  trigger:
+    - platform: time
+      at: "6:00:00" 
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    - service: script.makecoffee
+
+# time to wakeup
+- id: good_morning_automation
+  alias: Run goodmorning at 8am
+  trigger:
+    - platform: time
+      at: "8:00:00" 
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    - service: script.goodmorning

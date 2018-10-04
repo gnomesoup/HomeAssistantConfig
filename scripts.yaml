@@ -1,73 +1,121 @@
+#routine for early morning
+makecoffee:
+  alias: Make the Coffee
+  sequence:
+    - service: light.turn_on
+      data:
+        brightness: 75
+        entity_id:
+          - light.entry_light
+          - light.pop_socket_light
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.home_mode
+        option: "Day"
+
 # routine for wakeup
 goodmorning:
+  alias: Good Morning
   sequence:
     - service: light.turn_on
       data:
         brightness: 100
         entity_id:
           - group.all_lights
-    - service: switch.turn_on
-      data:
-        entity_id:
-          - switch.bedroom_canopy
-          - switch.pop_socket_light
-          - switch.metal_lamp
     - service: input_select.select_option
       data:
-        state: "Day"
+        entity_id: input_select.home_mode
+        option: "Day"
     - service: notify.notify
       data:
-        message: "Good Morning"
+        message: "Good Morning routine ran"
+
+#routine for leaving
+goodbye:
+  alias: Goodbye
+  sequence:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - group.all_lights
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.home_mode
+        option: "Away"
+    - service: media_player.media_stop
+      data:
+        entity_id: group.media
+    - service: notify.notify
+      data:
+        message: "Goodbye"
+
+#routine for arriving
+imback:
+  alias: I'm Back
+  sequence:
+    - service: light.turn_on
+      data:
+        brightness: 100
+        entity_id:
+          - group.living_room
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.home_mode
+        option: "Home"
+    - service: notify.notify
+      data:
+        message: "Welcome Home"
+
 # routine for camille's bedtime
 bedtime:
-  alias: Goodnight Camille
+  alias: Good Night Camille
   sequence:
     - service: light.turn_off
       data:
         entity_id: group.Bedroom
-    - service: switch.turn_off
-      data:
-        entity_id: switch.bedroom_canopy
     - service: input_select.select_option
       data:
-        state: "Evening"
+        entity_id: input_select.home_mode
+        option: "Evening"
     - service: notify.notify
       data:
         message: "Bedtime for Camille"
+
 #routine for evenings
 getmellowed:
   alias: Get Mellowed
   sequence:
     - service: light.turn_off
       data:
-        entity_id: light.entry_light
-    - service: switch.turn_off
-      data:
         entity_id:
-          - switch.pop_socket_light
-          - switch.metal_lamp
+          - light.entry_light
+          - light.pop_socket_light
+          - light.metal_lamp
     - service: light.turn_on 
       data:
-        brightness: 50
+        brightness: 65
         entity_id:
           - light.grandmas_lamp
           - light.hallway_light
     - service: notify.notify
       data:
-        message: "Getting mellowed"
-#routine for leaving
-goodbye:
+        message: "Getting mellowed routine ran"
+
+#routine for the nighttime
+goodnight:
+  alias: Goodnight
   sequence:
-    - service: homeassistant.turn_off
+    - service: light.turn_off
       data:
         entity_id:
           - group.all_lights
-          - switch.bedroom_canopy
-          - switch.pop_socket_light
-          - switch.metal_lamp
     - service: input_select.select_option
       data:
-        state: "Away"
+        entity_id: input_select.home_mode
+        option: "Night"
+    - service: media_player.media_stop
+      data:
+        entity_id: group.media
     - service: notify.notify
       data:
-        message: "Goodbye, Have a nice day"
+        message: "Sleep tight! Good Night routine ran"

@@ -1,5 +1,21 @@
+#routine for early morning
+makecoffee:
+  alias: Make the Coffee
+  sequence:
+    - service: light.turn_on
+      data:
+        brightness: 75
+        entity_id:
+          - light.entry_light
+          - light.pop_socket_light
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.home_mode
+        option: "Day"
+
 # routine for wakeup
 goodmorning:
+  alias: Good Morning
   sequence:
     - service: light.turn_on
       data:
@@ -8,7 +24,7 @@ goodmorning:
           - group.all_lights
     - service: input_select.select_option
       data:
-        entity_id: input_select.homestatus
+        entity_id: input_select.home_mode
         option: "Day"
     - service: notify.notify
       data:
@@ -24,7 +40,7 @@ goodbye:
           - group.all_lights
     - service: input_select.select_option
       data:
-        entity_id: input_select.homestatus
+        entity_id: input_select.home_mode
         option: "Away"
     - service: notify.notify
       data:
@@ -41,7 +57,7 @@ imback:
           - group.living_room
     - service: input_select.select_option
       data:
-        entity_id: input_select.homestatus
+        entity_id: input_select.home_mode
         option: "Home"
     - service: notify.notify
       data:
@@ -56,7 +72,7 @@ bedtime:
         entity_id: group.Bedroom
     - service: input_select.select_option
       data:
-        entity_id: input_select.homestatus
+        entity_id: input_select.home_mode
         option: "Evening"
     - service: notify.notify
       data:
@@ -92,7 +108,7 @@ goodnight:
           - group.all_lights
     - service: input_select.select_option
       data:
-        entity_id: input_select.homestatus
+        entity_id: input_select.home_mode
         option: "Night"
     - service: notify.notify
       data:

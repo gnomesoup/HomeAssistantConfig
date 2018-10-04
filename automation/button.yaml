@@ -118,7 +118,7 @@
       state: "off"
   action:
     - service: light.toggle
-      entity_id: light.metal_lamp
+      entity_id: light.bedroom_canopy
 - id: minimote_bedroom_button1_held
   alias: Bedroom Minimote Button 1 Pressed
   trigger:
@@ -131,7 +131,7 @@
       state: "off"
   action:
     - service:
-        script.getmellowed
+        script.bedtime
 
 - id: minimote_bedroom_button2_pushed
   alias: Bedroom Minimote Button 2 Pushed
@@ -145,7 +145,7 @@
       state: "off"
   action:
     - service: light.toggle
-      entity_id: light.metal_lamp
+      entity_id: light.bedroom_closet
 - id: minimote_bedroom_button2_held
   alias: Bedroom Minimote Button 2 Pressed
   trigger:
@@ -158,7 +158,7 @@
       state: "off"
   action:
     - service:
-        script.getmellowed
+        script.goodmorning
 
 - id: minimote_bedroom_button3_pushed
   alias: Bedroom Minimote Button 3 Pushed
@@ -172,20 +172,20 @@
       state: "off"
   action:
     - service: light.toggle
-      entity_id: light.metal_lamp
-- id: minimote_bedroom_button3_held
-  alias: Bedroom Minimote Button 3 Pressed
-  trigger:
-    - platform: mqtt
-      topic: "smartthings/Minimote Bedroom button 3/button"
-      payload: "held"
-  condition:
-    - condition: state
-      entity_id: input_boolean.mqtt_delay
-      state: "off"
-  action:
-    - service:
-        script.getmellowed
+      entity_id: light.bedroom_lamp
+# - id: minimote_bedroom_button3_held
+#   alias: Bedroom Minimote Button 3 Pressed
+#   trigger:
+#     - platform: mqtt
+#       topic: "smartthings/Minimote Bedroom button 3/button"
+#       payload: "held"
+#   condition:
+#     - condition: state
+#       entity_id: input_boolean.mqtt_delay
+#       state: "off"
+#   action:
+#     - service:
+#         script.getmellowed
 
 - id: minimote_bedroom_button4_pushed
   alias: Bedroom Minimote Button 4 Pushed
@@ -199,20 +199,20 @@
       state: "off"
   action:
     - service: light.toggle
-      entity_id: light.metal_lamp
-- id: minimote_bedroom_button4_held
-  alias: Bedroom Minimote Button 4 Pressed
-  trigger:
-    - platform: mqtt
-      topic: "smartthings/Minimote Bedroom button 4/button"
-      payload: "held"
-  condition:
-    - condition: state
-      entity_id: input_boolean.mqtt_delay
-      state: "off"
-  action:
-    - service:
-        script.getmellowed
+      entity_id: light.camilles_desk_lamp
+# - id: minimote_bedroom_button4_held
+#   alias: Bedroom Minimote Button 4 Pressed
+#   trigger:
+#     - platform: mqtt
+#       topic: "smartthings/Minimote Bedroom button 4/button"
+#       payload: "held"
+#   condition:
+#     - condition: state
+#       entity_id: input_boolean.mqtt_delay
+#       state: "off"
+#   action:
+#     - service:
+#         script.getmellowed
 
 ## Camille's Minimote
 - id: minimote_camille_button1_pushed

@@ -42,6 +42,9 @@ goodbye:
       data:
         entity_id: input_select.home_mode
         option: "Away"
+    - service: media_player.media_stop
+      data:
+        entity_id: group.media
     - service: notify.notify
       data:
         message: "Goodbye"
@@ -110,6 +113,9 @@ goodnight:
       data:
         entity_id: input_select.home_mode
         option: "Night"
+    - service: media_player.media_stop
+      data:
+        entity_id: group.media
     - service: notify.notify
       data:
         message: "Sleep tight! Good Night routine ran"

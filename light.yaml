@@ -1,4 +1,12 @@
 - platform: mqtt
+  name: "Pop Socket Light"
+  state_topic: "smartthings/Pop Socket Light/switch"
+  command_topic: "smartthings/Pop Socket Light/switch"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
+
+- platform: mqtt
   name: Grandma's Lamp
   state_topic: "smartthings/Grandma's Lamp/switch"
   command_topic: "smartthings/Grandma's Lamp/switch"
@@ -9,6 +17,7 @@
   brightness_scale: 100
   retain: true
   optimistic: true
+
 - platform: mqtt
   name: "Bedroom Closet"
   state_topic: "smartthings/Bedroom Closet/switch"
@@ -20,6 +29,7 @@
   brightness_scale: 100
   optimistic: true
   retain: true
+
 - platform: mqtt
   name: "Camille's Desk Lamp"
   state_topic: "smartthings/Camille's Desk Lamp/switch"
@@ -31,6 +41,7 @@
   payload_off: "off"
   optimistic: true
   retain: true
+
 - platform: mqtt
   name: "Entry Light"
   state_topic: "smartthings/Entry Light/switch"
@@ -41,6 +52,7 @@
   payload_on: "on"
   payload_off: "off"
   retain: true
+
 - platform: mqtt
   name: "Hallway Light"
   state_topic: "smartthings/Hallway Light/switch"
@@ -51,6 +63,7 @@
   payload_on: "on"
   payload_off: "off"
   retain: true
+
 - platform: mqtt
   name: "Bedroom Lamp"
   state_topic: "smartthings/Bedroom Lamp/switch"
@@ -58,6 +71,22 @@
   brightness_state_topic: "smartthings/Bedroom Lamp/level"
   brightness_command_topic: "smartthings/Bedroom Lamp/level"
   brightness_scale: 100
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
+
+- platform: mqtt
+  name: "Metal Lamp"
+  state_topic: "smartthings/Metal Lamp/switch"
+  command_topic: "smartthings/Metal Lamp/switch"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
+
+- platform: mqtt
+  name: "Bedroom Canopy"
+  state_topic: "smartthings/Bedroom Canopy/switch"
+  command_topic: "smartthings/Bedroom Canopy/switch"
   payload_on: "on"
   payload_off: "off"
   retain: true

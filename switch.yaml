@@ -1,32 +1,13 @@
 # Smartthing MQTT
-- platform: mqtt
-  name: "Metal Lamp"
-  state_topic: "smartthings/Metal Lamp/switch"
-  command_topic: "smartthings/Metal Lamp/switch"
-  payload_on: "on"
-  payload_off: "off"
-  retain: true
-- platform: mqtt
-  name: "Bedroom Canopy"
-  state_topic: "smartthings/Bedroom Canopy/switch"
-  command_topic: "smartthings/Bedroom Canopy/switch"
-  payload_on: "on"
-  payload_off: "off"
-  retain: true
-- platform: mqtt
-  name: "Pop Socket Light"
-  state_topic: "smartthings/Pop Socket Light/switch"
-  command_topic: "smartthings/Pop Socket Light/switch"
-  payload_on: "on"
-  payload_off: "off"
-  retain: true
 # Thermostat
+
 - platform: mqtt
   name: Living Room Thermostat Fan
   state_topic: "smartthings/Livingroom Thermostat/thermostatFanMode"   # auto | on
   command_topic: "smartthings/Livingroom Thermostat/thermostatFanMode"   # auto | on
   payload_on: "on"
   payload_off: "auto"
+
 - platform: mqtt
   name: Bedroom Thermostat Fan
   state_topic: "smartthings/Bedroom Thermostat/thermostatFanMode"   # auto | on

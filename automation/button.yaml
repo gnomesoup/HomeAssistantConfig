@@ -117,8 +117,8 @@
       entity_id: input_boolean.mqtt_delay
       state: "off"
   action:
-    - service: switch.toggle
-      entity_id: switch.metal_lamp
+    - service: light.toggle
+      entity_id: light.metal_lamp
 - id: minimote_bedroom_button1_held
   alias: Bedroom Minimote Button 1 Pressed
   trigger:
@@ -144,8 +144,8 @@
       entity_id: input_boolean.mqtt_delay
       state: "off"
   action:
-    - service: switch.toggle
-      entity_id: switch.metal_lamp
+    - service: light.toggle
+      entity_id: light.metal_lamp
 - id: minimote_bedroom_button2_held
   alias: Bedroom Minimote Button 2 Pressed
   trigger:
@@ -171,8 +171,8 @@
       entity_id: input_boolean.mqtt_delay
       state: "off"
   action:
-    - service: switch.toggle
-      entity_id: switch.metal_lamp
+    - service: light.toggle
+      entity_id: light.metal_lamp
 - id: minimote_bedroom_button3_held
   alias: Bedroom Minimote Button 3 Pressed
   trigger:
@@ -198,8 +198,8 @@
       entity_id: input_boolean.mqtt_delay
       state: "off"
   action:
-    - service: switch.toggle
-      entity_id: switch.metal_lamp
+    - service: light.toggle
+      entity_id: light.metal_lamp
 - id: minimote_bedroom_button4_held
   alias: Bedroom Minimote Button 4 Pressed
   trigger:
@@ -226,8 +226,8 @@
       entity_id: input_boolean.mqtt_delay
       state: "off"
   action:
-    - service: switch.toggle
-      entity_id: switch.bedroom_canopy
+    - service: light.toggle
+      entity_id: light.bedroom_canopy
 - id: minimote_camille_button1_held
   alias: Camille Minimote Button 1 Pressed
   trigger:

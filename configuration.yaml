@@ -82,6 +82,9 @@ arlo:
 # ffmpeg
 ffmpeg:
 
+# zwave:
+usb_path: /dev/ttyACM0
+
 switch: !include switch.yaml
 sensor: !include sensor.yaml
 light: !include light.yaml

@@ -12,12 +12,12 @@ Living Room:
   view: yes
   entities:
     - light.grandmas_lamp
-    - light.entry_light
+    - light.closet_light
     - light.hallway_light
     - light.metal_lamp
     - light.pop_socket_light
-    - light.aeon_entry_light
-    - light.aeon_kitchen_counter
+    - light.aeotec_entry_light
+    - light.aeotec_kitchen_counter_light
     - light.aeotec_bathroom_light
     - group.livingRoomSensorClimate
     - group.livingRoomThermostat
@@ -40,7 +40,7 @@ Lights:
   view: yes
   entities:
     - light.aeotec_entry_light
-    - light.entry_light
+    - light.closet_light
     - light.aeotec_kitchen_counter_light
     - light.hallway_light
     - light.metal_lamp

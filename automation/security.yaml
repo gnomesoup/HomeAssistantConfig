@@ -33,7 +33,8 @@
     - platform: state
       entity_id:
         - sensor.water_leak_sensor_water
-      state: 'wet'
+      from: 'dry'
+      from: 'wet'
   action:
     - service: notify.notify
       data:

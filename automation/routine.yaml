@@ -39,7 +39,7 @@
     - platform: time
       at: "7:00:00"
   action:
-    - platform: light.turn_on
+    - service: light.turn_on
       entity_id: light.aquarium_light
 
 # turn on aquarium light
@@ -49,7 +49,7 @@
     - platform: time
       at: "12:00:00"
   action:
-    - platform: light.turn_on
+    - service: light.turn_on
       entity_id: light.aquarium_light
 
 # turn on aquarium light
@@ -59,7 +59,7 @@
     - platform: time
       at: "16:00:00"
   action:
-    - platform: light.turn_on
+    - service: light.turn_on
       entity_id: light.aquarium_light
 
 # turn on aquarium light
@@ -69,5 +69,5 @@
     - platform: time
       at: "21:00:00"
   action:
-    - platform: light.turn_on
+    - service: light.turn_on
       entity_id: light.aquarium_light

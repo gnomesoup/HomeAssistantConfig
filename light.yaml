@@ -43,7 +43,7 @@
   retain: true
 
 - platform: mqtt
-  name: "Entry Light"
+  name: "Closet Light"
   state_topic: "smartthings/Entry Light/switch"
   command_topic: "smartthings/Entry Light/switch"
   brightness_state_topic: "smartthings/Entry Light/level"

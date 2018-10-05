@@ -22,6 +22,14 @@ goodmorning:
         brightness: 100
         entity_id:
           - group.all_lights
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.living_room_thermostat_fan
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.bedroom_thermostat_fan
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
@@ -38,6 +46,11 @@ goodbye:
       data:
         entity_id:
           - group.all_lights
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.bedroom_thermostat_fan
+          - switch.living_room_thermostat_fan
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
@@ -58,6 +71,10 @@ imback:
         brightness: 100
         entity_id:
           - group.living_room
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.living_room_thermostat_fan
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
@@ -73,6 +90,10 @@ bedtime:
     - service: light.turn_off
       data:
         entity_id: group.Bedroom
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.bedroom_thermostat_fan
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
@@ -97,6 +118,11 @@ getmellowed:
         entity_id:
           - light.grandmas_lamp
           - light.hallway_light
+    - service: light.turn_on 
+      data:
+        brightness: 30
+        entity_id:
+          - light.aeotec_kitchen_counter_light
     - service: notify.notify
       data:
         message: "Getting mellowed routine ran"
@@ -109,6 +135,10 @@ goodnight:
       data:
         entity_id:
           - group.all_lights
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.living_room_thermostat_fan
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode

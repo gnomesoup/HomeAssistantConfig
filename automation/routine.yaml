@@ -33,11 +33,29 @@
     - service: script.goodmorning
 
 # turn on aquarium light
-- id: pea_puff_aquarium_light_timer_on
-  alias: Pea Puff Light Timer On
+- id: pea_puff_aquarium_light_timer_on_am
+  alias: Pea Puff Light Timer On AM
   trigger:
     - platform: time
       at: "7:00:00"
+  action:
+    - platform: light.turn_on
+      entity_id: light.aquarium_light
+
+# turn on aquarium light
+- id: pea_puff_aquarium_light_timer_off_am
+  alias: Pea Puff Light Timer Off PM
+  trigger:
+    - platform: time
+      at: "12:00:00"
+  action:
+    - platform: light.turn_on
+      entity_id: light.aquarium_light
+
+# turn on aquarium light
+- id: pea_puff_aquarium_light_timer_on_pm
+  alias: Pea Puff Light Timer On PM
+  trigger:
     - platform: time
       at: "16:00:00"
   action:
@@ -45,11 +63,9 @@
       entity_id: light.aquarium_light
 
 # turn on aquarium light
-- id: pea_puff_aquarium_light_timer_off
-  alias: Pea Puff Light Timer Off
+- id: pea_puff_aquarium_light_timer_off_pm
+  alias: Pea Puff Light Timer Off PM
   trigger:
-    - platform: time
-      at: "12:00:00"
     - platform: time
       at: "21:00:00"
   action:

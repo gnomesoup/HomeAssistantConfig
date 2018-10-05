@@ -90,3 +90,11 @@
   payload_on: "on"
   payload_off: "off"
   retain: true
+
+- platform: mqtt
+  name: "Aquarium Light"
+  state_topic: "smartthings/Aquarium Light/switch"
+  command_topic: "smartthings/Aquarium Light/switch"
+  payload_on: "on"
+  payload_off: "off"
+  retain: "true"

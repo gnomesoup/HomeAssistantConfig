@@ -31,8 +31,9 @@
   alias: Send Alert When Water Detected
   trigger:
     - platform: state
-      entity_id: sensor.water_leak_sensor_water
-      state: "wet"
+      entity_id:
+        - sensor.water_leak_sensor_water
+      state: 'wet'
   action:
     - service: notify.notify
       data:

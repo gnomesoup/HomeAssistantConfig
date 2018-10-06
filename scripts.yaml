@@ -20,19 +20,21 @@ goodmorning:
   sequence:
     - service: light.turn_on
       data:
-        brightness: 100
         entity_id:
           - group.all_lights
+        brightness: 100
+    - service: climate.set_fan_mode
+      data:
+        fan_list: "On Low"
+        entity_id:
+          - climate.gocontrol_thermostat_living_room_cooling_setpoint
+          - climate.gocontrol_thermostat_living_room_heating_setpoint
     - service: climate.set_fan_mode
       data:
         fan_list: "Auto Low"
         entity_id:
-          - climate.gocontrol_thermostat_living_room_cooling_setpoint
-          - climate.gocontrol_thermostat_living_room_heating_setpoint
-    - service: switch.turn_off
-      data:
-        entity_id:
-          - switch.bedroom_thermostat_fan
+          - climate.gocontrol_thermostat_bedroom_cooling
+          - climate.gocontrol_thermostat_bedroom_heating
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
@@ -49,11 +51,14 @@ goodbye:
       data:
         entity_id:
           - group.all_lights
-    - service: switch.turn_off
+    - service: climate.set_fan_mode
       data:
+        fan_list: "Auto Low"
         entity_id:
-          - switch.bedroom_thermostat_fan
-          - switch.living_room_thermostat_fan
+          - climate.gocontrol_thermostat_living_room_cooling_setpoint
+          - climate.gocontrol_thermostat_living_room_heating_setpoint
+          - climate.gocontrol_thermostat_bedroom_cooling
+          - climate.gocontrol_thermostat_bedroom_heating
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
@@ -74,10 +79,12 @@ imback:
         brightness: 100
         entity_id:
           - group.living_room
-    - service: switch.turn_on
+    - service: climate.set_fan_mode
       data:
+        fan_list: "On Low"
         entity_id:
-          - switch.living_room_thermostat_fan
+          - climate.gocontrol_thermostat_living_room_cooling_setpoint
+          - climate.gocontrol_thermostat_living_room_heating_setpoint
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
@@ -93,10 +100,12 @@ bedtime:
     - service: light.turn_off
       data:
         entity_id: group.Bedroom
-    - service: switch.turn_on
+    - service: climate.set_fan_mode
       data:
+        fan_list: "On Low"
         entity_id:
-          - switch.bedroom_thermostat_fan
+          - climate.gocontrol_thermostat_bedroom_cooling
+          - climate.gocontrol_thermostat_bedroom_heating
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
@@ -145,6 +154,12 @@ goodnight:
         entity_id:
           - climate.gocontrol_thermostat_living_room_cooling_setpoint
           - climate.gocontrol_thermostat_living_room_heating_setpoint
+    - service: climate.set_fan_mode
+      data:
+        fan_list: "On Low"
+        entity_id:
+          - climate.gocontrol_thermostat_bedroom_cooling
+          - climate.gocontrol_thermostat_bedroom_heating
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode

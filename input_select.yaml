@@ -11,6 +11,7 @@ presence:
     - "Home"
     - "Away"
   initial: "Home"
+
 home_mode:
   name: Home Mode
   options:
@@ -21,6 +22,7 @@ home_mode:
     - "Guest"
     - "Manual"
   initial: "Day"
+
 clean_day:
   name: "Cleaning Day"
   options:

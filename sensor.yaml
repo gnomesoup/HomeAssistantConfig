@@ -50,14 +50,6 @@
   name: "Water Leak Sensor Battery"
   state_topic: "smartthings/Water Leak Sensor/battery"
   unit_of_measurement: "%"
-# Thermostat Sensors
-- platform: mqtt
-  name: Bedroom Thermostat Temperature
-  state_topic: "smartthings/Bedroom Thermostat/temperature"
-  unit_of_measurement: "°"
-- platform: mqtt
-  name: Bedroom Thermostat Current Mode
-  state_topic: "smartthings/Bedroom Thermostat/thermostatOperatingState"
 
 ## Virtual sensors
 - platform: template
@@ -65,7 +57,8 @@
     bedroom_average_temperature:
       friendly_name: Bedroom Average Temperature
       value_template: >-
-        {{((float(states.sensor.bedroom_sensor_temperature.state) + float(states.sensor.bedroom_thermostat_temperature.state)) / 2)|round(2)}}
+        {{((float(states.sensor.bedroom_sensor_temperature.state) +
+        float(states.sensor.gocontrol_thermostat_bedroom_temperature.state)) / 2)|round(2)}}
       unit_of_measurement: "°"
 
 - platform: template

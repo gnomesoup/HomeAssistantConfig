@@ -1,8 +1,0 @@
-# Smartthing MQTT
-# Thermostat
-- platform: mqtt
-  name: Bedroom Thermostat Fan
-  state_topic: "smartthings/Bedroom Thermostat/thermostatFanMode"   # auto | on
-  command_topic: "smartthings/Bedroom Thermostat/thermostatFanMode"   # auto | on
-  payload_on: "on"
-  payload_off: "auto"

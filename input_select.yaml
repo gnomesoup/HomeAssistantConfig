@@ -1,27 +1,8 @@
-thermostat_mode:
-  name: Living Room Thermostat Mode
-  options:
-    - "heat"
-    - "cool"
-    - "auto"
-    - "emergency heat"
-    - "off"
-  icon: mdi:air-conditioner
-bedroom_thermostat_mode:
-  name: Bedroom Thermostat Mode
-  options:
-    - "heat"
-    - "cool"
-    - "auto"
-    - "emergency heat"
-    - "off"
-  icon: mdi:air-conditioner
-
 hvac_mode:
   name: HVAC Mode
   options:
-    - "heat"
-    - "cool"
+    - "heating"
+    - "cooling"
   icon: mdi:fan
 
 presence:

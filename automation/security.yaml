@@ -54,7 +54,7 @@
       entity_id: input_select.presence
       state: "away"
   action:
-    - platform: notify.notify
+    - service: notify.notify
       data:
         message: >-
           Alert! {{ trigger.to_state.attributes.friendly }} detected motion

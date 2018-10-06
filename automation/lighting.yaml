@@ -12,7 +12,7 @@
       entity_id: input_select.home_mode
       state: "Day"
   action:
-    - platform: light.turn_on
+    - service: light.turn_on
       data:
         brightness: 100
         entity_id: group.bedroom

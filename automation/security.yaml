@@ -34,7 +34,7 @@
       entity_id:
         - sensor.water_leak_sensor_water
       from: 'dry'
-      from: 'wet'
+      to: 'wet'
   action:
     - service: notify.notify
       data:

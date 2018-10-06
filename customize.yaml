@@ -2,3 +2,7 @@ group.all_automations:
   hidden: false
 group.all_scripts:
   hidden: false
+climate.gocontrol_thermostat_living_room_cooling_setpoint:
+  unit_of_measurement: "F"
+climate.gocontrol_thermostat_living_room_heating_setpoint:
+  unit_of_measurement: "F"

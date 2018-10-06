@@ -23,10 +23,12 @@ goodmorning:
         brightness: 100
         entity_id:
           - group.all_lights
-    - service: switch.turn_on
+    - service: climate.set_fan_mode
       data:
+        fan_list: "Auto Low"
         entity_id:
-          - switch.living_room_thermostat_fan
+          - climate.gocontrol_thermostat_living_room_cooling_setpoint
+          - climate.gocontrol_thermostat_living_room_heating_setpoint
     - service: switch.turn_off
       data:
         entity_id:
@@ -137,10 +139,12 @@ goodnight:
       data:
         entity_id:
           - group.all_lights
-    - service: switch.turn_off
+    - service: climate.set_fan_mode
       data:
+        fan_list: "Auto Low"
         entity_id:
-          - switch.living_room_thermostat_fan
+          - climate.gocontrol_thermostat_living_room_cooling_setpoint
+          - climate.gocontrol_thermostat_living_room_heating_setpoint
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode

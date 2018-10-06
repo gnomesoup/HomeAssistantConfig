@@ -113,6 +113,7 @@ getmellowed:
           - light.entry_light
           - light.pop_socket_light
           - light.metal_lamp
+          - light.closet_light
     - service: light.turn_on 
       data:
         brightness: 65

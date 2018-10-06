@@ -1,0 +1,18 @@
+- id: bedroom_lights_on_motion
+  alias: Turn on bedroom lights when motion sensed
+  trigger:
+    - platform: state
+      entity_id: sensor.bedroom_sensor_motion
+      to: "active"
+  condition:
+    - condition: state
+      entity_id: input_select.presence
+      state: "home"
+    - condition: state
+      entity_id: input_select.home_mode
+      state: "Day"
+  action:
+    - platform: light.turn_on
+      data:
+        brightness: 100
+        entity_id: group.bedroom

@@ -24,17 +24,17 @@ goodmorning:
           - group.all_lights
         brightness: 100
     - service: climate.set_fan_mode
+      entity_id:
+        - climate.gocontrol_thermostat_living_room_cooling_setpoint
+        - climate.gocontrol_thermostat_living_room_heating_setpoint
       data:
         fan_list: "On Low"
-        entity_id:
-          - climate.gocontrol_thermostat_living_room_cooling_setpoint
-          - climate.gocontrol_thermostat_living_room_heating_setpoint
     - service: climate.set_fan_mode
+      entity_id:
+        - climate.gocontrol_thermostat_bedroom_cooling
+        - climate.gocontrol_thermostat_bedroom_heating
       data:
         fan_list: "Auto Low"
-        entity_id:
-          - climate.gocontrol_thermostat_bedroom_cooling
-          - climate.gocontrol_thermostat_bedroom_heating
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
@@ -52,13 +52,13 @@ goodbye:
         entity_id:
           - group.all_lights
     - service: climate.set_fan_mode
+      entity_id:
+        - climate.gocontrol_thermostat_living_room_cooling_setpoint
+        - climate.gocontrol_thermostat_living_room_heating_setpoint
+        - climate.gocontrol_thermostat_bedroom_cooling
+        - climate.gocontrol_thermostat_bedroom_heating
       data:
         fan_list: "Auto Low"
-        entity_id:
-          - climate.gocontrol_thermostat_living_room_cooling_setpoint
-          - climate.gocontrol_thermostat_living_room_heating_setpoint
-          - climate.gocontrol_thermostat_bedroom_cooling
-          - climate.gocontrol_thermostat_bedroom_heating
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
@@ -80,11 +80,11 @@ imback:
         entity_id:
           - group.living_room
     - service: climate.set_fan_mode
+      entity_id:
+        - climate.gocontrol_thermostat_living_room_cooling_setpoint
+        - climate.gocontrol_thermostat_living_room_heating_setpoint
       data:
         fan_list: "On Low"
-        entity_id:
-          - climate.gocontrol_thermostat_living_room_cooling_setpoint
-          - climate.gocontrol_thermostat_living_room_heating_setpoint
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
@@ -101,11 +101,11 @@ bedtime:
       data:
         entity_id: group.Bedroom
     - service: climate.set_fan_mode
+      entity_id:
+        - climate.gocontrol_thermostat_bedroom_cooling
+        - climate.gocontrol_thermostat_bedroom_heating
       data:
         fan_list: "On Low"
-        entity_id:
-          - climate.gocontrol_thermostat_bedroom_cooling
-          - climate.gocontrol_thermostat_bedroom_heating
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
@@ -149,17 +149,17 @@ goodnight:
         entity_id:
           - group.all_lights
     - service: climate.set_fan_mode
+      entity_id:
+        - climate.gocontrol_thermostat_living_room_cooling_setpoint
+        - climate.gocontrol_thermostat_living_room_heating_setpoint
       data:
         fan_list: "Auto Low"
-        entity_id:
-          - climate.gocontrol_thermostat_living_room_cooling_setpoint
-          - climate.gocontrol_thermostat_living_room_heating_setpoint
     - service: climate.set_fan_mode
+      entity_id:
+        - climate.gocontrol_thermostat_bedroom_cooling
+        - climate.gocontrol_thermostat_bedroom_heating
       data:
         fan_list: "On Low"
-        entity_id:
-          - climate.gocontrol_thermostat_bedroom_cooling
-          - climate.gocontrol_thermostat_bedroom_heating
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode

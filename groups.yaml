@@ -20,7 +20,6 @@ Living Room:
     - light.aeotec_kitchen_counter_light
     - light.aeotec_bathroom_light
     - group.livingRoomSensorClimate
-    - group.livingRoomThermostat
     - climate.gocontrol_thermostat_living_room_cooling_setpoint
     - climate.gocontrol_thermostat_living_room_heating_setpoint
     - media_player.living_room_speaker
@@ -34,8 +33,9 @@ Bedroom:
     - light.camilles_desk_lamp
     - light.bedroom_closet
     - sensor.bedroom_average_temperature
+    - climate.gocontrol_thermostat_bedroom_cooling
+    - climate.gocontrol_thermostat_bedroom_heating
     - group.bedroomSensorClimate
-    - group.bedroomThermostat
     - media_player.bedroom_speaker
 
 Lights:
@@ -61,7 +61,8 @@ Climate:
     - climate.gocontrol_thermostat_living_room_heating_setpoint
     - group.livingRoomSensorClimate
     - sensor.living_room_average_temperature
-    - group.bedroomThermostat
+    - climate.gocontrol_thermostat_bedroom_cooling
+    - climate.gocontrol_thermostat_bedroom_heating
     - group.bedroomSensorClimate
     - sensor.bedroom_average_temperature
     - group.weather
@@ -108,15 +109,6 @@ bedroomSensorClimate:
     - sensor.bedroom_sensor_temperature
     - sensor.bedroom_sensor_humidity
     - sensor.bedroom_sensor_illuminance
-bedroomThermostat:
-  name: Bedroom Thermostat
-  entities:
-    - sensor.bedroom_thermostat_temperature
-    - input_select.bedroom_thermostat_mode
-    - switch.bedroom_thermostat_fan
-    - sensor.bedroom_thermostat_current_mode
-    - input_number.bedroom_heating_target
-    - input_number.bedroom_cooling_target
 
 # Media View
 allRoomsMedia:

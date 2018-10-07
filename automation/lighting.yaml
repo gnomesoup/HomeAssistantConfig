@@ -18,22 +18,20 @@
         entity_id: group.bedroom
 
 # turn on aquarium light
-- id: pea_puff_aquarium_light_timer_on_am
-  alias: Pea Puff Light Timer On AM
+- id: pea_puff_aquarium_light_timer_on
+  alias: Pea Puff Light Timer On
   trigger:
     - platform: time
       at: "7:00:00"
     - platform: time
       at: "16:00:00"
-    - platform: time
-      at: "23:37:00"
   action:
     - service: light.turn_on
       entity_id: light.aquarium_light
 
 # turn off aquarium light
-- id: pea_puff_aquarium_light_timer_off_am
-  alias: Pea Puff Light Timer Off PM
+- id: pea_puff_aquarium_light_timer_off
+  alias: Pea Puff Light Timer Off
   trigger:
     - platform: time
       at: "12:00:00"

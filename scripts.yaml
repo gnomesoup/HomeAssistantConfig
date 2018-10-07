@@ -170,3 +170,11 @@ goodnight:
     - service: notify.notify
       data:
         message: "Sleep tight! Good Night routine ran"
+
+fanModeTest:
+  alias: Test of the fan modes
+  sequence:
+    - service: climate.set_fan_mode
+      data:
+        entity_id: climate.gocontrol_thermostat_bedroom_cooling
+        fan_list: "Auto Low"

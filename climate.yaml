@@ -1,1 +1,14 @@
 - platform: zwave
+
+- platform: generic
+  name: Living Room Thermostat
+  heater: input_boolean.heater_switch
+  target_sensor: sensor.living_room_average_temperature
+  min_temp: 60
+  max_temp: 80
+  target_temp: 72
+  ac_mode: False
+  initial_operation_mode: "off"
+  unit_of_measurement: "°F"
+  
+

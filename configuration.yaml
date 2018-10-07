@@ -94,6 +94,7 @@ ffmpeg:
 zwave:
   usb_path: /dev/ttyACM0
 
+climate: !include climate.yaml
 switch: !include switch.yaml
 sensor: !include sensor.yaml
 light: !include light.yaml
@@ -101,15 +102,9 @@ group: !include groups.yaml
 automation: !include_dir_merge_list automation/
 script: !include scripts.yaml
 input_select: !include input_select.yaml
-input_number: !include input_number.yaml
+# input_number: !include input_number.yaml
 input_datetime: !include input_datetime.yaml
 input_boolean: !include input_boolean.yaml
-
-binary_sensor:
-  - platform: mqtt
-    name: "Bedroom Minimote Button 1 Pushed"
-    state_topic: "smartthings/Bedroom Minimote button 1/button pushed"
-    payload_on: ""
 
 camera:
   - platform: arlo

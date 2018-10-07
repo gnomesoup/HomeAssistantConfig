@@ -171,10 +171,11 @@ goodnight:
       data:
         message: "Sleep tight! Good Night routine ran"
 
-fanModeTest:
+fanmodetest:
   alias: Test of the fan modes
   sequence:
     - service: climate.set_fan_mode
       data:
-        entity_id: climate.gocontrol_thermostat_bedroom_cooling
+        entity_id:
+          - climate.gocontrol_thermostat_living_room_cooling_setpoint
         fan_list: "Auto Low"

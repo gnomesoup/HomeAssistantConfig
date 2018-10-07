@@ -61,7 +61,7 @@ goodbye:
         fan_list: "Auto Low"
     - service: input_select.select_option
       data:
-        entity_id: input_select.home_mode
+        entity_id: input_select.presence
         option: "Away"
     - service: media_player.media_stop
       data:
@@ -87,7 +87,7 @@ imback:
         fan_list: "On Low"
     - service: input_select.select_option
       data:
-        entity_id: input_select.home_mode
+        entity_id: input_select.presence
         option: "Home"
     - service: notify.notify
       data:

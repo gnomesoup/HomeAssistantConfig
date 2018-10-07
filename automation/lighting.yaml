@@ -16,3 +16,29 @@
       data:
         brightness: 100
         entity_id: group.bedroom
+
+# turn on aquarium light
+- id: pea_puff_aquarium_light_timer_on_am
+  alias: Pea Puff Light Timer On AM
+  trigger:
+    - platform: time
+      at: "7:00:00"
+    - platform: time
+      at: "16:00:00"
+    - platform: time
+      at: "21:28:00"
+  action:
+    - service: light.turn_on
+      entity_id: light.aquarium_light
+
+# turn off aquarium light
+- id: pea_puff_aquarium_light_timer_off_am
+  alias: Pea Puff Light Timer Off PM
+  trigger:
+    - platform: time
+      at: "12:00:00"
+    - platform: time
+      at: "21:00:00"
+  action:
+    - service: light.turn_off
+      entity_id: light.aquarium_light

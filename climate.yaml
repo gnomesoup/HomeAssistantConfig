@@ -7,7 +7,7 @@
   min_temp: 60
   max_temp: 80
   target_temp: 72
-  ac_mode: False
+  ac_mode: True
   initial_operation_mode: "off"
   unit_of_measurement: "°F"
   

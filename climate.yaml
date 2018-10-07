@@ -1,6 +1,6 @@
 - platform: zwave
 
-- platform: generic
+- platform: generic_thermostat
   name: Living Room Thermostat
   heater: input_boolean.heater_switch
   target_sensor: sensor.living_room_average_temperature

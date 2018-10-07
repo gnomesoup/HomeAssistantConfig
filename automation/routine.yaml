@@ -3,15 +3,49 @@
   alias: Run make the coffee at 6am
   trigger:
     - platform: time
-      at: "6:00:00" 
+      at: "6:30:00" 
   condition:
-    condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_select.presence
+        state: "Home"
+      - condition: state
+        entity_id: input_select.home_mode
+        state: "Night"
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+  action:
+    - service: script.makecoffee
+
+# prep the morning
+- id: make_the_coffee_automation_weekend
+  alias: Run make the coffee when motion
+  trigger:
+    - platform: state
+      entity_id: sensor.bedroom_sensor_motion
+      from: "inactive"
+      to: "active"
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_select.presence
+        state: "Home"
+      - condition: state
+        entity_id: input_select.home_mode
+        state: "Night"
+      - condition: time
+        after: "6:30:00" 
+      - condition: time
+        weekday:
+          - sat
+          - sun
   action:
     - service: script.makecoffee
 
@@ -22,13 +56,21 @@
     - platform: time
       at: "8:00:00" 
   condition:
-    condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_select.presence
+        state: "Home"
+      - condition: state
+        entity_id: input_select.home_mode
+        state: "Night"
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
   action:
     - service: script.goodmorning
 

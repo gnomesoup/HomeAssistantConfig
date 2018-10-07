@@ -3,14 +3,17 @@
   trigger:
     - platform: state
       entity_id: sensor.bedroom_sensor_motion
+      from: "inactive"
       to: "active"
   condition:
-    - condition: state
-      entity_id: input_select.presence
-      state: "home"
-    - condition: state
-      entity_id: input_select.home_mode
-      state: "Day"
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_select.presence
+        state: "home"
+      - condition: state
+        entity_id: input_select.home_mode
+        state: "Day"
   action:
     - service: light.turn_on
       data:

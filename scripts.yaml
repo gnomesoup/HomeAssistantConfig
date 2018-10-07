@@ -4,7 +4,7 @@ makecoffee:
   sequence:
     - service: light.turn_on
       data:
-        brightness: 75
+        brightness: 100
         entity_id:
           - light.aeotec_entry_light
           - light.pop_socket_light
@@ -22,7 +22,7 @@ goodmorning:
       data:
         entity_id:
           - group.all_lights
-        brightness: 100
+        brightness: 255
     - service: climate.set_fan_mode
       entity_id:
         - climate.gocontrol_thermostat_living_room_cooling_setpoint

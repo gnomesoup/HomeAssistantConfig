@@ -10,7 +10,7 @@
     conditions:
       - condition: state
         entity_id: input_select.presence
-        state: "home"
+        state: "Home"
       - condition: state
         entity_id: input_select.home_mode
         state: "Day"

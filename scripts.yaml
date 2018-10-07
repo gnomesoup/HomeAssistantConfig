@@ -28,13 +28,13 @@ goodmorning:
         - climate.gocontrol_thermostat_living_room_cooling_setpoint
         - climate.gocontrol_thermostat_living_room_heating_setpoint
       data:
-        fan_list: "On Low"
+        fan_mode: "On Low"
     - service: climate.set_fan_mode
       entity_id:
         - climate.gocontrol_thermostat_bedroom_cooling
         - climate.gocontrol_thermostat_bedroom_heating
       data:
-        fan_list: "Auto Low"
+        fan_mode: "Auto Low"
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
@@ -58,7 +58,7 @@ goodbye:
         - climate.gocontrol_thermostat_bedroom_cooling
         - climate.gocontrol_thermostat_bedroom_heating
       data:
-        fan_list: "Auto Low"
+        fan_mode: "Auto Low"
     - service: input_select.select_option
       data:
         entity_id: input_select.presence
@@ -84,7 +84,7 @@ imback:
         - climate.gocontrol_thermostat_living_room_cooling_setpoint
         - climate.gocontrol_thermostat_living_room_heating_setpoint
       data:
-        fan_list: "On Low"
+        fan_mode: "On Low"
     - service: input_select.select_option
       data:
         entity_id: input_select.presence
@@ -105,7 +105,7 @@ bedtime:
         - climate.gocontrol_thermostat_bedroom_cooling
         - climate.gocontrol_thermostat_bedroom_heating
       data:
-        fan_list: "On Low"
+        fan_mode: "On Low"
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
@@ -153,13 +153,13 @@ goodnight:
         - climate.gocontrol_thermostat_living_room_cooling_setpoint
         - climate.gocontrol_thermostat_living_room_heating_setpoint
       data:
-        fan_list: "Auto Low"
+        fan_mode: "Auto Low"
     - service: climate.set_fan_mode
       entity_id:
         - climate.gocontrol_thermostat_bedroom_cooling
         - climate.gocontrol_thermostat_bedroom_heating
       data:
-        fan_list: "On Low"
+        fan_mode: "On Low"
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
@@ -178,4 +178,4 @@ fanmodetest:
       data:
         entity_id:
           - climate.gocontrol_thermostat_living_room_cooling_setpoint
-        fan_list: "Auto Low"
+        fan_mode: "Auto Low"

@@ -4,7 +4,7 @@ makecoffee:
   sequence:
     - service: light.turn_on
       data:
-        brightness: 100
+        brightness: 255
         entity_id:
           - light.aeotec_entry_light
           - light.pop_socket_light
@@ -76,7 +76,7 @@ imback:
   sequence:
     - service: light.turn_on
       data:
-        brightness: 100
+        brightness: 255
         entity_id:
           - group.living_room
     - service: climate.set_fan_mode

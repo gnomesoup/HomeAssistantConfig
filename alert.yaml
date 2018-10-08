@@ -1,0 +1,11 @@
+intruder_alert:
+  name: Intruder Alert
+  entity_id: input_boolean.intruder_alert
+  state: 'on'
+  repeat:
+    - 0.5
+    - 60
+  can_acknowledge: True
+  skip_first: True
+  notifiers:
+    - notify

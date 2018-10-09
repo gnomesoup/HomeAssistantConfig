@@ -8,7 +8,7 @@
 - platform: mqtt
   name: "Bedroom Sensor Temperature"
   state_topic: "smartthings/Bedroom Sensor/temperature"
-  unit_of_measurement: "°"
+  unit_of_measurement: "°F"
 - platform: mqtt
   name: "Bedroom Sensor Humidity"
   state_topic: "smartthings/Bedroom Sensor/humidity"
@@ -26,7 +26,7 @@
 - platform: mqtt
   name: "Living Room Sensor Temperature"
   state_topic: "smartthings/Living Room Sensor/temperature"
-  unit_of_measurement: "°"
+  unit_of_measurement: "°F"
 - platform: mqtt
   name: "Living Room Sensor Humidity"
   state_topic: "smartthings/Living Room Sensor/humidity"
@@ -42,7 +42,7 @@
 - platform: mqtt
   name: "Water Leak Sensor Temperature"
   state_topic: "smartthings/Water Leak Sensor/temperature"
-  unit_of_measurement: "°"
+  unit_of_measurement: "°F"
 - platform: mqtt
   name: "Water Leak Sensor Water"
   state_topic: "smartthings/Water Leak Sensor/water"
@@ -58,8 +58,8 @@
       friendly_name: Bedroom Average Temperature
       value_template: >-
         {{((float(states.sensor.bedroom_sensor_temperature.state) +
-        float(states.sensor.gocontrol_thermostat_bedroom_temperature.state)) / 2)|round(2)}}
-      unit_of_measurement: "°"
+        float(states.sensor.gocontrol_thermostat_bedroom_temperature.state)) / 2)| round(1)}}
+      unit_of_measurement: "°F"
 
 - platform: template
   sensors:
@@ -68,8 +68,30 @@
       value_template: >-
         {{((float(states.sensor.living_room_sensor_temperature.state) +
         float(states.sensor.water_leak_sensor_temperature.state) +
-        (float(states.sensor.gocontrol_thermostat_living_room_temperature.state)) * 2) / 4) | round(2)}}
-      unit_of_measurement: "°"
+        (float(states.sensor.gocontrol_thermostat_living_room_temperature.state)) * 2) / 4) | round(1)}}
+      unit_of_measurement: "°F"
+
+- platform: template
+  sensors:
+    all_rooms_temperature:
+      friendly_name: Average Temperature
+      value_template: >-
+        {{(((float(states.sensor.living_room_sensor_temperature.state) * 2) +
+        float(states.sensor.gocontrol_thermostat_living_room_temperature.state) +
+        float(states.sensor.gocontrol_thermostat_bedroom_temperature.state) +
+        float(states.sensor.water_leak_sensor_temperature.state) +
+        (float(states.sensor.bedroom_sensor_temperature.state) * 2)) / 7) | round(1)}}
+      unit_of_measurement: "°F"
+
+- platform: template
+  sensors:
+    all_rooms_humidity:
+      friendly_name: Average Humidity
+      value_template: >-
+        {{(float(states.sensor.living_room_sensor_humidity.state) +
+        float(states.sensor.bedroom_sensor_humidity.state)) / 2
+        | round(1)}}
+      unit_of_measurement: "%"
 
 ## System Monitor
 - platform: systemmonitor
@@ -91,5 +113,5 @@
     - captured_today
     - last_capture
     - total_cameras
-    # - battery_level
-    # - signal_strength
+    - battery_level
+    - signal_strength

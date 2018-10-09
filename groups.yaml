@@ -17,6 +17,7 @@ default_view:
     - script.bedtime
     - group.homeStatus
     - media_player.denon
+    - weather.dark_sky
 Living Room:
   view: yes
   entities:
@@ -79,7 +80,7 @@ Climate:
     - sensor.bedroom_average_temperature
     - sensor.water_leak_sensor_temperature
     - switch.aeotec_humdifier_bedroom
-    - group.weather
+    - weather.dark_sky
 Media:
   view: yes
   entities:

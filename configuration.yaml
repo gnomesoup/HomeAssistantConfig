@@ -90,6 +90,10 @@ arlo:
 # ffmpeg
 ffmpeg:
 
+# ifttt
+ifttt:
+  key: j4Vpy0Ik4QC1aqxDGKxbV
+
 # zwave
 zwave:
   usb_path: /dev/ttyACM0

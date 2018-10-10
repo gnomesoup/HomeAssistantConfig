@@ -8,7 +8,7 @@
   action:
     - service: climate.set_temperature
       entity_id: climate.gocontrol_thermostat_living_room_cooling_setpoint
-      data:
+      data_template:
         temperature: >-
           {% if is_state('climate.living_room_thermostat', 'cool') %}
           {{ float(states.climate.gocontrol_thermostat_living_room_cooling_setpoint.attributes.current_temperature) + 2 }}

@@ -1,3 +1,48 @@
+# set temperatures on presence
+# TODO: Add heat to the equation
+- id: climate_set_temperatures_cooling
+  alais: Set cooling temperature based on presence
+  trigger:
+    - platform: homeassistant
+      event: start
+    - platform: state
+      entity_id: input_select.presence
+    - platform: state
+      entity_id: input_select.home_mode
+  condition:
+    - condition: state
+      entity_id: input_select.hvac_mode
+      state: "cooling"
+  action:
+    - service: climate.set_temperature
+      entity_id: climate.living_room_thermostat_cool
+      data_template:
+        temperature: >-
+          {% if is_state('input_select.presence', 'Home') %}
+            {% if is_state('input_select.home_mode', 'Night') %}
+              76
+            {% else %}
+              72
+            {% endif %}
+          {% else %}
+            80
+          {% endif %}
+    - service: climate.set_temperature
+      entity_id: climate._thermostat_cool
+      data_template:
+        temperature: >-
+          {% if is_state('input_select.presence', 'Home') %}
+            {% if is_state('input_select.home_mode', 'Evening') %}
+              71
+            {% elif is_state('input_select.home_mode', 'Night') %}
+              71
+            {% else %}
+              72
+            {% endif %}
+          {% else %}
+            80
+          {% endif %}
+
 # Livingroom cooling automation
 - id: climate_cool_from_remote_living_room
   alias: Cool living room from remote sensor

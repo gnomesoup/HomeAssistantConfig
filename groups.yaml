@@ -70,6 +70,7 @@ Lights:
 Climate:
   view: yes
   entities:
+    - input_select.hvac_mode
     - climate.living_room_thermostat_cool
     - climate.living_room_thermostat_heat
     - climate.gocontrol_thermostat_living_room_cooling_setpoint

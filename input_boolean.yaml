@@ -1,6 +1,6 @@
 mqtt_delay:
   name: Delay MQTT Automation on Startup
-  # initial: on
+  initial: on
 
 switch_heat_living_room:
   name: Living Room Heater Switch

@@ -6,7 +6,7 @@
       entity_id: sensor.living_room_average_temperature
   # condition: 
   action:
-    - platform: climate.set_temperature
+    - service: climate.set_temperature
       entity_id: climate.gocontrol_thermostat_living_room_cooling_setpoint
       data:
         temperature: >-

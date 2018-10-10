@@ -4,6 +4,8 @@
   trigger:
     - platform: state
       entity_id: sensor.living_room_average_temperature
+    - platform: state
+      entity_id: climate.living_room_thermostat
   # condition: 
   action:
     - service: climate.set_temperature
@@ -11,7 +13,7 @@
       data_template:
         temperature: >-
           {% if is_state('climate.living_room_thermostat', 'cool') %}
-          {{ float(states.climate.gocontrol_thermostat_living_room_cooling_setpoint.attributes.current_temperature) + 2 }}
-          {% else %}
           {{ float(states.climate.gocontrol_thermostat_living_room_cooling_setpoint.attributes.current_temperature) - 2 }}
+          {% else %}
+          {{ float(states.climate.gocontrol_thermostat_living_room_cooling_setpoint.attributes.current_temperature) + 2 }}
           {% endif %}

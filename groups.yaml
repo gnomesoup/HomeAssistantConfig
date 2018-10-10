@@ -44,8 +44,8 @@ Bedroom:
     - light.camilles_desk_lamp
     - light.bedroom_closet
     - sensor.bedroom_average_temperature
-    - climate.gocontrol_thermostat_bedroom_cooling
-    - climate.gocontrol_thermostat_bedroom_heating
+    # - climate.gocontrol_thermostat_bedroom_cooling
+    # - climate.gocontrol_thermostat_bedroom_heating
     - group.bedroomSensorClimate
     - media_player.bedroom_speaker
     - climate.bedroom_thermostat_cool

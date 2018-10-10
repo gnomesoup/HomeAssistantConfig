@@ -28,7 +28,7 @@
             80
           {% endif %}
     - service: climate.set_temperature
-      entity_id: climate._thermostat_cool
+      entity_id: climate.bedroom_thermostat_cool
       data_template:
         temperature: >-
           {% if is_state('input_select.presence', 'Home') %}

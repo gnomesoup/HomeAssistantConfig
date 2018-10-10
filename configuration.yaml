@@ -108,7 +108,7 @@ group: !include groups.yaml
 automation: !include_dir_merge_list automation/
 script: !include scripts.yaml
 input_select: !include input_select.yaml
-# input_number: !include input_number.yaml
+input_number: !include input_number.yaml
 input_datetime: !include input_datetime.yaml
 input_boolean: !include input_boolean.yaml
 alert: !include alert.yaml

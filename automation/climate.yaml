@@ -1,7 +1,7 @@
 # set temperatures on presence
 # TODO: Add heat to the equation
 - id: climate_set_temperatures_cooling
-  alais: Set cooling temperature based on presence
+  alias: Set cooling temperature based on presence
   trigger:
     - platform: homeassistant
       event: start

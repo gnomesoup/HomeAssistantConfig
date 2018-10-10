@@ -81,6 +81,10 @@ Climate:
     - sensor.water_leak_sensor_temperature
     - switch.aeotec_humdifier_bedroom
     - weather.dark_sky
+    - group.livingroomCoolDefaults
+    - group.bedroomCoolDefaults
+    - group.livingroomHeatDefaults
+    - group.bedroomHeatDefaults
 Media:
   view: yes
   entities:
@@ -124,6 +128,31 @@ bedroomSensorClimate:
     - sensor.bedroom_sensor_temperature
     - sensor.bedroom_sensor_humidity
     - sensor.bedroom_sensor_illuminance
+# Climate default settings
+livingroomCoolDefaults:
+  name: Living room cooling defaults
+  entities:
+    - input_select.cool_home_living_room_awake
+    - input_select.cool_away_living_room_asleep
+    - input_select.cool_away_living_room_away
+livingroomHeatDefaults:
+  name: Living room heating defaults
+  entities:
+    - input_select.heat_home_living_room_awake
+    - input_select.heat_away_living_room_asleep
+    - input_select.heat_away_living_room_away
+bedroomCoolDefaults:
+  name: Bedroom cooling defaults
+  entities:
+    - input_select.cool_home_bedroom_awake
+    - input_select.cool_away_bedroom_asleep
+    - input_select.cool_away_bedroom_away
+bedroomHeatDefaults:
+  name: Bedroom heating defaults
+  entities:
+- input_select.heat_home_bedroom_awake
+- input_select.heat_away_bedroom_asleep
+- input_select.heat_away_bedroom_away
 
 # Media View
 allRoomsMedia:

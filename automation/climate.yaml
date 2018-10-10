@@ -1,0 +1,140 @@
+# set temperatures on presence
+# TODO: Add heat to the equation
+- id: climate_set_temperatures_cooling
+  alias: Set cooling temperature based on presence
+  trigger:
+    # - platform: homeassistant
+    #   event: start
+    - platform: state
+      entity_id: input_select.presence
+    - platform: state
+      entity_id: input_select.home_mode
+  condition:
+    - condition: state
+      entity_id: input_select.hvac_mode
+      state: "cooling"
+  action:
+    - service: climate.set_temperature
+      entity_id: climate.living_room_thermostat_cool
+      data_template:
+        temperature: >-
+          {% if is_state('input_select.presence', 'Home') %}
+            {% if is_state('input_select.home_mode', 'Night') %}
+              76
+            {% else %}
+              72
+            {% endif %}
+          {% else %}
+            80
+          {% endif %}
+    - service: climate.set_temperature
+      entity_id: climate.bedroom_thermostat_cool
+      data_template:
+        temperature: >-
+          {% if is_state('input_select.presence', 'Home') %}
+            {% if is_state('input_select.home_mode', 'Evening') %}
+              71
+            {% elif is_state('input_select.home_mode', 'Night') %}
+              71
+            {% else %}
+              72
+            {% endif %}
+          {% else %}
+            80
+          {% endif %}
+
+# Livingroom cooling automation
+- id: climate_cool_from_remote_living_room
+  alias: Cool living room from remote sensor
+  trigger:
+    - platform: state
+      entity_id: sensor.living_room_average_temperature
+    - platform: state
+      entity_id: climate.living_room_thermostat_cool
+  # condition: 
+  action:
+    - service: climate.set_temperature
+      entity_id: climate.gocontrol_thermostat_living_room_cooling_setpoint
+      data_template:
+        temperature: >-
+          {% if is_state('input_select.hvac_mode', 'cooling') %}
+            {% if is_state('climate.living_room_thermostat_cool', 'cool') %}
+              {{ float(states.climate.gocontrol_thermostat_living_room_cooling_setpoint.attributes.current_temperature) - 2 }}
+            {% else %}
+              {{ float(states.climate.gocontrol_thermostat_living_room_cooling_setpoint.attributes.current_temperature) + 2 }}
+            {% endif %}
+          {% else %}
+            80
+          {% endif %}
+
+# Livingroom heating automation
+- id: climate_heat_from_remote_living_room
+  alias: Heat living room from remote sensor
+  trigger:
+    - platform: state
+      entity_id: sensor.living_room_average_temperature
+    - platform: state
+      entity_id: climate.living_room_thermostat_heat
+  # condition: 
+  action:
+    - service: climate.set_temperature
+      entity_id: climate.gocontrol_thermostat_living_room_heating_setpoint
+      data_template:
+        temperature: >-
+          {% if is_state('input_select.hvac_mode', 'heating') %}
+            {% if is_state('climate.living_room_thermostat_heat', 'heat') %}
+              {{ float(states.climate.gocontrol_thermostat_living_room_heating_setpoint.attributes.current_temperature) + 2 }}
+            {% else %}
+              {{ float(states.climate.gocontrol_thermostat_living_room_heating_setpoint.attributes.current_temperature) - 2 }}
+            {% endif %}
+          {% else %}
+            65
+          {% endif %}
+
+# Bedroom cooling automation
+- id: climate_cool_from_remote_bedroom
+  alias: Cool living room from remote sensor
+  trigger:
+    - platform: state
+      entity_id: sensor.bedroom_average_temperature
+    - platform: state
+      entity_id: climate.bedroom_thermostat_cool
+  # condition: 
+  action:
+    - service: climate.set_temperature
+      entity_id: climate.gocontrol_thermostat_bedroom_cooling
+      data_template:
+        temperature: >-
+          {% if is_state('input_select.hvac_mode', 'cooling') %}
+            {% if is_state('climate.bedroom_thermostat_cool', 'cool') %}
+              {{ float(states.climate.gocontrol_thermostat_bedroom_cooling.attributes.current_temperature) - 2 }}
+            {% else %}
+              {{ float(states.climate.gocontrol_thermostat_bedroom_cooling.attributes.current_temperature) + 2 }}
+            {% endif %}
+          {% else %}
+            80
+          {% endif %}
+
+# Bedroom heating automation
+- id: climate_heat_from_remote_bedroom
+  alias: Heat living room from remote sensor
+  trigger:
+    - platform: state
+      entity_id: sensor.bedroom_average_temperature
+    - platform: state
+      entity_id: climate.bedroom_thermostat_heat
+  # condition: 
+  action:
+    - service: climate.set_temperature
+      entity_id: climate.gocontrol_thermostat_bedroom_heating
+      data_template:
+        temperature: >-
+          {% if is_state('input_select.hvac_mode', 'heating') %}
+            {% if is_state('climate.bedroom_thermostat_heat', 'heat') %}
+              {{ float(states.climate.gocontrol_thermostat_bedroom_heating.attributes.current_temperature) + 2 }}
+            {% else %}
+              {{ float(states.climate.gocontrol_thermostat_bedroom_heating.attributes.current_temperature) - 2 }}
+            {% endif %}
+          {% else %}
+            65
+          {% endif %}

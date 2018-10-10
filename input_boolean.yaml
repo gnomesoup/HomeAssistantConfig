@@ -6,7 +6,12 @@ heater_switch:
   name: Heater Switch
   initial: on
 
-input_boolean:
+intruder_alert:
   name: Intruder Alert
   initial: off
   icon: mdi:alert
+
+testing:
+  name: Testing boolean
+  initial: off
+  icon: mdi:test-tube

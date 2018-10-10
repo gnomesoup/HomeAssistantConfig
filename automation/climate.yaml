@@ -1,0 +1,17 @@
+# Livingroom cooling automation
+- id: climate_cool_from_remote_living_room
+  alias: Cool living room from remote sensor
+  trigger:
+    - platform: state
+      entity_id: sensor.living_room_average_temperature
+  # condition: 
+  action:
+    - platform: climate.set_temperature
+      entity_id: climate.gocontrol_thermostat_living_room_cooling_setpoint
+      data:
+        temperature: >-
+          {% if is_state('climate.living_room_thermostat', 'cool') %}
+          {{ states.climate.gocontrol_thermostat_living_room_cooling_setpoint.attributes.current_temperature + 2 }}
+          {% else %}
+          {{ states.climate.gocontrol_thermostat_living_room_cooling_setpoint.attributes.current_temperature - 2 }}
+          {% endif %}

@@ -34,9 +34,8 @@ Living Room:
     - group.livingRoomSensorClimate
     - media_player.living_room_speaker
     - media_player.denon
-    - climate.living_room_thermostat
-    - climate.gocontrol_thermostat_living_room_cooling_setpoint
-    - climate.gocontrol_thermostat_living_room_heating_setpoint
+    - climate.living_room_thermostat_cool
+    - climate.living_room_thermostat_heat
 Bedroom:
   view: yes
   entities:
@@ -49,6 +48,8 @@ Bedroom:
     - climate.gocontrol_thermostat_bedroom_heating
     - group.bedroomSensorClimate
     - media_player.bedroom_speaker
+    - climate.bedroom_thermostat_cool
+    - climate.bedroom_thermostat_heat
 
 Lights:
   view: yes
@@ -69,11 +70,14 @@ Lights:
 Climate:
   view: yes
   entities:
-    - climate.living_room_thermostat
+    - climate.living_room_thermostat_cool
+    - climate.living_room_thermostat_heat
     - climate.gocontrol_thermostat_living_room_cooling_setpoint
     - climate.gocontrol_thermostat_living_room_heating_setpoint
     - group.livingRoomSensorClimate
     - sensor.living_room_average_temperature
+    - climate.bedroom_thermostat_cool
+    - climate.bedroom_thermostat_heat
     - climate.gocontrol_thermostat_bedroom_cooling
     - climate.gocontrol_thermostat_bedroom_heating
     - group.bedroomSensorClimate

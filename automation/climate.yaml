@@ -3,8 +3,8 @@
 - id: climate_set_temperatures_cooling
   alias: Set cooling temperature based on presence
   trigger:
-    - platform: homeassistant
-      event: start
+    # - platform: homeassistant
+    #   event: start
     - platform: state
       entity_id: input_select.presence
     - platform: state

@@ -6,7 +6,7 @@
   target_sensor: sensor.living_room_average_temperature
   min_temp: 60
   max_temp: 90
-  target_temp: 72
+  # target_temp: 72
   ac_mode: True
   initial_operation_mode: "auto"
   unit_of_measurement: "°F"
@@ -17,7 +17,7 @@
   target_sensor: sensor.living_room_average_temperature
   min_temp: 60
   max_temp: 90
-  target_temp: 65
+  # target_temp: 65
   ac_mode: False
   initial_operation_mode: "auto"
   unit_of_measurement: "°F"
@@ -28,7 +28,7 @@
   target_sensor: sensor.bedroom_average_temperature
   min_temp: 60
   max_temp: 90
-  target_temp: 72
+  # target_temp: 72
   ac_mode: True
   initial_operation_mode: "auto"
   unit_of_measurement: "°F"
@@ -39,7 +39,7 @@
   target_sensor: sensor.bedroom_average_temperature
   min_temp: 60
   max_temp: 90
-  target_temp: 65
+  # target_temp: 65
   ac_mode: False
   initial_operation_mode: "auto"
   unit_of_measurement: "°F"

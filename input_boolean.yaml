@@ -1,27 +1,27 @@
 mqtt_delay:
   name: Delay MQTT Automation on Startup
-  initial: on
+  # initial: on
 
 switch_heat_living_room:
   name: Living Room Heater Switch
-  initial: off
+  # initial: off
 switch_cool_living_room:
   name: Living Room AC Switch
-  initial: off
+  # initial: off
 
 switch_heat_bedroom:
   name: Bedroom Heater Switch
-  initial: off
+  # initial: off
 switch_cool_bedroom:
   name: Bedroom AC Switch
-  initial: off
+  # initial: off
 
 intruder_alert:
   name: Intruder Alert
-  initial: off
+  # initial: off
   icon: mdi:alert
 
 testing:
   name: Testing boolean
-  initial: off
+  # initial: off
   icon: mdi:test-tube

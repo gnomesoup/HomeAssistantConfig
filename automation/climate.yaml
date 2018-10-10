@@ -11,7 +11,7 @@
       data:
         temperature: >-
           {% if is_state('climate.living_room_thermostat', 'cool') %}
-          {{ states.climate.gocontrol_thermostat_living_room_cooling_setpoint.attributes.current_temperature + 2 }}
+          {{ float(states.climate.gocontrol_thermostat_living_room_cooling_setpoint.attributes.current_temperature) + 2 }}
           {% else %}
-          {{ states.climate.gocontrol_thermostat_living_room_cooling_setpoint.attributes.current_temperature - 2 }}
+          {{ float(states.climate.gocontrol_thermostat_living_room_cooling_setpoint.attributes.current_temperature) - 2 }}
           {% endif %}

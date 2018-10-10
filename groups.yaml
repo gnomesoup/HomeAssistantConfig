@@ -76,6 +76,10 @@ Climate:
     - climate.gocontrol_thermostat_living_room_cooling_setpoint
     - climate.gocontrol_thermostat_living_room_heating_setpoint
     - group.livingRoomSensorClimate
+    - group.livingroomCoolDefaults
+    - group.bedroomCoolDefaults
+    - group.livingroomHeatDefaults
+    - group.bedroomHeatDefaults
     - sensor.living_room_average_temperature
     - climate.bedroom_thermostat_cool
     - climate.bedroom_thermostat_heat
@@ -86,10 +90,6 @@ Climate:
     - sensor.water_leak_sensor_temperature
     - switch.aeotec_humdifier_bedroom
     - weather.dark_sky
-    - group.livingroomCoolDefaults
-    - group.bedroomCoolDefaults
-    - group.livingroomHeatDefaults
-    - group.bedroomHeatDefaults
 Media:
   view: yes
   entities:
@@ -137,27 +137,27 @@ bedroomSensorClimate:
 livingroomCoolDefaults:
   name: Living room cooling defaults
   entities:
-    - input_select.cool_home_living_room_awake
-    - input_select.cool_away_living_room_asleep
-    - input_select.cool_away_living_room_away
+    - input_number.cool_home_living_room_awake
+    - input_number.cool_away_living_room_asleep
+    - input_number.cool_away_living_room_away
 livingroomHeatDefaults:
   name: Living room heating defaults
   entities:
-    - input_select.heat_home_living_room_awake
-    - input_select.heat_away_living_room_asleep
-    - input_select.heat_away_living_room_away
+    - input_number.heat_home_living_room_awake
+    - input_number.heat_away_living_room_asleep
+    - input_number.heat_away_living_room_away
 bedroomCoolDefaults:
   name: Bedroom cooling defaults
   entities:
-    - input_select.cool_home_bedroom_awake
-    - input_select.cool_away_bedroom_asleep
-    - input_select.cool_away_bedroom_away
+    - input_number.cool_home_bedroom_awake
+    - input_number.cool_away_bedroom_asleep
+    - input_number.cool_away_bedroom_away
 bedroomHeatDefaults:
   name: Bedroom heating defaults
   entities:
-    - input_select.heat_home_bedroom_awake
-    - input_select.heat_away_bedroom_asleep
-    - input_select.heat_away_bedroom_away
+    - input_number.heat_home_bedroom_awake
+    - input_number.heat_away_bedroom_asleep
+    - input_number.heat_away_bedroom_away
 
 # Media View
 allRoomsMedia:

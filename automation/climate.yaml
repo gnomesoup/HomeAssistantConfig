@@ -1,5 +1,5 @@
 # set temperatures on presence
-# TODO: Add heat to the equation
+# TODO Add heat to the equation
 - id: climate_set_temperatures_cooling
   alias: Set cooling temperature based on presence
   trigger:
@@ -42,6 +42,9 @@
           {% else %}
             80
           {% endif %}
+
+# TODO If virtual setting more extreme use that instead of +-2
+# TODO Trigger by gocontrol temp change as well
 
 # Livingroom cooling automation
 - id: climate_cool_from_remote_living_room

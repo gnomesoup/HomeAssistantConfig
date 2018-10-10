@@ -155,9 +155,9 @@ bedroomCoolDefaults:
 bedroomHeatDefaults:
   name: Bedroom heating defaults
   entities:
-- input_select.heat_home_bedroom_awake
-- input_select.heat_away_bedroom_asleep
-- input_select.heat_away_bedroom_away
+    - input_select.heat_home_bedroom_awake
+    - input_select.heat_away_bedroom_asleep
+    - input_select.heat_away_bedroom_away
 
 # Media View
 allRoomsMedia:

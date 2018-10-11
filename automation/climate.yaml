@@ -25,7 +25,7 @@
               72
             {% endif %}
           {% else %}
-            80
+            85
           {% endif %}
     - service: climate.set_temperature
       entity_id: climate.bedroom_thermostat_cool
@@ -40,7 +40,7 @@
               72
             {% endif %}
           {% else %}
-            80
+            85
           {% endif %}
 
 # TODO If virtual setting more extreme use that instead of +-2
@@ -54,7 +54,12 @@
       entity_id: sensor.living_room_average_temperature
     - platform: state
       entity_id: climate.living_room_thermostat_cool
-  # condition: 
+    - platform: state
+      entity_id: climate.gocontrol_thermostat_bedroom_heating_setpoint.attributes.current_temperature
+    - platform: state
+      entity_id: input_select.presence
+    - platform: state
+      entity_id: input_select.home_mode
   action:
     - service: climate.set_temperature
       entity_id: climate.gocontrol_thermostat_living_room_cooling_setpoint
@@ -67,7 +72,7 @@
               {{ float(states.climate.gocontrol_thermostat_living_room_cooling_setpoint.attributes.current_temperature) + 2 }}
             {% endif %}
           {% else %}
-            80
+            85
           {% endif %}
 
 # Livingroom heating automation
@@ -78,7 +83,12 @@
       entity_id: sensor.living_room_average_temperature
     - platform: state
       entity_id: climate.living_room_thermostat_heat
-  # condition: 
+    - platform: state
+      entity_id: climate.gocontrol_thermostat_living_room_heating_setpoint.attributes.current_temperature
+    - platform: state
+      entity_id: input_select.presence
+    - platform: state
+      entity_id: input_select.home_mode
   action:
     - service: climate.set_temperature
       entity_id: climate.gocontrol_thermostat_living_room_heating_setpoint
@@ -91,7 +101,7 @@
               {{ float(states.climate.gocontrol_thermostat_living_room_heating_setpoint.attributes.current_temperature) - 2 }}
             {% endif %}
           {% else %}
-            65
+            60
           {% endif %}
 
 # Bedroom cooling automation
@@ -102,7 +112,10 @@
       entity_id: sensor.bedroom_average_temperature
     - platform: state
       entity_id: climate.bedroom_thermostat_cool
-  # condition:
+    - platform: state
+      entity_id: input_select.presence
+    - platform: state
+      entity_id: input_select.home_mode
   action:
     - service: climate.set_temperature
       entity_id: climate.gocontrol_thermostat_bedroom_cooling
@@ -115,7 +128,7 @@
               {{ float(states.climate.gocontrol_thermostat_bedroom_cooling.attributes.current_temperature) + 2 }}
             {% endif %}
           {% else %}
-            80
+            85
           {% endif %}
 
 # Bedroom heating automation
@@ -126,7 +139,10 @@
       entity_id: sensor.bedroom_average_temperature
     - platform: state
       entity_id: climate.bedroom_thermostat_heat
-  # condition: 
+    - platform: state
+      entity_id: input_select.presence
+    - platform: state
+      entity_id: input_select.home_mode
   action:
     - service: climate.set_temperature
       entity_id: climate.gocontrol_thermostat_bedroom_heating

@@ -1,0 +1,75 @@
+cool_home_living_room_awake:
+  name: Living room cool when awake
+  step: 1
+  mode: box
+  min: 65
+  max: 90
+cool_away_living_room_asleep:
+  name: Living room cool when asleep
+  step: 1
+  mode: box
+  min: 65
+  max: 90
+cool_away_living_room_away:
+  name: Living room cool when away
+  step: 1
+  mode: box
+  min: 65
+  max: 90
+
+cool_home_bedroom_awake:
+  name: Bedroom cool when awake
+  step: 1
+  mode: box
+  min: 65
+  max: 90
+cool_away_bedroom_asleep:
+  name: Bedroom cool when asleep
+  step: 1
+  mode: box
+  min: 65
+  max: 90
+cool_away_bedroom_away:
+  name: Bedroom cool when away
+  step: 1
+  mode: box
+  min: 65
+  max: 90
+
+heat_home_living_room_awake:
+  name: Living room heat when awake
+  step: 1
+  mode: box
+  min: 65
+  max: 90
+heat_away_living_room_asleep:
+  name: Living room heat when asleep
+  step: 1
+  mode: box
+  min: 65
+  max: 90
+heat_away_living_room_away:
+  name: Living room heat when away
+  step: 1
+  mode: box
+  min: 65
+  max: 90
+
+heat_home_bedroom_awake:
+  name: Bedroom heat when awake
+  step: 1
+  mode: box
+  min: 65
+  max: 90
+heat_away_bedroom_asleep:
+  name: Bedroom heat when asleep
+  step: 1
+  mode: box
+  min: 65
+  max: 90
+heat_away_bedroom_away:
+  name: Bedroom heat when away
+  step: 1
+  mode: box
+  min: 65
+  max: 90

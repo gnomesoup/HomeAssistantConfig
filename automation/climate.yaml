@@ -99,7 +99,7 @@
       entity_id: sensor.bedroom_average_temperature
     - platform: state
       entity_id: climate.bedroom_thermostat_cool
-  # condition: 
+  # condition:
   action:
     - service: climate.set_temperature
       entity_id: climate.gocontrol_thermostat_bedroom_cooling

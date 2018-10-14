@@ -66,7 +66,7 @@
               {{ states.input_number.heat_home_living_room_awake.state }}
             {% endif %}
           {% else %}
-            {{ states.input_number.heat_away_bedroom_asleep.state }}
+            {{ states.input_number.heat_away_bedroom_away.state }}
           {% endif %}
     - service: climate.set_temperature
       entity_id: climate.bedroom_thermostat_heat
@@ -206,7 +206,7 @@
     - platform: state
       entity_id: sensor.all_rooms_humidity
     - platform: state
-      entity_id: sensor.aeotec_humdifier_bedroom_power
+      entity_id: sensor.aeotec_humidifier_bedroom_power
     - platform: state
       entity_id: input_select.home_mode
     - platform: state

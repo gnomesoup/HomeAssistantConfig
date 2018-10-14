@@ -233,6 +233,6 @@
             state: "Evening"
   action:
     - service: notify.notify
-      data:
+      data_template:
         message: >-
           Check humidifier. Humidity is at {{ states.sensor.all_rooms_humidity.state }}%

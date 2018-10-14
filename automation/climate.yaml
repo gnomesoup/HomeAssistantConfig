@@ -20,12 +20,12 @@
         temperature: >-
           {% if is_state('input_select.presence', 'Home') %}
             {% if is_state('input_select.home_mode', 'Night') %}
-              76
+              {{ states.input_number.cool_away_living_room_asleep.state }}
             {% else %}
-              72
+              {{ states.input_number.cool_home_living_room_awake.state }}
             {% endif %}
           {% else %}
-            85
+            {{ states.input_number.cool_away_living_room_away.state }}
           {% endif %}
     - service: climate.set_temperature
       entity_id: climate.bedroom_thermostat_cool
@@ -33,16 +33,56 @@
         temperature: >-
           {% if is_state('input_select.presence', 'Home') %}
             {% if is_state('input_select.home_mode', 'Evening') %}
-              71
+              {{ states.input_number.cool_home_bedroom_asleep.state }}
             {% elif is_state('input_select.home_mode', 'Night') %}
-              71
+              {{ states.input_number.cool_home_bedroom_asleep.state }}
             {% else %}
-              72
+              {{ states.input_number.cool_home_bedroom_awake.state }}
             {% endif %}
           {% else %}
-            85
+            {{ states.input_number.cool_away_bedroom_away.state }}
           {% endif %}
 
+- id: climate_set_temperatures_heating
+  alias: Set heating temperature based on presence
+  trigger:
+    - platform: state
+      entity_id: input_select.presence
+    - platform: state
+      entity_id: input_select.home_mode
+  condition:
+    - condition: state
+      entity_id: input_select.hvac_mode
+      state: "heating"
+  action:
+    - service: climate.set_temperature
+      entity_id: climate.living_room_thermostat_heat
+      data_template:
+        temperature: >-
+          {% if is_state('input_select.presence', 'Home') %}
+            {% if is_state('input_select.home_mode', 'Night') %}
+              {{ states.input_number.heat_away_living_room_asleep.state }}
+            {% else %}
+              {{ states.input_number.heat_home_living_room_awake.state }}
+            {% endif %}
+          {% else %}
+            {{ states.input_number.heat_away_bedroom_asleep.state }}
+          {% endif %}
+    - service: climate.set_temperature
+      entity_id: climate.bedroom_thermostat_heat
+      data_template:
+        temperature: >-
+          {% if is_state('input_select.presence', 'Home') %}
+            {% if is_state('input_select.home_mode', 'Evening') %}
+              {{ states.input_number.heat_away_bedroom_asleep.state }}
+            {% elif is_state('input_select.home_mode', 'Night') %}
+              {{ states.input_number.heat_away_bedroom_asleep.state }}
+            {% else %}
+              {{ states.input_number.heat_home_bedroom_awake.state }}
+            {% endif %}
+          {% else %}
+            {{ states.input_number.heat_away_bedroom_away.state }}
+          {% endif %}
 # TODO If virtual setting more extreme use that instead of +-2
 # TODO Trigger by gocontrol temp change as well
 

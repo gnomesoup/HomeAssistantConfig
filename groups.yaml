@@ -70,26 +70,31 @@ Lights:
 Climate:
   view: yes
   entities:
+    - sensor.all_rooms_temperature
+    - sensor.all_rooms_humidity
+    - sensor.living_room_average_temperature
+    - sensor.bedroom_average_temperature
+    - sensor.living_room_sensor_humidity
+    - sensor.bedroom_sensor_humidity
     - input_select.hvac_mode
     - climate.living_room_thermostat_cool
     - climate.living_room_thermostat_heat
     - climate.gocontrol_thermostat_living_room_cooling_setpoint
     - climate.gocontrol_thermostat_living_room_heating_setpoint
     - group.livingRoomSensorClimate
-    - group.livingroomCoolDefaults
-    - group.bedroomCoolDefaults
-    - group.livingroomHeatDefaults
-    - group.bedroomHeatDefaults
-    - sensor.living_room_average_temperature
+    # - group.livingroomCoolDefaults
+    # - group.bedroomCoolDefaults
     - climate.bedroom_thermostat_cool
     - climate.bedroom_thermostat_heat
     - climate.gocontrol_thermostat_bedroom_cooling
     - climate.gocontrol_thermostat_bedroom_heating
     - group.bedroomSensorClimate
-    - sensor.bedroom_average_temperature
     - sensor.water_leak_sensor_temperature
-    - switch.aeotec_humdifier_bedroom
+    - switch.aeotec_humidifier_bedroom
+    - sensor.aeotec_humidifier_power
     - weather.dark_sky
+    - group.livingroomHeatDefaults
+    - group.bedroomHeatDefaults
 Media:
   view: yes
   entities:

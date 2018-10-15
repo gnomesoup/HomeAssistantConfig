@@ -223,14 +223,14 @@
       - condition: state
         entity_id: input_select.presence
         state: "Home"
-      - condition: or
-        conditions:
-          - condition: state
-            entity_id: input_select.home_mode
-            state: "Day"
-          - condition: state
-            entity_id: input_select.home_mode
-            state: "Evening"
+      # - condition: or
+      #   conditions:
+      #     - condition: state
+      #       entity_id: input_select.home_mode
+      #       state: "Day"
+      #     - condition: state
+      #       entity_id: input_select.home_mode
+      #       state: "Evening"
   action:
     - service: notify.notify
       data_template:

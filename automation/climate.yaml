@@ -215,7 +215,7 @@
     condition: and
     conditions:
       - condition: state
-        entity_id: sensor.aeotec_humdifier_bedroom_power
+        entity_id: sensor.aeotec_humidifier_bedroom_power
         below: 300
       - condition: state
         entity_id: sensor.all_rooms_humidity

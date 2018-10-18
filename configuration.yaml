@@ -113,9 +113,9 @@ input_datetime: !include input_datetime.yaml
 input_boolean: !include input_boolean.yaml
 alert: !include alert.yaml
 
-camera:
-  - platform: arlo
-    ffmpeg_arguments: '-pred 1 -q:v 2'
+# camera:
+#   - platform: arlo
+#     ffmpeg_arguments: '-pred 1 -q:v 2'
 
 alarm_control_panel:
   - platform: arlo

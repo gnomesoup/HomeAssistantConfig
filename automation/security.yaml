@@ -10,7 +10,8 @@
   #     data:
   #       entity_id: alarm_control_panel.grand_ohio
   action:
-    - service: {"event":"home_armed"}
+    - service: ifttt.trigger
+      data: {"event":"home_armed"}
     - service: notify.notify
       data:
         message: "System is armed"

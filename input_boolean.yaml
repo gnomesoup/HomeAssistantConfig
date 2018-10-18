@@ -16,8 +16,8 @@ switch_cool_bedroom:
   name: Bedroom AC Switch
   # initial: off
 
-intruder_alert:
-  name: Intruder Alert
+motion_alert:
+  name: Motion Alert
   # initial: off
   icon: mdi:alert
 

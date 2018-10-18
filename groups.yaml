@@ -22,7 +22,7 @@ Living Room:
   view: yes
   entities:
     - sensor.living_room_average_temperature
-    - sensor.living_room_sensor_humidity
+    - sensor.aeotec_multisensor_relative_humidity_living_room
     - light.grandmas_lamp
     - light.closet_light
     - light.hallway_light
@@ -74,7 +74,7 @@ Climate:
     - sensor.all_rooms_humidity
     - sensor.living_room_average_temperature
     - sensor.bedroom_average_temperature
-    - sensor.living_room_sensor_humidity
+    - sensor.aeotec_multisensor_relative_humidity_living_room
     - sensor.bedroom_sensor_humidity
     - input_select.hvac_mode
     - climate.living_room_thermostat_cool
@@ -129,9 +129,9 @@ Setup:
 livingRoomSensorClimate:
   name: Living Room Sensor Climate
   entities:
-    - sensor.living_room_sensor_temperature
-    - sensor.living_room_sensor_humidity
-    - sensor.living_room_sensor_illuminance
+    - sensor.aeotec_multisensor_temperature_living_room
+    - sensor.aeotec_multisensor_relative_humidity_living_room
+    - sensor.aeotec_multisensor_illuminance_living_room
 bedroomSensorClimate:
   name: Bedroom Sensor Climate
   entities:
@@ -183,7 +183,7 @@ bedroomMedia:
 livingRoomSecurity:
   name: Living Room Security
   entities:
-    - sensor.living_room_sensor_motion
+    - sensor.aeotec_multisensor_burglar_living_room
     - sensor.water_leak_sensor_water
 
 # outdoorSecurity:
@@ -203,7 +203,7 @@ bedroomSecurity:
 livingRoomBatteries:
   name: Living Room Batteries
   entities:
-    - sensor.living_room_sensor_battery
+    # - sensor.aeotec_multisensor_battery
     - sensor.water_leak_sensor_battery
 bedroomBatteries:
   name: Bedroom Batteries

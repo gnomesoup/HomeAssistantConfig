@@ -69,7 +69,7 @@
     all_rooms_humidity:
       friendly_name: Average Humidity
       value_template: >-
-        {{(float(states.sensor.aeotec_multisensor_relative_humidity.state) +
+        {{(float(states.sensor.aeotec_multisensor_relative_humidity_living_room.state) +
         float(states.sensor.bedroom_sensor_humidity.state)) / 2
         | round(1)}}
       unit_of_measurement: "%"

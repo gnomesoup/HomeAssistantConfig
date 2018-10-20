@@ -227,10 +227,10 @@
 #         conditions:
 #           - condition: state
 #             entity_id: input_select.home_mode
-#             state: "Day"
+#             state: "Normal"
 #           - condition: state
 #             entity_id: input_select.home_mode
-#             state: "Evening"
+#             state: "Quiet"
 #   action:
 #     - service: notify.notify
 #       data_template:

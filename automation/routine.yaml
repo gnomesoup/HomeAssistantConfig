@@ -12,7 +12,7 @@
         state: "Home"
       - condition: state
         entity_id: input_select.home_mode
-        state: "Night"
+        state: "Sleep"
       - condition: time
         weekday:
           - mon
@@ -39,7 +39,7 @@
         state: "Home"
       - condition: state
         entity_id: input_select.home_mode
-        state: "Night"
+        state: "Sleep"
       - condition: time
         after: "6:30:00" 
       - condition: time
@@ -63,7 +63,7 @@
         state: "Home"
       - condition: state
         entity_id: input_select.home_mode
-        state: "Night"
+        state: "Sleep"
       - condition: time
         weekday:
           - mon

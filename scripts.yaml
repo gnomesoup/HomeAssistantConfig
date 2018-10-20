@@ -12,7 +12,7 @@ makecoffee:
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
-        option: "Day"
+        option: "Normal"
 
 # routine for wakeup
 goodmorning:
@@ -38,7 +38,7 @@ goodmorning:
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
-        option: "Day"
+        option: "Normal"
     - service: notify.notify
       data:
         message: "Good Morning routine ran"
@@ -109,7 +109,7 @@ bedtime:
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
-        option: "Evening"
+        option: "Quiet"
     - service: notify.notify
       data:
         message: "Bedtime for Camille"
@@ -163,7 +163,7 @@ goodnight:
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
-        option: "Night"
+        option: "Sleep"
     - service: media_player.media_stop
       data:
         entity_id: group.media

@@ -13,7 +13,55 @@
         state: "Home"
       - condition: state
         entity_id: input_select.home_mode
+        state: "N- id: bedroom_lights_on_motion
+  alias: Turn on bedroom lights when motion sensed
+  trigger:
+    - platform: state
+      entity_id: sensor.bedroom_sensor_motion
+      from: "inactive"
+      to: "active"
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_select.presence
+        state: "Home"
+      - condition: state
+        entity_id: input_select.home_mode
         state: "Normal"
+      - condition: time
+        after: "10:00:00"
+        before: "21:00:00"
+  action:
+    - service: light.turn_on
+      data:
+        brightness: 100
+        entity_id: group.bedroom
+
+# turn on aquarium light
+- id: pea_puff_aquarium_light_timer_on
+  alias: Pea Puff Light Timer On
+  trigger:
+    - platform: time
+      at: "7:00:00"
+    - platform: time
+      at: "16:00:00"
+  action:
+    - service: light.turn_on
+      entity_id: light.aquarium_light
+
+# turn off aquarium light
+- id: pea_puff_aquarium_light_timer_off
+  alias: Pea Puff Light Timer Off
+  trigger:
+    - platform: time
+      at: "12:00:00"
+    - platform: time
+      at: "21:00:00"
+  action:
+    - service: light.turn_off
+      entity_id: light.aquarium_light
+ormal"
       - condition: time
         after: "10:00:00"
         before: "21:00:00"

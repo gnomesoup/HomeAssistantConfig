@@ -21,7 +21,7 @@ home_mode:
     - "Cleaning"
     - "Guest"
     - "Manual"
-  # initial: "Normal"
+  initial: "Normal"
 
 clean_day:
   name: "Cleaning Day"

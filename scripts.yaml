@@ -9,10 +9,11 @@ makecoffee:
           - light.aeotec_entry_light
           - light.pop_socket_light
           - light.aeotec_kitchen_counter_light
+          - light.aeotec_bathroom_light
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
-        option: "Normal"
+        option: "Quiet"
 
 # routine for wakeup
 goodmorning:

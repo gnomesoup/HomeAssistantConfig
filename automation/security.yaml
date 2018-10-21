@@ -5,10 +5,6 @@
       entity_id: input_select.presence
       from: "Home"
       to: "Away"
-  # action:
-  #   - service: alarm_control_panel.alarm_arm_away
-  #     data:
-  #       entity_id: alarm_control_panel.grand_ohio
   action:
     - service: ifttt.trigger
       data: {"event":"home_armed"}
@@ -22,12 +18,6 @@
       entity_id: input_select.presence
       from: "Away"
       to: "Home"
-  # Disabled due to long reload
-  # action:
-  #   - service: alarm_control_panel.alarm_disarm
-  #     data:
-  #       entity_id: alarm_control_panel.grand_ohio
-  # Using IFTTT to arm temporarily
   action:
     - service: ifttt.trigger
       data: {"event":"home_disarmed"}
@@ -39,13 +29,12 @@
   alias: Send Alert When Water Detected
   trigger:
     - platform: state
-      entity_id:
-        - sensor.water_leak_sensor_water
+      entity_id: sensor.water_leak_sensor_water
       from: 'dry'
       to: 'wet'
   action:
     - service: notify.notify
-      data:
+      data_template:
         message: >-
           {{ trigger.to_state.attributes.friendly }} detected water!
 
@@ -65,7 +54,3 @@
   action:
     - service: input_boolean.turn_on
       entity_id: input_boolean.motion_alert
-    # - service: notify.notify
-    #   data:
-    #     message: >-
-    #       Alert! {{ trigger.to_state.attributes.friendly }} detected motion

@@ -86,9 +86,9 @@ mqtt:
   broker: 10.0.0.120
 
 # Arlo
-arlo:
-  username: !secret arloUsername
-  password: !secret arloPassword
+# arlo:
+#   username: !secret arloUsername
+#   password: !secret arloPassword
 
 # ffmpeg
 ffmpeg:

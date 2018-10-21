@@ -107,7 +107,7 @@ Security:
     - group.outdoorSecurity
     - group.livingRoomSecurity
     - group.bedroomSecurity
-    - group.arloBaseStation
+    # - group.arloBaseStation
     - group.cameraLivingRoom
     - group.cameraPatio
 
@@ -231,25 +231,3 @@ systemMonitor:
     - sensor.memory_use_percent
     - sensor.since_last_boot
 
-# Arlo
-arloBaseStation:
-  name: Arlo Base Station
-  entities:
-    - alarm_control_panel.grand_ohio
-    - sensor.arlo_cameras
-cameraLivingRoom:
-  name: Living Room Camera
-  entities:
-    - camera.living_room
-    - sensor.last_living_room
-    - sensor.captured_today_living_room
-    - sensor.signal_strength_living_room
-    - sensor.battery_level_living_room
-cameraPatio:
-  name: Patio Camera
-  entities:
-    - camera.patio
-    - sensor.last_patio
-    - sensor.captured_today_patio
-    - sensor.signal_strength_patio
-    - sensor.battery_level_patio

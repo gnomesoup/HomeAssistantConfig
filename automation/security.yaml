@@ -24,7 +24,7 @@
     - service: notify.notify
       data:
         message: "System is disarmed"
-    
+
 - id: alert_when_wet
   alias: Send Alert When Water Detected
   trigger:
@@ -38,19 +38,20 @@
         message: >-
           {{ trigger.to_state.attributes.friendly }} detected water!
 
-# - id: alert_when_motion
-#   alias: Send Alert When Motion And Away
-#   trigger:
-#     - platform: state
-#       entity_id: sensor.bedroom_sensor_motion
-#       to: "active"
-#     - platform: state
-#       entity_id: sensor.aeotec_multisensor_burglar_living_room
-#       above: 2
-#   condition:
-#     - condition: state
-#       entity_id: input_select.presence
-#       state: "Away"
-#   action:
-#     - service: input_boolean.turn_on
-#       entity_id: input_boolean.motion_alert
+- id: alert_when_motion
+  alias: Send Alert When Motion And Away
+  trigger:
+    - platform: state
+      entity_id: sensor.bedroom_sensor_motion
+      from: "inactive"
+      to: "active"
+    - platform: state
+      entity_id: sensor.aeotec_multisensor_burglar_living_room
+      above: 2
+  condition:
+    - condition: state
+      entity_id: input_select.presence
+      state: "Away"
+  action:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.motion_alert

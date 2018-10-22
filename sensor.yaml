@@ -88,11 +88,11 @@
     - type: load_15m
     - type: since_last_boot
 
-## Arlo
-- platform: arlo
-  monitored_conditions:
-    - captured_today
-    - last_capture
-    - total_cameras
-    - battery_level
-    - signal_strength
+# ## Arlo
+# - platform: arlo
+#   monitored_conditions:
+#     - captured_today
+#     - last_capture
+#     - total_cameras
+#     - battery_level
+#     - signal_strength

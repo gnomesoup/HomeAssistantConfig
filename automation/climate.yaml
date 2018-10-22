@@ -19,7 +19,7 @@
       data_template:
         temperature: >-
           {% if is_state('input_select.presence', 'Home') %}
-            {% if is_state('input_select.home_mode', 'Night') %}
+            {% if is_state('input_select.home_mode', 'Sleep') %}
               {{ states.input_number.cool_away_living_room_asleep.state }}
             {% else %}
               {{ states.input_number.cool_home_living_room_awake.state }}
@@ -32,9 +32,9 @@
       data_template:
         temperature: >-
           {% if is_state('input_select.presence', 'Home') %}
-            {% if is_state('input_select.home_mode', 'Evening') %}
+            {% if is_state('input_select.home_mode', 'Quiet') %}
               {{ states.input_number.cool_home_bedroom_asleep.state }}
-            {% elif is_state('input_select.home_mode', 'Night') %}
+            {% elif is_state('input_select.home_mode', 'Sleep') %}
               {{ states.input_number.cool_home_bedroom_asleep.state }}
             {% else %}
               {{ states.input_number.cool_home_bedroom_awake.state }}
@@ -60,7 +60,7 @@
       data_template:
         temperature: >-
           {% if is_state('input_select.presence', 'Home') %}
-            {% if is_state('input_select.home_mode', 'Night') %}
+            {% if is_state('input_select.home_mode', 'Sleep') %}
               {{ states.input_number.heat_away_living_room_asleep.state }}
             {% else %}
               {{ states.input_number.heat_home_living_room_awake.state }}
@@ -73,9 +73,9 @@
       data_template:
         temperature: >-
           {% if is_state('input_select.presence', 'Home') %}
-            {% if is_state('input_select.home_mode', 'Evening') %}
+            {% if is_state('input_select.home_mode', 'Quiet') %}
               {{ states.input_number.heat_away_bedroom_asleep.state }}
-            {% elif is_state('input_select.home_mode', 'Night') %}
+            {% elif is_state('input_select.home_mode', 'Sleep') %}
               {{ states.input_number.heat_away_bedroom_asleep.state }}
             {% else %}
               {{ states.input_number.heat_home_bedroom_awake.state }}
@@ -227,10 +227,10 @@
 #         conditions:
 #           - condition: state
 #             entity_id: input_select.home_mode
-#             state: "Day"
+#             state: "Normal"
 #           - condition: state
 #             entity_id: input_select.home_mode
-#             state: "Evening"
+#             state: "Quiet"
 #   action:
 #     - service: notify.notify
 #       data_template:

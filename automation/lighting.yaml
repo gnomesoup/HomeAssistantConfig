@@ -13,7 +13,7 @@
         state: "Home"
       - condition: state
         entity_id: input_select.home_mode
-        state: "Day"
+        state: "Normal"
       - condition: time
         after: "10:00:00"
         before: "21:00:00"

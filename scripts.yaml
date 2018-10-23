@@ -22,7 +22,7 @@ goodmorning:
     - service: light.turn_on
       data:
         entity_id:
-          - group.all_lights
+          - group.lights
         brightness: 255
     - service: climate.set_fan_mode
       entity_id:
@@ -56,7 +56,7 @@ goodbye:
     - service: light.turn_off
       data:
         entity_id:
-          - group.all_lights
+          - group.lights
     - service: climate.set_fan_mode
       entity_id:
         - climate.gocontrol_thermostat_living_room_cooling_setpoint
@@ -163,7 +163,7 @@ goodnight:
     - service: light.turn_off
       data:
         entity_id:
-          - group.all_lights
+          - group.lights
     - service: climate.set_fan_mode
       entity_id:
         - climate.gocontrol_thermostat_living_room_cooling_setpoint

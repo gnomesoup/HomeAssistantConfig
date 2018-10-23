@@ -54,18 +54,18 @@ Bedroom:
 Lights:
   view: yes
   entities:
-    - light.aeotec_entry_light
-    - light.closet_light
-    - light.aeotec_kitchen_counter_light
-    - light.hallway_light
-    - light.metal_lamp
-    - light.grandmas_lamp
-    - light.pop_socket_light
     - light.aeotec_bathroom_light
+    - light.aeotec_entry_light
+    - light.aeotec_kitchen_counter_light
     - light.bedroom_canopy
+    - light.bedroom_closet
     - light.bedroom_lamp
     - light.camilles_desk_lamp
-    - light.bedroom_closet
+    - light.closet_light
+    - light.grandmas_lamp
+    - light.hallway_light
+    - light.metal_lamp
+    - light.pop_socket_light
 
 Climate:
   view: yes
@@ -230,4 +230,3 @@ systemMonitor:
     - sensor.memory_free
     - sensor.memory_use_percent
     - sensor.since_last_boot
-

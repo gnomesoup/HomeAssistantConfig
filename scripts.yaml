@@ -28,8 +28,13 @@ goodmorning:
       entity_id:
         - climate.gocontrol_thermostat_living_room_cooling_setpoint
         - climate.gocontrol_thermostat_living_room_heating_setpoint
-      data:
-        fan_mode: "On Low"
+      data_template:
+        fan_mode: >-
+          {% if is_state("input_select.hvac_mode", "cooling") %}
+            On Low
+          {% else %}
+            Auto Low
+          {% endif %}
     - service: climate.set_fan_mode
       entity_id:
         - climate.gocontrol_thermostat_bedroom_cooling
@@ -84,8 +89,13 @@ imback:
       entity_id:
         - climate.gocontrol_thermostat_living_room_cooling_setpoint
         - climate.gocontrol_thermostat_living_room_heating_setpoint
-      data:
-        fan_mode: "On Low"
+      data_template:
+        fan_mode: >-
+          {% if is_state("input_select.hvac_mode", "cooling") %}
+            On Low
+          {% else %}
+            Auto Low
+          {% endif %}
     - service: input_select.select_option
       data:
         entity_id: input_select.presence
@@ -105,8 +115,13 @@ bedtime:
       entity_id:
         - climate.gocontrol_thermostat_bedroom_cooling
         - climate.gocontrol_thermostat_bedroom_heating
-      data:
-        fan_mode: "On Low"
+      data_template:
+        fan_mode: >-
+          {% if is_state("input_select.hvac_mode", "cooling") %}
+            On Low
+          {% else %}
+            Auto Low
+          {% endif %}
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
@@ -126,13 +141,13 @@ getmellowed:
           - light.pop_socket_light
           - light.metal_lamp
           - light.closet_light
-    - service: light.turn_on 
+    - service: light.turn_on
       data:
         brightness: 65
         entity_id:
           - light.grandmas_lamp
           - light.hallway_light
-    - service: light.turn_on 
+    - service: light.turn_on
       data:
         brightness: 30
         entity_id:
@@ -159,8 +174,13 @@ goodnight:
       entity_id:
         - climate.gocontrol_thermostat_bedroom_cooling
         - climate.gocontrol_thermostat_bedroom_heating
-      data:
-        fan_mode: "On Low"
+      data_template:
+        fan_mode: >-
+          {% if is_state("input_select.hvac_mode", "cooling") %}
+            On Low
+          {% else %}
+            Auto Low
+          {% endif %}
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode

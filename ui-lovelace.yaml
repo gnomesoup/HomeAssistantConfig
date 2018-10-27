@@ -97,15 +97,22 @@ views:
         entity: media_player.living_room_speaker
       - type: glance
         entities:
-          - light.aeotec_bathroom_light
-          - light.aeotec_entry_light
-          - light.aeotec_kitchen_counter_light
-          - light.bedroom_canopy
-          - light.closet_light
-          - light.grandmas_lamp
-          - light.hallway_light
-          - light.metal_lamp
-          - light.pop_socket_light
+          - entity: light.aeotec_bathroom_light
+            name: Bathroom
+          - entity: light.aeotec_entry_light
+            name: Entry
+          - entity: light.aeotec_kitchen_counter_light
+            name: Counter
+          - entity: light.closet_light
+            name: Closet
+          - entity: light.grandmas_lamp
+            name: Grandma's
+          - entity: light.hallway_light
+            name: Hall
+          - entity: light.metal_lamp
+            name: Metal
+          - entity: light.pop_socket_light
+            name: Pop Socket
 
   - title: Bedroom
     id: bedroom
@@ -126,10 +133,14 @@ views:
       - type: glance
         title: Bedroom Lights
         entities:
-          - light.bedroom_canopy
-          - light.bedroom_lamp
-          - light.camilles_desk_lamp
-          - light.bedroom_closet
+          - entity: light.bedroom_canopy
+            name: Canopy
+          - entity: light.bedroom_lamp
+            name: Bedside
+          - entity: light.camilles_desk_lamp
+            name: Desk
+          - entity: light.bedroom_closet
+            name: Closet
 
       # - type: conditional
       #   conditions:

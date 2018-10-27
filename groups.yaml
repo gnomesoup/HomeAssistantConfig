@@ -75,7 +75,7 @@ Climate:
     - sensor.living_room_average_temperature
     - sensor.bedroom_average_temperature
     - sensor.aeotec_multisensor_relative_humidity_living_room
-    - sensor.bedroom_sensor_humidity
+    - sensor.aeotec_multisensor_relative_humidity_bedroom
     - input_select.hvac_mode
     - climate.living_room_thermostat_cool
     - climate.living_room_thermostat_heat
@@ -135,9 +135,10 @@ livingRoomSensorClimate:
 bedroomSensorClimate:
   name: Bedroom Sensor Climate
   entities:
-    - sensor.bedroom_sensor_temperature
-    - sensor.bedroom_sensor_humidity
-    - sensor.bedroom_sensor_illuminance
+    - binary_sensor.aeotec_multisensor_sensor_bedroom
+    - sensor.aeotec_multisensor_temperature_bedroom
+    - sensor.aeotec_multisensor_relative_humidity_bedroom
+    - sensor.aeotec_multisensor_luminance_bedroom
 # Climate default settings
 livingroomCoolDefaults:
   name: Living room cooling defaults
@@ -193,7 +194,7 @@ livingRoomSecurity:
 bedroomSecurity:
   name: Bedroom Security
   entities:
-    - sensor.bedroom_sensor_motion
+    - sensor.binary_sensor.aeotec_multisensor_sensor_bedroom
 
 # Battery View
 # outdoorBatteries:

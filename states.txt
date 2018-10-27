@@ -183,7 +183,6 @@ sensor.all_rooms_humidity
 sensor.all_rooms_temperature
 sensor.angela_pfammatters_iphone_battery_level
 sensor.angela_pfammatters_iphone_battery_state
-sensor.arlo_cameras
 sensor.battery_level_living_room
 sensor.battery_level_patio
 sensor.bedroom_average_temperature

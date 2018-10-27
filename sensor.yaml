@@ -2,25 +2,6 @@
 - platform: yr
 
 # Smartthings MQTT
-- platform: mqtt
-  name: "Bedroom Sensor Motion"
-  state_topic: "smartthings/Bedroom Sensor/motion"
-- platform: mqtt
-  name: "Bedroom Sensor Temperature"
-  state_topic: "smartthings/Bedroom Sensor/temperature"
-  unit_of_measurement: "°F"
-- platform: mqtt
-  name: "Bedroom Sensor Humidity"
-  state_topic: "smartthings/Bedroom Sensor/humidity"
-  unit_of_measurement: "%"
-- platform: mqtt
-  name: "Bedroom Sensor Illuminance"
-  state_topic: "smartthings/Bedroom Sensor/illuminance"
-  unit_of_measurement: "lux"
-- platform: mqtt
-  name: "Bedroom Sensor Battery"
-  state_topic: "smartthings/Bedroom Sensor/battery"
-- platform: mqtt
   name: "Water Leak Sensor Temperature"
   state_topic: "smartthings/Water Leak Sensor/temperature"
   unit_of_measurement: "°F"
@@ -38,7 +19,7 @@
     bedroom_average_temperature:
       friendly_name: Bedroom Average Temperature
       value_template: >-
-        {{(((float(states.sensor.bedroom_sensor_temperature.state) * 4) +
+        {{(((float(states.sensor.aeotec_multisensor_temperature_bedroom.state) * 4) +
         float(states.sensor.gocontrol_thermostat_bedroom_temperature.state)) / 5)| round(1)}}
       unit_of_measurement: "°F"
 
@@ -61,7 +42,7 @@
         float(states.sensor.gocontrol_thermostat_living_room_temperature.state) +
         float(states.sensor.gocontrol_thermostat_bedroom_temperature.state) +
         float(states.sensor.water_leak_sensor_temperature.state) +
-        (float(states.sensor.bedroom_sensor_temperature.state) * 2)) / 7) | round(1)}}
+        (float(states.sensor.aeotec_multisensor_temperature_bedroom.state) * 2)) / 7) | round(1)}}
       unit_of_measurement: "°F"
 
 - platform: template
@@ -70,7 +51,7 @@
       friendly_name: Average Humidity
       value_template: >-
         {{(float(states.sensor.aeotec_multisensor_relative_humidity_living_room.state) +
-        float(states.sensor.bedroom_sensor_humidity.state)) / 2
+        float(states.sensor.aeotec_multisensor_relative_humidity_bedroom.state)) / 2
         | round(1)}}
       unit_of_measurement: "%"
 

@@ -206,10 +206,10 @@ livingRoomBatteries:
   entities:
     # - sensor.aeotec_multisensor_battery
     - sensor.water_leak_sensor_battery
-bedroomBatteries:
-  name: Bedroom Batteries
-  entities:
-    - sensor.bedroom_sensor_battery
+# bedroomBatteries:
+#   name: Bedroom Batteries
+#   entities:
+#     - sensor.bedroom_sensor_battery
 homeStatus:
   name: Home Status
   entities:

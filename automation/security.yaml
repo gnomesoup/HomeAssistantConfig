@@ -42,9 +42,9 @@
   alias: Send Alert When Motion And Away
   trigger:
     - platform: state
-      entity_id: sensor.bedroom_sensor_motion
-      from: "inactive"
-      to: "active"
+      entity_id: sensor.binary_sensor.aeotec_multisensor_sensor_bedroom
+      from: "Off"
+      to: "On"
     - platform: numeric_state
       entity_id: sensor.aeotec_multisensor_burglar_living_room
       above: 2

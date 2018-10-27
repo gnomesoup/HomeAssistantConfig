@@ -194,7 +194,7 @@ livingRoomSecurity:
 bedroomSecurity:
   name: Bedroom Security
   entities:
-    - sensor.binary_sensor.aeotec_multisensor_sensor_bedroom
+    - binary_sensor.aeotec_multisensor_sensor_bedroom
 
 # Battery View
 # outdoorBatteries:

@@ -2,7 +2,7 @@
   alias: Turn on bedroom lights when motion sensed
   trigger:
     - platform: state
-      entity_id: sensor.binary_sensor.aeotec_multisensor_sensor_bedroom
+      entity_id: binary_sensor.aeotec_multisensor_sensor_bedroom
       from: "Off"
       to: "On"
   condition:

@@ -79,14 +79,14 @@ views:
           - sensor.aeotec_multisensor_luminance_bedroom
       - type: conditional
         conditions:
-          - entity_id: input_select.hvac_mode
+          - entity: input_select.hvac_mode
             state: "cooling"
         card:
           type: thermostat
           entity: climate.climate.bedroom_thermostat_cool
       - type: conditional
         conditions:
-          - entity_id: input_select.hvac_mode
+          - entity: input_select.hvac_mode
             state: "heating"
         card:
           type: thermostat
@@ -110,14 +110,14 @@ views:
           - sensor.aeotec_multisensor_luminance_bedroom
       - type: conditional
         conditions:
-          - entity_id: input_select.hvac_mode
+          - entity: input_select.hvac_mode
             state: "cooling"
         card:
           type: thermostat
           entity: climate.climate.bedroom_thermostat_cool
       - type: conditional
         conditions:
-          - entity_id: input_select.hvac_mode
+          - entity: input_select.hvac_mode
             state: "heating"
         card:
           type: thermostat

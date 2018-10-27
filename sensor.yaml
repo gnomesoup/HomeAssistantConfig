@@ -2,6 +2,7 @@
 - platform: yr
 
 # Smartthings MQTT
+- platform: mqtt
   name: "Water Leak Sensor Temperature"
   state_topic: "smartthings/Water Leak Sensor/temperature"
   unit_of_measurement: "°F"

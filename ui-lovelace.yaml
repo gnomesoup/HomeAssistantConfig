@@ -17,7 +17,7 @@ views:
     # Optional unique id for direct access /lovelace/${id}
     id: home
     # Optional background (overwrites the global background).
-    background: radial-gradient(crimson, skyblue)
+    # background: radial-gradient(crimson, skyblue)
     # Each view can have a different theme applied. Theme should be defined in the frontend.
     theme: dark-mode
     # The cards to show on this view.
@@ -64,6 +64,66 @@ views:
       # - type: picture-entity
       #   image: https://www.home-assistant.io/images/default-social.png
       #   entity: light.bed_light
+
+  - title: Living Room
+    id: living_room
+    theme: dark-mode
+    cards:
+      - type: glance
+        title: Living Room Status
+        entities:
+          - binary_sensor.aeotec_multisensor_sensor_bedroom
+          - sensor.bedroom_average_temperature
+          - sensor.aeotec_multisensor_temperature_bedroom
+          - sensor.aeotec_multisensor_relative_humidity_bedroom
+          - sensor.aeotec_multisensor_luminance_bedroom
+      - type: conditional
+        conditions:
+          - entity_id: input_select.hvac_mode
+            state: "cooling"
+        card:
+          type: thermostat
+          entity: climate.climate.bedroom_thermostat_cool
+      - type: conditional
+        conditions:
+          - entity_id: input_select.hvac_mode
+            state: "heating"
+        card:
+          type: thermostat
+          entity: climate.climate.bedroom_thermostat_heat
+      - type: media-control
+        entity: media_player.denon
+      - type: media-control
+        entity: media_player.living_room_speaker
+
+  - title: Bedroom
+    id: bedroom
+    theme: dark-mode
+    cards:
+      - type: glance
+        title: Bedroom Status
+        entities:
+          - binary_sensor.aeotec_multisensor_sensor_bedroom
+          - sensor.bedroom_average_temperature
+          - sensor.aeotec_multisensor_temperature_bedroom
+          - sensor.aeotec_multisensor_relative_humidity_bedroom
+          - sensor.aeotec_multisensor_luminance_bedroom
+      - type: conditional
+        conditions:
+          - entity_id: input_select.hvac_mode
+            state: "cooling"
+        card:
+          type: thermostat
+          entity: climate.climate.bedroom_thermostat_cool
+      - type: conditional
+        conditions:
+          - entity_id: input_select.hvac_mode
+            state: "heating"
+        card:
+          type: thermostat
+          entity: climate.climate.bedroom_thermostat_heat
+      - type: media-control
+        entity: media_player.bedroom_speaker
 
     # Specify a tab icon if you want the view tab to be an icon.
   - icon: mdi:settings

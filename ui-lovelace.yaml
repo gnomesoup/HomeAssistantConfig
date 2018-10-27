@@ -108,20 +108,22 @@ views:
           - sensor.aeotec_multisensor_temperature_bedroom
           - sensor.aeotec_multisensor_relative_humidity_bedroom
           - sensor.aeotec_multisensor_luminance_bedroom
-      - type: conditional
-        conditions:
-          - entity: input_select.hvac_mode
-            state: "cooling"
-        card:
-          type: thermostat
-          entity: climate.climate.bedroom_thermostat_cool
-      - type: conditional
-        conditions:
-          - entity: input_select.hvac_mode
-            state: "heating"
-        card:
-          type: thermostat
-          entity: climate.climate.bedroom_thermostat_heat
+      # - type: conditional
+      #   conditions:
+      #     - entity: input_select.hvac_mode
+      #       state: "cooling"
+      #   card:
+      #     type: thermostat
+      #     entity: climate.climate.bedroom_thermostat_cool
+      # - type: conditional
+      #   conditions:
+      #     - entity: input_select.hvac_mode
+      #       state: "heating"
+      #   card:
+      #     type: thermostat
+      #     entity: climate.climate.bedroom_thermostat_heat
+      - type: thermostat
+        entity: climate.climate.bedroom_thermostat_heat
       - type: media-control
         entity: media_player.bedroom_speaker
 

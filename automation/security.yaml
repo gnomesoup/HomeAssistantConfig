@@ -54,3 +54,13 @@
   action:
     - service: input_boolean.turn_on
       entity_id: input_boolean.motion_alert
+
+- id: alert_test
+  alias: Testing motion sensors
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.aeotec_multisensor_sensor_bedroom
+      to: "on"
+  action:
+    - service: input_boolean.toggle
+      entity_id: input_boolean.testing

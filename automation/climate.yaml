@@ -173,7 +173,7 @@
 
 # Bedroom heating automation
 - id: climate_heat_from_remote_bedroom
-  alias: Heat living room from remote sensor
+  alias: Heat bedroom room from remote sensor
   trigger:
     - platform: state
       entity_id: sensor.bedroom_average_temperature

@@ -38,6 +38,9 @@
   sensors:
     all_rooms_temperature:
       friendly_name: Average Temperature
+        {{(((float(states.sensor.aeotec_multisensor_temperature_living_room.state) * 2) +
+        float(states.sensor.water_leak_sensor_temperature.state) +
+        (float(states.sensor.gocontrol_thermostat_living_room_temperature.state)) * 5) / 8) | round(1)}}
       value_template: >-
         {{(((float(states.sensor.aeotec_multisensor_temperature_living_room.state) * 2) +
         float(states.sensor.gocontrol_thermostat_living_room_temperature.state) +

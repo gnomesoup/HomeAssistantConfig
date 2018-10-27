@@ -29,8 +29,8 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.aeotec_multisensor_sensor_bedroom
-      from: "Off"
-      to: "On"
+      from: "off"
+      to: "on"
   condition:
     condition: and
     conditions:

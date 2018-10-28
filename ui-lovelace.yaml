@@ -111,8 +111,8 @@ views:
         card:
           type: entities
           entites:
-            - climate.bedroom_thermostat_heat
-            - climate.gocontrol_thermostat_living_room_heating_setpoint
+          - climate.bedroom_thermostat_heat
+          - climate.gocontrol_thermostat_living_room_heating_setpoint
       - type: media-control
         entity: media_player.denon
       - type: media-control

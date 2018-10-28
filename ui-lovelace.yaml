@@ -57,21 +57,21 @@ views:
       - type: conditional
         conditions:
           - entity: media_player.denon
-            state_not: "off"
+            state: "playing"
         card:
           type: media-control
           entity: media_player.denon
       - type: conditional
         conditions:
           - entity: media_player.living_room_speaker
-            state_not: "off"
+            state: "playing"
         card:
           type: media-control
           entity: media_player.living_room_speaker
       - type: conditional
         conditions:
           - entity: media_player.bedroom_speaker
-            state_not: "off"
+            state: "playing"
         card:
           type: media-control
           entity: media_player.bedroom_speaker
@@ -102,14 +102,16 @@ views:
             state: "cooling"
         card:
           type: entities
-          entity: climate.bedroom_thermostat_cool
+          entities:
+            - climate.bedroom_thermostat_cool
       - type: conditional
         conditions:
           - entity: input_select.hvac_mode
             state: "heating"
         card:
           type: entities
-          entity: climate.bedroom_thermostat_heat
+          entites:
+            - climate.bedroom_thermostat_heat
       - type: media-control
         entity: media_player.denon
       - type: media-control
@@ -151,14 +153,16 @@ views:
             state: "cooling"
         card:
           type: entities
-          entity: climate.bedroom_thermostat_cool
+          entities:
+            - climate.bedroom_thermostat_cool
       - type: conditional
         conditions:
           - entity: input_select.hvac_mode
             state: "heating"
         card:
           type: entities
-          entity: climate.bedroom_thermostat_heat
+          entites:
+            - climate.bedroom_thermostat_heat
       - type: media-control
         entity: media_player.bedroom_speaker
       - type: glance

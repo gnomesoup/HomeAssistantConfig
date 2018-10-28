@@ -217,6 +217,9 @@ views:
     cards:
       - type: sensor
         entity: sensor.load_1m
+      - type: gauge
+        title: Disk Usage
+        entity: sensor.disk_use_percent_
       - type: vertical-stack
         cards:
           - type: entities
@@ -234,9 +237,9 @@ views:
               - input_datetime.clean_end
       - type: vertical-stack
         cards:
-          # - type: gauge
-          #   title: Disk Usage
-          #   entity: sensor.disk_use_percent_
+          - type: gauge
+            title: Disk Usage
+            entity: sensor.disk_use_percent_
           - type: entities
             entities:
               - sensor.disk_free_

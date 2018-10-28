@@ -156,6 +156,23 @@ views:
       #   card:
       #     type: thermostat
       #     entity: climate.climate.bedroom_thermostat_heat
+  - icon: mdi:thermometer-lines
+    title: Climate
+    cards:
+      - type: entities
+        title: Living Room Heating
+        entities:
+          - climate.gocontrol_thermostat_living_room_heating_setpoint
+          - climate.living_room_thermostat_heat
+          - climate.linear_gctbz48_battery_powered_zwave_thermostat_unused_0
+          - climate.linear_gctbz48_battery_powered_zwave_thermostat_dry_air
+          - climate.linear_gctbz48_battery_powered_zwave_thermostat_heating_econ
+          - 
+      - type: entities
+        title: Bedroom Heating
+        entities:
+          - climate.bedroom_thermostat_heat
+          - climate_set_temperatures_heating
 
     # Specify a tab icon if you want the view tab to be an icon.
   - icon: mdi:settings

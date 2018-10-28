@@ -235,14 +235,14 @@ views:
           - type: sensor
             name: CPU Load (1m)
             entity: sensor.load_1m
-          - type: guage
-            name: Disk Usage
+          - type: gauge
+            title: Disk Usage
             entity: sensor.disk_use_percent_
           - type: entities
             entities:
               - sensor.disk_free_
-          - type: guage
-            name: Memory
+          - type: gauge
+            title: Memory
             entity: sensor.memory_use_percent
           - type: entities
             entities:

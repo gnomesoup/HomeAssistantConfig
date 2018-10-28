@@ -54,13 +54,22 @@ views:
           - script.bedtime
           - script.getmellowed
           - script.goodnight
-      - type: conditional
-        conditions:
-          - entity: media_player.denon
-            state: "playing"
-        card:
-          type: media-control
-          entity: media_player.denon
+      - type: vertical-stack
+        cards:
+          - type: conditional
+            conditions:
+              - entity: media_player.denon
+                state: "playing"
+            card:
+              type: media-control
+              entity: media_player.denon
+          - type: conditional
+            condition:
+              - entity: media_player.living_room_speaker
+                state: "playing"
+            card:
+              type: media-control
+              entity: media_player.living_room_speaker
       # - type: conditional
       #   condition:
       #     - entity: media_player.denon
@@ -68,13 +77,6 @@ views:
       #   card:
       #     type: media-control
       #     entity: media_player.denon
-      # - type: conditional
-      #   condition:
-      #     - entity: media_player.living_room_speaker
-      #       state: "playing"
-      #   card:
-      #     type: media-control
-      #     entity: media_player.living_room_speaker
       # - type: conditional
       #   condition:
       #     - entity: media_player.bedroom_speaker

@@ -82,14 +82,14 @@ views:
           - entity: input_select.hvac_mode
             state: "cooling"
         card:
-          type: thermostat
+          type: entity
           entity: climate.climate.bedroom_thermostat_cool
       - type: conditional
         conditions:
           - entity: input_select.hvac_mode
             state: "heating"
         card:
-          type: thermostat
+          type: entity
           entity: climate.climate.bedroom_thermostat_heat
       - type: media-control
         entity: media_player.denon
@@ -126,8 +126,20 @@ views:
           - sensor.aeotec_multisensor_temperature_bedroom
           - sensor.aeotec_multisensor_relative_humidity_bedroom
           - sensor.aeotec_multisensor_luminance_bedroom
-      - type: thermostat
-        entity: climate.climate.bedroom_thermostat_heat
+      - type: conditional
+        conditions:
+          - entity: input_select.hvac_mode
+            state: "cooling"
+        card:
+          type: entity
+          entity: climate.climate.bedroom_thermostat_cool
+      - type: conditional
+        conditions:
+          - entity: input_select.hvac_mode
+            state: "heating"
+        card:
+          type: entity
+          entity: climate.climate.bedroom_thermostat_heat
       - type: media-control
         entity: media_player.bedroom_speaker
       - type: glance
@@ -142,20 +154,7 @@ views:
           - entity: light.bedroom_closet
             name: Closet
 
-      # - type: conditional
-      #   conditions:
-      #     - entity: input_select.hvac_mode
-      #       state: "cooling"
-      #   card:
-      #     type: thermostat
-      #     entity: climate.climate.bedroom_thermostat_cool
-      # - type: conditional
-      #   conditions:
-      #     - entity: input_select.hvac_mode
-      #       state: "heating"
-      #   card:
-      #     type: thermostat
-      #     entity: climate.climate.bedroom_thermostat_heat
+
   - icon: mdi:thermometer-lines
     title: Climate
     cards:
@@ -175,8 +174,8 @@ views:
           - climate.linear_gctbz48_battery_powered_zwave_thermostat_unused_0
           - climate.linear_gctbz48_battery_powered_zwave_thermostat_dry_air
           - climate.linear_gctbz48_battery_powered_zwave_thermostat_heating_econ
-      - type: thermostat
-        entity: climate.gocontrol_thermostat_living_room_heating_setpoint
+      # - type: thermostat
+      #   entity: climate.gocontrol_thermostat_living_room_heating_setpoint
       - type: glance
         name: Bedroom Status
         entities:
@@ -189,7 +188,7 @@ views:
           - climate.bedroom_thermostat_heat
           - climate.gocontrol_thermostat_bedroom_heating
       - type: thermostat
-        entity: climate.gocontrol_thermostat_bedroom_heating
+        entity: climate.bedroom_thermostat_heat
 
     # Specify a tab icon if you want the view tab to be an icon.
   - icon: mdi:settings

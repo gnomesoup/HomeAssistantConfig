@@ -215,6 +215,8 @@ views:
     # Title of the view. Will be used as the tooltip for tab icon
     title: Settings
     cards:
+      - type: sensor
+        entity: sensor.load_1m
       - type: vertical-stack
         cards:
           - type: entities
@@ -230,10 +232,8 @@ views:
               - input_select.clean_day
               - input_datetime.clean_start
               - input_datetime.clean_end
-      - type: vertical-stack
-        cards:
-          - type: sensor
-            entity: sensor.load_1m
+      # - type: vertical-stack
+      #   cards:
           # - type: gauge
           #   title: Disk Usage
           #   entity: sensor.disk_use_percent_

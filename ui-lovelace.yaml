@@ -110,7 +110,7 @@ views:
             state: "heating"
         card:
           type: entities
-          entites:
+          entities:
           - climate.bedroom_thermostat_heat
           - climate.gocontrol_thermostat_living_room_heating_setpoint
       - type: media-control

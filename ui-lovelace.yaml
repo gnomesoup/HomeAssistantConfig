@@ -235,21 +235,21 @@ views:
           - type: sensor
             name: CPU Load (1m)
             entity: sensor.load_1m
-          - type: gauge
-            title: Disk Usage
-            entity: sensor.disk_use_percent_
-          - type: entities
-            entities:
-              - sensor.disk_free_
-          - type: gauge
-            title: Memory
-            entity: sensor.memory_use_percent
-          - type: entities
-            entities:
-              - senosr.memory_free
-          - type: entities
-            entities:
-              - sensor.since_last_boot
+          # - type: gauge
+          #   title: Disk Usage
+          #   entity: sensor.disk_use_percent_
+          # - type: entities
+          #   entities:
+          #     - sensor.disk_free_
+          # - type: gauge
+          #   title: Memory
+          #   entity: sensor.memory_use_percent
+          # - type: entities
+          #   entities:
+          #     - senosr.memory_free
+          # - type: entities
+          #   entities:
+          #     - sensor.since_last_boot
 
 
         # The markdown card will render markdown text.

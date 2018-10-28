@@ -159,6 +159,14 @@ views:
   - icon: mdi:thermometer-lines
     title: Climate
     cards:
+      - type: glimpse
+        name: Living Room Status
+        entities:
+          - sensor.living_room_average_temperature
+          - sensor.aeotec_multisensor_temperature_living_room
+          - sensor.gocontrol_thermostat_living_room_temperature
+          - sensor.water_leak_sensor_temperature
+          - sensor.aeotec_multisensor_relative_humidity_living_room
       - type: entities
         title: Living Room Heating
         entities:
@@ -167,11 +175,21 @@ views:
           - climate.linear_gctbz48_battery_powered_zwave_thermostat_unused_0
           - climate.linear_gctbz48_battery_powered_zwave_thermostat_dry_air
           - climate.linear_gctbz48_battery_powered_zwave_thermostat_heating_econ
+      - type: thermostat
+        entity: climate.gocontrol_thermostat_living_room_heating_setpoint
+      - type: glimpse
+        name: Bedroom Status
+        entities:
+          - sensor.bedroom_average_temperature
+          - sensor.gocontrol_thermostat_bedroom_temperature
+          - sensor.aeotec_multisensor_temperature_bedroom
       - type: entities
         title: Bedroom Heating
         entities:
           - climate.bedroom_thermostat_heat
           - climate.gocontrol_thermostat_bedroom_heating
+      - type: thermostat
+        entity: climate.gocontrol_thermostat_bedroom_heating
 
     # Specify a tab icon if you want the view tab to be an icon.
   - icon: mdi:settings

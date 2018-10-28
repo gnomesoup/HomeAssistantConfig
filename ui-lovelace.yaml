@@ -101,14 +101,14 @@ views:
           - entity: input_select.hvac_mode
             state: "cooling"
         card:
-          type: entity
+          type: entities
           entity: climate.bedroom_thermostat_cool
       - type: conditional
         conditions:
           - entity: input_select.hvac_mode
             state: "heating"
         card:
-          type: entity
+          type: entities
           entity: climate.bedroom_thermostat_heat
       - type: media-control
         entity: media_player.denon
@@ -150,15 +150,15 @@ views:
           - entity: input_select.hvac_mode
             state: "cooling"
         card:
-          type: entity
-          entity: climate.climate.bedroom_thermostat_cool
+          type: entities
+          entity: climate.bedroom_thermostat_cool
       - type: conditional
         conditions:
           - entity: input_select.hvac_mode
             state: "heating"
         card:
-          type: entity
-          entity: climate.climate.bedroom_thermostat_heat
+          type: entities
+          entity: climate.bedroom_thermostat_heat
       - type: media-control
         entity: media_player.bedroom_speaker
       - type: glance

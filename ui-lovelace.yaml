@@ -233,7 +233,6 @@ views:
       - type: vertical-stack
         cards:
           - type: sensor
-            name: CPU Load (1m)
             entity: sensor.load_1m
           # - type: gauge
           #   title: Disk Usage

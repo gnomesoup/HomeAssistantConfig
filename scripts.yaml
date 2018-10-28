@@ -14,6 +14,14 @@ makecoffee:
       data:
         entity_id: input_select.home_mode
         option: "Quiet"
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.living_room_speaker
+        volume_set: 0.8
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.denon
+        volume_set: 0.5
 
 # routine for wakeup
 goodmorning:
@@ -45,6 +53,18 @@ goodmorning:
       data:
         entity_id: input_select.home_mode
         option: "Normal"
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.living_room_speaker
+        volume_set: 0.8
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.denon
+        volume_set: 0.7
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.bedroom_speaker
+        volume_set: 0.8
     - service: notify.notify
       data:
         message: "Good Morning routine ran"
@@ -126,6 +146,10 @@ bedtime:
       data:
         entity_id: input_select.home_mode
         option: "Quiet"
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.bedroom_speaker
+        volume_set: 0.2
     - service: notify.notify
       data:
         message: "Bedtime for Camille"
@@ -141,17 +165,30 @@ getmellowed:
           - light.pop_socket_light
           - light.metal_lamp
           - light.closet_light
+          - light.hallway_light
     - service: light.turn_on
       data:
         brightness: 65
         entity_id:
           - light.grandmas_lamp
-          - light.hallway_light
+          - light.bathroom_light
     - service: light.turn_on
       data:
         brightness: 30
         entity_id:
           - light.aeotec_kitchen_counter_light
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.home_mode
+        option: "Normal"
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.living_room_speaker
+        volume_set: 0.3
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.denon
+        volume_set: 0.3
     - service: notify.notify
       data:
         message: "Getting mellowed routine ran"
@@ -185,18 +222,17 @@ goodnight:
       data:
         entity_id: input_select.home_mode
         option: "Sleep"
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.living_room_speaker
+        volume_set: 0.3
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.denon
+        volume_set: 0.3
     - service: media_player.media_stop
       data:
         entity_id: group.media
     - service: notify.notify
       data:
         message: "Sleep tight! Good Night routine ran"
-
-fanmodetest:
-  alias: Test of the fan modes
-  sequence:
-    - service: climate.set_fan_mode
-      data:
-        entity_id:
-          - climate.gocontrol_thermostat_living_room_cooling_setpoint
-        fan_mode: "Auto Low"

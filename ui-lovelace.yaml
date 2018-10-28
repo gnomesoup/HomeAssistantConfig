@@ -159,7 +159,7 @@ views:
   - icon: mdi:thermometer-lines
     title: Climate
     cards:
-      - type: glimpse
+      - type: glance
         name: Living Room Status
         entities:
           - sensor.living_room_average_temperature
@@ -177,7 +177,7 @@ views:
           - climate.linear_gctbz48_battery_powered_zwave_thermostat_heating_econ
       - type: thermostat
         entity: climate.gocontrol_thermostat_living_room_heating_setpoint
-      - type: glimpse
+      - type: glance
         name: Bedroom Status
         entities:
           - sensor.bedroom_average_temperature

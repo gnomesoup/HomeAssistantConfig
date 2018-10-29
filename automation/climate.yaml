@@ -10,9 +10,9 @@
     - platform: state
       entity_id: input_select.home_mode
   condition:
-    - condition: state
-      entity_id: input_select.hvac_mode
-      state: "cooling"
+    condition: state
+    entity_id: input_select.hvac_mode
+    state: "cooling"
   action:
     - service: climate.set_temperature
       entity_id: climate.living_room_thermostat_cool
@@ -51,9 +51,9 @@
     - platform: state
       entity_id: input_select.home_mode
   condition:
-    - condition: state
-      entity_id: input_select.hvac_mode
-      state: "heating"
+    condition: state
+    entity_id: input_select.hvac_mode
+    state: "heating"
   action:
     - service: climate.set_temperature
       entity_id: climate.living_room_thermostat_heat
@@ -100,12 +100,9 @@
     - platform: state
       entity_id: input_select.home_mode
   condition:
-    - condition: state
-      endity_id: input_select.hvac_mode
-      state: "cooling"
-    # - condition: template
-    #   value_template: >-
-    #     {% if states.climate.gocontrol_thermostat_living_room_cooling_setpoint >  %}
+    condition: state
+    endity_id: input_select.hvac_mode
+    state: "cooling"
   action:
     - service: climate.set_temperature
       entity_id: climate.gocontrol_thermostat_living_room_cooling_setpoint
@@ -169,9 +166,9 @@
     - platform: state
       entity_id: input_select.home_mode
   condition:
-    - condition: state
-      endity_id: input_select.hvac_mode
-      state: "cooling"
+    condition: state
+    endity_id: input_select.hvac_mode
+    state: "cooling"
   action:
     - service: climate.set_temperature
       entity_id: climate.gocontrol_thermostat_bedroom_cooling
@@ -200,9 +197,9 @@
     - platform: state
       entity_id: input_select.home_mode
   condition:
-    - condition: state
-      endity_id: input_select.hvac_mode
-      state: "heating"
+    condition: state
+    endity_id: input_select.hvac_mode
+    state: "heating"
   action:
     - service: climate.set_temperature
       entity_id: climate.gocontrol_thermostat_bedroom_heating

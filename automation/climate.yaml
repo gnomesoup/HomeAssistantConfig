@@ -101,7 +101,7 @@
       entity_id: input_select.home_mode
   condition:
     condition: state
-    endity_id: input_select.hvac_mode
+    entity_id: input_select.hvac_mode
     state: "cooling"
   action:
     - service: climate.set_temperature
@@ -167,7 +167,7 @@
       entity_id: input_select.home_mode
   condition:
     condition: state
-    endity_id: input_select.hvac_mode
+    entity_id: input_select.hvac_mode
     state: "cooling"
   action:
     - service: climate.set_temperature
@@ -198,7 +198,7 @@
       entity_id: input_select.home_mode
   condition:
     condition: state
-    endity_id: input_select.hvac_mode
+    entity_id: input_select.hvac_mode
     state: "heating"
   action:
     - service: climate.set_temperature

@@ -258,12 +258,26 @@ views:
     title: Battery Status
     cards:
       - type: entities
+        name: Sensors
         entities:
           - sensor.aeotec_multisensor_living_room_battery
           - sensor.aeotec_multisensor_bedroom_battery
           - sensor.water_leak_sensor_battery
           # - minimotes
           # - arlos
+      - type: vertical-stack
+        cards:
+          - type: gauge
+            entity: sensor.angela_pfammatters_iphone_battery_level
+          - type: entities
+            entities:
+              - sensor.angela_pfammatters_iphone_battery_state
+          - type: gauge
+            entity: sensor.ergisch_battery_level
+          - type: entities
+            entities:
+              - sensor.ergisch_battery_state
+
 
 
         # The markdown card will render markdown text.

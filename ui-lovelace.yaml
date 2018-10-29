@@ -100,7 +100,7 @@ views:
         card:
           type: entities
           entities:
-            - climate.bedroom_thermostat_cool
+            - climate.living_room_thermostat_cool
       - type: conditional
         conditions:
           - entity: input_select.hvac_mode
@@ -108,7 +108,7 @@ views:
         card:
           type: entities
           entities:
-            - climate.bedroom_thermostat_heat
+            - climate.living_room_thermostat_heat
       - type: media-control
         entity: media_player.denon
       - type: media-control

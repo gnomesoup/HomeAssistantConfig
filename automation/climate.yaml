@@ -1,5 +1,5 @@
 # set temperatures on presence
-# TODO Add heat to the equation
+# TODO don't change states if not needed
 - id: climate_set_temperatures_cooling
   alias: Set cooling temperature based on presence
   trigger:
@@ -84,7 +84,6 @@
             {{ states.input_number.heat_away_bedroom_away.state }}
           {% endif %}
 # TODO If virtual setting more extreme use that instead of +-2
-# TODO Trigger by gocontrol temp change as well
 
 # Livingroom cooling automation
 - id: climate_cool_from_remote_living_room
@@ -100,6 +99,13 @@
       entity_id: input_select.presence
     - platform: state
       entity_id: input_select.home_mode
+  condition:
+    - condition: state
+      endity_id: input_select.hvac_mode
+      state: "cooling"
+    # - condition: template
+    #   value_template: >-
+    #     {% if states.climate.gocontrol_thermostat_living_room_cooling_setpoint >  %}
   action:
     - service: climate.set_temperature
       entity_id: climate.gocontrol_thermostat_living_room_cooling_setpoint
@@ -129,19 +135,25 @@
       entity_id: input_select.presence
     - platform: state
       entity_id: input_select.home_mode
+  condition:
+    - condition: state
+      entity_id: input_select.hvac_mode
+      state: "heating"
+    - condition: template
+      value_template: >-
+        {{ is_state('climate.living_room_thermostat_heat', 'heat') or
+           (not (is_state('climate.living_room_thermostat_heat', 'heat')) and
+             (state_attr("climate.gocontrol_thermostat_living_room_heating_setpoint", "temperature") >
+               state_attr("climate.gocontrol_thermostat_living_room_heating_setpoint", "current_temperature") - 2)) }}
   action:
     - service: climate.set_temperature
       entity_id: climate.gocontrol_thermostat_living_room_heating_setpoint
       data_template:
         temperature: >-
-          {% if is_state('input_select.hvac_mode', 'heating') %}
-            {% if is_state('climate.living_room_thermostat_heat', 'heat') %}
-              {{ float(states.climate.gocontrol_thermostat_living_room_heating_setpoint.attributes.current_temperature) + 2 }}
-            {% else %}
-              {{ float(states.climate.gocontrol_thermostat_living_room_heating_setpoint.attributes.current_temperature) - 2 }}
-            {% endif %}
+          {% if is_state('climate.living_room_thermostat_heat', 'heat') %}
+            {{ float(states.climate.gocontrol_thermostat_living_room_heating_setpoint.attributes.current_temperature) + 2 }}
           {% else %}
-            60
+            {{ float(states.climate.gocontrol_thermostat_living_room_heating_setpoint.attributes.current_temperature) - 2 }}
           {% endif %}
 
 # Bedroom cooling automation
@@ -156,6 +168,10 @@
       entity_id: input_select.presence
     - platform: state
       entity_id: input_select.home_mode
+  condition:
+    - condition: state
+      endity_id: input_select.hvac_mode
+      state: "cooling"
   action:
     - service: climate.set_temperature
       entity_id: climate.gocontrol_thermostat_bedroom_cooling
@@ -183,6 +199,10 @@
       entity_id: input_select.presence
     - platform: state
       entity_id: input_select.home_mode
+  condition:
+    - condition: state
+      endity_id: input_select.hvac_mode
+      state: "heating"
   action:
     - service: climate.set_temperature
       entity_id: climate.gocontrol_thermostat_bedroom_heating

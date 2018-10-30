@@ -4,7 +4,8 @@
   trigger:
     - platform: event
       event_type: zwave.scene_activated
-      event_data: zwave.aeotec_minimote_door
+      event_data:
+        entity_id: zwave.aeotec_minimote_door
   action:
     - service: homeassistant.toggle
       data_template:

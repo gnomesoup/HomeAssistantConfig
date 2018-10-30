@@ -20,6 +20,8 @@
                         7: 'light.metal_lamp',
                         9: 'light.metal_lamp'} %}
           {{ map[trigger.event.data.scene_id|int] }}
+    - service: light.toggle
+      entity_id: light.pop_socket_light
 
 # bedroom minimote
 - id: minimote_bedroom_button1_pushed

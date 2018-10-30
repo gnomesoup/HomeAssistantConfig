@@ -11,17 +11,17 @@
     - service: homeassistant.toggle
       data_template:
         entity_id: >
-          {% set map = {1: 'light.metal_lamp',
-                        2: 'light.metal_lamp',
-                        3: 'light.metal_lamp',
-                        4: 'light.metal_lamp',
-                        5: 'light.metal_lamp',
-                        6: 'light.metal_lamp',
-                        7: 'light.metal_lamp',
-                        9: 'light.metal_lamp'} %}
+          {% set map = {1: "script.goodmorning",
+                        2: "script.goodmorning",
+                        3: "script.goodbye",
+                        4: "script.goodbye",
+                        5: "script.imback",
+                        6: "script.imback",
+                        7: "script.goodnight",
+                        9: "script.goodnight"} %}
           {{ map[trigger.event.data.scene_id|int] }}
-    - service: light.toggle
-      entity_id: light.pop_socket_light
+    # - service: light.toggle
+    #   entity_id: light.pop_socket_light
 
 # bedroom minimote
 - id: minimote_bedroom_button1_pushed

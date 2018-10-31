@@ -37,7 +37,7 @@
     - service: homeassistant.toggle
       data_template:
         entity_id: >
-          {% set map = {1: "script.light.bedroom_canopy",
+          {% set map = {1: "light.bedroom_canopy",
                         2: "script.bedtime",
                         3: "light.bedroom_closet",
                         4: "script.bedtime",

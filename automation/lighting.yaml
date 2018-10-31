@@ -54,7 +54,8 @@
     - platform: numeric_state
       entity_id: sensor.aeotec_multisensor_burglar_living_room
       above: 2
-    - platform: state
+  condition:
+    - condition: state
       entity_id: input_boolean.cleaner_present
       state: "off"
   action:
@@ -66,14 +67,15 @@
 - id: cleaner_goodbye
   alias: The cleaner has left
   trigger:
-    - platform: state
+    - platform: numeric_state
       entity_id: sensor.aeotec_multisensor_burglar_living_room
-      state: "0"
+      below: 1
       for:
         seconds: 30
-    - platform: state
+  condition:
+    - condition: state
       entity_id: input_boolean.cleaner_present
-      state: "off"
+      state: "on"
   action:
     - service: homeassistant.turn_off
        - light.metal_lamp

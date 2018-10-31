@@ -78,5 +78,6 @@
       state: "on"
   action:
     - service: homeassistant.turn_off
+      entity_id:
        - light.metal_lamp
        - input_boolean.cleaner_present

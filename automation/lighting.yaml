@@ -68,7 +68,7 @@
   trigger:
     - platform: state
       entity_id: sensor.aeotec_multisensor_burglar_living_room
-      state: 0
+      state: "0"
       for:
         seconds: 30
     - platform: state

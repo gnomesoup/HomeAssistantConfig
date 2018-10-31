@@ -64,8 +64,8 @@
                         3: "light.bedroom_closet",
                         4: "script.bedtime",
                         5: "light.bedroom_lamp",
-                        6: "script.goodnight",
+                        6: "script.bedtime",
                         7: "light.camilles_desk_lamp",
-                        8: "script.goodnight"} %}
+                        8: "script.bedtime"} %}
           {{ map[trigger.event.data.scene_id|int] }}
 

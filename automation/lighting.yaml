@@ -46,3 +46,35 @@
   action:
     - service: light.turn_off
       entity_id: light.aquarium_light
+
+# cleaning mode turn on all lights
+- id: cleaning_welcome
+  alias: Welcome cleaner
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.aeotec_multisensor_burglar_living_room
+      above: 2
+    - platform: state
+      entity_id: input_boolean.cleaner_present
+      state: "off"
+  action:
+    - service: homeassistant.turn_on
+      entity_id:
+        - light.metal_lamp
+        - input_boolean.cleaner_present
+
+- id: cleaner_goodbye
+  alias: The cleaner has left
+  trigger:
+    - platform: state
+      entity_id: sensor.aeotec_multisensor_burglar_living_room
+      state: 0
+      for:
+        seconds: 30
+    - platform: state
+      entity_id: input_boolean.cleaner_present
+      state: "off"
+  action:
+    - service: homeassistant.turn_off
+       - light.metal_lamp
+       - input_boolean.cleaner_present

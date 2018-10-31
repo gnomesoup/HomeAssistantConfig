@@ -25,3 +25,7 @@ testing:
   name: Testing boolean
   # initial: off
   icon: mdi:test-tube
+
+cleaner_present:
+  name: Cleaner Present
+  icon: mdi:broom

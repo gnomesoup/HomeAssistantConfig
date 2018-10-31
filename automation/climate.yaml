@@ -197,22 +197,24 @@
     - platform: state
       entity_id: input_select.home_mode
   condition:
-    condition: state
-    entity_id: input_select.hvac_mode
-    state: "heating"
+    - condition: state
+      entity_id: input_select.hvac_mode
+      state: "heating"
+    - condition: template
+      value_template: >-
+        {{ is_state('climate.bedroom_thermostat_heat', 'heat') or
+           (not (is_state('climate.bedroom_thermostat_heat', 'heat')) and
+             (state_attr("climate.gocontrol_thermostat_bedroom_heating", "temperature") >
+               state_attr("climate.gocontrol_thermostat_bedroom_heating", "current_temperature") - 2)) }}
   action:
     - service: climate.set_temperature
       entity_id: climate.gocontrol_thermostat_bedroom_heating
       data_template:
         temperature: >-
-          {% if is_state('input_select.hvac_mode', 'heating') %}
-            {% if is_state('climate.bedroom_thermostat_heat', 'heat') %}
-              {{ float(states.climate.gocontrol_thermostat_bedroom_heating.attributes.current_temperature) + 2 }}
-            {% else %}
-              {{ float(states.climate.gocontrol_thermostat_bedroom_heating.attributes.current_temperature) - 2 }}
-            {% endif %}
+          {% if is_state('climate.bedroom_thermostat_heat', 'heat') %}
+            {{ float(states.climate.gocontrol_thermostat_bedroom_heating.attributes.current_temperature) + 2 }}
           {% else %}
-            65
+            {{ float(states.climate.gocontrol_thermostat_bedroom_heating.attributes.current_temperature) - 2 }}
           {% endif %}
 
 ## Humidity Control/Warning

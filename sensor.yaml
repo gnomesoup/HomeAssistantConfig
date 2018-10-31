@@ -88,7 +88,7 @@
       value_template: >-
         {{ state_attr("zwave.aeotec_multisensor_living_room", "battery_level") }}
     aeotec_multisensor_bedroom_battery:
-      friendly_name: "Living Room Multisensor Battery"
+      friendly_name: "Bedroom Multisensor Battery"
       unit_of_measurement: "%"
       value_template: >-
         {{ state_attr("zwave.aeotec_multisensor_bedroom", "battery_level") }}

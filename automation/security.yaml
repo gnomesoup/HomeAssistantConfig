@@ -97,10 +97,9 @@
     - condition: state
       entity_id: input_select.home_mode
       state: "Cleaning"
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.presence
-        option: "Away"
+    - condition: state
+      entity_id: input_select.presence
+      state: "Away"
   action:
     - service: homeassistant.turn_on
       entity_id:
@@ -136,10 +135,9 @@
       data:
         entity_id: input_select.home_mode
         option: "Normal"
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.presence
-        option: "Away"
+    - condition: state
+      entity_id: input_select.presence
+      state: "Away"
     - service: notify.notify
       data:
         message: "The cleaner has left"

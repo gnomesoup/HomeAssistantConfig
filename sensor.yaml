@@ -92,3 +92,9 @@
       unit_of_measurement: "%"
       value_template: >-
         {{ state_attr("zwave.aeotec_multisensor_bedroom", "battery_level") }}
+
+- platform: time_date
+  display_options:
+    - "time"
+    - "date"
+    - "beat"

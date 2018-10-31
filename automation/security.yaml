@@ -64,3 +64,74 @@
 #   action:
 #     - service: input_boolean.toggle
 #       entity_id: input_boolean.testing
+
+## select "Cleaning" mode when appropriate
+- id: setup_cleaning
+  alias: Turn on cleaning mode
+  trigger:
+    - platform: time
+      at: "11:30:00"
+  condition:
+    condition: time
+    weekday:
+      - wed
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.home_mode
+        option: "Cleaning"
+
+# cleaning mode turn on all lights
+- id: cleaning_welcome
+  alias: Welcome cleaner
+  trigger:
+    - platform: state
+      entity_id:
+        - binary_sensor.aeotec_multisensor_sensor_living_room
+        - binary_sensor.aeotec_multisensor_sensor_bedroom
+      to: "on"
+  condition:
+    - condition: state
+      entity_id: input_boolean.cleaner_present
+      state: "off"
+    - condition: state
+      entity_id: input_select.home_mode
+      state: "Cleaning"
+  action:
+    - service: homeassistant.turn_on
+      entity_id:
+        - group.lights
+        - input_boolean.cleaner_present
+    - service: notify.notify
+      data:
+        message: "The cleaner has arrived"
+
+- id: cleaner_goodbye
+  alias: Cleaner Goodbye
+  trigger:
+    - platform: state
+      entity_id:
+        - binary_sensor.aeotec_multisensor_sensor_living_room
+        - binary_sensor.aeotec_multisensor_sensor_bedroom
+      to: "off"
+      for:
+        minutes: 30
+  condition:
+    - condition: state
+      entity_id: input_boolean.cleaner_present
+      state: "on"
+    - condition: state
+      entity_id: input_select.home_mode
+      state: "Cleaning"
+  action:
+    - service: homeassistant.turn_off
+      entity_id:
+        - group.lights
+        - input_boolean.cleaner_present
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.home_mode
+        option: "Normal"
+    - service: notify.notify
+      data:
+        message: "The cleaner has left"

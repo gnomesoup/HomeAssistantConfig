@@ -1,36 +1,36 @@
 [{
     "attributes": {
-        "friendly_name": "Intruder Alert",
-        "hidden": true
-    },
-    "context": {
-        "id": "5405861223274b03b585739e4319ca86",
-        "user_id": null
-    },
-    "entity_id": "alert.intruder_alert",
-    "last_changed": "2018-10-30T04:13:00.399029+00:00",
-    "last_updated": "2018-10-30T04:13:00.399029+00:00",
-    "state": "idle"
-}, {
-    "attributes": {
-        "azimuth": 334.03,
-        "elevation": -59.69,
+        "azimuth": 106.28,
+        "elevation": -2.79,
         "friendly_name": "Sun",
-        "next_dawn": "2018-10-30T11:51:05+00:00",
+        "next_dawn": "2018-10-31T11:52:14+00:00",
         "next_dusk": "2018-10-30T23:17:10+00:00",
-        "next_midnight": "2018-10-30T05:34:05+00:00",
+        "next_midnight": "2018-10-31T05:34:03+00:00",
         "next_noon": "2018-10-30T17:34:08+00:00",
         "next_rising": "2018-10-30T12:19:53+00:00",
         "next_setting": "2018-10-30T22:48:22+00:00"
     },
     "context": {
-        "id": "34b33c7167524be8a57a0ff85fae90e6",
+        "id": "54f81cf0ef3c450bb324a4c3eb0c43cd",
         "user_id": null
     },
     "entity_id": "sun.sun",
-    "last_changed": "2018-10-30T04:13:00.400080+00:00",
-    "last_updated": "2018-10-30T04:41:30.003614+00:00",
+    "last_changed": "2018-10-30T12:08:03.442716+00:00",
+    "last_updated": "2018-10-30T12:09:30.004545+00:00",
     "state": "below_horizon"
+}, {
+    "attributes": {
+        "friendly_name": "Intruder Alert",
+        "hidden": true
+    },
+    "context": {
+        "id": "a8ff3a7cdc0b4e4e8c8741625b7cb38f",
+        "user_id": null
+    },
+    "entity_id": "alert.intruder_alert",
+    "last_changed": "2018-10-30T12:08:03.453203+00:00",
+    "last_updated": "2018-10-30T12:08:03.453203+00:00",
+    "state": "idle"
 }, {
     "attributes": {
         "friendly_name": "Home",
@@ -41,25 +41,13 @@
         "radius": 100
     },
     "context": {
-        "id": "720152f422254057a30f873e80a2d2b4",
+        "id": "1f3387c6e046493a94a1ed435a16f77a",
         "user_id": null
     },
     "entity_id": "zone.home",
-    "last_changed": "2018-10-30T04:13:00.530453+00:00",
-    "last_updated": "2018-10-30T04:13:00.530453+00:00",
+    "last_changed": "2018-10-30T12:08:03.568773+00:00",
+    "last_updated": "2018-10-30T12:08:03.568773+00:00",
     "state": "zoning"
-}, {
-    "attributes": {
-        "friendly_name": "Delay MQTT Automation on Startup"
-    },
-    "context": {
-        "id": "e6ee92853f5d43e5a52b9cd686f66101",
-        "user_id": "765bd7b4c3104b70b3137cadc0a96668"
-    },
-    "entity_id": "input_boolean.mqtt_delay",
-    "last_changed": "2018-10-30T04:27:12.160505+00:00",
-    "last_updated": "2018-10-30T04:27:12.160505+00:00",
-    "state": "off"
 }, {
     "attributes": {
         "entity_id": ["device_tracker.ergisch", "device_tracker.angelapfammattersiphone", "sun.sun", "sensor.all_rooms_temperature", "sensor.all_rooms_humidity", "script.makethecoffee", "script.goodmorning", "script.goodbye", "script.imback", "script.goodnightcamille", "script.getmellowed", "script.bedtime", "group.homestatus", "media_player.denon", "weather.dark_sky"],
@@ -69,12 +57,12 @@
         "view": true
     },
     "context": {
-        "id": "dc63c3297da04c3e88de8422049635d8",
+        "id": "1ddd6b1a571644cc91fdbd9f64a42d02",
         "user_id": null
     },
     "entity_id": "group.default_view",
-    "last_changed": "2018-10-30T04:13:01.026300+00:00",
-    "last_updated": "2018-10-30T04:13:01.026300+00:00",
+    "last_changed": "2018-10-30T12:08:04.096763+00:00",
+    "last_updated": "2018-10-30T12:08:04.096763+00:00",
     "state": "off"
 }, {
     "attributes": {
@@ -82,117 +70,144 @@
         "options": ["Normal", "Quiet", "Sleep", "Cleaning", "Guest", "Manual"]
     },
     "context": {
-        "id": "29cc38305a3a4fbea744905aabe576cd",
+        "id": "8ec5f279718d4b43b2dc99562328b040",
         "user_id": null
     },
     "entity_id": "input_select.home_mode",
-    "last_changed": "2018-10-30T04:13:00.670761+00:00",
-    "last_updated": "2018-10-30T04:13:00.670761+00:00",
+    "last_changed": "2018-10-30T12:08:03.633804+00:00",
+    "last_updated": "2018-10-30T12:08:03.633804+00:00",
     "state": "Normal"
 }, {
     "attributes": {
+        "friendly_name": "Delay MQTT Automation on Startup"
+    },
+    "context": {
+        "id": "f40cc4361d4b41199a566c3362b00c1f",
+        "user_id": null
+    },
+    "entity_id": "input_boolean.mqtt_delay",
+    "last_changed": "2018-10-30T12:08:35.002755+00:00",
+    "last_updated": "2018-10-30T12:08:35.002755+00:00",
+    "state": "off"
+}, {
+    "attributes": {
+        "friendly_name": "Living Room Multisensor Battery",
+        "unit_of_measurement": "%"
+    },
+    "context": {
+        "id": "18cb4f1ced7b46b89be81344b0a80328",
+        "user_id": null
+    },
+    "entity_id": "sensor.aeotec_multisensor_living_room_battery",
+    "last_changed": "2018-10-30T12:08:19.781234+00:00",
+    "last_updated": "2018-10-30T12:08:19.781234+00:00",
+    "state": "100"
+}, {
+    "attributes": {
+        "friendly_name": "Living Room Multisensor Battery",
+        "unit_of_measurement": "%"
+    },
+    "context": {
+        "id": "d7e5cca7e68c4a0abf7554cd206037a5",
+        "user_id": null
+    },
+    "entity_id": "sensor.aeotec_multisensor_bedroom_battery",
+    "last_changed": "2018-10-30T12:08:20.888031+00:00",
+    "last_updated": "2018-10-30T12:08:20.888031+00:00",
+    "state": "51"
+}, {
+    "attributes": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "entity_picture": "https://api.met.no/weatherapi/weathericon/1.1/?symbol=1;content_type=image/png",
+        "entity_picture": "https://api.met.no/weatherapi/weathericon/1.1/?symbol=4;content_type=image/png",
         "friendly_name": "yr Symbol"
     },
     "context": {
-        "id": "cb8a8388b4c5457c9481fc4ad9868652",
+        "id": "0d99debfad4d4eb494ef128daf12a725",
         "user_id": null
     },
     "entity_id": "sensor.yr_symbol",
-    "last_changed": "2018-10-30T04:13:01.660512+00:00",
-    "last_updated": "2018-10-30T04:13:01.660512+00:00",
-    "state": "1"
+    "last_changed": "2018-10-30T12:08:04.720592+00:00",
+    "last_updated": "2018-10-30T12:08:04.720592+00:00",
+    "state": "4"
 }, {
     "attributes": {
         "friendly_name": "Bedroom Average Temperature",
         "unit_of_measurement": "\u00b0F"
     },
     "context": {
-        "id": "03e7923e20704643b95dee60f62a3343",
+        "id": "7f9239dee96d4528b9f3ecae966ec1e6",
         "user_id": null
     },
     "entity_id": "sensor.bedroom_average_temperature",
-    "last_changed": "2018-10-30T04:40:13.098800+00:00",
-    "last_updated": "2018-10-30T04:40:13.098800+00:00",
-    "state": "71.8"
+    "last_changed": "2018-10-30T12:08:19.860488+00:00",
+    "last_updated": "2018-10-30T12:08:19.860488+00:00",
+    "state": "70.9"
 }, {
     "attributes": {
         "friendly_name": "Living Room Average Temperature",
         "unit_of_measurement": "\u00b0F"
     },
     "context": {
-        "id": "47d365a5c971430e876344943c44d7af",
+        "id": "0a6c4a11ef2345b18e4eff849157bd8e",
         "user_id": null
     },
     "entity_id": "sensor.living_room_average_temperature",
-    "last_changed": "2018-10-30T04:16:44.633122+00:00",
-    "last_updated": "2018-10-30T04:16:44.633122+00:00",
-    "state": "69.1"
+    "last_changed": "2018-10-30T12:08:17.086761+00:00",
+    "last_updated": "2018-10-30T12:08:17.086761+00:00",
+    "state": "70.5"
 }, {
     "attributes": {
         "friendly_name": "Average Temperature",
         "unit_of_measurement": "\u00b0F"
     },
     "context": {
-        "id": "f9095ac4f319488b9903950c0eaaef1f",
+        "id": "23a100ad8a9e4dfea35974ecf28c2a5e",
         "user_id": null
     },
     "entity_id": "sensor.all_rooms_temperature",
-    "last_changed": "2018-10-30T04:40:13.101769+00:00",
-    "last_updated": "2018-10-30T04:40:13.101769+00:00",
-    "state": "69.4"
+    "last_changed": "2018-10-30T12:08:19.863699+00:00",
+    "last_updated": "2018-10-30T12:08:19.863699+00:00",
+    "state": "69.3"
 }, {
     "attributes": {
         "friendly_name": "Average Humidity",
         "unit_of_measurement": "%"
     },
     "context": {
-        "id": "35c854bacc0b4fe1b3f0213a60e3c8bd",
+        "id": "8af1b012ed3e4524a647cff56065fac7",
         "user_id": null
     },
     "entity_id": "sensor.all_rooms_humidity",
-    "last_changed": "2018-10-30T04:40:13.072912+00:00",
-    "last_updated": "2018-10-30T04:40:13.072912+00:00",
-    "state": "54.0"
+    "last_changed": "2018-10-30T12:08:20.018884+00:00",
+    "last_updated": "2018-10-30T12:08:20.018884+00:00",
+    "state": "54.5"
 }, {
     "attributes": {
-        "friendly_name": "Living Room Multisensor Battery",
+        "friendly_name": "Water Leak Sensor Temperature",
+        "unit_of_measurement": "\u00b0F"
+    },
+    "context": {
+        "id": "8abd0c89951c42cab8100930628edc2e",
+        "user_id": null
+    },
+    "entity_id": "sensor.water_leak_sensor_temperature",
+    "last_changed": "2018-10-30T12:08:03.836171+00:00",
+    "last_updated": "2018-10-30T12:08:03.836171+00:00",
+    "state": "67"
+}, {
+    "attributes": {
+        "friendly_name": "Memory use (percent)",
+        "icon": "mdi:memory",
         "unit_of_measurement": "%"
     },
     "context": {
-        "id": "f7980637539c426b93ea79aa4f85750f",
+        "id": "7ccc78e57b1e41c79826de58b582e51b",
         "user_id": null
     },
-    "entity_id": "sensor.aeotec_multisensor_bedroom_battery",
-    "last_changed": "2018-10-30T04:40:13.005212+00:00",
-    "last_updated": "2018-10-30T04:40:13.005212+00:00",
-    "state": "51"
-}, {
-    "attributes": {
-        "friendly_name": "Living Room Multisensor Battery",
-        "unit_of_measurement": "%"
-    },
-    "context": {
-        "id": "1bfd820039df4da48b0122eefe1c5b0f",
-        "user_id": null
-    },
-    "entity_id": "sensor.aeotec_multisensor_living_room_battery",
-    "last_changed": "2018-10-30T04:13:16.395948+00:00",
-    "last_updated": "2018-10-30T04:13:16.395948+00:00",
-    "state": "100"
-}, {
-    "attributes": {
-        "friendly_name": "Water Leak Sensor Water"
-    },
-    "context": {
-        "id": "efcfd94039654a3287cc25036cca904b",
-        "user_id": null
-    },
-    "entity_id": "sensor.water_leak_sensor_water",
-    "last_changed": "2018-10-30T04:13:00.828614+00:00",
-    "last_updated": "2018-10-30T04:13:00.828614+00:00",
-    "state": "dry"
+    "entity_id": "sensor.memory_use_percent",
+    "last_changed": "2018-10-30T12:09:05.003614+00:00",
+    "last_updated": "2018-10-30T12:09:05.003614+00:00",
+    "state": "27.6"
 }, {
     "attributes": {
         "assumed_state": true,
@@ -203,13 +218,25 @@
         "view": true
     },
     "context": {
-        "id": "67170d15b34541139613eb6efbb55f22",
+        "id": "f121645af91342b5a6ccca7e84035e27",
         "user_id": null
     },
     "entity_id": "group.living_room",
-    "last_changed": "2018-10-30T04:13:01.302078+00:00",
-    "last_updated": "2018-10-30T04:13:01.302078+00:00",
+    "last_changed": "2018-10-30T12:08:04.372488+00:00",
+    "last_updated": "2018-10-30T12:08:04.372488+00:00",
     "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Water Leak Sensor Water"
+    },
+    "context": {
+        "id": "77201bafb5894e009d6d8ae2dfb79db8",
+        "user_id": null
+    },
+    "entity_id": "sensor.water_leak_sensor_water",
+    "last_changed": "2018-10-30T12:08:03.849309+00:00",
+    "last_updated": "2018-10-30T12:08:03.849309+00:00",
+    "state": "dry"
 }, {
     "attributes": {
         "friendly_name": "Memory free",
@@ -217,39 +244,13 @@
         "unit_of_measurement": "MiB"
     },
     "context": {
-        "id": "e97c982cd03649cdb4d1501941123253",
+        "id": "122a0efd52b0496db75ab4e711d6f217",
         "user_id": null
     },
     "entity_id": "sensor.memory_free",
-    "last_changed": "2018-10-30T04:41:47.035645+00:00",
-    "last_updated": "2018-10-30T04:41:47.035645+00:00",
-    "state": "1456.5"
-}, {
-    "attributes": {
-        "friendly_name": "Water Leak Sensor Battery",
-        "unit_of_measurement": "%"
-    },
-    "context": {
-        "id": "1e9d354e720d47118f52ee8511bee6af",
-        "user_id": null
-    },
-    "entity_id": "sensor.water_leak_sensor_battery",
-    "last_changed": "2018-10-30T04:13:00.835306+00:00",
-    "last_updated": "2018-10-30T04:13:00.835306+00:00",
-    "state": "unknown"
-}, {
-    "attributes": {
-        "friendly_name": "Living Room Speaker",
-        "supported_features": 21437
-    },
-    "context": {
-        "id": "d921b024a04e411f8b17b4551059426e",
-        "user_id": null
-    },
-    "entity_id": "media_player.living_room_speaker",
-    "last_changed": "2018-10-30T04:13:01.002665+00:00",
-    "last_updated": "2018-10-30T04:13:01.002665+00:00",
-    "state": "off"
+    "last_changed": "2018-10-30T12:09:36.027104+00:00",
+    "last_updated": "2018-10-30T12:09:36.027104+00:00",
+    "state": "1427.0"
 }, {
     "attributes": {
         "assumed_state": true,
@@ -260,53 +261,26 @@
         "view": true
     },
     "context": {
-        "id": "5722bc61be1e44dbb472bc8dcbf76356",
+        "id": "d87e1fec5e4d497ab6b2f72578644fa7",
         "user_id": null
     },
     "entity_id": "group.bedroom",
-    "last_changed": "2018-10-30T04:13:01.008496+00:00",
-    "last_updated": "2018-10-30T04:13:01.316519+00:00",
-    "state": "off"
+    "last_changed": "2018-10-30T12:08:19.738463+00:00",
+    "last_updated": "2018-10-30T12:08:19.738463+00:00",
+    "state": "on"
 }, {
     "attributes": {
-        "friendly_name": "Bedroom Speaker",
-        "supported_features": 21437
+        "friendly_name": "Water Leak Sensor Battery",
+        "unit_of_measurement": "%"
     },
     "context": {
-        "id": "f38d4c6bf65f45c39dd8db7e51de9b16",
+        "id": "d910fc1e0c7c419d933a8a8b250474c5",
         "user_id": null
     },
-    "entity_id": "media_player.bedroom_speaker",
-    "last_changed": "2018-10-30T04:13:01.001682+00:00",
-    "last_updated": "2018-10-30T04:13:01.001682+00:00",
-    "state": "off"
-}, {
-    "attributes": {
-        "friendly_name": "Load (1m)",
-        "icon": "mdi:memory",
-        "unit_of_measurement": " "
-    },
-    "context": {
-        "id": "4ec8b5f0d2bd4339b2d98d3496650000",
-        "user_id": null
-    },
-    "entity_id": "sensor.load_1m",
-    "last_changed": "2018-10-30T04:41:47.050902+00:00",
-    "last_updated": "2018-10-30T04:41:47.050902+00:00",
-    "state": "0.25048828125"
-}, {
-    "attributes": {
-        "friendly_name": "Water Leak Sensor Temperature",
-        "unit_of_measurement": "\u00b0F"
-    },
-    "context": {
-        "id": "db56e599c45642ecb2ca91ee0bea61f5",
-        "user_id": null
-    },
-    "entity_id": "sensor.water_leak_sensor_temperature",
-    "last_changed": "2018-10-30T04:13:00.917200+00:00",
-    "last_updated": "2018-10-30T04:13:00.917200+00:00",
-    "state": "67"
+    "entity_id": "sensor.water_leak_sensor_battery",
+    "last_changed": "2018-10-30T12:08:03.879244+00:00",
+    "last_updated": "2018-10-30T12:08:03.879244+00:00",
+    "state": "unknown"
 }, {
     "attributes": {
         "assumed_state": true,
@@ -317,53 +291,27 @@
         "view": true
     },
     "context": {
-        "id": "0f04d7b280454897be11c872e1df47bd",
+        "id": "414a41d28a66461a92cbd75fa8dbd330",
         "user_id": null
     },
     "entity_id": "group.lights",
-    "last_changed": "2018-10-30T04:13:01.303623+00:00",
-    "last_updated": "2018-10-30T04:13:01.303623+00:00",
+    "last_changed": "2018-10-30T12:08:04.374326+00:00",
+    "last_updated": "2018-10-30T12:08:04.374326+00:00",
     "state": "on"
 }, {
     "attributes": {
-        "friendly_name": "Denon",
-        "supported_features": 21437
-    },
-    "context": {
-        "id": "dfd95b2a878443d39b698f75398d0d0f",
-        "user_id": null
-    },
-    "entity_id": "media_player.denon",
-    "last_changed": "2018-10-30T04:35:48.977556+00:00",
-    "last_updated": "2018-10-30T04:35:48.977556+00:00",
-    "state": "off"
-}, {
-    "attributes": {
-        "friendly_name": "All rooms",
-        "supported_features": 21437
-    },
-    "context": {
-        "id": "031136b7016842f68f73ce35545ea139",
-        "user_id": null
-    },
-    "entity_id": "media_player.all_rooms",
-    "last_changed": "2018-10-30T04:13:01.059651+00:00",
-    "last_updated": "2018-10-30T04:13:01.059651+00:00",
-    "state": "off"
-}, {
-    "attributes": {
-        "friendly_name": "Load (5m)",
+        "friendly_name": "Load (1m)",
         "icon": "mdi:memory",
         "unit_of_measurement": " "
     },
     "context": {
-        "id": "5379231048cc474892374e6d8310f7f7",
+        "id": "b02059e683fe484a972c471a305f22e4",
         "user_id": null
     },
-    "entity_id": "sensor.load_5m",
-    "last_changed": "2018-10-30T04:41:47.044147+00:00",
-    "last_updated": "2018-10-30T04:41:47.044147+00:00",
-    "state": "0.24560546875"
+    "entity_id": "sensor.load_1m",
+    "last_changed": "2018-10-30T12:09:36.019772+00:00",
+    "last_updated": "2018-10-30T12:09:36.019772+00:00",
+    "state": "1.82373046875"
 }, {
     "attributes": {
         "entity_id": ["sensor.all_rooms_temperature", "sensor.all_rooms_humidity", "sensor.living_room_average_temperature", "sensor.bedroom_average_temperature", "sensor.aeotec_multisensor_relative_humidity_living_room", "sensor.aeotec_multisensor_relative_humidity_bedroom", "input_select.hvac_mode", "climate.living_room_thermostat_cool", "climate.living_room_thermostat_heat", "climate.gocontrol_thermostat_living_room_cooling_setpoint", "climate.gocontrol_thermostat_living_room_heating_setpoint", "group.livingroomsensorclimate", "climate.bedroom_thermostat_cool", "climate.bedroom_thermostat_heat", "climate.gocontrol_thermostat_bedroom_cooling", "climate.gocontrol_thermostat_bedroom_heating", "group.bedroomsensorclimate", "sensor.water_leak_sensor_temperature", "switch.aeotec_humidifier_bedroom", "sensor.aeotec_humidifier_power", "weather.dark_sky", "group.livingroomheatdefaults", "group.bedroomheatdefaults"],
@@ -373,59 +321,27 @@
         "view": true
     },
     "context": {
-        "id": "57ce0623b62242c2b763d42735438292",
+        "id": "12550056da454c13a0d9b91292c09b43",
         "user_id": null
     },
     "entity_id": "group.climate",
-    "last_changed": "2018-10-30T04:13:11.600015+00:00",
-    "last_updated": "2018-10-30T04:13:11.600015+00:00",
+    "last_changed": "2018-10-30T12:08:15.958745+00:00",
+    "last_updated": "2018-10-30T12:08:15.958745+00:00",
     "state": "on"
 }, {
     "attributes": {
-        "friendly_name": "Living room cool when awake",
-        "max": 90.0,
-        "min": 65.0,
-        "mode": "box",
-        "step": 1.0
+        "friendly_name": "Load (5m)",
+        "icon": "mdi:memory",
+        "unit_of_measurement": " "
     },
     "context": {
-        "id": "a8857c7605824ed28f695dea1f40096a",
+        "id": "28547ab7353e409abe2ef2da20130e5b",
         "user_id": null
     },
-    "entity_id": "input_number.cool_home_living_room_awake",
-    "last_changed": "2018-10-30T04:13:00.983775+00:00",
-    "last_updated": "2018-10-30T04:13:00.983775+00:00",
-    "state": "72.0"
-}, {
-    "attributes": {
-        "friendly_name": "Since last boot",
-        "icon": "mdi:clock",
-        "unit_of_measurement": ""
-    },
-    "context": {
-        "id": "60dd2b2de7b54d68b1abc3cf2846418a",
-        "user_id": null
-    },
-    "entity_id": "sensor.since_last_boot",
-    "last_changed": "2018-10-30T04:41:47.021401+00:00",
-    "last_updated": "2018-10-30T04:41:47.021401+00:00",
-    "state": "1:07:40.020640"
-}, {
-    "attributes": {
-        "friendly_name": "Living room cool when asleep",
-        "max": 90.0,
-        "min": 65.0,
-        "mode": "box",
-        "step": 1.0
-    },
-    "context": {
-        "id": "a92656afef3e443eba6355365cefddab",
-        "user_id": null
-    },
-    "entity_id": "input_number.cool_away_living_room_asleep",
-    "last_changed": "2018-10-30T04:13:00.986742+00:00",
-    "last_updated": "2018-10-30T04:13:00.986742+00:00",
-    "state": "78.0"
+    "entity_id": "sensor.load_5m",
+    "last_changed": "2018-10-30T12:09:36.034350+00:00",
+    "last_updated": "2018-10-30T12:09:36.034350+00:00",
+    "state": "0.8779296875"
 }, {
     "attributes": {
         "entity_id": ["group.allroomsmedia", "group.livingroommedia", "group.bedroommedia"],
@@ -435,45 +351,13 @@
         "view": true
     },
     "context": {
-        "id": "ccb32a575e1048c49a79116c593a4079",
+        "id": "d93faa4ee8764be08741f763a5bf8217",
         "user_id": null
     },
     "entity_id": "group.media",
-    "last_changed": "2018-10-30T04:13:01.071091+00:00",
-    "last_updated": "2018-10-30T04:13:01.071091+00:00",
+    "last_changed": "2018-10-30T12:08:04.107794+00:00",
+    "last_updated": "2018-10-30T12:08:04.107794+00:00",
     "state": "off"
-}, {
-    "attributes": {
-        "friendly_name": "Living room heat when awake",
-        "max": 90.0,
-        "min": 65.0,
-        "mode": "box",
-        "step": 1.0
-    },
-    "context": {
-        "id": "f9e7a75642874f4099453fc19ce9ef29",
-        "user_id": null
-    },
-    "entity_id": "input_number.heat_home_living_room_awake",
-    "last_changed": "2018-10-30T04:13:01.000617+00:00",
-    "last_updated": "2018-10-30T04:13:01.000617+00:00",
-    "state": "70.0"
-}, {
-    "attributes": {
-        "friendly_name": "Bedroom cool when away",
-        "max": 90.0,
-        "min": 65.0,
-        "mode": "box",
-        "step": 1.0
-    },
-    "context": {
-        "id": "ba8f808c928d4e6ab798592965248ca7",
-        "user_id": null
-    },
-    "entity_id": "input_number.cool_away_bedroom_away",
-    "last_changed": "2018-10-30T04:13:01.003796+00:00",
-    "last_updated": "2018-10-30T04:13:01.003796+00:00",
-    "state": "80.0"
 }, {
     "attributes": {
         "friendly_name": "Load (15m)",
@@ -481,29 +365,13 @@
         "unit_of_measurement": " "
     },
     "context": {
-        "id": "f318deaeabfc4173b2fa251477b1134a",
+        "id": "a0e4936576554a189cd4657dd22bff89",
         "user_id": null
     },
     "entity_id": "sensor.load_15m",
-    "last_changed": "2018-10-30T04:41:47.028589+00:00",
-    "last_updated": "2018-10-30T04:41:47.028589+00:00",
-    "state": "0.337890625"
-}, {
-    "attributes": {
-        "friendly_name": "Bedroom heat when asleep",
-        "max": 90.0,
-        "min": 65.0,
-        "mode": "box",
-        "step": 1.0
-    },
-    "context": {
-        "id": "a9fc436790bd4d19ba41ec9d0e15e92d",
-        "user_id": null
-    },
-    "entity_id": "input_number.heat_away_bedroom_asleep",
-    "last_changed": "2018-10-30T04:13:01.006273+00:00",
-    "last_updated": "2018-10-30T04:13:01.006273+00:00",
-    "state": "71.0"
+    "last_changed": "2018-10-30T12:09:36.012059+00:00",
+    "last_updated": "2018-10-30T12:09:36.012059+00:00",
+    "state": "0.40625"
 }, {
     "attributes": {
         "entity_id": ["group.outdoorsecurity", "group.livingroomsecurity", "group.bedroomsecurity", "group.cameralivingroom", "group.camerapatio"],
@@ -513,75 +381,27 @@
         "view": true
     },
     "context": {
-        "id": "74d258d7ef864691b5a413d51a2268c6",
+        "id": "19a8e96e48b24d41906750072e279f7a",
         "user_id": null
     },
     "entity_id": "group.security",
-    "last_changed": "2018-10-30T04:13:18.156242+00:00",
-    "last_updated": "2018-10-30T04:13:18.156242+00:00",
-    "state": "off"
+    "last_changed": "2018-10-30T12:08:19.755831+00:00",
+    "last_updated": "2018-10-30T12:08:19.755831+00:00",
+    "state": "on"
 }, {
     "attributes": {
-        "friendly_name": "Bedroom heat when awake",
-        "max": 90.0,
-        "min": 65.0,
-        "mode": "box",
-        "step": 1.0
+        "friendly_name": "Since last boot",
+        "icon": "mdi:clock",
+        "unit_of_measurement": ""
     },
     "context": {
-        "id": "35fd8a4f4eec487caa450c25221c94b1",
+        "id": "20955a4c0fd64dc9b4503060c5d97530",
         "user_id": null
     },
-    "entity_id": "input_number.heat_home_bedroom_awake",
-    "last_changed": "2018-10-30T04:13:01.016496+00:00",
-    "last_updated": "2018-10-30T04:13:01.016496+00:00",
-    "state": "68.0"
-}, {
-    "attributes": {
-        "friendly_name": "Bedroom heat when away",
-        "max": 90.0,
-        "min": 65.0,
-        "mode": "box",
-        "step": 1.0
-    },
-    "context": {
-        "id": "15bf3c25302947d6838e2eabcf049155",
-        "user_id": null
-    },
-    "entity_id": "input_number.heat_away_bedroom_away",
-    "last_changed": "2018-10-30T04:13:01.017989+00:00",
-    "last_updated": "2018-10-30T04:13:01.017989+00:00",
-    "state": "65.0"
-}, {
-    "attributes": {
-        "friendly_name": "Disk use (percent) /",
-        "icon": "mdi:harddisk",
-        "unit_of_measurement": "%"
-    },
-    "context": {
-        "id": "3fd42794a7414254a663552c8653d694",
-        "user_id": null
-    },
-    "entity_id": "sensor.disk_use_percent_",
-    "last_changed": "2018-10-30T04:13:01.019514+00:00",
-    "last_updated": "2018-10-30T04:13:01.019514+00:00",
-    "state": "13.6"
-}, {
-    "attributes": {
-        "friendly_name": "Living room cool when away",
-        "max": 90.0,
-        "min": 65.0,
-        "mode": "box",
-        "step": 1.0
-    },
-    "context": {
-        "id": "52a08621621e4737a819a0b34f69d890",
-        "user_id": null
-    },
-    "entity_id": "input_number.cool_away_living_room_away",
-    "last_changed": "2018-10-30T04:13:01.021022+00:00",
-    "last_updated": "2018-10-30T04:13:01.021022+00:00",
-    "state": "80.0"
+    "entity_id": "sensor.since_last_boot",
+    "last_changed": "2018-10-30T12:09:36.004234+00:00",
+    "last_updated": "2018-10-30T12:09:36.004234+00:00",
+    "state": "8:35:29.003339"
 }, {
     "attributes": {
         "entity_id": ["group.livingroombatteries", "group.bedroombatteries", "group.outdoorbatteries", "group.cleaningsetup", "group.systemmonitor", "group.all_automations", "group.all_scripts"],
@@ -591,12 +411,169 @@
         "view": true
     },
     "context": {
-        "id": "66293bf1ae2b41f0ab00103555592747",
+        "id": "cc6a1f4ad359465a888b57f81856a374",
         "user_id": null
     },
     "entity_id": "group.setup",
-    "last_changed": "2018-10-30T04:13:01.741570+00:00",
-    "last_updated": "2018-10-30T04:13:01.741570+00:00",
+    "last_changed": "2018-10-30T12:08:04.859201+00:00",
+    "last_updated": "2018-10-30T12:08:04.859201+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Disk use (percent) /",
+        "icon": "mdi:harddisk",
+        "unit_of_measurement": "%"
+    },
+    "context": {
+        "id": "3ef531ae5e79431a9f32846d0b9435cc",
+        "user_id": null
+    },
+    "entity_id": "sensor.disk_use_percent_",
+    "last_changed": "2018-10-30T12:08:03.929686+00:00",
+    "last_updated": "2018-10-30T12:08:03.929686+00:00",
+    "state": "13.2"
+}, {
+    "attributes": {
+        "assumed_state": true,
+        "entity_id": ["light.bedroom_canopy", "light.bedroom_lamp", "light.camilles_desk_lamp", "light.bedroom_closet"],
+        "friendly_name": "bedroomLights",
+        "order": 8
+    },
+    "context": {
+        "id": "e03900d0fb5d491d8bc36ca65aa358e8",
+        "user_id": null
+    },
+    "entity_id": "group.bedroomlights",
+    "last_changed": "2018-10-30T12:08:04.388270+00:00",
+    "last_updated": "2018-10-30T12:08:04.388270+00:00",
+    "state": "off"
+}, {
+    "attributes": {
+        "friendly_name": "Disk free /",
+        "icon": "mdi:harddisk",
+        "unit_of_measurement": "GiB"
+    },
+    "context": {
+        "id": "51b5a2670e514b8a8d4dd3ecd2c22704",
+        "user_id": null
+    },
+    "entity_id": "sensor.disk_free_",
+    "last_changed": "2018-10-30T12:08:03.940031+00:00",
+    "last_updated": "2018-10-30T12:08:03.940031+00:00",
+    "state": "59.0"
+}, {
+    "attributes": {
+        "assumed_state": true,
+        "entity_id": ["light.aeotec_bathroom_light", "light.aeotec_entry_light", "light.aeotec_kitchen_counter_light", "light.bedroom_canopy", "light.closet_light", "light.grandmas_lamp", "light.hallway_light", "light.metal_lamp", "light.pop_socket_light"],
+        "friendly_name": "livingRoomLights",
+        "order": 9
+    },
+    "context": {
+        "id": "6ce418b6ad5243688316955bc7b25900",
+        "user_id": null
+    },
+    "entity_id": "group.livingroomlights",
+    "last_changed": "2018-10-30T12:08:04.376242+00:00",
+    "last_updated": "2018-10-30T12:08:04.376242+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Denon",
+        "supported_features": 21437
+    },
+    "context": {
+        "id": "d1b93e45079a40578bbe3f099eae642f",
+        "user_id": null
+    },
+    "entity_id": "media_player.denon",
+    "last_changed": "2018-10-30T12:08:04.089212+00:00",
+    "last_updated": "2018-10-30T12:08:04.089212+00:00",
+    "state": "off"
+}, {
+    "attributes": {
+        "friendly_name": "All rooms",
+        "supported_features": 21437
+    },
+    "context": {
+        "id": "94785ffcddfa462caf6cf25f5d41ffff",
+        "user_id": null
+    },
+    "entity_id": "media_player.all_rooms",
+    "last_changed": "2018-10-30T12:08:04.090517+00:00",
+    "last_updated": "2018-10-30T12:08:04.090517+00:00",
+    "state": "off"
+}, {
+    "attributes": {
+        "entity_id": ["sensor.aeotec_multisensor_temperature_living_room", "sensor.aeotec_multisensor_relative_humidity_living_room", "sensor.aeotec_multisensor_illuminance_living_room"],
+        "friendly_name": "Living Room Sensor Climate",
+        "order": 10
+    },
+    "context": {
+        "id": "771d6d36e7c145a5a2ca2bbde41bfd23",
+        "user_id": null
+    },
+    "entity_id": "group.livingroomsensorclimate",
+    "last_changed": "2018-10-30T12:08:03.994554+00:00",
+    "last_updated": "2018-10-30T12:08:03.994554+00:00",
+    "state": "unknown"
+}, {
+    "attributes": {
+        "friendly_name": "Living room cool when asleep",
+        "max": 90.0,
+        "min": 65.0,
+        "mode": "box",
+        "step": 1.0
+    },
+    "context": {
+        "id": "07f73aeefc05475ea53374e638943fe5",
+        "user_id": null
+    },
+    "entity_id": "input_number.cool_away_living_room_asleep",
+    "last_changed": "2018-10-30T12:08:03.998231+00:00",
+    "last_updated": "2018-10-30T12:08:03.998231+00:00",
+    "state": "78.0"
+}, {
+    "attributes": {
+        "friendly_name": "Bedroom Speaker",
+        "supported_features": 21437
+    },
+    "context": {
+        "id": "18bfb131c4724e4d90be8aa5cce3a772",
+        "user_id": null
+    },
+    "entity_id": "media_player.bedroom_speaker",
+    "last_changed": "2018-10-30T12:08:04.110086+00:00",
+    "last_updated": "2018-10-30T12:08:04.110086+00:00",
+    "state": "off"
+}, {
+    "attributes": {
+        "friendly_name": "Living room cool when away",
+        "max": 90.0,
+        "min": 65.0,
+        "mode": "box",
+        "step": 1.0
+    },
+    "context": {
+        "id": "eea6bbd063ee4a2aa3332944f8be5f2d",
+        "user_id": null
+    },
+    "entity_id": "input_number.cool_away_living_room_away",
+    "last_changed": "2018-10-30T12:08:04.004823+00:00",
+    "last_updated": "2018-10-30T12:08:04.004823+00:00",
+    "state": "80.0"
+}, {
+    "attributes": {
+        "entity_id": ["binary_sensor.aeotec_multisensor_sensor_bedroom", "sensor.aeotec_multisensor_temperature_bedroom", "sensor.aeotec_multisensor_relative_humidity_bedroom", "sensor.aeotec_multisensor_luminance_bedroom"],
+        "friendly_name": "Bedroom Sensor Climate",
+        "order": 11
+    },
+    "context": {
+        "id": "b909c7b326c84f439cc965b308076fdf",
+        "user_id": null
+    },
+    "entity_id": "group.bedroomsensorclimate",
+    "last_changed": "2018-10-30T12:08:19.720442+00:00",
+    "last_updated": "2018-10-30T12:08:19.720442+00:00",
     "state": "on"
 }, {
     "attributes": {
@@ -607,60 +584,13 @@
         "step": 1.0
     },
     "context": {
-        "id": "367e1ce806fe426c8239f37afdf2b7aa",
+        "id": "d1df9d2dc4524777b3c90f453f97b9b3",
         "user_id": null
     },
     "entity_id": "input_number.cool_home_bedroom_awake",
-    "last_changed": "2018-10-30T04:13:01.024040+00:00",
-    "last_updated": "2018-10-30T04:13:01.024040+00:00",
+    "last_changed": "2018-10-30T12:08:04.018209+00:00",
+    "last_updated": "2018-10-30T12:08:04.018209+00:00",
     "state": "72.0"
-}, {
-    "attributes": {
-        "friendly_name": "Living room heat when asleep",
-        "max": 90.0,
-        "min": 65.0,
-        "mode": "box",
-        "step": 1.0
-    },
-    "context": {
-        "id": "1cd6c91537084c919cb5ea36b460ee49",
-        "user_id": null
-    },
-    "entity_id": "input_number.heat_away_living_room_asleep",
-    "last_changed": "2018-10-30T04:13:01.025112+00:00",
-    "last_updated": "2018-10-30T04:13:01.025112+00:00",
-    "state": "65.0"
-}, {
-    "attributes": {
-        "friendly_name": "Living room heat when away",
-        "max": 90.0,
-        "min": 65.0,
-        "mode": "box",
-        "step": 1.0
-    },
-    "context": {
-        "id": "5606d2eef66e4c0dbeb67333bc1d70e3",
-        "user_id": null
-    },
-    "entity_id": "input_number.heat_away_living_room_away",
-    "last_changed": "2018-10-30T04:13:01.027623+00:00",
-    "last_updated": "2018-10-30T04:13:01.027623+00:00",
-    "state": "65.0"
-}, {
-    "attributes": {
-        "assumed_state": true,
-        "entity_id": ["light.bedroom_canopy", "light.bedroom_lamp", "light.camilles_desk_lamp", "light.bedroom_closet"],
-        "friendly_name": "bedroomLights",
-        "order": 8
-    },
-    "context": {
-        "id": "05618036480f499d907b93da95b57de4",
-        "user_id": null
-    },
-    "entity_id": "group.bedroomlights",
-    "last_changed": "2018-10-30T04:13:01.317997+00:00",
-    "last_updated": "2018-10-30T04:13:01.317997+00:00",
-    "state": "off"
 }, {
     "attributes": {
         "friendly_name": "Bedroom cool when asleep",
@@ -670,162 +600,196 @@
         "step": 1.0
     },
     "context": {
-        "id": "de4d38aefb8348249e6460dc1ae02f8f",
+        "id": "a98441146dbd41518e94730bc5e95910",
         "user_id": null
     },
     "entity_id": "input_number.cool_away_bedroom_asleep",
-    "last_changed": "2018-10-30T04:13:01.029657+00:00",
-    "last_updated": "2018-10-30T04:13:01.029657+00:00",
+    "last_changed": "2018-10-30T12:08:04.021165+00:00",
+    "last_updated": "2018-10-30T12:08:04.021165+00:00",
     "state": "71.0"
 }, {
     "attributes": {
-        "friendly_name": "Living Room AC Switch"
+        "friendly_name": "Bedroom cool when away",
+        "max": 90.0,
+        "min": 65.0,
+        "mode": "box",
+        "step": 1.0
     },
     "context": {
-        "id": "d89207e5864d459dac4b9948b8a344ce",
+        "id": "6491d446b9ee4847b9af8e6e75f89cc2",
         "user_id": null
     },
-    "entity_id": "input_boolean.switch_cool_living_room",
-    "last_changed": "2018-10-30T04:13:01.030649+00:00",
-    "last_updated": "2018-10-30T04:13:01.030649+00:00",
-    "state": "off"
+    "entity_id": "input_number.cool_away_bedroom_away",
+    "last_changed": "2018-10-30T12:08:04.031531+00:00",
+    "last_updated": "2018-10-30T12:08:04.031531+00:00",
+    "state": "80.0"
 }, {
     "attributes": {
-        "friendly_name": "Disk free /",
-        "icon": "mdi:harddisk",
-        "unit_of_measurement": "GiB"
+        "entity_id": ["input_number.cool_home_living_room_awake", "input_number.cool_away_living_room_asleep", "input_number.cool_away_living_room_away"],
+        "friendly_name": "Living room cooling defaults",
+        "order": 12
     },
     "context": {
-        "id": "ebb6c8a1c9714c35a01e65c474ec999b",
+        "id": "6c20396fb3454b1d97589ecfc3fc3e52",
         "user_id": null
     },
-    "entity_id": "sensor.disk_free_",
-    "last_changed": "2018-10-30T04:13:01.031712+00:00",
-    "last_updated": "2018-10-30T04:13:01.031712+00:00",
-    "state": "58.7"
-}, {
-    "attributes": {
-        "friendly_name": "Bedroom Heater Switch"
-    },
-    "context": {
-        "id": "c6243933b62343dd99abae24970d51c3",
-        "user_id": null
-    },
-    "entity_id": "input_boolean.switch_heat_bedroom",
-    "last_changed": "2018-10-30T04:40:13.144600+00:00",
-    "last_updated": "2018-10-30T04:40:13.144600+00:00",
-    "state": "off"
-}, {
-    "attributes": {
-        "assumed_state": true,
-        "entity_id": ["light.aeotec_bathroom_light", "light.aeotec_entry_light", "light.aeotec_kitchen_counter_light", "light.bedroom_canopy", "light.closet_light", "light.grandmas_lamp", "light.hallway_light", "light.metal_lamp", "light.pop_socket_light"],
-        "friendly_name": "livingRoomLights",
-        "order": 9
-    },
-    "context": {
-        "id": "63504d8c0cba42dfbb436a61cf2f0dfb",
-        "user_id": null
-    },
-    "entity_id": "group.livingroomlights",
-    "last_changed": "2018-10-30T04:13:01.304923+00:00",
-    "last_updated": "2018-10-30T04:13:01.304923+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Testing boolean",
-        "icon": "mdi:test-tube"
-    },
-    "context": {
-        "id": "172b25ef3bc349f68b27ea2eb030db77",
-        "user_id": null
-    },
-    "entity_id": "input_boolean.testing",
-    "last_changed": "2018-10-30T04:13:01.035977+00:00",
-    "last_updated": "2018-10-30T04:13:01.035977+00:00",
-    "state": "off"
-}, {
-    "attributes": {
-        "friendly_name": "Motion Alert",
-        "icon": "mdi:alert"
-    },
-    "context": {
-        "id": "8f5a0128b8ac4b71bfd9ede3494e3d50",
-        "user_id": null
-    },
-    "entity_id": "input_boolean.motion_alert",
-    "last_changed": "2018-10-30T04:13:01.036961+00:00",
-    "last_updated": "2018-10-30T04:13:01.036961+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Bedroom AC Switch"
-    },
-    "context": {
-        "id": "4d6c750f03b348769fbcc040c597a038",
-        "user_id": null
-    },
-    "entity_id": "input_boolean.switch_cool_bedroom",
-    "last_changed": "2018-10-30T04:13:01.038664+00:00",
-    "last_updated": "2018-10-30T04:13:01.038664+00:00",
-    "state": "off"
-}, {
-    "attributes": {
-        "entity_id": ["sensor.aeotec_multisensor_temperature_living_room", "sensor.aeotec_multisensor_relative_humidity_living_room", "sensor.aeotec_multisensor_illuminance_living_room"],
-        "friendly_name": "Living Room Sensor Climate",
-        "order": 10
-    },
-    "context": {
-        "id": "ad95b9cf632c4731a3b87690a1d70f5e",
-        "user_id": null
-    },
-    "entity_id": "group.livingroomsensorclimate",
-    "last_changed": "2018-10-30T04:13:01.040651+00:00",
-    "last_updated": "2018-10-30T04:13:01.040651+00:00",
+    "entity_id": "group.livingroomcooldefaults",
+    "last_changed": "2018-10-30T12:08:04.033241+00:00",
+    "last_updated": "2018-10-30T12:08:04.033241+00:00",
     "state": "unknown"
 }, {
     "attributes": {
-        "friendly_name": "Living Room Heater Switch"
+        "friendly_name": "Living room heat when awake",
+        "max": 90.0,
+        "min": 65.0,
+        "mode": "box",
+        "step": 1.0
     },
     "context": {
-        "id": "9c18bf9479d74b0a840564b91dc967d8",
+        "id": "e312904b5aa249748478bd280d3f6af8",
         "user_id": null
     },
-    "entity_id": "input_boolean.switch_heat_living_room",
-    "last_changed": "2018-10-30T04:16:44.663013+00:00",
-    "last_updated": "2018-10-30T04:16:44.663013+00:00",
-    "state": "on"
+    "entity_id": "input_number.heat_home_living_room_awake",
+    "last_changed": "2018-10-30T12:08:04.034674+00:00",
+    "last_updated": "2018-10-30T12:08:04.034674+00:00",
+    "state": "70.0"
 }, {
     "attributes": {
-        "friendly_name": "Start of cleaning window",
-        "has_date": false,
-        "has_time": true,
-        "hour": 11,
-        "minute": 0,
-        "second": 0,
-        "timestamp": 39600
+        "friendly_name": "Living room cool when awake",
+        "max": 90.0,
+        "min": 65.0,
+        "mode": "box",
+        "step": 1.0
     },
     "context": {
-        "id": "b70fddea3f7745769771d947bcaaed69",
+        "id": "12cbd597725047fbaeb6f984ea02a8b9",
         "user_id": null
     },
-    "entity_id": "input_datetime.clean_start",
-    "last_changed": "2018-10-30T04:13:01.044739+00:00",
-    "last_updated": "2018-10-30T04:13:01.044739+00:00",
-    "state": "11:00:00"
+    "entity_id": "input_number.cool_home_living_room_awake",
+    "last_changed": "2018-10-30T12:08:04.036805+00:00",
+    "last_updated": "2018-10-30T12:08:04.036805+00:00",
+    "state": "72.0"
 }, {
     "attributes": {
-        "friendly_name": "Memory use (percent)",
-        "icon": "mdi:memory",
-        "unit_of_measurement": "%"
+        "friendly_name": "Living Room Speaker",
+        "supported_features": 21437
     },
     "context": {
-        "id": "9559d1267a9c42cebcfb618c52e45ee4",
+        "id": "cb6c67e3f59d4ab8a535f0507ff4bbbc",
         "user_id": null
     },
-    "entity_id": "sensor.memory_use_percent",
-    "last_changed": "2018-10-30T04:41:47.007529+00:00",
-    "last_updated": "2018-10-30T04:41:47.007529+00:00",
-    "state": "26.1"
+    "entity_id": "media_player.living_room_speaker",
+    "last_changed": "2018-10-30T12:08:04.201757+00:00",
+    "last_updated": "2018-10-30T12:08:04.201757+00:00",
+    "state": "off"
+}, {
+    "attributes": {
+        "friendly_name": "Living room heat when asleep",
+        "max": 90.0,
+        "min": 65.0,
+        "mode": "box",
+        "step": 1.0
+    },
+    "context": {
+        "id": "035ede5ff5134f2187b485e6b443c29a",
+        "user_id": null
+    },
+    "entity_id": "input_number.heat_away_living_room_asleep",
+    "last_changed": "2018-10-30T12:08:04.041891+00:00",
+    "last_updated": "2018-10-30T12:08:04.041891+00:00",
+    "state": "65.0"
+}, {
+    "attributes": {
+        "entity_id": ["input_number.heat_home_living_room_awake", "input_number.heat_away_living_room_asleep", "input_number.heat_away_living_room_away"],
+        "friendly_name": "Living room heating defaults",
+        "order": 13
+    },
+    "context": {
+        "id": "eb7f500d9b3b4429af9536beddc06f02",
+        "user_id": null
+    },
+    "entity_id": "group.livingroomheatdefaults",
+    "last_changed": "2018-10-30T12:08:04.047625+00:00",
+    "last_updated": "2018-10-30T12:08:04.047625+00:00",
+    "state": "unknown"
+}, {
+    "attributes": {
+        "friendly_name": "Living room heat when away",
+        "max": 90.0,
+        "min": 65.0,
+        "mode": "box",
+        "step": 1.0
+    },
+    "context": {
+        "id": "660a7dfaee1149ccb2354526a0f2faa9",
+        "user_id": null
+    },
+    "entity_id": "input_number.heat_away_living_room_away",
+    "last_changed": "2018-10-30T12:08:04.048976+00:00",
+    "last_updated": "2018-10-30T12:08:04.048976+00:00",
+    "state": "65.0"
+}, {
+    "attributes": {
+        "friendly_name": "Bedroom heat when awake",
+        "max": 90.0,
+        "min": 65.0,
+        "mode": "box",
+        "step": 1.0
+    },
+    "context": {
+        "id": "8b9f5aab87ce457b8b5a0563f43d46bf",
+        "user_id": null
+    },
+    "entity_id": "input_number.heat_home_bedroom_awake",
+    "last_changed": "2018-10-30T12:08:04.050526+00:00",
+    "last_updated": "2018-10-30T12:08:04.050526+00:00",
+    "state": "68.0"
+}, {
+    "attributes": {
+        "friendly_name": "Bedroom heat when asleep",
+        "max": 90.0,
+        "min": 65.0,
+        "mode": "box",
+        "step": 1.0
+    },
+    "context": {
+        "id": "d0ca6ab48a124c8eb0eb6eecbb747332",
+        "user_id": null
+    },
+    "entity_id": "input_number.heat_away_bedroom_asleep",
+    "last_changed": "2018-10-30T12:08:04.052414+00:00",
+    "last_updated": "2018-10-30T12:08:04.052414+00:00",
+    "state": "71.0"
+}, {
+    "attributes": {
+        "entity_id": ["input_number.cool_home_bedroom_awake", "input_number.cool_away_bedroom_asleep", "input_number.cool_away_bedroom_away"],
+        "friendly_name": "Bedroom cooling defaults",
+        "order": 14
+    },
+    "context": {
+        "id": "1ca4c35715734859a8804f26ae77b70f",
+        "user_id": null
+    },
+    "entity_id": "group.bedroomcooldefaults",
+    "last_changed": "2018-10-30T12:08:04.053725+00:00",
+    "last_updated": "2018-10-30T12:08:04.053725+00:00",
+    "state": "unknown"
+}, {
+    "attributes": {
+        "friendly_name": "Bedroom heat when away",
+        "max": 90.0,
+        "min": 65.0,
+        "mode": "box",
+        "step": 1.0
+    },
+    "context": {
+        "id": "44bb3c60ad204a36812dd98b7e66adff",
+        "user_id": null
+    },
+    "entity_id": "input_number.heat_away_bedroom_away",
+    "last_changed": "2018-10-30T12:08:04.054930+00:00",
+    "last_updated": "2018-10-30T12:08:04.054930+00:00",
+    "state": "65.0"
 }, {
     "attributes": {
         "friendly_name": "End of cleaning window",
@@ -837,109 +801,31 @@
         "timestamp": 54000
     },
     "context": {
-        "id": "3a20959823d346738e04c8ebf9f5bc61",
+        "id": "c8642616f9414e9eb8ca1bbffdbe8879",
         "user_id": null
     },
     "entity_id": "input_datetime.clean_end",
-    "last_changed": "2018-10-30T04:13:01.047956+00:00",
-    "last_updated": "2018-10-30T04:13:01.047956+00:00",
+    "last_changed": "2018-10-30T12:08:04.056276+00:00",
+    "last_updated": "2018-10-30T12:08:04.056276+00:00",
     "state": "15:00:00"
 }, {
     "attributes": {
-        "entity_id": ["binary_sensor.aeotec_multisensor_sensor_bedroom", "sensor.aeotec_multisensor_temperature_bedroom", "sensor.aeotec_multisensor_relative_humidity_bedroom", "sensor.aeotec_multisensor_luminance_bedroom"],
-        "friendly_name": "Bedroom Sensor Climate",
-        "order": 11
+        "friendly_name": "Start of cleaning window",
+        "has_date": false,
+        "has_time": true,
+        "hour": 11,
+        "minute": 0,
+        "second": 0,
+        "timestamp": 39600
     },
     "context": {
-        "id": "e960431d34864c05b28e0dcf0fa0be85",
+        "id": "83110a43cb7842da8b632866270a6832",
         "user_id": null
     },
-    "entity_id": "group.bedroomsensorclimate",
-    "last_changed": "2018-10-30T04:13:17.959874+00:00",
-    "last_updated": "2018-10-30T04:13:17.959874+00:00",
-    "state": "off"
-}, {
-    "attributes": {
-        "friendly_name": "HVAC Mode",
-        "icon": "mdi:fan",
-        "options": ["heating", "cooling"]
-    },
-    "context": {
-        "id": "d387d44f3cc24c1690d0c4cb40986160",
-        "user_id": null
-    },
-    "entity_id": "input_select.hvac_mode",
-    "last_changed": "2018-10-30T04:13:01.051076+00:00",
-    "last_updated": "2018-10-30T04:13:01.051076+00:00",
-    "state": "heating"
-}, {
-    "attributes": {
-        "friendly_name": "Cleaning Day",
-        "options": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-    },
-    "context": {
-        "id": "498f90ddcac9406bb7263ee71139b38f",
-        "user_id": null
-    },
-    "entity_id": "input_select.clean_day",
-    "last_changed": "2018-10-30T04:13:01.052333+00:00",
-    "last_updated": "2018-10-30T04:13:01.052333+00:00",
-    "state": "Wednesday"
-}, {
-    "attributes": {
-        "friendly_name": "Presence",
-        "options": ["Home", "Away"]
-    },
-    "context": {
-        "id": "69522c02b2e042ed8efd6b1602cc39ab",
-        "user_id": null
-    },
-    "entity_id": "input_select.presence",
-    "last_changed": "2018-10-30T04:13:01.055773+00:00",
-    "last_updated": "2018-10-30T04:13:01.055773+00:00",
-    "state": "Home"
-}, {
-    "attributes": {
-        "entity_id": ["input_number.cool_home_living_room_awake", "input_number.cool_away_living_room_asleep", "input_number.cool_away_living_room_away"],
-        "friendly_name": "Living room cooling defaults",
-        "order": 12
-    },
-    "context": {
-        "id": "f2ba3a06fe974d43aa24c26623ca8150",
-        "user_id": null
-    },
-    "entity_id": "group.livingroomcooldefaults",
-    "last_changed": "2018-10-30T04:13:01.056934+00:00",
-    "last_updated": "2018-10-30T04:13:01.056934+00:00",
-    "state": "unknown"
-}, {
-    "attributes": {
-        "entity_id": ["input_number.heat_home_living_room_awake", "input_number.heat_away_living_room_asleep", "input_number.heat_away_living_room_away"],
-        "friendly_name": "Living room heating defaults",
-        "order": 13
-    },
-    "context": {
-        "id": "56a724bc21a8491b838ff9608eb07475",
-        "user_id": null
-    },
-    "entity_id": "group.livingroomheatdefaults",
-    "last_changed": "2018-10-30T04:13:01.061233+00:00",
-    "last_updated": "2018-10-30T04:13:01.061233+00:00",
-    "state": "unknown"
-}, {
-    "attributes": {
-        "entity_id": ["input_number.cool_home_bedroom_awake", "input_number.cool_away_bedroom_asleep", "input_number.cool_away_bedroom_away"],
-        "friendly_name": "Bedroom cooling defaults",
-        "order": 14
-    },
-    "context": {
-        "id": "8ec15ae7e40b43019b4f9e5e46fcd712",
-        "user_id": null
-    },
-    "entity_id": "group.bedroomcooldefaults",
-    "last_changed": "2018-10-30T04:13:01.063448+00:00",
-    "last_updated": "2018-10-30T04:13:01.063448+00:00",
-    "state": "unknown"
+    "entity_id": "input_datetime.clean_start",
+    "last_changed": "2018-10-30T12:08:04.058088+00:00",
+    "last_updated": "2018-10-30T12:08:04.058088+00:00",
+    "state": "11:00:00"
 }, {
     "attributes": {
         "entity_id": ["input_number.heat_home_bedroom_awake", "input_number.heat_away_bedroom_asleep", "input_number.heat_away_bedroom_away"],
@@ -947,13 +833,53 @@
         "order": 15
     },
     "context": {
-        "id": "2372bbc414c647979f0760f4a2bc92cd",
+        "id": "efdaee0038914558956e1d79fa0f3eea",
         "user_id": null
     },
     "entity_id": "group.bedroomheatdefaults",
-    "last_changed": "2018-10-30T04:13:01.066118+00:00",
-    "last_updated": "2018-10-30T04:13:01.066118+00:00",
+    "last_changed": "2018-10-30T12:08:04.060292+00:00",
+    "last_updated": "2018-10-30T12:08:04.060292+00:00",
     "state": "unknown"
+}, {
+    "attributes": {
+        "friendly_name": "Presence",
+        "options": ["Home", "Away"]
+    },
+    "context": {
+        "id": "1042bebfc839431c9e3ae3772ac3ac29",
+        "user_id": null
+    },
+    "entity_id": "input_select.presence",
+    "last_changed": "2018-10-30T12:08:04.061275+00:00",
+    "last_updated": "2018-10-30T12:08:04.061275+00:00",
+    "state": "Home"
+}, {
+    "attributes": {
+        "friendly_name": "Cleaning Day",
+        "options": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    },
+    "context": {
+        "id": "6819558bb35f4a54a6d70d1a69a8ed63",
+        "user_id": null
+    },
+    "entity_id": "input_select.clean_day",
+    "last_changed": "2018-10-30T12:08:04.062386+00:00",
+    "last_updated": "2018-10-30T12:08:04.062386+00:00",
+    "state": "Wednesday"
+}, {
+    "attributes": {
+        "friendly_name": "HVAC Mode",
+        "icon": "mdi:fan",
+        "options": ["heating", "cooling"]
+    },
+    "context": {
+        "id": "e9f8718f0b3f40aa9219945d199abd65",
+        "user_id": null
+    },
+    "entity_id": "input_select.hvac_mode",
+    "last_changed": "2018-10-30T12:08:04.064733+00:00",
+    "last_updated": "2018-10-30T12:08:04.064733+00:00",
+    "state": "heating"
 }, {
     "attributes": {
         "entity_id": ["media_player.all_rooms"],
@@ -961,12 +887,50 @@
         "order": 16
     },
     "context": {
-        "id": "79edfa142e1a4eefa33677feeddb4451",
+        "id": "772ac94a4a9f46f4a141cdbc01bbe9ce",
         "user_id": null
     },
     "entity_id": "group.allroomsmedia",
-    "last_changed": "2018-10-30T04:13:01.068817+00:00",
-    "last_updated": "2018-10-30T04:13:01.068817+00:00",
+    "last_changed": "2018-10-30T12:08:04.102616+00:00",
+    "last_updated": "2018-10-30T12:08:04.102616+00:00",
+    "state": "off"
+}, {
+    "attributes": {
+        "friendly_name": "Motion Alert",
+        "icon": "mdi:alert"
+    },
+    "context": {
+        "id": "4405a16f877d4b329b58ec7c053b5aea",
+        "user_id": null
+    },
+    "entity_id": "input_boolean.motion_alert",
+    "last_changed": "2018-10-30T12:08:04.068970+00:00",
+    "last_updated": "2018-10-30T12:08:04.068970+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Testing boolean",
+        "icon": "mdi:test-tube"
+    },
+    "context": {
+        "id": "70f2ffcc038c4d6384f6d404a7a28629",
+        "user_id": null
+    },
+    "entity_id": "input_boolean.testing",
+    "last_changed": "2018-10-30T12:08:04.070846+00:00",
+    "last_updated": "2018-10-30T12:08:04.070846+00:00",
+    "state": "off"
+}, {
+    "attributes": {
+        "friendly_name": "Living Room Heater Switch"
+    },
+    "context": {
+        "id": "b2935e3c5be24a33850a9256cc42b3f0",
+        "user_id": null
+    },
+    "entity_id": "input_boolean.switch_heat_living_room",
+    "last_changed": "2018-10-30T12:08:04.077526+00:00",
+    "last_updated": "2018-10-30T12:08:04.077526+00:00",
     "state": "off"
 }, {
     "attributes": {
@@ -975,12 +939,48 @@
         "order": 17
     },
     "context": {
-        "id": "99489a5f4714440796f9cac5c1862098",
+        "id": "d982a17fe2fe4229a4a89a38ac6ad22b",
         "user_id": null
     },
     "entity_id": "group.livingroommedia",
-    "last_changed": "2018-10-30T04:13:01.073530+00:00",
-    "last_updated": "2018-10-30T04:13:01.073530+00:00",
+    "last_changed": "2018-10-30T12:08:04.100766+00:00",
+    "last_updated": "2018-10-30T12:08:04.100766+00:00",
+    "state": "off"
+}, {
+    "attributes": {
+        "friendly_name": "Living Room AC Switch"
+    },
+    "context": {
+        "id": "bd54fdf8b343422785638625c15cbbc6",
+        "user_id": null
+    },
+    "entity_id": "input_boolean.switch_cool_living_room",
+    "last_changed": "2018-10-30T12:08:04.083786+00:00",
+    "last_updated": "2018-10-30T12:08:04.083786+00:00",
+    "state": "off"
+}, {
+    "attributes": {
+        "friendly_name": "Bedroom Heater Switch"
+    },
+    "context": {
+        "id": "3974b1e1275840c2a3986b0419a1ee25",
+        "user_id": null
+    },
+    "entity_id": "input_boolean.switch_heat_bedroom",
+    "last_changed": "2018-10-30T12:08:04.085213+00:00",
+    "last_updated": "2018-10-30T12:08:04.085213+00:00",
+    "state": "off"
+}, {
+    "attributes": {
+        "friendly_name": "Bedroom AC Switch"
+    },
+    "context": {
+        "id": "e09d34fae1fa42a2a089f8bd15fb54d4",
+        "user_id": null
+    },
+    "entity_id": "input_boolean.switch_cool_bedroom",
+    "last_changed": "2018-10-30T12:08:04.087998+00:00",
+    "last_updated": "2018-10-30T12:08:04.087998+00:00",
     "state": "off"
 }, {
     "attributes": {
@@ -989,12 +989,12 @@
         "order": 18
     },
     "context": {
-        "id": "6234b154c39349509eeb487ddd9fec17",
+        "id": "cb15ddc615d14541a37b4ce49fe4dabd",
         "user_id": null
     },
     "entity_id": "group.bedroommedia",
-    "last_changed": "2018-10-30T04:13:01.075332+00:00",
-    "last_updated": "2018-10-30T04:13:01.075332+00:00",
+    "last_changed": "2018-10-30T12:08:04.115265+00:00",
+    "last_updated": "2018-10-30T12:08:04.115265+00:00",
     "state": "off"
 }, {
     "attributes": {
@@ -1003,12 +1003,12 @@
         "order": 19
     },
     "context": {
-        "id": "1c7c80b8db724505986eab77fe61a48b",
+        "id": "f2ff9b0be7c74b2bbf2a2980811e4daa",
         "user_id": null
     },
     "entity_id": "group.livingroomsecurity",
-    "last_changed": "2018-10-30T04:13:01.076966+00:00",
-    "last_updated": "2018-10-30T04:13:01.076966+00:00",
+    "last_changed": "2018-10-30T12:08:04.105924+00:00",
+    "last_updated": "2018-10-30T12:08:04.105924+00:00",
     "state": "unknown"
 }, {
     "attributes": {
@@ -1017,13 +1017,13 @@
         "order": 20
     },
     "context": {
-        "id": "1ed7857901a245cdb8a31306068c4d7c",
+        "id": "35f41f75398c4dc894a88bc1192fb4f1",
         "user_id": null
     },
     "entity_id": "group.bedroomsecurity",
-    "last_changed": "2018-10-30T04:13:17.963978+00:00",
-    "last_updated": "2018-10-30T04:13:17.963978+00:00",
-    "state": "off"
+    "last_changed": "2018-10-30T12:08:19.722596+00:00",
+    "last_updated": "2018-10-30T12:08:19.722596+00:00",
+    "state": "on"
 }, {
     "attributes": {
         "entity_id": ["sensor.water_leak_sensor_battery"],
@@ -1031,12 +1031,12 @@
         "order": 21
     },
     "context": {
-        "id": "e19fbd58d25542218cd2c3aa69ee36ef",
+        "id": "4162593586d14eb0a5cf7590bf4ee16f",
         "user_id": null
     },
     "entity_id": "group.livingroombatteries",
-    "last_changed": "2018-10-30T04:13:01.080323+00:00",
-    "last_updated": "2018-10-30T04:13:01.080323+00:00",
+    "last_changed": "2018-10-30T12:08:04.117838+00:00",
+    "last_updated": "2018-10-30T12:08:04.117838+00:00",
     "state": "unknown"
 }, {
     "attributes": {
@@ -1045,12 +1045,12 @@
         "order": 22
     },
     "context": {
-        "id": "e75ee583af6c48268cd02bc4f64726c3",
+        "id": "3fb179a6f1724e9eaa42ba68f4043649",
         "user_id": null
     },
     "entity_id": "group.homestatus",
-    "last_changed": "2018-10-30T04:13:01.081988+00:00",
-    "last_updated": "2018-10-30T04:13:01.081988+00:00",
+    "last_changed": "2018-10-30T12:08:04.119959+00:00",
+    "last_updated": "2018-10-30T12:08:04.119959+00:00",
     "state": "unknown"
 }, {
     "attributes": {
@@ -1059,12 +1059,12 @@
         "order": 23
     },
     "context": {
-        "id": "0632841d9b7b4c57a726c0c26a3641da",
+        "id": "d936fae124db49a3b93b35d1518180b3",
         "user_id": null
     },
     "entity_id": "group.cleaningsetup",
-    "last_changed": "2018-10-30T04:13:01.084220+00:00",
-    "last_updated": "2018-10-30T04:13:01.084220+00:00",
+    "last_changed": "2018-10-30T12:08:04.124000+00:00",
+    "last_updated": "2018-10-30T12:08:04.124000+00:00",
     "state": "unknown"
 }, {
     "attributes": {
@@ -1073,160 +1073,13 @@
         "order": 24
     },
     "context": {
-        "id": "9a1e841a766f444ea2c9f5ed66ffa65d",
+        "id": "20a3029bcca04368beb7341997d53a19",
         "user_id": null
     },
     "entity_id": "group.systemmonitor",
-    "last_changed": "2018-10-30T04:13:01.085989+00:00",
-    "last_updated": "2018-10-30T04:13:01.085989+00:00",
+    "last_changed": "2018-10-30T12:08:04.126197+00:00",
+    "last_updated": "2018-10-30T12:08:04.126197+00:00",
     "state": "unknown"
-}, {
-    "attributes": {
-        "friendly_name": "I'm Back",
-        "last_triggered": null
-    },
-    "context": {
-        "id": "cf3891db052541a1b3c1de0d82576688",
-        "user_id": null
-    },
-    "entity_id": "script.imback",
-    "last_changed": "2018-10-30T04:13:01.142665+00:00",
-    "last_updated": "2018-10-30T04:13:01.142665+00:00",
-    "state": "off"
-}, {
-    "attributes": {
-        "friendly_name": "Good Night Camille",
-        "last_triggered": null
-    },
-    "context": {
-        "id": "5e35170460834f1b86ef7be7df5eb392",
-        "user_id": null
-    },
-    "entity_id": "script.bedtime",
-    "last_changed": "2018-10-30T04:13:01.143716+00:00",
-    "last_updated": "2018-10-30T04:13:01.143716+00:00",
-    "state": "off"
-}, {
-    "attributes": {
-        "friendly_name": "Make the Coffee",
-        "last_triggered": null
-    },
-    "context": {
-        "id": "9b8e5a6e01df4082926a032d281bc14f",
-        "user_id": null
-    },
-    "entity_id": "script.makecoffee",
-    "last_changed": "2018-10-30T04:13:01.144696+00:00",
-    "last_updated": "2018-10-30T04:13:01.144696+00:00",
-    "state": "off"
-}, {
-    "attributes": {
-        "friendly_name": "Get Mellowed",
-        "last_triggered": "2018-10-30T04:31:18.536978+00:00"
-    },
-    "context": {
-        "id": "6679f062a2fe463da3ddc003ae1f1297",
-        "user_id": null
-    },
-    "entity_id": "script.getmellowed",
-    "last_changed": "2018-10-30T04:13:01.145672+00:00",
-    "last_updated": "2018-10-30T04:31:19.401278+00:00",
-    "state": "off"
-}, {
-    "attributes": {
-        "friendly_name": "Goodnight",
-        "last_triggered": null
-    },
-    "context": {
-        "id": "5b3694093eac43bc980452096f26a50b",
-        "user_id": null
-    },
-    "entity_id": "script.goodnight",
-    "last_changed": "2018-10-30T04:13:01.146665+00:00",
-    "last_updated": "2018-10-30T04:13:01.146665+00:00",
-    "state": "off"
-}, {
-    "attributes": {
-        "friendly_name": "Goodbye",
-        "last_triggered": null
-    },
-    "context": {
-        "id": "152ecc6c62644144acef4c10bc9ce9b0",
-        "user_id": null
-    },
-    "entity_id": "script.goodbye",
-    "last_changed": "2018-10-30T04:13:01.147673+00:00",
-    "last_updated": "2018-10-30T04:13:01.147673+00:00",
-    "state": "off"
-}, {
-    "attributes": {
-        "friendly_name": "Good Morning",
-        "last_triggered": null
-    },
-    "context": {
-        "id": "4d2425735ee64dd8adf89f9b8ff03a8e",
-        "user_id": null
-    },
-    "entity_id": "script.goodmorning",
-    "last_changed": "2018-10-30T04:13:01.148646+00:00",
-    "last_updated": "2018-10-30T04:13:01.148646+00:00",
-    "state": "off"
-}, {
-    "attributes": {
-        "friendly_name": "Arm Home When Away",
-        "id": "arm_when_away",
-        "last_triggered": "2018-10-29T23:29:19.098522+00:00"
-    },
-    "context": {
-        "id": "acc4ce3e6383489ea27304b73c6aae46",
-        "user_id": null
-    },
-    "entity_id": "automation.arm_home_when_away",
-    "last_changed": "2018-10-30T04:25:47.799048+00:00",
-    "last_updated": "2018-10-30T04:25:47.799048+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Pea Puff Light Timer On",
-        "id": "pea_puff_aquarium_light_timer_on",
-        "last_triggered": "2018-10-29T21:00:00.014595+00:00"
-    },
-    "context": {
-        "id": "16c1d13cd1ed42b583eaa593df2b736d",
-        "user_id": null
-    },
-    "entity_id": "automation.pea_puff_light_timer_on",
-    "last_changed": "2018-10-30T04:26:48.572589+00:00",
-    "last_updated": "2018-10-30T04:26:48.572589+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Pea Puff Light Timer Off",
-        "id": "pea_puff_aquarium_light_timer_off",
-        "last_triggered": "2018-10-30T02:00:00.018092+00:00"
-    },
-    "context": {
-        "id": "60528d61a5c4400cb9c4605605ab83f7",
-        "user_id": null
-    },
-    "entity_id": "automation.pea_puff_light_timer_off",
-    "last_changed": "2018-10-30T04:26:47.202260+00:00",
-    "last_updated": "2018-10-30T04:26:47.202260+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Run goodmorning at 8am",
-        "id": "good_morning_automation",
-        "last_triggered": null
-    },
-    "context": {
-        "id": "095abf0d48aa4df0ad11c564a22b109c",
-        "user_id": null
-    },
-    "entity_id": "automation.run_goodmorning_at_8am",
-    "last_changed": "2018-10-30T04:26:49.874397+00:00",
-    "last_updated": "2018-10-30T04:26:49.874397+00:00",
-    "state": "on"
 }, {
     "attributes": {
         "friendly_name": "Set cooling temperature based on presence",
@@ -1234,376 +1087,26 @@
         "last_triggered": "2018-10-22T23:43:36.358954+00:00"
     },
     "context": {
-        "id": "cfdd5766449b4a5fbdb5df97056c9118",
+        "id": "2b0d42f33ef1411f837f89574c901792",
         "user_id": null
     },
     "entity_id": "automation.set_cooling_temperature_based_on_presence",
-    "last_changed": "2018-10-30T04:26:53.058895+00:00",
-    "last_updated": "2018-10-30T04:26:53.058895+00:00",
+    "last_changed": "2018-10-30T12:08:04.791198+00:00",
+    "last_updated": "2018-10-30T12:08:04.791198+00:00",
     "state": "on"
 }, {
     "attributes": {
         "friendly_name": "Set heating temperature based on presence",
         "id": "climate_set_temperatures_heating",
-        "last_triggered": "2018-10-30T03:21:10.822263+00:00"
+        "last_triggered": "2018-10-30T11:30:00.102763+00:00"
     },
     "context": {
-        "id": "cdf1a6772cd1471fb44231c562aecc4e",
+        "id": "b4f11534ed394f61bd6953e15eef88da",
         "user_id": null
     },
     "entity_id": "automation.set_heating_temperature_based_on_presence",
-    "last_changed": "2018-10-30T04:26:53.906507+00:00",
-    "last_updated": "2018-10-30T04:26:53.906507+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Cool living room from remote sensor",
-        "id": "climate_cool_from_remote_living_room",
-        "last_triggered": "2018-10-29T22:10:36.445085+00:00"
-    },
-    "context": {
-        "id": "fb716f52dd20420281b7163a53541e6f",
-        "user_id": null
-    },
-    "entity_id": "automation.cool_living_room_from_remote_sensor",
-    "last_changed": "2018-10-30T04:26:09.418956+00:00",
-    "last_updated": "2018-10-30T04:26:09.418956+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Heat living room from remote sensor",
-        "id": "climate_heat_from_remote_living_room",
-        "last_triggered": "2018-10-30T01:55:10.054494+00:00"
-    },
-    "context": {
-        "id": "f2cc8aa2f7d8403482909c8fc193050a",
-        "user_id": null
-    },
-    "entity_id": "automation.heat_living_room_from_remote_sensor",
-    "last_changed": "2018-10-30T04:26:17.555504+00:00",
-    "last_updated": "2018-10-30T04:26:17.555504+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Cool living room from remote sensor",
-        "id": "climate_cool_from_remote_bedroom",
-        "last_triggered": null
-    },
-    "context": {
-        "id": "3a5e48c1d9f2442b8e4a91b64ba2ca56",
-        "user_id": null
-    },
-    "entity_id": "automation.cool_living_room_from_remote_sensor_2",
-    "last_changed": "2018-10-30T04:13:01.732245+00:00",
-    "last_updated": "2018-10-30T04:13:01.732245+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Heat bedroom room from remote sensor",
-        "id": "climate_heat_from_remote_bedroom",
-        "last_triggered": "2018-10-30T04:40:13.190453+00:00"
-    },
-    "context": {
-        "id": "3f133746cada400a8c3576d9c3cbdd7d",
-        "user_id": null
-    },
-    "entity_id": "automation.heat_bedroom_room_from_remote_sensor",
-    "last_changed": "2018-10-30T04:26:15.261836+00:00",
-    "last_updated": "2018-10-30T04:40:13.190549+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Camille Minimote Button 3 Pushed",
-        "id": "minimote_camille_button3_pushed",
-        "last_triggered": "2018-10-30T03:27:13.281791+00:00"
-    },
-    "context": {
-        "id": "5fbe416f30534c3387a3a8c200660435",
-        "user_id": null
-    },
-    "entity_id": "automation.camille_minimote_button_3_pushed",
-    "last_changed": "2018-10-30T04:26:07.453101+00:00",
-    "last_updated": "2018-10-30T04:26:07.453101+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Camille Minimote Button 3 Pressed",
-        "id": "minimote_camille_button3_held",
-        "last_triggered": "2018-10-30T03:21:11.822854+00:00"
-    },
-    "context": {
-        "id": "49015930e4df437c94e85d580c79c1b3",
-        "user_id": null
-    },
-    "entity_id": "automation.camille_minimote_button_3_pressed",
-    "last_changed": "2018-10-30T04:26:06.541980+00:00",
-    "last_updated": "2018-10-30T04:26:06.541980+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Camille Minimote Button 4 Pushed",
-        "id": "minimote_camille_button4_pushed",
-        "last_triggered": "2018-10-30T03:24:33.000393+00:00"
-    },
-    "context": {
-        "id": "a7503e6a4d2c400496d9623926df42c3",
-        "user_id": null
-    },
-    "entity_id": "automation.camille_minimote_button_4_pushed",
-    "last_changed": "2018-10-30T04:26:08.803087+00:00",
-    "last_updated": "2018-10-30T04:26:08.803087+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Camille Minimote Button 4 Pressed",
-        "id": "minimote_camille_button4_held",
-        "last_triggered": null
-    },
-    "context": {
-        "id": "1f91350a3d924d79af95ec8dbdba0c5a",
-        "user_id": null
-    },
-    "entity_id": "automation.camille_minimote_button_4_pressed",
-    "last_changed": "2018-10-30T04:26:08.031024+00:00",
-    "last_updated": "2018-10-30T04:26:08.031024+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "MQTT Automation Startup Delay",
-        "id": "mqtt_startup_delay",
-        "last_triggered": "2018-10-30T04:26:22.458010+00:00"
-    },
-    "context": {
-        "id": "5b6e42b6d71a41dfaa05360266f31e9d",
-        "user_id": "765bd7b4c3104b70b3137cadc0a96668"
-    },
-    "entity_id": "automation.mqtt_automation_startup_delay",
-    "last_changed": "2018-10-30T04:26:19.830263+00:00",
-    "last_updated": "2018-10-30T04:26:22.458176+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Turn on bedroom lights when motion sensed",
-        "id": "bedroom_lights_on_motion",
-        "last_triggered": "2018-10-30T01:07:33.391231+00:00"
-    },
-    "context": {
-        "id": "254be3cd301542fc9efaf7b618ebf4c8",
-        "user_id": null
-    },
-    "entity_id": "automation.turn_on_bedroom_lights_when_motion_sensed",
-    "last_changed": "2018-10-30T04:26:55.009198+00:00",
-    "last_updated": "2018-10-30T04:26:55.009198+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Camille Minimote Button 1 Pressed",
-        "id": "minimote_camille_button1_held",
-        "last_triggered": "2018-10-30T02:36:01.131493+00:00"
-    },
-    "context": {
-        "id": "9a1d0a4cf9da45fbb53f13ce71b6c915",
-        "user_id": null
-    },
-    "entity_id": "automation.camille_minimote_button_1_pressed",
-    "last_changed": "2018-10-30T04:26:02.245275+00:00",
-    "last_updated": "2018-10-30T04:26:02.245275+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Camille Minimote Button 2 Pushed",
-        "id": "minimote_camille_button2_pushed",
-        "last_triggered": "2018-10-30T02:39:33.868741+00:00"
-    },
-    "context": {
-        "id": "42e5a1268f224fb9aa56861b7ccf1eaf",
-        "user_id": null
-    },
-    "entity_id": "automation.camille_minimote_button_2_pushed",
-    "last_changed": "2018-10-30T04:26:05.180104+00:00",
-    "last_updated": "2018-10-30T04:26:05.180104+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Camille Minimote Button 2 Pressed",
-        "id": "minimote_camille_button2_held",
-        "last_triggered": "2018-10-29T02:08:24.417159+00:00"
-    },
-    "context": {
-        "id": "393ae706f5bc41ee8ddca3e840748de7",
-        "user_id": null
-    },
-    "entity_id": "automation.camille_minimote_button_2_pressed",
-    "last_changed": "2018-10-30T04:26:03.956352+00:00",
-    "last_updated": "2018-10-30T04:26:03.956352+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Door Minimote Control",
-        "id": "minimote_door",
-        "last_triggered": "2018-10-30T04:27:21.980894+00:00"
-    },
-    "context": {
-        "id": "0046dfb1bd5840a98498278ea29ff5ad",
-        "user_id": null
-    },
-    "entity_id": "automation.door_minimote_control",
-    "last_changed": "2018-10-30T04:24:50.811281+00:00",
-    "last_updated": "2018-10-30T04:27:21.980993+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Bedroom Minimote Button 1 Pushed",
-        "id": "minimote_bedroom_button1_pushed",
-        "last_triggered": "2018-10-29T22:03:03.963074+00:00"
-    },
-    "context": {
-        "id": "5486fb4d6a844cf1b74c3b0a574e9d31",
-        "user_id": null
-    },
-    "entity_id": "automation.bedroom_minimote_button_1_pushed",
-    "last_changed": "2018-10-30T04:25:59.138185+00:00",
-    "last_updated": "2018-10-30T04:25:59.138185+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Bedroom Minimote Button 1 Pressed",
-        "id": "minimote_bedroom_button1_held",
-        "last_triggered": "2018-10-24T04:34:25.499691+00:00"
-    },
-    "context": {
-        "id": "5aff3231d4b84ece8c308ac3c8bd9de4",
-        "user_id": null
-    },
-    "entity_id": "automation.bedroom_minimote_button_1_pressed",
-    "last_changed": "2018-10-30T04:25:50.907449+00:00",
-    "last_updated": "2018-10-30T04:25:50.907449+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Bedroom Minimote Button 2 Pushed",
-        "id": "minimote_bedroom_button2_pushed",
-        "last_triggered": "2018-10-28T13:38:57.834657+00:00"
-    },
-    "context": {
-        "id": "98381336d0664451bffe0a3a06cd3745",
-        "user_id": null
-    },
-    "entity_id": "automation.bedroom_minimote_button_2_pushed",
-    "last_changed": "2018-10-30T04:26:00.357632+00:00",
-    "last_updated": "2018-10-30T04:26:00.357632+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Run make the coffee at 6am",
-        "id": "make_the_coffee_automation",
-        "last_triggered": "2018-10-29T11:30:00.230180+00:00"
-    },
-    "context": {
-        "id": "17c5b511b9614f1e90f88d9da9f195a3",
-        "user_id": null
-    },
-    "entity_id": "automation.run_make_the_coffee_at_6am",
-    "last_changed": "2018-10-30T04:26:50.480183+00:00",
-    "last_updated": "2018-10-30T04:26:50.480183+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Bedroom Minimote Button 2 Pressed",
-        "id": "minimote_bedroom_button2_held",
-        "last_triggered": "2018-10-22T03:15:17.470548+00:00"
-    },
-    "context": {
-        "id": "e4c766c639af45fa9512a0156fb6fbfe",
-        "user_id": null
-    },
-    "entity_id": "automation.bedroom_minimote_button_2_pressed",
-    "last_changed": "2018-10-30T04:25:59.726737+00:00",
-    "last_updated": "2018-10-30T04:25:59.726737+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Run make the coffee when motion",
-        "id": "make_the_coffee_automation_weekend",
-        "last_triggered": "2018-10-28T11:51:16.238942+00:00"
-    },
-    "context": {
-        "id": "00bbf9246d894efc94f053ce7b6ce902",
-        "user_id": null
-    },
-    "entity_id": "automation.run_make_the_coffee_when_motion",
-    "last_changed": "2018-10-30T04:26:51.086462+00:00",
-    "last_updated": "2018-10-30T04:26:51.086462+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Bedroom Minimote Button 3 Pushed",
-        "id": "minimote_bedroom_button3_pushed",
-        "last_triggered": "2018-10-29T22:03:04.625985+00:00"
-    },
-    "context": {
-        "id": "cad64223adbb41e28ae27525b3d6af1b",
-        "user_id": null
-    },
-    "entity_id": "automation.bedroom_minimote_button_3_pushed",
-    "last_changed": "2018-10-30T04:26:00.912989+00:00",
-    "last_updated": "2018-10-30T04:26:00.912989+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Bedroom Minimote Button 4 Pushed",
-        "id": "minimote_bedroom_button4_pushed",
-        "last_triggered": "2018-10-29T22:03:05.227472+00:00"
-    },
-    "context": {
-        "id": "5bcc80481f6047bf813dcabfd54ac107",
-        "user_id": null
-    },
-    "entity_id": "automation.bedroom_minimote_button_4_pushed",
-    "last_changed": "2018-10-30T04:26:01.637563+00:00",
-    "last_updated": "2018-10-30T04:26:01.637563+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Send Alert When Water Detected",
-        "id": "alert_when_wet",
-        "last_triggered": "2018-10-27T19:07:35.031868+00:00"
-    },
-    "context": {
-        "id": "d56afd70b2224e30aad5e27948ee326e",
-        "user_id": null
-    },
-    "entity_id": "automation.send_alert_when_water_detected",
-    "last_changed": "2018-10-30T04:26:52.354484+00:00",
-    "last_updated": "2018-10-30T04:26:52.354484+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Camille Minimote Button 1 Pushed",
-        "id": "minimote_camille_button1_pushed",
-        "last_triggered": "2018-10-30T02:39:33.270051+00:00"
-    },
-    "context": {
-        "id": "5b10783767d34f5285996f1b5c4b75aa",
-        "user_id": null
-    },
-    "entity_id": "automation.camille_minimote_button_1_pushed",
-    "last_changed": "2018-10-30T04:26:03.314353+00:00",
-    "last_updated": "2018-10-30T04:26:03.314353+00:00",
-    "state": "on"
-}, {
-    "attributes": {
-        "friendly_name": "Send Alert When Motion And Away",
-        "id": "alert_when_motion",
-        "last_triggered": "2018-10-30T04:37:00.714269+00:00"
-    },
-    "context": {
-        "id": "7e636916e0ea4a3f8ee9de8452891bef",
-        "user_id": null
-    },
-    "entity_id": "automation.send_alert_when_motion_and_away",
-    "last_changed": "2018-10-30T04:26:51.810827+00:00",
-    "last_updated": "2018-10-30T04:37:00.714368+00:00",
+    "last_changed": "2018-10-30T12:08:04.793863+00:00",
+    "last_updated": "2018-10-30T12:08:04.793863+00:00",
     "state": "on"
 }, {
     "attributes": {
@@ -1612,131 +1115,588 @@
         "last_triggered": "2018-10-30T00:51:50.957859+00:00"
     },
     "context": {
-        "id": "59f7d30421864d45ac6f874ddd8c7718",
+        "id": "7b6c797bb1c74bd89f94dda51804c17b",
         "user_id": null
     },
     "entity_id": "automation.disarm_home_when_home",
-    "last_changed": "2018-10-30T04:26:11.332927+00:00",
-    "last_updated": "2018-10-30T04:26:11.332927+00:00",
+    "last_changed": "2018-10-30T12:08:04.795878+00:00",
+    "last_updated": "2018-10-30T12:08:04.795878+00:00",
     "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Turn on bedroom lights when motion sensed",
+        "id": "bedroom_lights_on_motion",
+        "last_triggered": "2018-10-30T01:07:33.391231+00:00"
+    },
+    "context": {
+        "id": "17a46cc7b9b24d7996bf9498f6e64798",
+        "user_id": null
+    },
+    "entity_id": "automation.turn_on_bedroom_lights_when_motion_sensed",
+    "last_changed": "2018-10-30T12:08:04.797608+00:00",
+    "last_updated": "2018-10-30T12:08:04.797608+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Door Minimote Control",
+        "id": "minimote_door",
+        "last_triggered": "2018-10-30T12:04:55.403375+00:00"
+    },
+    "context": {
+        "id": "d015bc832f134815a71b7c7a25f036f6",
+        "user_id": null
+    },
+    "entity_id": "automation.door_minimote_control",
+    "last_changed": "2018-10-30T12:08:04.800432+00:00",
+    "last_updated": "2018-10-30T12:08:04.800432+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Camille Minimote Button 3 Pressed",
+        "id": "minimote_camille_button3_held",
+        "last_triggered": "2018-10-30T03:21:11.822854+00:00"
+    },
+    "context": {
+        "id": "7cdbfad1873a48f49e827d47423e0af8",
+        "user_id": null
+    },
+    "entity_id": "automation.camille_minimote_button_3_pressed",
+    "last_changed": "2018-10-30T12:08:04.863199+00:00",
+    "last_updated": "2018-10-30T12:08:04.863199+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Camille Minimote Button 4 Pushed",
+        "id": "minimote_camille_button4_pushed",
+        "last_triggered": "2018-10-30T03:24:33.000393+00:00"
+    },
+    "context": {
+        "id": "f371b2643a0b469ba293dd4f1a9c5487",
+        "user_id": null
+    },
+    "entity_id": "automation.camille_minimote_button_4_pushed",
+    "last_changed": "2018-10-30T12:08:04.871139+00:00",
+    "last_updated": "2018-10-30T12:08:04.871139+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Pea Puff Light Timer On",
+        "id": "pea_puff_aquarium_light_timer_on",
+        "last_triggered": "2018-10-30T12:00:00.012816+00:00"
+    },
+    "context": {
+        "id": "5779d3db4b7a46f787b2eb2707b6dcce",
+        "user_id": null
+    },
+    "entity_id": "automation.pea_puff_light_timer_on",
+    "last_changed": "2018-10-30T12:08:04.804985+00:00",
+    "last_updated": "2018-10-30T12:08:04.804985+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Camille Minimote Button 4 Pressed",
+        "id": "minimote_camille_button4_held",
+        "last_triggered": null
+    },
+    "context": {
+        "id": "030dd0d017a448d3a4f4465faddb7cb7",
+        "user_id": null
+    },
+    "entity_id": "automation.camille_minimote_button_4_pressed",
+    "last_changed": "2018-10-30T12:08:04.874701+00:00",
+    "last_updated": "2018-10-30T12:08:04.874701+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "MQTT Automation Startup Delay",
+        "id": "mqtt_startup_delay",
+        "last_triggered": "2018-10-30T12:08:04.842966+00:00"
+    },
+    "context": {
+        "id": "8ffa6d068f094f6f92a726d16c74e055",
+        "user_id": null
+    },
+    "entity_id": "automation.mqtt_automation_startup_delay",
+    "last_changed": "2018-10-30T12:08:04.807659+00:00",
+    "last_updated": "2018-10-30T12:08:04.843080+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Bedroom Minimote Button 1 Pressed",
+        "id": "minimote_bedroom_button1_held",
+        "last_triggered": "2018-10-24T04:34:25.499691+00:00"
+    },
+    "context": {
+        "id": "8a1b99308d8c4f9eacd5f70809299229",
+        "user_id": null
+    },
+    "entity_id": "automation.bedroom_minimote_button_1_pressed",
+    "last_changed": "2018-10-30T12:08:04.881714+00:00",
+    "last_updated": "2018-10-30T12:08:04.881714+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Pea Puff Light Timer Off",
+        "id": "pea_puff_aquarium_light_timer_off",
+        "last_triggered": "2018-10-30T02:00:00.018092+00:00"
+    },
+    "context": {
+        "id": "a6a57d38657840938dabc4c72a2007b3",
+        "user_id": null
+    },
+    "entity_id": "automation.pea_puff_light_timer_off",
+    "last_changed": "2018-10-30T12:08:04.809831+00:00",
+    "last_updated": "2018-10-30T12:08:04.809831+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Camille Minimote Button 2 Pressed",
+        "id": "minimote_camille_button2_held",
+        "last_triggered": "2018-10-29T02:08:24.417159+00:00"
+    },
+    "context": {
+        "id": "09ee16f904d149d0826884457464b857",
+        "user_id": null
+    },
+    "entity_id": "automation.camille_minimote_button_2_pressed",
+    "last_changed": "2018-10-30T12:08:04.887675+00:00",
+    "last_updated": "2018-10-30T12:08:04.887675+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Camille Minimote Button 3 Pushed",
+        "id": "minimote_camille_button3_pushed",
+        "last_triggered": "2018-10-30T03:27:13.281791+00:00"
+    },
+    "context": {
+        "id": "6ab0e3584ce749498d62e6d57532d7eb",
+        "user_id": null
+    },
+    "entity_id": "automation.camille_minimote_button_3_pushed",
+    "last_changed": "2018-10-30T12:08:04.893691+00:00",
+    "last_updated": "2018-10-30T12:08:04.893691+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Camille Minimote Button 1 Pushed",
+        "id": "minimote_camille_button1_pushed",
+        "last_triggered": "2018-10-30T02:39:33.270051+00:00"
+    },
+    "context": {
+        "id": "438854e408b04afcb01a535fe78f087d",
+        "user_id": null
+    },
+    "entity_id": "automation.camille_minimote_button_1_pushed",
+    "last_changed": "2018-10-30T12:08:04.897295+00:00",
+    "last_updated": "2018-10-30T12:08:04.897295+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Bedroom Minimote Button 4 Pushed",
+        "id": "minimote_bedroom_button4_pushed",
+        "last_triggered": "2018-10-29T22:03:05.227472+00:00"
+    },
+    "context": {
+        "id": "faf02eced3414cbea4e9c18a261ab117",
+        "user_id": null
+    },
+    "entity_id": "automation.bedroom_minimote_button_4_pushed",
+    "last_changed": "2018-10-30T12:08:04.903358+00:00",
+    "last_updated": "2018-10-30T12:08:04.903358+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Run make the coffee when motion",
+        "id": "make_the_coffee_automation_weekend",
+        "last_triggered": "2018-10-28T11:51:16.238942+00:00"
+    },
+    "context": {
+        "id": "80c735b8d6a541b1b65bc259f7fe64f9",
+        "user_id": null
+    },
+    "entity_id": "automation.run_make_the_coffee_when_motion",
+    "last_changed": "2018-10-30T12:08:04.811848+00:00",
+    "last_updated": "2018-10-30T12:08:04.811848+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Camille Minimote Button 2 Pushed",
+        "id": "minimote_camille_button2_pushed",
+        "last_triggered": "2018-10-30T02:39:33.868741+00:00"
+    },
+    "context": {
+        "id": "e336fb54af3b4a34ab7924880f024f78",
+        "user_id": null
+    },
+    "entity_id": "automation.camille_minimote_button_2_pushed",
+    "last_changed": "2018-10-30T12:08:04.906564+00:00",
+    "last_updated": "2018-10-30T12:08:04.906564+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Run make the coffee at 6am",
+        "id": "make_the_coffee_automation",
+        "last_triggered": "2018-10-30T11:30:00.104632+00:00"
+    },
+    "context": {
+        "id": "0a4583e1206d462d8d9632897a1fdc74",
+        "user_id": null
+    },
+    "entity_id": "automation.run_make_the_coffee_at_6am",
+    "last_changed": "2018-10-30T12:08:04.813726+00:00",
+    "last_updated": "2018-10-30T12:08:04.813726+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Heat living room from remote sensor",
+        "id": "climate_heat_from_remote_living_room",
+        "last_triggered": "2018-10-30T12:01:04.006211+00:00"
+    },
+    "context": {
+        "id": "cd8ecc7f2c2148b693fbe6da92d7d4a1",
+        "user_id": null
+    },
+    "entity_id": "automation.heat_living_room_from_remote_sensor",
+    "last_changed": "2018-10-30T12:08:04.817102+00:00",
+    "last_updated": "2018-10-30T12:08:04.817102+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Cool living room from remote sensor",
+        "id": "climate_cool_from_remote_bedroom",
+        "last_triggered": "2018-10-29T22:10:36.445085+00:00"
+    },
+    "context": {
+        "id": "c2f9f7b8ec20449db320da30a5f24cea",
+        "user_id": null
+    },
+    "entity_id": "automation.cool_living_room_from_remote_sensor",
+    "last_changed": "2018-10-30T12:08:04.819978+00:00",
+    "last_updated": "2018-10-30T12:08:04.819978+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Camille Minimote Button 1 Pressed",
+        "id": "minimote_camille_button1_held",
+        "last_triggered": "2018-10-30T02:36:01.131493+00:00"
+    },
+    "context": {
+        "id": "bf8c4854aa3147f2b083d81d56d26e64",
+        "user_id": null
+    },
+    "entity_id": "automation.camille_minimote_button_1_pressed",
+    "last_changed": "2018-10-30T12:08:04.913057+00:00",
+    "last_updated": "2018-10-30T12:08:04.913057+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Run goodmorning at 8am",
+        "id": "good_morning_automation",
+        "last_triggered": null
+    },
+    "context": {
+        "id": "b818e1e8220743769af7d84e5c2e0829",
+        "user_id": null
+    },
+    "entity_id": "automation.run_goodmorning_at_8am",
+    "last_changed": "2018-10-30T12:08:04.821859+00:00",
+    "last_updated": "2018-10-30T12:08:04.821859+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Bedroom Minimote Button 2 Pushed",
+        "id": "minimote_bedroom_button2_pushed",
+        "last_triggered": "2018-10-28T13:38:57.834657+00:00"
+    },
+    "context": {
+        "id": "b3371eaf7e034ee5847792b33a517cc2",
+        "user_id": null
+    },
+    "entity_id": "automation.bedroom_minimote_button_2_pushed",
+    "last_changed": "2018-10-30T12:08:04.918412+00:00",
+    "last_updated": "2018-10-30T12:08:04.918412+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Cool living room from remote sensor",
+        "id": "climate_cool_from_remote_living_room",
+        "last_triggered": null
+    },
+    "context": {
+        "id": "33bd651a637a472ca64a9a16baed8367",
+        "user_id": null
+    },
+    "entity_id": "automation.cool_living_room_from_remote_sensor_2",
+    "last_changed": "2018-10-30T12:08:04.825768+00:00",
+    "last_updated": "2018-10-30T12:08:04.825768+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Bedroom Minimote Button 1 Pushed",
+        "id": "minimote_bedroom_button1_pushed",
+        "last_triggered": "2018-10-29T22:03:03.963074+00:00"
+    },
+    "context": {
+        "id": "12f9a580bf10422aa6b1730bfdabccb1",
+        "user_id": null
+    },
+    "entity_id": "automation.bedroom_minimote_button_1_pushed",
+    "last_changed": "2018-10-30T12:08:04.922804+00:00",
+    "last_updated": "2018-10-30T12:08:04.922804+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Heat bedroom room from remote sensor",
+        "id": "climate_heat_from_remote_bedroom",
+        "last_triggered": "2018-10-30T12:08:19.937119+00:00"
+    },
+    "context": {
+        "id": "5f880122b0354267995ccdbf3b46eba9",
+        "user_id": null
+    },
+    "entity_id": "automation.heat_bedroom_room_from_remote_sensor",
+    "last_changed": "2018-10-30T12:08:04.829255+00:00",
+    "last_updated": "2018-10-30T12:08:19.937211+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Bedroom Minimote Button 2 Pressed",
+        "id": "minimote_bedroom_button2_held",
+        "last_triggered": "2018-10-22T03:15:17.470548+00:00"
+    },
+    "context": {
+        "id": "68ef885c3ccd4c37ac91cdb4062cbc76",
+        "user_id": null
+    },
+    "entity_id": "automation.bedroom_minimote_button_2_pressed",
+    "last_changed": "2018-10-30T12:08:04.930502+00:00",
+    "last_updated": "2018-10-30T12:08:04.930502+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Send Alert When Motion And Away",
+        "id": "alert_when_motion",
+        "last_triggered": "2018-10-30T12:08:19.778396+00:00"
+    },
+    "context": {
+        "id": "2d6a043c5b6741c39e0706e30475c81e",
+        "user_id": null
+    },
+    "entity_id": "automation.send_alert_when_motion_and_away",
+    "last_changed": "2018-10-30T12:08:04.832507+00:00",
+    "last_updated": "2018-10-30T12:08:19.778497+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Arm Home When Away",
+        "id": "arm_when_away",
+        "last_triggered": "2018-10-29T23:29:19.098522+00:00"
+    },
+    "context": {
+        "id": "099eefce6049490ea6ce9f0166e8cf3d",
+        "user_id": null
+    },
+    "entity_id": "automation.arm_home_when_away",
+    "last_changed": "2018-10-30T12:08:04.834398+00:00",
+    "last_updated": "2018-10-30T12:08:04.834398+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Bedroom Minimote Button 3 Pushed",
+        "id": "minimote_bedroom_button3_pushed",
+        "last_triggered": "2018-10-29T22:03:04.625985+00:00"
+    },
+    "context": {
+        "id": "fce1465b0e2e4a76a86734caaa98f8bd",
+        "user_id": null
+    },
+    "entity_id": "automation.bedroom_minimote_button_3_pushed",
+    "last_changed": "2018-10-30T12:08:04.933708+00:00",
+    "last_updated": "2018-10-30T12:08:04.933708+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Send Alert When Water Detected",
+        "id": "alert_when_wet",
+        "last_triggered": "2018-10-27T19:07:35.031868+00:00"
+    },
+    "context": {
+        "id": "3932cc29d70d46daab888d9981e26419",
+        "user_id": null
+    },
+    "entity_id": "automation.send_alert_when_water_detected",
+    "last_changed": "2018-10-30T12:08:04.836420+00:00",
+    "last_updated": "2018-10-30T12:08:04.836420+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "I'm Back",
+        "last_triggered": null
+    },
+    "context": {
+        "id": "8b7e01ac30f344eb941da3b9bf85d95c",
+        "user_id": null
+    },
+    "entity_id": "script.imback",
+    "last_changed": "2018-10-30T12:08:04.271319+00:00",
+    "last_updated": "2018-10-30T12:08:04.271319+00:00",
+    "state": "off"
+}, {
+    "attributes": {
+        "friendly_name": "Good Night Camille",
+        "last_triggered": null
+    },
+    "context": {
+        "id": "bd325c0ac6f2482da0620139dbe53ea8",
+        "user_id": null
+    },
+    "entity_id": "script.bedtime",
+    "last_changed": "2018-10-30T12:08:04.272360+00:00",
+    "last_updated": "2018-10-30T12:08:04.272360+00:00",
+    "state": "off"
+}, {
+    "attributes": {
+        "friendly_name": "Get Mellowed",
+        "last_triggered": null
+    },
+    "context": {
+        "id": "41327edbc684433591e2cd623f9bf336",
+        "user_id": null
+    },
+    "entity_id": "script.getmellowed",
+    "last_changed": "2018-10-30T12:08:04.273349+00:00",
+    "last_updated": "2018-10-30T12:08:04.273349+00:00",
+    "state": "off"
+}, {
+    "attributes": {
+        "friendly_name": "Make the Coffee",
+        "last_triggered": null
+    },
+    "context": {
+        "id": "ce5b92d614694a27901a0c1b1d640d3b",
+        "user_id": null
+    },
+    "entity_id": "script.makecoffee",
+    "last_changed": "2018-10-30T12:08:04.274407+00:00",
+    "last_updated": "2018-10-30T12:08:04.274407+00:00",
+    "state": "off"
+}, {
+    "attributes": {
+        "friendly_name": "Goodnight",
+        "last_triggered": null
+    },
+    "context": {
+        "id": "92ac5e0743384cf9b0d1a3e2d23e2120",
+        "user_id": null
+    },
+    "entity_id": "script.goodnight",
+    "last_changed": "2018-10-30T12:08:04.275484+00:00",
+    "last_updated": "2018-10-30T12:08:04.275484+00:00",
+    "state": "off"
+}, {
+    "attributes": {
+        "friendly_name": "Goodbye",
+        "last_triggered": null
+    },
+    "context": {
+        "id": "f659f8d01a064b238829c8dd2a524eb7",
+        "user_id": null
+    },
+    "entity_id": "script.goodbye",
+    "last_changed": "2018-10-30T12:08:04.276511+00:00",
+    "last_updated": "2018-10-30T12:08:04.276511+00:00",
+    "state": "off"
+}, {
+    "attributes": {
+        "friendly_name": "Good Morning",
+        "last_triggered": null
+    },
+    "context": {
+        "id": "735081501813496abfcc547171400cab",
+        "user_id": null
+    },
+    "entity_id": "script.goodmorning",
+    "last_changed": "2018-10-30T12:08:04.277546+00:00",
+    "last_updated": "2018-10-30T12:08:04.277546+00:00",
+    "state": "off"
 }, {
     "attributes": {
         "attribution": "Powered by Dark Sky",
         "forecast": [{
-            "condition": "partlycloudy",
-            "datetime": "2018-10-29T23:00:00",
-            "precipitation": null,
-            "temperature": 47
-        }, {
-            "condition": "partlycloudy",
-            "datetime": "2018-10-30T00:00:00",
-            "precipitation": null,
-            "temperature": 48
-        }, {
-            "condition": "partlycloudy",
-            "datetime": "2018-10-30T01:00:00",
-            "precipitation": null,
-            "temperature": 48
-        }, {
-            "condition": "partlycloudy",
-            "datetime": "2018-10-30T02:00:00",
-            "precipitation": null,
-            "temperature": 47
-        }, {
-            "condition": "partlycloudy",
-            "datetime": "2018-10-30T03:00:00",
-            "precipitation": null,
-            "temperature": 47
-        }, {
-            "condition": "partlycloudy",
-            "datetime": "2018-10-30T04:00:00",
-            "precipitation": null,
-            "temperature": 47
-        }, {
-            "condition": "partlycloudy",
-            "datetime": "2018-10-30T05:00:00",
-            "precipitation": null,
-            "temperature": 47
-        }, {
-            "condition": "partlycloudy",
-            "datetime": "2018-10-30T06:00:00",
-            "precipitation": null,
-            "temperature": 47
-        }, {
-            "condition": "partlycloudy",
+            "condition": "clear-night",
             "datetime": "2018-10-30T07:00:00",
             "precipitation": null,
-            "temperature": 47
+            "temperature": 46
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-30T08:00:00",
             "precipitation": null,
-            "temperature": 48
+            "temperature": 47
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-30T09:00:00",
             "precipitation": null,
-            "temperature": 50
+            "temperature": 49
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-30T10:00:00",
             "precipitation": null,
-            "temperature": 52
+            "temperature": 51
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-30T11:00:00",
             "precipitation": null,
-            "temperature": 53
+            "temperature": 54
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-30T12:00:00",
             "precipitation": null,
-            "temperature": 55
+            "temperature": 58
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-30T13:00:00",
             "precipitation": null,
-            "temperature": 57
+            "temperature": 60
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-30T14:00:00",
             "precipitation": null,
-            "temperature": 59
+            "temperature": 61
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-30T15:00:00",
             "precipitation": null,
-            "temperature": 62
+            "temperature": 63
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-30T16:00:00",
             "precipitation": null,
-            "temperature": 63
+            "temperature": 64
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-30T17:00:00",
             "precipitation": null,
-            "temperature": 63
+            "temperature": 64
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-30T18:00:00",
             "precipitation": null,
             "temperature": 62
         }, {
-            "condition": "cloudy",
+            "condition": "partlycloudy",
             "datetime": "2018-10-30T19:00:00",
             "precipitation": null,
-            "temperature": 60
+            "temperature": 61
         }, {
             "condition": "rainy",
             "datetime": "2018-10-30T20:00:00",
-            "precipitation": null,
-            "temperature": 59
+            "precipitation": 0.1,
+            "temperature": 60
         }, {
             "condition": "rainy",
             "datetime": "2018-10-30T21:00:00",
             "precipitation": 0.1,
-            "temperature": 58
+            "temperature": 59
         }, {
             "condition": "rainy",
             "datetime": "2018-10-30T22:00:00",
@@ -1746,12 +1706,12 @@
             "condition": "rainy",
             "datetime": "2018-10-30T23:00:00",
             "precipitation": 0.1,
-            "temperature": 57
+            "temperature": 58
         }, {
             "condition": "rainy",
             "datetime": "2018-10-31T00:00:00",
             "precipitation": 0.2,
-            "temperature": 56
+            "temperature": 57
         }, {
             "condition": "rainy",
             "datetime": "2018-10-31T01:00:00",
@@ -1760,8 +1720,8 @@
         }, {
             "condition": "rainy",
             "datetime": "2018-10-31T02:00:00",
-            "precipitation": 0.1,
-            "temperature": 53
+            "precipitation": 0.2,
+            "temperature": 54
         }, {
             "condition": "rainy",
             "datetime": "2018-10-31T03:00:00",
@@ -1770,12 +1730,12 @@
         }, {
             "condition": "rainy",
             "datetime": "2018-10-31T04:00:00",
-            "precipitation": null,
+            "precipitation": 0.1,
             "temperature": 51
         }, {
             "condition": "rainy",
             "datetime": "2018-10-31T05:00:00",
-            "precipitation": null,
+            "precipitation": 0.1,
             "temperature": 50
         }, {
             "condition": "rainy",
@@ -1791,7 +1751,7 @@
             "condition": "cloudy",
             "datetime": "2018-10-31T08:00:00",
             "precipitation": null,
-            "temperature": 48
+            "temperature": 49
         }, {
             "condition": "cloudy",
             "datetime": "2018-10-31T09:00:00",
@@ -1803,15 +1763,15 @@
             "precipitation": null,
             "temperature": 49
         }, {
-            "condition": "cloudy",
+            "condition": "partlycloudy",
             "datetime": "2018-10-31T11:00:00",
             "precipitation": null,
-            "temperature": 50
+            "temperature": 51
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-31T12:00:00",
             "precipitation": null,
-            "temperature": 52
+            "temperature": 53
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-31T13:00:00",
@@ -1826,22 +1786,22 @@
             "condition": "partlycloudy",
             "datetime": "2018-10-31T15:00:00",
             "precipitation": null,
-            "temperature": 55
+            "temperature": 56
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-31T16:00:00",
             "precipitation": null,
-            "temperature": 56
+            "temperature": 57
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-31T17:00:00",
             "precipitation": null,
-            "temperature": 55
+            "temperature": 56
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-31T18:00:00",
             "precipitation": null,
-            "temperature": 54
+            "temperature": 55
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-31T19:00:00",
@@ -1851,56 +1811,96 @@
             "condition": "partlycloudy",
             "datetime": "2018-10-31T20:00:00",
             "precipitation": null,
-            "temperature": 51
+            "temperature": 52
         }, {
             "condition": "partlycloudy",
             "datetime": "2018-10-31T21:00:00",
             "precipitation": null,
-            "temperature": 50
+            "temperature": 51
         }, {
-            "condition": "partlycloudy",
+            "condition": "cloudy",
             "datetime": "2018-10-31T22:00:00",
             "precipitation": null,
             "temperature": 50
         }, {
-            "condition": "partlycloudy",
+            "condition": "cloudy",
             "datetime": "2018-10-31T23:00:00",
             "precipitation": null,
             "temperature": 50
+        }, {
+            "condition": "cloudy",
+            "datetime": "2018-11-01T00:00:00",
+            "precipitation": null,
+            "temperature": 49
+        }, {
+            "condition": "cloudy",
+            "datetime": "2018-11-01T01:00:00",
+            "precipitation": null,
+            "temperature": 49
+        }, {
+            "condition": "cloudy",
+            "datetime": "2018-11-01T02:00:00",
+            "precipitation": null,
+            "temperature": 48
+        }, {
+            "condition": "cloudy",
+            "datetime": "2018-11-01T03:00:00",
+            "precipitation": null,
+            "temperature": 48
+        }, {
+            "condition": "cloudy",
+            "datetime": "2018-11-01T04:00:00",
+            "precipitation": null,
+            "temperature": 47
+        }, {
+            "condition": "cloudy",
+            "datetime": "2018-11-01T05:00:00",
+            "precipitation": null,
+            "temperature": 47
+        }, {
+            "condition": "cloudy",
+            "datetime": "2018-11-01T06:00:00",
+            "precipitation": null,
+            "temperature": 47
+        }, {
+            "condition": "cloudy",
+            "datetime": "2018-11-01T07:00:00",
+            "precipitation": null,
+            "temperature": 47
         }],
         "friendly_name": "Dark Sky",
         "humidity": 79,
-        "ozone": 288.22,
-        "pressure": 1017.36,
-        "temperature": 47,
+        "ozone": 282.22,
+        "pressure": 1014.43,
+        "temperature": 46,
         "visibility": 10,
-        "wind_bearing": 123,
-        "wind_speed": 5.69
+        "wind_bearing": 154,
+        "wind_speed": 10.31
     },
     "context": {
-        "id": "316475cb9a794615bf1b481f167bba5e",
+        "id": "9e98684492fc4cb2b13246fe98db9cd0",
         "user_id": null
     },
     "entity_id": "weather.dark_sky",
-    "last_changed": "2018-10-30T04:13:01.257826+00:00",
-    "last_updated": "2018-10-30T04:41:30.396743+00:00",
-    "state": "partlycloudy"
+    "last_changed": "2018-10-30T12:08:04.294678+00:00",
+    "last_updated": "2018-10-30T12:08:04.294678+00:00",
+    "state": "clear-night"
 }, {
     "attributes": {
-        "battery": 56,
+        "battery": 50,
         "friendly_name": "Ergisch",
         "gps_accuracy": 65,
-        "latitude": 41.89250358844927,
-        "longitude": -87.6212190532434,
+        "latitude": 41.89247827186011,
+        "longitude": -87.62121740589302,
         "source_type": "gps"
     },
     "context": {
-        "id": "78211034788f4230acb800a6deaacd60",
+        "id": "f4682e468b6546ecad9d1f608814337f",
         "user_id": null
     },
     "entity_id": "device_tracker.ergisch",
-    "last_changed": "2018-10-30T04:13:01.264081+00:00",
-    "last_updated": "2018-10-30T04:13:01.264081+00:00",
+    "last_changed": "2018-10-30T12:08:04.306003+00:00",
+    "last_updated": "2018-10-30T12:08:04.306003+00:00",
     "state": "home"
 }, {
     "attributes": {
@@ -1908,12 +1908,12 @@
         "source_type": null
     },
     "context": {
-        "id": "2d2d25be7dc54dd09c8b5f22d59fe89b",
+        "id": "a949e93b0aa5487186c579da5863eece",
         "user_id": null
     },
     "entity_id": "device_tracker.fibonacci",
-    "last_changed": "2018-10-30T04:13:01.265095+00:00",
-    "last_updated": "2018-10-30T04:13:01.265095+00:00",
+    "last_changed": "2018-10-30T12:08:04.307029+00:00",
+    "last_updated": "2018-10-30T12:08:04.307029+00:00",
     "state": "not_home"
 }, {
     "attributes": {
@@ -1921,12 +1921,12 @@
         "source_type": null
     },
     "context": {
-        "id": "450a9f4b08594cbbb1e96573bba40c49",
+        "id": "5b6809cc77a641c0a5f15b8b3a549e1b",
         "user_id": null
     },
     "entity_id": "device_tracker.angelapfammattersiphone",
-    "last_changed": "2018-10-30T04:13:01.266029+00:00",
-    "last_updated": "2018-10-30T04:13:01.266029+00:00",
+    "last_changed": "2018-10-30T12:08:04.308006+00:00",
+    "last_updated": "2018-10-30T12:08:04.308006+00:00",
     "state": "not_home"
 }, {
     "attributes": {
@@ -1934,12 +1934,12 @@
         "source_type": null
     },
     "context": {
-        "id": "73c2dee515fc4d878fe8250f166f3696",
+        "id": "7e93902ef2a24c5fbe9875e9fa02187d",
         "user_id": null
     },
     "entity_id": "device_tracker.fsmdmpw26b9j28k",
-    "last_changed": "2018-10-30T04:13:01.267008+00:00",
-    "last_updated": "2018-10-30T04:13:01.267008+00:00",
+    "last_changed": "2018-10-30T12:08:04.308979+00:00",
+    "last_updated": "2018-10-30T12:08:04.308979+00:00",
     "state": "not_home"
 }, {
     "attributes": {
@@ -1951,12 +1951,12 @@
         "source_type": "gps"
     },
     "context": {
-        "id": "569ec8794c1e4baa9a44c0e2b48658e8",
+        "id": "3599f0485ea4425ab83e63132f522b08",
         "user_id": null
     },
     "entity_id": "device_tracker.angela_pfammatters_iphone",
-    "last_changed": "2018-10-30T04:13:01.267993+00:00",
-    "last_updated": "2018-10-30T04:13:01.267993+00:00",
+    "last_changed": "2018-10-30T12:08:04.309942+00:00",
+    "last_updated": "2018-10-30T12:08:04.309942+00:00",
     "state": "not_home"
 }, {
     "attributes": {
@@ -1967,29 +1967,13 @@
         "order": 25
     },
     "context": {
-        "id": "c35b14cc9ada407da985e79ed384c0b9",
+        "id": "e61c81c6032146ddb17d3899115cb039",
         "user_id": null
     },
     "entity_id": "group.all_devices",
-    "last_changed": "2018-10-30T04:13:01.278904+00:00",
-    "last_updated": "2018-10-30T04:13:01.278904+00:00",
+    "last_changed": "2018-10-30T12:08:04.322293+00:00",
+    "last_updated": "2018-10-30T12:08:04.322293+00:00",
     "state": "home"
-}, {
-    "attributes": {
-        "auto": true,
-        "entity_id": ["script.getmellowed", "script.goodmorning", "script.bedtime", "script.goodbye", "script.goodnight", "script.imback", "script.makecoffee"],
-        "friendly_name": "all scripts",
-        "hidden": false,
-        "order": 25
-    },
-    "context": {
-        "id": "be2812292230491b99d5afcac3cc5cb0",
-        "user_id": null
-    },
-    "entity_id": "group.all_scripts",
-    "last_changed": "2018-10-30T04:13:01.281093+00:00",
-    "last_updated": "2018-10-30T04:13:01.281093+00:00",
-    "state": "off"
 }, {
     "attributes": {
         "auto": true,
@@ -1999,40 +1983,55 @@
         "order": 25
     },
     "context": {
-        "id": "6651511cf8114d12b1e8a9d9de14d756",
+        "id": "992864d6eca04c3d902e56669800496a",
         "user_id": null
     },
     "entity_id": "group.all_automations",
-    "last_changed": "2018-10-30T04:13:01.739111+00:00",
-    "last_updated": "2018-10-30T04:13:01.739111+00:00",
+    "last_changed": "2018-10-30T12:08:04.848065+00:00",
+    "last_updated": "2018-10-30T12:08:04.848065+00:00",
     "state": "on"
 }, {
     "attributes": {
+        "auto": true,
+        "entity_id": ["script.getmellowed", "script.goodmorning", "script.bedtime", "script.goodbye", "script.goodnight", "script.imback", "script.makecoffee"],
+        "friendly_name": "all scripts",
+        "hidden": false,
+        "order": 25
+    },
+    "context": {
+        "id": "f96696cd4e1a408ebebe2de13d8221b3",
+        "user_id": null
+    },
+    "entity_id": "group.all_scripts",
+    "last_changed": "2018-10-30T12:08:04.329873+00:00",
+    "last_updated": "2018-10-30T12:08:04.329873+00:00",
+    "state": "off"
+}, {
+    "attributes": {
         "assumed_state": true,
-        "brightness": 63,
         "friendly_name": "Grandma's Lamp",
         "supported_features": 1
     },
     "context": {
-        "id": "d2de5f5b1b73482db0caf3ceb14af591",
+        "id": "bd59fe8f8f2748fdb0ceb1218aa1ce7f",
         "user_id": null
     },
     "entity_id": "light.grandmas_lamp",
-    "last_changed": "2018-10-30T04:13:01.300739+00:00",
-    "last_updated": "2018-10-30T04:31:18.626560+00:00",
-    "state": "on"
+    "last_changed": "2018-10-30T12:08:04.348073+00:00",
+    "last_updated": "2018-10-30T12:08:04.348073+00:00",
+    "state": "off"
 }, {
     "attributes": {
-        "friendly_name": "Aquarium Light",
+        "friendly_name": "Metal Lamp",
         "supported_features": 0
     },
     "context": {
-        "id": "6bc078017bce4dd09ae39dcd4a745857",
+        "id": "3a8ff3b77dc84404b08b73a19eb829e9",
         "user_id": null
     },
-    "entity_id": "light.aquarium_light",
-    "last_changed": "2018-10-30T04:13:01.307878+00:00",
-    "last_updated": "2018-10-30T04:13:01.307878+00:00",
+    "entity_id": "light.metal_lamp",
+    "last_changed": "2018-10-30T12:08:04.355702+00:00",
+    "last_updated": "2018-10-30T12:08:04.355702+00:00",
     "state": "off"
 }, {
     "attributes": {
@@ -2044,27 +2043,53 @@
         "order": 28
     },
     "context": {
-        "id": "3ec93694d60d4e8b8d56588b5fb6db05",
+        "id": "b23044277832458083e1dc63770f8b24",
         "user_id": null
     },
     "entity_id": "group.all_lights",
-    "last_changed": "2018-10-30T04:13:01.312626+00:00",
-    "last_updated": "2018-10-30T04:13:06.086519+00:00",
+    "last_changed": "2018-10-30T12:08:04.377626+00:00",
+    "last_updated": "2018-10-30T12:08:08.257615+00:00",
     "state": "on"
 }, {
     "attributes": {
-        "assumed_state": true,
-        "friendly_name": "Bedroom Closet",
+        "friendly_name": "Hallway Light",
         "supported_features": 1
     },
     "context": {
-        "id": "76f1f8fb5c4e47ef835a060c8bdaf1d8",
+        "id": "b9581a22efef49be871216eb677b7372",
         "user_id": null
     },
-    "entity_id": "light.bedroom_closet",
-    "last_changed": "2018-10-30T04:13:01.313778+00:00",
-    "last_updated": "2018-10-30T04:13:01.313778+00:00",
+    "entity_id": "light.hallway_light",
+    "last_changed": "2018-10-30T12:08:04.364551+00:00",
+    "last_updated": "2018-10-30T12:08:04.364551+00:00",
     "state": "off"
+}, {
+    "attributes": {
+        "brightness": 178,
+        "friendly_name": "Closet Light",
+        "supported_features": 1
+    },
+    "context": {
+        "id": "32ee759824324785a7374e9263a00abf",
+        "user_id": null
+    },
+    "entity_id": "light.closet_light",
+    "last_changed": "2018-10-30T12:08:04.368955+00:00",
+    "last_updated": "2018-10-30T12:08:04.435026+00:00",
+    "state": "on"
+}, {
+    "attributes": {
+        "friendly_name": "Pop Socket Light",
+        "supported_features": 0
+    },
+    "context": {
+        "id": "a2d4e2fde4374fb2a0b610315ef1d1c7",
+        "user_id": null
+    },
+    "entity_id": "light.pop_socket_light",
+    "last_changed": "2018-10-30T12:08:04.385716+00:00",
+    "last_updated": "2018-10-30T12:08:04.385716+00:00",
+    "state": "on"
 }, {
     "attributes": {
         "assumed_state": true,
@@ -2072,51 +2097,38 @@
         "supported_features": 1
     },
     "context": {
-        "id": "c32f676a06a34d6bb7e3ec237d5e2baf",
+        "id": "88baea182fb343b4b48be8015ef520a0",
         "user_id": null
     },
     "entity_id": "light.camilles_desk_lamp",
-    "last_changed": "2018-10-30T04:13:01.324331+00:00",
-    "last_updated": "2018-10-30T04:13:01.324331+00:00",
+    "last_changed": "2018-10-30T12:08:04.380696+00:00",
+    "last_updated": "2018-10-30T12:08:04.380696+00:00",
     "state": "off"
 }, {
     "attributes": {
-        "friendly_name": "Metal Lamp",
+        "friendly_name": "Aquarium Light",
         "supported_features": 0
     },
     "context": {
-        "id": "d2de5f5b1b73482db0caf3ceb14af591",
+        "id": "b00477d671a9425a8d309f996d7107a8",
         "user_id": null
     },
-    "entity_id": "light.metal_lamp",
-    "last_changed": "2018-10-30T04:31:18.599693+00:00",
-    "last_updated": "2018-10-30T04:31:18.599693+00:00",
-    "state": "off"
+    "entity_id": "light.aquarium_light",
+    "last_changed": "2018-10-30T12:08:04.397469+00:00",
+    "last_updated": "2018-10-30T12:08:04.397469+00:00",
+    "state": "on"
 }, {
     "attributes": {
-        "friendly_name": "Closet Light",
-        "supported_features": 1
+        "friendly_name": "Bedroom Canopy",
+        "supported_features": 0
     },
     "context": {
-        "id": "d2de5f5b1b73482db0caf3ceb14af591",
+        "id": "e37deef328224857a2b13d97d36c79dd",
         "user_id": null
     },
-    "entity_id": "light.closet_light",
-    "last_changed": "2018-10-30T04:31:18.558666+00:00",
-    "last_updated": "2018-10-30T04:31:18.558666+00:00",
-    "state": "off"
-}, {
-    "attributes": {
-        "friendly_name": "Hallway Light",
-        "supported_features": 1
-    },
-    "context": {
-        "id": "d2de5f5b1b73482db0caf3ceb14af591",
-        "user_id": null
-    },
-    "entity_id": "light.hallway_light",
-    "last_changed": "2018-10-30T04:31:18.577713+00:00",
-    "last_updated": "2018-10-30T04:31:18.577713+00:00",
+    "entity_id": "light.bedroom_canopy",
+    "last_changed": "2018-10-30T12:08:04.393723+00:00",
+    "last_updated": "2018-10-30T12:08:04.393723+00:00",
     "state": "off"
 }, {
     "attributes": {
@@ -2124,42 +2136,30 @@
         "supported_features": 1
     },
     "context": {
-        "id": "33833a08ba264985bd35e8c5d9296bf2",
+        "id": "759038e2612744bdb47d2d9e53c33e31",
         "user_id": null
     },
     "entity_id": "light.bedroom_lamp",
-    "last_changed": "2018-10-30T04:13:01.338312+00:00",
-    "last_updated": "2018-10-30T04:13:01.338312+00:00",
+    "last_changed": "2018-10-30T12:08:04.398631+00:00",
+    "last_updated": "2018-10-30T12:08:04.398631+00:00",
     "state": "off"
 }, {
     "attributes": {
-        "friendly_name": "Bedroom Canopy",
-        "supported_features": 0
+        "assumed_state": true,
+        "friendly_name": "Bedroom Closet",
+        "supported_features": 1
     },
     "context": {
-        "id": "1cd20c59c7f8423f9225db3df8c28b9e",
+        "id": "6391394b44344cf6ad0025406748cb47",
         "user_id": null
     },
-    "entity_id": "light.bedroom_canopy",
-    "last_changed": "2018-10-30T04:13:01.341667+00:00",
-    "last_updated": "2018-10-30T04:13:01.341667+00:00",
+    "entity_id": "light.bedroom_closet",
+    "last_changed": "2018-10-30T12:08:04.409186+00:00",
+    "last_updated": "2018-10-30T12:08:04.409186+00:00",
     "state": "off"
 }, {
     "attributes": {
-        "friendly_name": "Pop Socket Light",
-        "supported_features": 0
-    },
-    "context": {
-        "id": "d2de5f5b1b73482db0caf3ceb14af591",
-        "user_id": null
-    },
-    "entity_id": "light.pop_socket_light",
-    "last_changed": "2018-10-30T04:31:18.611849+00:00",
-    "last_updated": "2018-10-30T04:31:18.611849+00:00",
-    "state": "off"
-}, {
-    "attributes": {
-        "current_temperature": 69,
+        "current_temperature": 70,
         "friendly_name": "Living Room Thermostat Cool",
         "max_temp": 90,
         "min_temp": 60,
@@ -2169,54 +2169,16 @@
         "temperature": 72
     },
     "context": {
-        "id": "22755aaa0196467e982ca514a2e01034",
+        "id": "5816967e8eed481184afd573258bf2af",
         "user_id": null
     },
     "entity_id": "climate.living_room_thermostat_cool",
-    "last_changed": "2018-10-30T04:13:01.671540+00:00",
-    "last_updated": "2018-10-30T04:16:44.638380+00:00",
+    "last_changed": "2018-10-30T12:08:04.731478+00:00",
+    "last_updated": "2018-10-30T12:08:17.116242+00:00",
     "state": "idle"
 }, {
     "attributes": {
-        "current_temperature": 72,
-        "friendly_name": "Bedroom Thermostat Cool",
-        "max_temp": 90,
-        "min_temp": 60,
-        "operation_list": ["cool", "off"],
-        "operation_mode": "cool",
-        "supported_features": 129,
-        "temperature": 72
-    },
-    "context": {
-        "id": "6f56108f11214b5abfea9245367df88b",
-        "user_id": null
-    },
-    "entity_id": "climate.bedroom_thermostat_cool",
-    "last_changed": "2018-10-30T04:13:01.673096+00:00",
-    "last_updated": "2018-10-30T04:40:13.109809+00:00",
-    "state": "idle"
-}, {
-    "attributes": {
-        "current_temperature": 72,
-        "friendly_name": "Bedroom Thermostat Heat",
-        "max_temp": 90,
-        "min_temp": 60,
-        "operation_list": ["heat", "off"],
-        "operation_mode": "heat",
-        "supported_features": 129,
-        "temperature": 71
-    },
-    "context": {
-        "id": "3f133746cada400a8c3576d9c3cbdd7d",
-        "user_id": null
-    },
-    "entity_id": "climate.bedroom_thermostat_heat",
-    "last_changed": "2018-10-30T04:40:13.159670+00:00",
-    "last_updated": "2018-10-30T04:40:13.159670+00:00",
-    "state": "idle"
-}, {
-    "attributes": {
-        "current_temperature": 69,
+        "current_temperature": 70,
         "friendly_name": "Living Room Thermostat Heat",
         "max_temp": 90,
         "min_temp": 60,
@@ -2226,32 +2188,51 @@
         "temperature": 70
     },
     "context": {
-        "id": "f7cea874807e46ffa3adba9b91c2e978",
+        "id": "6d6a1016bf8c40488241b899f1ab119a",
         "user_id": null
     },
     "entity_id": "climate.living_room_thermostat_heat",
-    "last_changed": "2018-10-30T04:16:44.664914+00:00",
-    "last_updated": "2018-10-30T04:16:44.664914+00:00",
-    "state": "heat"
+    "last_changed": "2018-10-30T12:08:04.733043+00:00",
+    "last_updated": "2018-10-30T12:08:17.120087+00:00",
+    "state": "idle"
 }, {
     "attributes": {
-        "Battery Level": 56,
-        "Battery State": "Unplugged",
-        "Device Name": "Ergisch",
-        "Device Type": "iPhone 8",
-        "Device Version": "11.4",
-        "friendly_name": "Ergisch Battery Level",
-        "icon": "mdi:battery-60",
-        "unit_of_measurement": "%"
+        "current_temperature": 71,
+        "friendly_name": "Bedroom Thermostat Cool",
+        "max_temp": 90,
+        "min_temp": 60,
+        "operation_list": ["cool", "off"],
+        "operation_mode": "cool",
+        "supported_features": 129,
+        "temperature": 72
     },
     "context": {
-        "id": "9644312b2f504208a7694a5b418e3375",
+        "id": "e794ac0a985d4302941d996513f1b29a",
         "user_id": null
     },
-    "entity_id": "sensor.ergisch_battery_level",
-    "last_changed": "2018-10-30T04:13:01.679749+00:00",
-    "last_updated": "2018-10-30T04:13:01.679749+00:00",
-    "state": "56"
+    "entity_id": "climate.bedroom_thermostat_cool",
+    "last_changed": "2018-10-30T12:08:04.734545+00:00",
+    "last_updated": "2018-10-30T12:08:19.875926+00:00",
+    "state": "idle"
+}, {
+    "attributes": {
+        "current_temperature": 71,
+        "friendly_name": "Bedroom Thermostat Heat",
+        "max_temp": 90,
+        "min_temp": 60,
+        "operation_list": ["heat", "off"],
+        "operation_mode": "heat",
+        "supported_features": 129,
+        "temperature": 71
+    },
+    "context": {
+        "id": "5f880122b0354267995ccdbf3b46eba9",
+        "user_id": null
+    },
+    "entity_id": "climate.bedroom_thermostat_heat",
+    "last_changed": "2018-10-30T12:08:04.736072+00:00",
+    "last_updated": "2018-10-30T12:08:19.880160+00:00",
+    "state": "idle"
 }, {
     "attributes": {
         "Battery Level": 49,
@@ -2264,16 +2245,35 @@
         "unit_of_measurement": "%"
     },
     "context": {
-        "id": "8e6f6e31d84543bda6430e9b39053f83",
+        "id": "99d122329b094bb08d9a32d18129a360",
         "user_id": null
     },
     "entity_id": "sensor.angela_pfammatters_iphone_battery_level",
-    "last_changed": "2018-10-30T04:13:01.688999+00:00",
-    "last_updated": "2018-10-30T04:13:01.688999+00:00",
+    "last_changed": "2018-10-30T12:08:04.746476+00:00",
+    "last_updated": "2018-10-30T12:08:04.746476+00:00",
     "state": "49"
 }, {
     "attributes": {
-        "Battery Level": 56,
+        "Battery Level": 50,
+        "Battery State": "Unplugged",
+        "Device Name": "Ergisch",
+        "Device Type": "iPhone 8",
+        "Device Version": "11.4",
+        "friendly_name": "Ergisch Battery Level",
+        "icon": "mdi:battery-50",
+        "unit_of_measurement": "%"
+    },
+    "context": {
+        "id": "aeb9f70b5d844edabeb1e8fd180c73a1",
+        "user_id": null
+    },
+    "entity_id": "sensor.ergisch_battery_level",
+    "last_changed": "2018-10-30T12:08:04.749018+00:00",
+    "last_updated": "2018-10-30T12:08:04.749018+00:00",
+    "state": "50"
+}, {
+    "attributes": {
+        "Battery Level": 50,
         "Battery State": "Unplugged",
         "Device Name": "Ergisch",
         "Device Type": "iPhone 8",
@@ -2282,12 +2282,12 @@
         "icon": "mdi:power-plug-off"
     },
     "context": {
-        "id": "3b1ed41a14b44620871f6440ef9a038f",
+        "id": "114c19d1587f4797a45e1af6a00383a5",
         "user_id": null
     },
     "entity_id": "sensor.ergisch_battery_state",
-    "last_changed": "2018-10-30T04:13:01.690697+00:00",
-    "last_updated": "2018-10-30T04:13:01.690697+00:00",
+    "last_changed": "2018-10-30T12:08:04.750676+00:00",
+    "last_updated": "2018-10-30T12:08:04.750676+00:00",
     "state": "Unplugged"
 }, {
     "attributes": {
@@ -2300,18 +2300,18 @@
         "icon": "mdi:power-plug-off"
     },
     "context": {
-        "id": "cb9528c3255d4cf88e12194b4d09ddbf",
+        "id": "94f6e6218ef448b6964887c777caf7d4",
         "user_id": null
     },
     "entity_id": "sensor.angela_pfammatters_iphone_battery_state",
-    "last_changed": "2018-10-30T04:13:01.692386+00:00",
-    "last_updated": "2018-10-30T04:13:01.692386+00:00",
+    "last_changed": "2018-10-30T12:08:04.752334+00:00",
+    "last_updated": "2018-10-30T12:08:04.752334+00:00",
     "state": "Unplugged"
 }, {
     "attributes": {
         "averageRequestRTT": 0,
         "averageResponseRTT": 0,
-        "capabilities": ["listening", "beaming", "primaryController"],
+        "capabilities": ["beaming", "primaryController", "listening"],
         "friendly_name": "Aeotec ZW090 Z-Stick Gen5 US",
         "is_awake": true,
         "is_failed": false,
@@ -2329,26 +2329,26 @@
         "query_stage": "Complete",
         "receivedCnt": 0,
         "receivedDups": 0,
-        "receivedTS": "2018-10-29 23:13:01:919 ",
+        "receivedTS": "2018-10-30 07:08:04:981 ",
         "receivedUnsolicited": 0,
         "retries": 0,
         "sentCnt": 1,
         "sentFailed": 0,
-        "sentTS": "2018-10-29 23:13:19:731 "
+        "sentTS": "2018-10-30 07:08:21:171 "
     },
     "context": {
-        "id": "d732c231a36445dfb509c5a0abcf0490",
+        "id": "ffc866058e374220bee236a36f97193c",
         "user_id": null
     },
     "entity_id": "zwave.aeotec_zw090_zstick_gen5_us",
-    "last_changed": "2018-10-30T04:13:39.676205+00:00",
-    "last_updated": "2018-10-30T04:13:39.676205+00:00",
+    "last_changed": "2018-10-30T12:08:39.682478+00:00",
+    "last_updated": "2018-10-30T12:08:39.682478+00:00",
     "state": "ready"
 }, {
     "attributes": {
         "averageRequestRTT": 25,
         "averageResponseRTT": 37,
-        "capabilities": ["listening", "routing", "beaming", "zwave_plus"],
+        "capabilities": ["zwave_plus", "beaming", "routing", "listening"],
         "friendly_name": "Kitchen Counter Light Dimmer",
         "is_awake": true,
         "is_failed": false,
@@ -2359,44 +2359,44 @@
         "lastResponseRTT": 36,
         "manufacturer_name": "Aeotec",
         "max_baud_rate": 40000,
-        "neighbors": [1, 4, 5, 8, 9],
+        "neighbors": [1, 4, 5, 8, 9, 10],
         "node_id": 3,
         "node_name": "Aeotec ZW111 Nano Dimmer",
         "product_name": "ZW111 Nano Dimmer",
         "query_stage": "Complete",
         "receivedCnt": 16,
-        "receivedDups": 0,
-        "receivedTS": "2018-10-29 23:31:18:652 ",
+        "receivedDups": 1,
+        "receivedTS": "2018-10-30 07:08:41:267 ",
         "receivedUnsolicited": 0,
         "retries": 0,
-        "sentCnt": 21,
+        "sentCnt": 19,
         "sentFailed": 0,
-        "sentTS": "2018-10-29 23:31:18:616 "
+        "sentTS": "2018-10-30 07:08:41:230 "
     },
     "context": {
-        "id": "bf799d0199f241a3bf9f1cff2b94bbba",
+        "id": "53e3f4132ab34048b847c8ced67ebcd9",
         "user_id": null
     },
     "entity_id": "zwave.aeotec_zw111_nano_dimmer",
-    "last_changed": "2018-10-30T04:14:04.790295+00:00",
-    "last_updated": "2018-10-30T04:31:18.698064+00:00",
+    "last_changed": "2018-10-30T12:09:05.066204+00:00",
+    "last_updated": "2018-10-30T12:09:05.066204+00:00",
     "state": "ready"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Switch",
         "node_id": 3,
-        "power_consumption": 8.66,
+        "power_consumption": 8.69,
         "value_id": "72057594093060096",
         "value_index": 0,
         "value_instance": 1
     },
     "context": {
-        "id": "5808b4ffcb94486b9936043f809df311",
+        "id": "dfe545e10dff42e180d82cd1110e4354",
         "user_id": null
     },
     "entity_id": "switch.aeotec_zw111_nano_dimmer_switch",
-    "last_changed": "2018-10-30T04:13:03.134030+00:00",
-    "last_updated": "2018-10-30T04:13:40.990961+00:00",
+    "last_changed": "2018-10-30T12:08:05.065329+00:00",
+    "last_updated": "2018-10-30T12:08:41.008541+00:00",
     "state": "on"
 }, {
     "attributes": {
@@ -2407,284 +2407,284 @@
         "order": 29
     },
     "context": {
-        "id": "bab075761b544ee4bb80f4a3da8019dd",
+        "id": "d43839135b65451a902e3d7f77018b7c",
         "user_id": null
     },
     "entity_id": "group.all_switches",
-    "last_changed": "2018-10-30T04:13:03.142066+00:00",
-    "last_updated": "2018-10-30T04:13:11.605203+00:00",
+    "last_changed": "2018-10-30T12:08:05.072456+00:00",
+    "last_updated": "2018-10-30T12:08:15.982975+00:00",
     "state": "on"
 }, {
     "attributes": {
         "brightness": 255,
         "friendly_name": "Kitchen Counter Light",
         "node_id": 3,
-        "power_consumption": 8.66,
+        "power_consumption": 8.69,
         "supported_features": 33,
         "value_id": "72057594093076481",
         "value_index": 0,
         "value_instance": 1
     },
     "context": {
-        "id": "cc8279116071493783d6b166050ee955",
+        "id": "05b0d94683c64f389724564e871c7f32",
         "user_id": null
     },
     "entity_id": "light.aeotec_kitchen_counter_light",
-    "last_changed": "2018-10-30T04:13:03.161696+00:00",
-    "last_updated": "2018-10-30T04:13:40.993033+00:00",
+    "last_changed": "2018-10-30T12:08:05.597868+00:00",
+    "last_updated": "2018-10-30T12:08:41.010821+00:00",
     "state": "on"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Energy",
         "node_id": 3,
-        "power_consumption": 8.66,
+        "power_consumption": 8.69,
         "unit_of_measurement": "kWh",
         "value_id": "72057594093273090",
         "value_index": 0,
         "value_instance": 1
     },
     "context": {
-        "id": "99550d84d5be40f28161f97d1ec1f26a",
+        "id": "eb8baf4070b74c399066f23550781a53",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_energy",
-    "last_changed": "2018-10-30T04:13:40.916931+00:00",
-    "last_updated": "2018-10-30T04:13:40.916931+00:00",
+    "last_changed": "2018-10-30T12:08:40.939099+00:00",
+    "last_updated": "2018-10-30T12:08:40.939099+00:00",
     "state": "1.6"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Previous Reading",
         "node_id": 3,
-        "power_consumption": 8.66,
+        "power_consumption": 8.69,
         "unit_of_measurement": "kWh",
         "value_id": "72057594093273106",
         "value_index": 1,
         "value_instance": 1
     },
     "context": {
-        "id": "1adfba5c72164a968db5062101322fb2",
+        "id": "a24fd061531a4797abb9278c27402b67",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_previous_reading",
-    "last_changed": "2018-10-30T04:13:40.937210+00:00",
-    "last_updated": "2018-10-30T04:13:40.937210+00:00",
+    "last_changed": "2018-10-30T12:08:40.941253+00:00",
+    "last_updated": "2018-10-30T12:08:40.941253+00:00",
     "state": "1.6"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Interval",
         "node_id": 3,
-        "power_consumption": 8.66,
+        "power_consumption": 8.69,
         "unit_of_measurement": "seconds",
         "value_id": "72057594093273123",
         "value_index": 2,
         "value_instance": 1
     },
     "context": {
-        "id": "cbba0f44aa6442bcbe01a5e4b38f7420",
+        "id": "0c207391aa654213bef5edf10d762d89",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_interval",
-    "last_changed": "2018-10-30T04:13:40.939223+00:00",
-    "last_updated": "2018-10-30T04:13:40.939223+00:00",
-    "state": "1357"
+    "last_changed": "2018-10-30T12:08:40.944219+00:00",
+    "last_updated": "2018-10-30T12:08:40.944219+00:00",
+    "state": "28500"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Power",
         "node_id": 3,
-        "power_consumption": 8.66,
+        "power_consumption": 8.69,
         "unit_of_measurement": "W",
         "value_id": "72057594093273218",
         "value_index": 8,
         "value_instance": 1
     },
     "context": {
-        "id": "45c6df95764e47ec955bd08372500425",
+        "id": "9e6351dc9a4343f2bfea3f5753fb6923",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_power",
-    "last_changed": "2018-10-30T04:13:40.995160+00:00",
-    "last_updated": "2018-10-30T04:13:40.995160+00:00",
-    "state": "8.66"
+    "last_changed": "2018-10-30T12:08:41.013494+00:00",
+    "last_updated": "2018-10-30T12:08:41.013494+00:00",
+    "state": "8.69"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Voltage",
         "node_id": 3,
-        "power_consumption": 8.66,
+        "power_consumption": 8.69,
         "unit_of_measurement": "V",
         "value_id": "72057594093273346",
         "value_index": 16,
         "value_instance": 1
     },
     "context": {
-        "id": "50515cdf2662441390027fbc2f213629",
+        "id": "c7b4a619ffd3444a9b4304bd6ee710f4",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_voltage",
-    "last_changed": "2018-10-30T04:13:40.997903+00:00",
-    "last_updated": "2018-10-30T04:13:40.997903+00:00",
-    "state": "83.67"
+    "last_changed": "2018-10-30T12:08:41.015956+00:00",
+    "last_updated": "2018-10-30T12:08:41.015956+00:00",
+    "state": "83.59"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Current",
         "node_id": 3,
-        "power_consumption": 8.66,
+        "power_consumption": 8.69,
         "unit_of_measurement": "A",
         "value_id": "72057594093273410",
         "value_index": 20,
         "value_instance": 1
     },
     "context": {
-        "id": "36e6087d33d44269a82abc3fd293a6e9",
+        "id": "a46910fd87ce4fe8a19011546b6c35eb",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_current",
-    "last_changed": "2018-10-30T04:13:41.208861+00:00",
-    "last_updated": "2018-10-30T04:13:41.208861+00:00",
+    "last_changed": "2018-10-30T12:08:41.211771+00:00",
+    "last_updated": "2018-10-30T12:08:41.211771+00:00",
     "state": "0.11"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Exporting",
         "node_id": 3,
-        "power_consumption": 8.66,
+        "power_consumption": 8.69,
         "unit_of_measurement": "",
         "value_id": "72057594093273600",
         "value_index": 32,
         "value_instance": 1
     },
     "context": {
-        "id": "5e19b174ce10449f90f372f453cb391f",
+        "id": "e5a7f490f20b4df1b9e7b3aae29f35bc",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_exporting",
-    "last_changed": "2018-10-30T04:13:41.083414+00:00",
-    "last_updated": "2018-10-30T04:13:41.083414+00:00",
+    "last_changed": "2018-10-30T12:08:41.108428+00:00",
+    "last_updated": "2018-10-30T12:08:41.108428+00:00",
     "state": "False"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Alarm Type",
         "node_id": 3,
-        "power_consumption": 8.66,
+        "power_consumption": 8.69,
         "unit_of_measurement": "",
         "value_id": "72057594094305281",
         "value_index": 0,
         "value_instance": 1
     },
     "context": {
-        "id": "a28e2354e3d14c62a66621469f4db2e2",
+        "id": "892e6a2528b94f1e86963b5a557843d8",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_alarm_type",
-    "last_changed": "2018-10-30T04:13:41.210824+00:00",
-    "last_updated": "2018-10-30T04:13:41.210824+00:00",
+    "last_changed": "2018-10-30T12:08:41.240337+00:00",
+    "last_updated": "2018-10-30T12:08:41.240337+00:00",
     "state": "0"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Alarm Level",
         "node_id": 3,
-        "power_consumption": 8.66,
+        "power_consumption": 8.69,
         "unit_of_measurement": "",
         "value_id": "72057594094305297",
         "value_index": 1,
         "value_instance": 1
     },
     "context": {
-        "id": "a6ca178263184f04a00c940e13ff6c59",
+        "id": "843ca40f980f4f109ba3f70f4906145f",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_alarm_level",
-    "last_changed": "2018-10-30T04:13:41.212482+00:00",
-    "last_updated": "2018-10-30T04:13:41.212482+00:00",
+    "last_changed": "2018-10-30T12:08:41.242211+00:00",
+    "last_updated": "2018-10-30T12:08:41.242211+00:00",
     "state": "0"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer SourceNodeId",
         "node_id": 3,
-        "power_consumption": 8.66,
+        "power_consumption": 8.69,
         "unit_of_measurement": "",
         "value_id": "72057594094305313",
         "value_index": 2,
         "value_instance": 1
     },
     "context": {
-        "id": "db159d9250ad4033bcc62d7d3b5f5623",
+        "id": "e0c85ff2370c4815915a03ab630bd951",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_sourcenodeid",
-    "last_changed": "2018-10-30T04:13:41.229330+00:00",
-    "last_updated": "2018-10-30T04:13:41.229330+00:00",
+    "last_changed": "2018-10-30T12:08:41.244023+00:00",
+    "last_updated": "2018-10-30T12:08:41.244023+00:00",
     "state": "0"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Heat",
         "node_id": 3,
-        "power_consumption": 8.66,
+        "power_consumption": 8.69,
         "unit_of_measurement": "",
         "value_id": "72057594094305393",
         "value_index": 7,
         "value_instance": 1
     },
     "context": {
-        "id": "e9744abddf3c48fd8866176700006872",
+        "id": "4919bd0a23614b70b24e286f89f04712",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_heat",
-    "last_changed": "2018-10-30T04:13:41.230871+00:00",
-    "last_updated": "2018-10-30T04:13:41.230871+00:00",
+    "last_changed": "2018-10-30T12:08:41.261146+00:00",
+    "last_updated": "2018-10-30T12:08:41.261146+00:00",
     "state": "254"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Power Management",
         "node_id": 3,
-        "power_consumption": 8.66,
+        "power_consumption": 8.69,
         "unit_of_measurement": "",
         "value_id": "72057594094305457",
         "value_index": 11,
         "value_instance": 1
     },
     "context": {
-        "id": "2da471cfd9d24537a6e96a37cab52406",
+        "id": "395af26660a241ea8e640a5864e9e306",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_power_management",
-    "last_changed": "2018-10-30T04:13:41.317807+00:00",
-    "last_updated": "2018-10-30T04:13:41.317807+00:00",
+    "last_changed": "2018-10-30T12:08:41.337193+00:00",
+    "last_updated": "2018-10-30T12:08:41.337193+00:00",
     "state": "254"
 }, {
     "attributes": {
-        "averageRequestRTT": 39,
-        "averageResponseRTT": 57,
-        "capabilities": ["listening", "routing", "beaming", "zwave_plus"],
+        "averageRequestRTT": 25,
+        "averageResponseRTT": 38,
+        "capabilities": ["zwave_plus", "beaming", "routing", "listening"],
         "friendly_name": "Entry Light Dimmer",
         "is_awake": true,
         "is_failed": false,
         "is_info_received": true,
         "is_ready": true,
         "is_zwave_plus": true,
-        "lastRequestRTT": 26,
-        "lastResponseRTT": 47,
+        "lastRequestRTT": 25,
+        "lastResponseRTT": 38,
         "manufacturer_name": "Aeotec",
         "max_baud_rate": 40000,
-        "neighbors": [1, 3, 5, 8, 9],
+        "neighbors": [1, 3, 8, 9, 10],
         "node_id": 4,
         "node_name": "Aeotec ZW111 Nano Dimmer",
         "product_name": "ZW111 Nano Dimmer",
         "query_stage": "Complete",
-        "receivedCnt": 16,
-        "receivedDups": 1,
-        "receivedTS": "2018-10-29 23:13:42:110 ",
+        "receivedCnt": 15,
+        "receivedDups": 0,
+        "receivedTS": "2018-10-30 07:08:41:992 ",
         "receivedUnsolicited": 0,
         "retries": 0,
         "sentCnt": 19,
         "sentFailed": 0,
-        "sentTS": "2018-10-29 23:13:42:062 "
+        "sentTS": "2018-10-30 07:08:41:953 "
     },
     "context": {
-        "id": "05399bd98f63462188fa8776ce384507",
+        "id": "494e5df48ff945a79d2c7903beb8df89",
         "user_id": null
     },
     "entity_id": "zwave.aeotec_zw111_nano_dimmer_entry_light",
-    "last_changed": "2018-10-30T04:14:04.792401+00:00",
-    "last_updated": "2018-10-30T04:14:04.792401+00:00",
+    "last_changed": "2018-10-30T12:09:05.068442+00:00",
+    "last_updated": "2018-10-30T12:09:05.068442+00:00",
     "state": "ready"
 }, {
     "attributes": {
@@ -2696,12 +2696,12 @@
         "value_instance": 1
     },
     "context": {
-        "id": "7edb913065dc45b1b953e0a8ceedc69c",
+        "id": "4301728e8e7d4d169a3e962fd3e96caf",
         "user_id": null
     },
     "entity_id": "switch.aeotec_entry_light",
-    "last_changed": "2018-10-30T04:13:04.319806+00:00",
-    "last_updated": "2018-10-30T04:13:41.714571+00:00",
+    "last_changed": "2018-10-30T12:08:06.573952+00:00",
+    "last_updated": "2018-10-30T12:08:41.751555+00:00",
     "state": "on"
 }, {
     "attributes": {
@@ -2715,12 +2715,12 @@
         "value_instance": 1
     },
     "context": {
-        "id": "5941b6f9cd8145678c0bd74813abc624",
+        "id": "c5fea13e5d024cd789133581a42b2e9b",
         "user_id": null
     },
     "entity_id": "light.aeotec_entry_light",
-    "last_changed": "2018-10-30T04:13:04.397784+00:00",
-    "last_updated": "2018-10-30T04:13:41.716276+00:00",
+    "last_changed": "2018-10-30T12:08:06.679390+00:00",
+    "last_updated": "2018-10-30T12:08:41.753410+00:00",
     "state": "on"
 }, {
     "attributes": {
@@ -2733,12 +2733,12 @@
         "value_instance": 1
     },
     "context": {
-        "id": "71ae01df4ebc45aeb87367200112bb66",
+        "id": "419f62f204a0401c932f2cad8283cfae",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_entry_light_energy",
-    "last_changed": "2018-10-30T04:13:41.645434+00:00",
-    "last_updated": "2018-10-30T04:13:41.645434+00:00",
+    "last_changed": "2018-10-30T12:08:41.674233+00:00",
+    "last_updated": "2018-10-30T12:08:41.674233+00:00",
     "state": "0.4"
 }, {
     "attributes": {
@@ -2751,12 +2751,12 @@
         "value_instance": 1
     },
     "context": {
-        "id": "da6e43b8cc47476fa3624ca0587b52d7",
+        "id": "757be03bc3a14e5e94856b2c5c1c900b",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_previous_reading_3",
-    "last_changed": "2018-10-30T04:13:41.647683+00:00",
-    "last_updated": "2018-10-30T04:13:41.647683+00:00",
+    "last_changed": "2018-10-30T12:08:41.676086+00:00",
+    "last_updated": "2018-10-30T12:08:41.676086+00:00",
     "state": "0.4"
 }, {
     "attributes": {
@@ -2769,13 +2769,13 @@
         "value_instance": 1
     },
     "context": {
-        "id": "9ffdf9c3d17648ea88abb588bceb1c32",
+        "id": "0751178accec43b68df1e5f53117ce9d",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_interval_3",
-    "last_changed": "2018-10-30T04:13:41.650403+00:00",
-    "last_updated": "2018-10-30T04:13:41.650403+00:00",
-    "state": "1357"
+    "last_changed": "2018-10-30T12:08:41.678597+00:00",
+    "last_updated": "2018-10-30T12:08:41.678597+00:00",
+    "state": "28500"
 }, {
     "attributes": {
         "friendly_name": "Entry Light Power",
@@ -2787,12 +2787,12 @@
         "value_instance": 1
     },
     "context": {
-        "id": "76d9f52808b34cfca719da33425950dd",
+        "id": "3d4afed407ec40cdb910a78ce996ddc2",
         "user_id": null
     },
     "entity_id": "sensor.aaeotec_entry_light_power",
-    "last_changed": "2018-10-30T04:13:41.717842+00:00",
-    "last_updated": "2018-10-30T04:13:41.717842+00:00",
+    "last_changed": "2018-10-30T12:08:41.755262+00:00",
+    "last_updated": "2018-10-30T12:08:41.755262+00:00",
     "state": "1.71"
 }, {
     "attributes": {
@@ -2805,13 +2805,13 @@
         "value_instance": 1
     },
     "context": {
-        "id": "86c749a995654d0787f1c79524583bc8",
+        "id": "d49318cc66a945dbac5b9667f0aab1fc",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_entry_light_voltage",
-    "last_changed": "2018-10-30T04:13:41.719465+00:00",
-    "last_updated": "2018-10-30T04:13:41.719465+00:00",
-    "state": "60.65"
+    "last_changed": "2018-10-30T12:08:41.757131+00:00",
+    "last_updated": "2018-10-30T12:08:41.757131+00:00",
+    "state": "60.49"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Current",
@@ -2823,12 +2823,12 @@
         "value_instance": 1
     },
     "context": {
-        "id": "cb55f8af7e5e47719ff1a4ff69bf7611",
+        "id": "2d448bef210a4dc18aab75dae2a68467",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_entry_light_current",
-    "last_changed": "2018-10-30T04:13:41.912381+00:00",
-    "last_updated": "2018-10-30T04:13:41.912381+00:00",
+    "last_changed": "2018-10-30T12:08:41.956243+00:00",
+    "last_updated": "2018-10-30T12:08:41.956243+00:00",
     "state": "0.04"
 }, {
     "attributes": {
@@ -2841,12 +2841,12 @@
         "value_instance": 1
     },
     "context": {
-        "id": "433e6764046247e5aa79f0e733895fd3",
+        "id": "aff15f4bdf8a4907af9578672bf3cc41",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_exporting_2",
-    "last_changed": "2018-10-30T04:13:41.808342+00:00",
-    "last_updated": "2018-10-30T04:13:41.808342+00:00",
+    "last_changed": "2018-10-30T12:08:41.840854+00:00",
+    "last_updated": "2018-10-30T12:08:41.840854+00:00",
     "state": "False"
 }, {
     "attributes": {
@@ -2859,12 +2859,12 @@
         "value_instance": 1
     },
     "context": {
-        "id": "1aa1edc773b64482b87d64e613ff888b",
+        "id": "743e22decfa041a7a2e01d988d16fbea",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_alarm_type_2",
-    "last_changed": "2018-10-30T04:13:42.169043+00:00",
-    "last_updated": "2018-10-30T04:13:42.169043+00:00",
+    "last_changed": "2018-10-30T12:08:41.971080+00:00",
+    "last_updated": "2018-10-30T12:08:41.971080+00:00",
     "state": "0"
 }, {
     "attributes": {
@@ -2877,12 +2877,12 @@
         "value_instance": 1
     },
     "context": {
-        "id": "ad2ef6001b9d4c3c8c43e8c9f784e7c9",
+        "id": "6f3659d6a2344062816c97b978d449ec",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_alarm_level_2",
-    "last_changed": "2018-10-30T04:13:42.067235+00:00",
-    "last_updated": "2018-10-30T04:13:42.067235+00:00",
+    "last_changed": "2018-10-30T12:08:41.972874+00:00",
+    "last_updated": "2018-10-30T12:08:41.972874+00:00",
     "state": "0"
 }, {
     "attributes": {
@@ -2895,12 +2895,12 @@
         "value_instance": 1
     },
     "context": {
-        "id": "27ea687bd3124bc2aaf2b87caf7d57bf",
+        "id": "482ca83f25a64281a8478ed8fcdd9e49",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_sourcenodeid_2",
-    "last_changed": "2018-10-30T04:13:42.081755+00:00",
-    "last_updated": "2018-10-30T04:13:42.081755+00:00",
+    "last_changed": "2018-10-30T12:08:41.987027+00:00",
+    "last_updated": "2018-10-30T12:08:41.987027+00:00",
     "state": "0"
 }, {
     "attributes": {
@@ -2913,12 +2913,12 @@
         "value_instance": 1
     },
     "context": {
-        "id": "f99f67b9d252445b871967569ac684f7",
+        "id": "5657454d41c24d91bdd178e315e06ba8",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_heat_2",
-    "last_changed": "2018-10-30T04:13:42.093616+00:00",
-    "last_updated": "2018-10-30T04:13:42.093616+00:00",
+    "last_changed": "2018-10-30T12:08:41.988958+00:00",
+    "last_updated": "2018-10-30T12:08:41.988958+00:00",
     "state": "254"
 }, {
     "attributes": {
@@ -2931,18 +2931,18 @@
         "value_instance": 1
     },
     "context": {
-        "id": "01703a4910a146f98ac882e0bb6c0996",
+        "id": "ad5aec4f8d4d402fac129559b847d340",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_power_management_2",
-    "last_changed": "2018-10-30T04:13:42.170804+00:00",
-    "last_updated": "2018-10-30T04:13:42.170804+00:00",
+    "last_changed": "2018-10-30T12:08:42.058290+00:00",
+    "last_updated": "2018-10-30T12:08:42.058290+00:00",
     "state": "254"
 }, {
     "attributes": {
-        "averageRequestRTT": 24,
-        "averageResponseRTT": 38,
-        "capabilities": ["listening", "routing", "beaming", "zwave_plus"],
+        "averageRequestRTT": 25,
+        "averageResponseRTT": 39,
+        "capabilities": ["zwave_plus", "beaming", "routing", "listening"],
         "friendly_name": "Bathroom Light Dimmer",
         "is_awake": true,
         "is_failed": false,
@@ -2950,320 +2950,320 @@
         "is_ready": true,
         "is_zwave_plus": true,
         "lastRequestRTT": 25,
-        "lastResponseRTT": 39,
+        "lastResponseRTT": 37,
         "manufacturer_name": "Aeotec",
         "max_baud_rate": 40000,
-        "neighbors": [1, 3, 4, 6, 7, 8, 9, 10],
+        "neighbors": [1, 3, 6, 7, 8, 9, 10],
         "node_id": 5,
         "node_name": "Aeotec ZW111 Nano Dimmer",
         "product_name": "ZW111 Nano Dimmer",
         "query_stage": "Complete",
-        "receivedCnt": 15,
-        "receivedDups": 0,
-        "receivedTS": "2018-10-29 23:13:42:859 ",
+        "receivedCnt": 17,
+        "receivedDups": 2,
+        "receivedTS": "2018-10-30 07:08:43:025 ",
         "receivedUnsolicited": 0,
         "retries": 0,
         "sentCnt": 19,
         "sentFailed": 0,
-        "sentTS": "2018-10-29 23:13:42:819 "
+        "sentTS": "2018-10-30 07:08:42:988 "
     },
     "context": {
-        "id": "27b0dd66bb424d7c838ed76f76754795",
+        "id": "93e0d1b330a744939b78b0c62fd581c1",
         "user_id": null
     },
     "entity_id": "zwave.aeotec_zw111_nano_dimmer_bathroom",
-    "last_changed": "2018-10-30T04:14:04.794452+00:00",
-    "last_updated": "2018-10-30T04:14:04.794452+00:00",
+    "last_changed": "2018-10-30T12:09:05.070643+00:00",
+    "last_updated": "2018-10-30T12:09:05.070643+00:00",
     "state": "ready"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Switch",
         "node_id": 5,
-        "power_consumption": 12.39,
+        "power_consumption": 11.08,
         "value_id": "72057594126614528",
         "value_index": 0,
         "value_instance": 1
     },
     "context": {
-        "id": "808f50a3aeb44099a0778c2e10da8c53",
+        "id": "359340e0ef094b63ad909fc10b218c71",
         "user_id": null
     },
     "entity_id": "switch.aeotec_zw111_nano_dimmer_switch_3",
-    "last_changed": "2018-10-30T04:13:05.956994+00:00",
-    "last_updated": "2018-10-30T04:13:42.627472+00:00",
+    "last_changed": "2018-10-30T12:08:08.133501+00:00",
+    "last_updated": "2018-10-30T12:08:42.766416+00:00",
     "state": "on"
 }, {
     "attributes": {
         "brightness": 255,
         "friendly_name": "Bathroom Light",
         "node_id": 5,
-        "power_consumption": 12.39,
+        "power_consumption": 11.08,
         "supported_features": 33,
         "value_id": "72057594126630913",
         "value_index": 0,
         "value_instance": 1
     },
     "context": {
-        "id": "2214625d5547472daf6f14eaa2542436",
+        "id": "d7638b68b5074cc399172aa8b7b63bac",
         "user_id": null
     },
     "entity_id": "light.aeotec_bathroom_light",
-    "last_changed": "2018-10-30T04:13:06.077899+00:00",
-    "last_updated": "2018-10-30T04:13:42.629157+00:00",
+    "last_changed": "2018-10-30T12:08:08.253277+00:00",
+    "last_updated": "2018-10-30T12:08:42.768531+00:00",
     "state": "on"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Energy",
         "node_id": 5,
-        "power_consumption": 12.39,
+        "power_consumption": 11.08,
         "unit_of_measurement": "kWh",
         "value_id": "72057594126827522",
         "value_index": 0,
         "value_instance": 1
     },
     "context": {
-        "id": "7415565dd5cb4d9b9c4904945e3b0bcd",
+        "id": "10f20dd4e86b432c8feb8c20a8e09e15",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_energy_3",
-    "last_changed": "2018-10-30T04:13:42.547922+00:00",
-    "last_updated": "2018-10-30T04:13:42.547922+00:00",
+    "last_changed": "2018-10-30T12:08:42.704512+00:00",
+    "last_updated": "2018-10-30T12:08:42.704512+00:00",
     "state": "3.0"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Previous Reading",
         "node_id": 5,
-        "power_consumption": 12.39,
+        "power_consumption": 11.08,
         "unit_of_measurement": "kWh",
         "value_id": "72057594126827538",
         "value_index": 1,
         "value_instance": 1
     },
     "context": {
-        "id": "ee864bd21ca64aefbfefff357c0e295d",
+        "id": "a382b9382efe4e9bb979b3c53f06d05d",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_previous_reading_2",
-    "last_changed": "2018-10-30T04:13:42.564474+00:00",
-    "last_updated": "2018-10-30T04:13:42.564474+00:00",
+    "last_changed": "2018-10-30T12:08:42.706811+00:00",
+    "last_updated": "2018-10-30T12:08:42.706811+00:00",
     "state": "3.0"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Interval",
         "node_id": 5,
-        "power_consumption": 12.39,
+        "power_consumption": 11.08,
         "unit_of_measurement": "seconds",
         "value_id": "72057594126827555",
         "value_index": 2,
         "value_instance": 1
     },
     "context": {
-        "id": "96ba47c763ee4972aedd41652874bbdd",
+        "id": "74027e3fc04f44748963a7935065de9c",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_interval_2",
-    "last_changed": "2018-10-30T04:13:42.566793+00:00",
-    "last_updated": "2018-10-30T04:13:42.566793+00:00",
-    "state": "1357"
+    "last_changed": "2018-10-30T12:08:42.709906+00:00",
+    "last_updated": "2018-10-30T12:08:42.709906+00:00",
+    "state": "28500"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Power",
         "node_id": 5,
-        "power_consumption": 12.39,
+        "power_consumption": 11.08,
         "unit_of_measurement": "W",
         "value_id": "72057594126827650",
         "value_index": 8,
         "value_instance": 1
     },
     "context": {
-        "id": "27230bc9189b4814ab323dbef2759143",
+        "id": "cab03da0eabb446a92b63800ed94ce72",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_power_3",
-    "last_changed": "2018-10-30T04:13:42.630887+00:00",
-    "last_updated": "2018-10-30T04:13:42.630887+00:00",
-    "state": "12.39"
+    "last_changed": "2018-10-30T12:08:42.770442+00:00",
+    "last_updated": "2018-10-30T12:08:42.770442+00:00",
+    "state": "11.08"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Voltage",
         "node_id": 5,
-        "power_consumption": 12.39,
+        "power_consumption": 11.08,
         "unit_of_measurement": "V",
         "value_id": "72057594126827778",
         "value_index": 16,
         "value_instance": 1
     },
     "context": {
-        "id": "b1ad032b9ea64712921403891a1c8536",
+        "id": "9f7187d2ff214265ad04764e10df0c65",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_voltage_3",
-    "last_changed": "2018-10-30T04:13:42.633020+00:00",
-    "last_updated": "2018-10-30T04:13:42.633020+00:00",
-    "state": "61.51"
+    "last_changed": "2018-10-30T12:08:42.772233+00:00",
+    "last_updated": "2018-10-30T12:08:42.772233+00:00",
+    "state": "61.65"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Current",
         "node_id": 5,
-        "power_consumption": 12.39,
+        "power_consumption": 11.08,
         "unit_of_measurement": "A",
         "value_id": "72057594126827842",
         "value_index": 20,
         "value_instance": 1
     },
     "context": {
-        "id": "16e9ff18355045cbade14cbc6a4a5682",
+        "id": "6238a7c0c9904c8aa8a8354a26105bdb",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_current_3",
-    "last_changed": "2018-10-30T04:13:42.822075+00:00",
-    "last_updated": "2018-10-30T04:13:42.822075+00:00",
+    "last_changed": "2018-10-30T12:08:42.976928+00:00",
+    "last_updated": "2018-10-30T12:08:42.976928+00:00",
     "state": "0.38"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Exporting",
         "node_id": 5,
-        "power_consumption": 12.39,
+        "power_consumption": 11.08,
         "unit_of_measurement": "",
         "value_id": "72057594126828032",
         "value_index": 32,
         "value_instance": 1
     },
     "context": {
-        "id": "085394152cb5469baa7dd5073609a68b",
+        "id": "9de48f0aa3e64fa3a68eea0c8d7c7235",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_exporting_3",
-    "last_changed": "2018-10-30T04:13:42.715453+00:00",
-    "last_updated": "2018-10-30T04:13:42.715453+00:00",
+    "last_changed": "2018-10-30T12:08:42.869782+00:00",
+    "last_updated": "2018-10-30T12:08:42.869782+00:00",
     "state": "False"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Alarm Type",
         "node_id": 5,
-        "power_consumption": 12.39,
+        "power_consumption": 11.08,
         "unit_of_measurement": "",
         "value_id": "72057594127859713",
         "value_index": 0,
         "value_instance": 1
     },
     "context": {
-        "id": "0b9a7dce722e4673a7f4fcff5c7d9c98",
+        "id": "7e4ce2d0028f426d9fb2a515c6ec0eef",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_alarm_type_3",
-    "last_changed": "2018-10-30T04:13:42.836667+00:00",
-    "last_updated": "2018-10-30T04:13:42.836667+00:00",
+    "last_changed": "2018-10-30T12:08:43.000012+00:00",
+    "last_updated": "2018-10-30T12:08:43.000012+00:00",
     "state": "0"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Alarm Level",
         "node_id": 5,
-        "power_consumption": 12.39,
+        "power_consumption": 11.08,
         "unit_of_measurement": "",
         "value_id": "72057594127859729",
         "value_index": 1,
         "value_instance": 1
     },
     "context": {
-        "id": "8b4d9a0eb98a421384eb2b5a7deb1f0c",
+        "id": "9a2e8fa571e64e9886c1eebef03c5d80",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_alarm_level_3",
-    "last_changed": "2018-10-30T04:13:42.844462+00:00",
-    "last_updated": "2018-10-30T04:13:42.844462+00:00",
+    "last_changed": "2018-10-30T12:08:43.001922+00:00",
+    "last_updated": "2018-10-30T12:08:43.001922+00:00",
     "state": "0"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer SourceNodeId",
         "node_id": 5,
-        "power_consumption": 12.39,
+        "power_consumption": 11.08,
         "unit_of_measurement": "",
         "value_id": "72057594127859745",
         "value_index": 2,
         "value_instance": 1
     },
     "context": {
-        "id": "5df8b9d82cdf4ad7bafa69b850ae162c",
+        "id": "ea9666b326804a7db719f302539246ec",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_sourcenodeid_3",
-    "last_changed": "2018-10-30T04:13:42.853429+00:00",
-    "last_updated": "2018-10-30T04:13:42.853429+00:00",
+    "last_changed": "2018-10-30T12:08:43.004712+00:00",
+    "last_updated": "2018-10-30T12:08:43.004712+00:00",
     "state": "0"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Heat",
         "node_id": 5,
-        "power_consumption": 12.39,
+        "power_consumption": 11.08,
         "unit_of_measurement": "",
         "value_id": "72057594127859825",
         "value_index": 7,
         "value_instance": 1
     },
     "context": {
-        "id": "446585431fb8480792f60755abb81ce8",
+        "id": "5b14d8c126a944b2bec0e65062f5916b",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_heat_3",
-    "last_changed": "2018-10-30T04:13:42.855274+00:00",
-    "last_updated": "2018-10-30T04:13:42.855274+00:00",
+    "last_changed": "2018-10-30T12:08:43.020918+00:00",
+    "last_updated": "2018-10-30T12:08:43.020918+00:00",
     "state": "254"
 }, {
     "attributes": {
         "friendly_name": "Aeotec ZW111 Nano Dimmer Power Management",
         "node_id": 5,
-        "power_consumption": 12.39,
+        "power_consumption": 11.08,
         "unit_of_measurement": "",
         "value_id": "72057594127859889",
         "value_index": 11,
         "value_instance": 1
     },
     "context": {
-        "id": "76552c2d63dd48b0a86c1fd42df37078",
+        "id": "0160d7618cea4a6dbb54e1ef80c91d6d",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw111_nano_dimmer_power_management_3",
-    "last_changed": "2018-10-30T04:13:42.923329+00:00",
-    "last_updated": "2018-10-30T04:13:42.923329+00:00",
+    "last_changed": "2018-10-30T12:08:43.113053+00:00",
+    "last_updated": "2018-10-30T12:08:43.113053+00:00",
     "state": "254"
 }, {
     "attributes": {
         "averageRequestRTT": 25,
-        "averageResponseRTT": 37,
+        "averageResponseRTT": 40,
         "battery_level": 100,
-        "capabilities": ["listening", "routing", "beaming"],
+        "capabilities": ["beaming", "routing", "listening"],
         "friendly_name": "Living Room Thermostat Controller",
         "is_awake": true,
         "is_failed": false,
         "is_info_received": true,
         "is_ready": true,
         "is_zwave_plus": false,
-        "lastRequestRTT": 26,
-        "lastResponseRTT": 39,
+        "lastRequestRTT": 25,
+        "lastResponseRTT": 36,
         "manufacturer_name": "Linear",
         "max_baud_rate": 40000,
-        "neighbors": [1, 5, 8, 9, 10],
+        "neighbors": [1, 5, 7, 8, 9, 10],
         "node_id": 6,
         "node_name": "Linear GC-TBZ48 Battery Powered Z-Wave Thermostat",
         "product_name": "GC-TBZ48 Battery Powered Z-Wave Thermostat",
         "query_stage": "Complete",
-        "receivedCnt": 16,
+        "receivedCnt": 14,
         "receivedDups": 0,
-        "receivedTS": "2018-10-29 23:16:45:448 ",
-        "receivedUnsolicited": 2,
+        "receivedTS": "2018-10-30 07:09:03:745 ",
+        "receivedUnsolicited": 0,
         "retries": 0,
         "sentCnt": 21,
         "sentFailed": 0,
-        "sentTS": "2018-10-29 23:14:03:467 "
+        "sentTS": "2018-10-30 07:09:03:708 "
     },
     "context": {
-        "id": "2b8a07da38a245d49ded6e914a14cea7",
+        "id": "c61838c78bd2488fadb3f39a6cbd463f",
         "user_id": null
     },
     "entity_id": "zwave.gocontrol_thermostat_living_room",
-    "last_changed": "2018-10-30T04:14:04.796445+00:00",
-    "last_updated": "2018-10-30T04:16:45.565385+00:00",
+    "last_changed": "2018-10-30T12:09:05.072867+00:00",
+    "last_updated": "2018-10-30T12:09:05.072867+00:00",
     "state": "ready"
 }, {
     "attributes": {
@@ -3275,16 +3275,16 @@
         "value_instance": 1
     },
     "context": {
-        "id": "6be35a586890492ba91be3d18d4a640f",
+        "id": "348a2533041548129685dce410a42384",
         "user_id": null
     },
     "entity_id": "sensor.gocontrol_thermostat_living_room_temperature",
-    "last_changed": "2018-10-30T04:16:45.567755+00:00",
-    "last_updated": "2018-10-30T04:16:45.567755+00:00",
-    "state": "70.0"
+    "last_changed": "2018-10-30T12:09:03.416420+00:00",
+    "last_updated": "2018-10-30T12:09:03.416420+00:00",
+    "state": "72.0"
 }, {
     "attributes": {
-        "current_temperature": 70,
+        "current_temperature": 72,
         "fan_list": ["On Low", "Auto Low"],
         "fan_mode": "Auto Low",
         "fan_state": "Idle",
@@ -3293,25 +3293,25 @@
         "min_temp": 45,
         "node_id": 6,
         "operating_state": "Idle",
-        "operation_list": ["Aux Heat", "auto", "heat", "off", "cool"],
+        "operation_list": ["auto", "off", "Aux Heat", "heat", "cool"],
         "operation_mode": "auto",
         "supported_features": 193,
-        "temperature": 70,
+        "temperature": 72,
         "value_id": "72057594143883266",
         "value_index": 0,
         "value_instance": 1
     },
     "context": {
-        "id": "3b1ab91e92254f32ab67df3d82843481",
+        "id": "508c0cf1f0ae40ec96f1874b9dfc4935",
         "user_id": null
     },
     "entity_id": "climate.linear_gctbz48_battery_powered_zwave_thermostat_unused_0",
-    "last_changed": "2018-10-30T04:13:08.064545+00:00",
-    "last_updated": "2018-10-30T04:16:44.574692+00:00",
+    "last_changed": "2018-10-30T12:08:12.087994+00:00",
+    "last_updated": "2018-10-30T12:08:12.496245+00:00",
     "state": "auto"
 }, {
     "attributes": {
-        "current_temperature": 70,
+        "current_temperature": 72,
         "fan_list": ["On Low", "Auto Low"],
         "fan_mode": "Auto Low",
         "fan_state": "Idle",
@@ -3320,26 +3320,26 @@
         "min_temp": 45,
         "node_id": 6,
         "operating_state": "Idle",
-        "operation_list": ["Aux Heat", "auto", "heat", "off", "cool"],
+        "operation_list": ["auto", "off", "Aux Heat", "heat", "cool"],
         "operation_mode": "auto",
         "supported_features": 193,
-        "temperature": 69,
+        "temperature": 70,
         "unit_of_measurement": "\u00b0F",
         "value_id": "72057594143883282",
         "value_index": 1,
         "value_instance": 1
     },
     "context": {
-        "id": "cc78c340e0554d608f5b5c3c94005144",
+        "id": "b5b1646a03e748ab81a47468987068e5",
         "user_id": null
     },
     "entity_id": "climate.gocontrol_thermostat_living_room_heating_setpoint",
-    "last_changed": "2018-10-30T04:13:08.115315+00:00",
-    "last_updated": "2018-10-30T04:16:44.576993+00:00",
+    "last_changed": "2018-10-30T12:08:12.131344+00:00",
+    "last_updated": "2018-10-30T12:08:12.498701+00:00",
     "state": "auto"
 }, {
     "attributes": {
-        "current_temperature": 70,
+        "current_temperature": 72,
         "fan_list": ["On Low", "Auto Low"],
         "fan_mode": "Auto Low",
         "fan_state": "Idle",
@@ -3348,7 +3348,7 @@
         "min_temp": 45,
         "node_id": 6,
         "operating_state": "Idle",
-        "operation_list": ["Aux Heat", "auto", "heat", "off", "cool"],
+        "operation_list": ["auto", "off", "Aux Heat", "heat", "cool"],
         "operation_mode": "auto",
         "supported_features": 193,
         "temperature": 85,
@@ -3358,16 +3358,16 @@
         "value_instance": 1
     },
     "context": {
-        "id": "8dca7a0ce0ca452993d0c90a82f31380",
+        "id": "4c163e40bc1143b486fe16e6e01e1360",
         "user_id": null
     },
     "entity_id": "climate.gocontrol_thermostat_living_room_cooling_setpoint",
-    "last_changed": "2018-10-30T04:13:08.166791+00:00",
-    "last_updated": "2018-10-30T04:16:44.578837+00:00",
+    "last_changed": "2018-10-30T12:08:12.186149+00:00",
+    "last_updated": "2018-10-30T12:08:12.502214+00:00",
     "state": "auto"
 }, {
     "attributes": {
-        "current_temperature": 70,
+        "current_temperature": 72,
         "fan_list": ["On Low", "Auto Low"],
         "fan_mode": "Auto Low",
         "fan_state": "Idle",
@@ -3376,25 +3376,25 @@
         "min_temp": 45,
         "node_id": 6,
         "operating_state": "Idle",
-        "operation_list": ["Aux Heat", "auto", "heat", "off", "cool"],
+        "operation_list": ["auto", "off", "Aux Heat", "heat", "cool"],
         "operation_mode": "auto",
         "supported_features": 193,
-        "temperature": 70,
+        "temperature": 72,
         "value_id": "72057594143883394",
         "value_index": 8,
         "value_instance": 1
     },
     "context": {
-        "id": "d6b90dd28124471183d24f921238e0df",
+        "id": "1de218c12b1649a48c1a1091dd4498d2",
         "user_id": null
     },
     "entity_id": "climate.linear_gctbz48_battery_powered_zwave_thermostat_dry_air",
-    "last_changed": "2018-10-30T04:13:08.218258+00:00",
-    "last_updated": "2018-10-30T04:16:44.580706+00:00",
+    "last_changed": "2018-10-30T12:08:12.332596+00:00",
+    "last_updated": "2018-10-30T12:08:12.533113+00:00",
     "state": "auto"
 }, {
     "attributes": {
-        "current_temperature": 70,
+        "current_temperature": 72,
         "fan_list": ["On Low", "Auto Low"],
         "fan_mode": "Auto Low",
         "fan_state": "Idle",
@@ -3403,7 +3403,7 @@
         "min_temp": 45,
         "node_id": 6,
         "operating_state": "Idle",
-        "operation_list": ["Aux Heat", "auto", "heat", "off", "cool"],
+        "operation_list": ["auto", "off", "Aux Heat", "heat", "cool"],
         "operation_mode": "auto",
         "supported_features": 193,
         "temperature": 62,
@@ -3412,50 +3412,50 @@
         "value_instance": 1
     },
     "context": {
-        "id": "2756f50eaaa5475da66d1bf89e99d5ca",
+        "id": "ac06590bc219431a9fa6cba5b69c0450",
         "user_id": null
     },
     "entity_id": "climate.linear_gctbz48_battery_powered_zwave_thermostat_heating_econ",
-    "last_changed": "2018-10-30T04:13:08.164682+00:00",
-    "last_updated": "2018-10-30T04:16:44.582542+00:00",
+    "last_changed": "2018-10-30T12:08:12.353828+00:00",
+    "last_updated": "2018-10-30T12:08:12.545172+00:00",
     "state": "auto"
 }, {
     "attributes": {
-        "averageRequestRTT": 29,
-        "averageResponseRTT": 1064,
+        "averageRequestRTT": 25,
+        "averageResponseRTT": 68,
         "battery_level": 100,
-        "capabilities": ["listening", "routing", "beaming", "zwave_plus"],
+        "capabilities": ["zwave_plus", "beaming", "routing", "listening"],
         "friendly_name": "Bedroom Thermostat Controller",
         "is_awake": true,
         "is_failed": false,
         "is_info_received": true,
         "is_ready": true,
         "is_zwave_plus": true,
-        "lastRequestRTT": 29,
-        "lastResponseRTT": 1538,
+        "lastRequestRTT": 25,
+        "lastResponseRTT": 94,
         "manufacturer_name": "Linear",
         "max_baud_rate": 40000,
-        "neighbors": [8, 1, 10, 5],
+        "neighbors": [1, 5, 6, 8, 10],
         "node_id": 7,
         "node_name": "Linear GC-TBZ48 Battery Powered Z-Wave Thermostat",
         "product_name": "GC-TBZ48 Battery Powered Z-Wave Thermostat",
         "query_stage": "Complete",
-        "receivedCnt": 39,
-        "receivedDups": 3,
-        "receivedTS": "2018-10-29 23:40:20:998 ",
-        "receivedUnsolicited": 14,
+        "receivedCnt": 15,
+        "receivedDups": 1,
+        "receivedTS": "2018-10-30 07:09:04:449 ",
+        "receivedUnsolicited": 0,
         "retries": 0,
-        "sentCnt": 36,
+        "sentCnt": 22,
         "sentFailed": 0,
-        "sentTS": "2018-10-29 23:40:13:350 "
+        "sentTS": "2018-10-30 07:09:04:355 "
     },
     "context": {
-        "id": "e0255f5caaff4eaf979d5791fbeb6b1c",
+        "id": "69caf99fffbf4a4fa29c8e1a95a1c601",
         "user_id": null
     },
     "entity_id": "zwave.gocontrol_thermostat_bedroom",
-    "last_changed": "2018-10-30T04:14:04.798412+00:00",
-    "last_updated": "2018-10-30T04:40:21.107270+00:00",
+    "last_changed": "2018-10-30T12:09:05.077253+00:00",
+    "last_updated": "2018-10-30T12:09:05.077253+00:00",
     "state": "ready"
 }, {
     "attributes": {
@@ -3467,16 +3467,16 @@
         "value_instance": 1
     },
     "context": {
-        "id": "deae9e7f347a427ebf674d719834582c",
+        "id": "620136c670cc4d808c29884b1f407cab",
         "user_id": null
     },
     "entity_id": "sensor.gocontrol_thermostat_bedroom_temperature",
-    "last_changed": "2018-10-30T04:37:18.689198+00:00",
-    "last_updated": "2018-10-30T04:37:18.689198+00:00",
-    "state": "67.0"
+    "last_changed": "2018-10-30T12:09:04.144470+00:00",
+    "last_updated": "2018-10-30T12:09:04.144470+00:00",
+    "state": "65.0"
 }, {
     "attributes": {
-        "current_temperature": 67,
+        "current_temperature": 65,
         "fan_list": ["On Low", "Auto Low"],
         "fan_mode": "Auto Low",
         "fan_state": "Idle",
@@ -3484,26 +3484,26 @@
         "max_temp": 95,
         "min_temp": 45,
         "node_id": 7,
-        "operating_state": "Pending Heat",
-        "operation_list": ["Aux Heat", "auto", "heat", "off", "cool"],
+        "operating_state": "Idle",
+        "operation_list": ["auto", "off", "Aux Heat", "heat", "cool"],
         "operation_mode": "auto",
         "supported_features": 193,
-        "temperature": 65,
+        "temperature": 63,
         "value_id": "72057594160660498",
         "value_index": 1,
         "value_instance": 1
     },
     "context": {
-        "id": "2e9f5ddf4c7540998a8fb91b165a9fc8",
+        "id": "d5d21a54f71a43ffa88e02524e4d1dee",
         "user_id": null
     },
     "entity_id": "climate.gocontrol_thermostat_bedroom_heating",
-    "last_changed": "2018-10-30T04:13:09.926826+00:00",
-    "last_updated": "2018-10-30T04:40:20.059717+00:00",
+    "last_changed": "2018-10-30T12:08:14.219615+00:00",
+    "last_updated": "2018-10-30T12:08:14.412147+00:00",
     "state": "auto"
 }, {
     "attributes": {
-        "current_temperature": 67,
+        "current_temperature": 65,
         "fan_list": ["On Low", "Auto Low"],
         "fan_mode": "Auto Low",
         "fan_state": "Idle",
@@ -3511,8 +3511,8 @@
         "max_temp": 95,
         "min_temp": 45,
         "node_id": 7,
-        "operating_state": "Pending Heat",
-        "operation_list": ["Aux Heat", "auto", "heat", "off", "cool"],
+        "operating_state": "Idle",
+        "operation_list": ["auto", "off", "Aux Heat", "heat", "cool"],
         "operation_mode": "auto",
         "supported_features": 193,
         "temperature": 85,
@@ -3521,217 +3521,217 @@
         "value_instance": 1
     },
     "context": {
-        "id": "160a14d1b1b44e3d979d36895352219a",
+        "id": "4e957c52a92945bf87cdf33781c7fbf9",
         "user_id": null
     },
     "entity_id": "climate.gocontrol_thermostat_bedroom_cooling",
-    "last_changed": "2018-10-30T04:13:10.072954+00:00",
-    "last_updated": "2018-10-30T04:40:20.061773+00:00",
+    "last_changed": "2018-10-30T12:08:14.263364+00:00",
+    "last_updated": "2018-10-30T12:08:14.365786+00:00",
     "state": "auto"
 }, {
     "attributes": {
-        "averageRequestRTT": 38,
-        "averageResponseRTT": 57,
-        "capabilities": ["listening", "routing", "beaming"],
+        "averageRequestRTT": 25,
+        "averageResponseRTT": 37,
+        "capabilities": ["beaming", "routing", "listening"],
         "friendly_name": "Bedroom Humdifier Switch",
         "is_awake": true,
         "is_failed": false,
         "is_info_received": true,
         "is_ready": true,
         "is_zwave_plus": false,
-        "lastRequestRTT": 25,
+        "lastRequestRTT": 26,
         "lastResponseRTT": 39,
         "manufacturer_name": "Aeotec",
         "max_baud_rate": 40000,
-        "neighbors": [1, 3, 4, 5, 6, 7],
+        "neighbors": [1, 3, 4, 5, 6, 7, 10],
         "node_id": 8,
         "node_name": "Aeotec DSC06106 Smart Energy Switch",
         "product_name": "DSC06106 Smart Energy Switch",
         "query_stage": "Complete",
-        "receivedCnt": 29,
-        "receivedDups": 1,
-        "receivedTS": "2018-10-29 23:41:13:514 ",
-        "receivedUnsolicited": 19,
-        "retries": 1,
-        "sentCnt": 9,
+        "receivedCnt": 8,
+        "receivedDups": 0,
+        "receivedTS": "2018-10-30 07:09:04:829 ",
+        "receivedUnsolicited": 0,
+        "retries": 2,
+        "sentCnt": 10,
         "sentFailed": 0,
-        "sentTS": "2018-10-29 23:14:04:526 "
+        "sentTS": "2018-10-30 07:09:04:790 "
     },
     "context": {
-        "id": "2769222046a741d58639c431c14268ff",
+        "id": "b82c93094d8049c182ed7db42a00207e",
         "user_id": null
     },
     "entity_id": "zwave.aeotec_humidifier_bedroom",
-    "last_changed": "2018-10-30T04:14:04.801344+00:00",
-    "last_updated": "2018-10-30T04:41:13.558017+00:00",
+    "last_changed": "2018-10-30T12:09:05.056714+00:00",
+    "last_updated": "2018-10-30T12:09:05.056714+00:00",
     "state": "ready"
 }, {
     "attributes": {
         "friendly_name": "Bedroom Humidifier",
         "node_id": 8,
-        "power_consumption": 162.158,
+        "power_consumption": 364.356,
         "value_id": "72057594176946176",
         "value_index": 0,
         "value_instance": 1
     },
     "context": {
-        "id": "4f3e44eb40844b368b2b64f7bc7914b6",
+        "id": "4c2574621bec4070b9dc41c9a50f6336",
         "user_id": null
     },
     "entity_id": "switch.aeotec_humidifier_bedroom",
-    "last_changed": "2018-10-30T04:13:11.598157+00:00",
-    "last_updated": "2018-10-30T04:36:13.917314+00:00",
+    "last_changed": "2018-10-30T12:08:15.956380+00:00",
+    "last_updated": "2018-10-30T12:09:04.760944+00:00",
     "state": "on"
 }, {
     "attributes": {
         "friendly_name": "Aeotec DSC06106 Smart Energy Switch Power",
         "node_id": 8,
-        "power_consumption": 162.158,
+        "power_consumption": 364.356,
         "unit_of_measurement": "W",
         "value_id": "72057594177142850",
         "value_index": 4,
         "value_instance": 1
     },
     "context": {
-        "id": "618e4b5627b04872ad01d135f092109e",
+        "id": "f709505894f64cee832e29b98123b62e",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_dsc06106_smart_energy_switch_power_2",
-    "last_changed": "2018-10-30T04:36:13.919160+00:00",
-    "last_updated": "2018-10-30T04:36:13.919160+00:00",
-    "state": "162.16"
+    "last_changed": "2018-10-30T12:09:04.826401+00:00",
+    "last_updated": "2018-10-30T12:09:04.826401+00:00",
+    "state": "364.36"
 }, {
     "attributes": {
         "friendly_name": "Bedroom Humidifier Energy",
         "node_id": 8,
-        "power_consumption": 162.158,
+        "power_consumption": 364.356,
         "unit_of_measurement": "kWh",
         "value_id": "72057594177159170",
         "value_index": 0,
         "value_instance": 1
     },
     "context": {
-        "id": "0b048b26728b4ee8bb374f920c524114",
+        "id": "5ec72c0c60d540e1bb06e94fc8a4b1df",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_humidifier_bedroom_energy",
-    "last_changed": "2018-10-30T04:41:13.583177+00:00",
-    "last_updated": "2018-10-30T04:41:13.583177+00:00",
-    "state": "97.95"
+    "last_changed": "2018-10-30T12:09:04.828308+00:00",
+    "last_updated": "2018-10-30T12:09:04.828308+00:00",
+    "state": "99.15"
 }, {
     "attributes": {
         "friendly_name": "Aeotec DSC06106 Smart Energy Switch Previous Reading",
         "node_id": 8,
-        "power_consumption": 162.158,
+        "power_consumption": 364.356,
         "unit_of_measurement": "kWh",
         "value_id": "72057594177159186",
         "value_index": 1,
         "value_instance": 1
     },
     "context": {
-        "id": "e9c349bc2e8f4b64981d74fd4977e81c",
+        "id": "b28e8a6d0ab6450895a78c5aeea2f611",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_dsc06106_smart_energy_switch_previous_reading",
-    "last_changed": "2018-10-30T04:41:13.585127+00:00",
-    "last_updated": "2018-10-30T04:41:13.585127+00:00",
-    "state": "97.94"
+    "last_changed": "2018-10-30T12:09:04.830256+00:00",
+    "last_updated": "2018-10-30T12:09:04.830256+00:00",
+    "state": "99.14"
 }, {
     "attributes": {
         "friendly_name": "Aeotec DSC06106 Smart Energy Switch Interval",
         "node_id": 8,
-        "power_consumption": 162.158,
+        "power_consumption": 364.356,
         "unit_of_measurement": "seconds",
         "value_id": "72057594177159203",
         "value_index": 2,
         "value_instance": 1
     },
     "context": {
-        "id": "abedb51ddb62442abea94a16cb95ea7d",
+        "id": "edb8db40e582460b8c115c779eedc130",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_dsc06106_smart_energy_switch_interval",
-    "last_changed": "2018-10-30T04:41:13.587057+00:00",
-    "last_updated": "2018-10-30T04:41:13.587057+00:00",
-    "state": "300"
+    "last_changed": "2018-10-30T12:09:04.832204+00:00",
+    "last_updated": "2018-10-30T12:09:04.832204+00:00",
+    "state": "168"
 }, {
     "attributes": {
         "friendly_name": "Bedroom Humidifier Power",
         "node_id": 8,
-        "power_consumption": 162.158,
+        "power_consumption": 364.356,
         "unit_of_measurement": "W",
         "value_id": "72057594177159298",
         "value_index": 8,
         "value_instance": 1
     },
     "context": {
-        "id": "dcb9af02965c48599e9cb62b71d76bf3",
+        "id": "a1288a75fe2c4a8b963ecbb6924f6338",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_humidifier_bedroom_power",
-    "last_changed": "2018-10-30T04:36:13.926303+00:00",
-    "last_updated": "2018-10-30T04:36:13.926303+00:00",
-    "state": "162.16"
+    "last_changed": "2018-10-30T12:09:05.060813+00:00",
+    "last_updated": "2018-10-30T12:09:05.060813+00:00",
+    "state": "364.36"
 }, {
     "attributes": {
         "friendly_name": "Aeotec DSC06106 Smart Energy Switch Previous Reading",
         "node_id": 8,
-        "power_consumption": 162.158,
+        "power_consumption": 364.356,
         "unit_of_measurement": "W",
         "value_id": "72057594177159314",
         "value_index": 9,
         "value_instance": 1
     },
     "context": {
-        "id": "5d50582824854e14a2ad60b9ccca82ce",
+        "id": "f5509e7a3689433a95441ed489d26d87",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_dsc06106_smart_energy_switch_previous_reading_2",
-    "last_changed": "2018-10-30T04:36:13.928707+00:00",
-    "last_updated": "2018-10-30T04:36:13.928707+00:00",
-    "state": "97.94"
+    "last_changed": "2018-10-30T12:09:05.062675+00:00",
+    "last_updated": "2018-10-30T12:09:05.062675+00:00",
+    "state": "99.14"
 }, {
     "attributes": {
         "friendly_name": "Aeotec DSC06106 Smart Energy Switch Interval",
         "node_id": 8,
-        "power_consumption": 162.158,
+        "power_consumption": 364.356,
         "unit_of_measurement": "seconds",
         "value_id": "72057594177159331",
         "value_index": 10,
         "value_instance": 1
     },
     "context": {
-        "id": "24cb2a8960c04e2790a42c85f9913d6f",
+        "id": "9f502f62f4f544b1ab49b5008987e0c9",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_dsc06106_smart_energy_switch_interval_2",
-    "last_changed": "2018-10-30T04:36:13.930496+00:00",
-    "last_updated": "2018-10-30T04:36:13.930496+00:00",
-    "state": "300"
+    "last_changed": "2018-10-30T12:09:05.064457+00:00",
+    "last_updated": "2018-10-30T12:09:05.064457+00:00",
+    "state": "168"
 }, {
     "attributes": {
         "friendly_name": "Aeotec DSC06106 Smart Energy Switch Exporting",
         "node_id": 8,
-        "power_consumption": 162.158,
+        "power_consumption": 364.356,
         "unit_of_measurement": "",
         "value_id": "72057594177159680",
         "value_index": 32,
         "value_instance": 1
     },
     "context": {
-        "id": "c35bcb0fa7194633a141ecb53fd7ffbf",
+        "id": "e231001ac14f49af8eec04eacc89d874",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_dsc06106_smart_energy_switch_exporting",
-    "last_changed": "2018-10-30T04:41:13.560413+00:00",
-    "last_updated": "2018-10-30T04:41:13.560413+00:00",
+    "last_changed": "2018-10-30T12:09:05.059048+00:00",
+    "last_updated": "2018-10-30T12:09:05.059048+00:00",
     "state": "False"
 }, {
     "attributes": {
         "averageRequestRTT": 0,
         "averageResponseRTT": 0,
         "battery_level": 100,
-        "capabilities": ["routing", "beaming", "zwave_plus"],
+        "capabilities": ["zwave_plus", "beaming", "routing"],
         "friendly_name": "Aeotec Living Room Multisensor",
         "is_awake": false,
         "is_failed": false,
@@ -3746,23 +3746,23 @@
         "node_name": "Aeotec ZW100 MultiSensor 6",
         "product_name": "ZW100 MultiSensor 6",
         "query_stage": "CacheLoad",
-        "receivedCnt": 8,
+        "receivedCnt": 2,
         "receivedDups": 0,
-        "receivedTS": "2018-10-29 23:41:24:456 ",
-        "receivedUnsolicited": 8,
+        "receivedTS": "2018-10-30 07:08:40:081 ",
+        "receivedUnsolicited": 2,
         "retries": 0,
         "sentCnt": 1,
         "sentFailed": 1,
-        "sentTS": "2018-10-29 23:13:19:992 ",
+        "sentTS": "2018-10-30 07:08:21:351 ",
         "wake_up_interval": 3600
     },
     "context": {
-        "id": "e0e36963fe9943e68c1b53f23679d7db",
+        "id": "7ba3a77d40984cbb937dc6ecc947cee8",
         "user_id": null
     },
     "entity_id": "zwave.aeotec_multisensor_living_room",
-    "last_changed": "2018-10-30T04:13:12.517569+00:00",
-    "last_updated": "2018-10-30T04:41:24.571522+00:00",
+    "last_changed": "2018-10-30T12:08:17.003091+00:00",
+    "last_updated": "2018-10-30T12:08:40.190369+00:00",
     "state": "initializing"
 }, {
     "attributes": {
@@ -3773,13 +3773,13 @@
         "value_instance": 1
     },
     "context": {
-        "id": "0ee0dbd069cd4e658a86a72c0b2c9449",
+        "id": "c2661f736e2b4bb285303ff76e9b22c4",
         "user_id": null
     },
     "entity_id": "binary_sensor.aeotec_multisensor_sensor_living_room",
-    "last_changed": "2018-10-30T04:13:12.440514+00:00",
-    "last_updated": "2018-10-30T04:13:12.440514+00:00",
-    "state": "off"
+    "last_changed": "2018-10-30T12:08:16.924901+00:00",
+    "last_updated": "2018-10-30T12:08:16.924901+00:00",
+    "state": "on"
 }, {
     "attributes": {
         "friendly_name": "Multisensor Temperature Living Room",
@@ -3790,13 +3790,13 @@
         "value_instance": 1
     },
     "context": {
-        "id": "c9a2a565bedb44afb1dcc068826be861",
+        "id": "66116d4fc20d4ae89bf50c13d5198e61",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_multisensor_temperature_living_room",
-    "last_changed": "2018-10-30T04:13:12.475885+00:00",
-    "last_updated": "2018-10-30T04:13:12.475885+00:00",
-    "state": "67.8"
+    "last_changed": "2018-10-30T12:08:17.075468+00:00",
+    "last_updated": "2018-10-30T12:08:17.075468+00:00",
+    "state": "68.3"
 }, {
     "attributes": {
         "friendly_name": "Multisensor Luminance Living Room",
@@ -3807,12 +3807,12 @@
         "value_instance": 1
     },
     "context": {
-        "id": "add4f292a5fa4bdc8c1479039b310819",
+        "id": "4359b7dae1a24259abcadc040be676e5",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_multisensor_luminance_living_room",
-    "last_changed": "2018-10-30T04:13:12.531207+00:00",
-    "last_updated": "2018-10-30T04:13:12.531207+00:00",
+    "last_changed": "2018-10-30T12:08:17.077710+00:00",
+    "last_updated": "2018-10-30T12:08:17.077710+00:00",
     "state": "1.0"
 }, {
     "attributes": {
@@ -3824,12 +3824,12 @@
         "value_instance": 1
     },
     "context": {
-        "id": "d6ce05f867c4414dbcddf7f981b0b448",
+        "id": "8137df662bf94383b0c47391e493020d",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_multisensor_relative_humidity_living_room",
-    "last_changed": "2018-10-30T04:13:12.569254+00:00",
-    "last_updated": "2018-10-30T04:13:12.569254+00:00",
+    "last_changed": "2018-10-30T12:08:17.109647+00:00",
+    "last_updated": "2018-10-30T12:08:17.109647+00:00",
     "state": "55.0"
 }, {
     "attributes": {
@@ -3841,12 +3841,12 @@
         "value_instance": 1
     },
     "context": {
-        "id": "04d761b5025043f8927bd4a836ea9fc5",
+        "id": "7f4d9ad1d75c4cf69ecab0a8ab7d02f6",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_multisensor_ultraviolet_living_room",
-    "last_changed": "2018-10-30T04:13:12.613905+00:00",
-    "last_updated": "2018-10-30T04:13:12.613905+00:00",
+    "last_changed": "2018-10-30T12:08:17.160944+00:00",
+    "last_updated": "2018-10-30T12:08:17.160944+00:00",
     "state": "0.0"
 }, {
     "attributes": {
@@ -3858,12 +3858,12 @@
         "value_instance": 1
     },
     "context": {
-        "id": "e1278aa5a79547c4a5bd3f21c43b2577",
+        "id": "115fef648d5e4ea99b85f4b0609f7ec3",
         "user_id": null
     },
     "entity_id": "sensor.aeotec__multisensor_alarm_type_living_room",
-    "last_changed": "2018-10-30T04:41:24.577758+00:00",
-    "last_updated": "2018-10-30T04:41:24.577758+00:00",
+    "last_changed": "2018-10-30T12:08:40.194211+00:00",
+    "last_updated": "2018-10-30T12:08:40.194211+00:00",
     "state": "0"
 }, {
     "attributes": {
@@ -3875,12 +3875,12 @@
         "value_instance": 1
     },
     "context": {
-        "id": "963f2740fc4b4b83bba5974b36170b1e",
+        "id": "ed68b84a4ac542deadd44b1a0007a41f",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw100_multisensor_6_alarm_level",
-    "last_changed": "2018-10-30T04:41:24.581629+00:00",
-    "last_updated": "2018-10-30T04:41:24.581629+00:00",
+    "last_changed": "2018-10-30T12:08:40.197563+00:00",
+    "last_updated": "2018-10-30T12:08:40.197563+00:00",
     "state": "0"
 }, {
     "attributes": {
@@ -3892,12 +3892,12 @@
         "value_instance": 1
     },
     "context": {
-        "id": "5b7ccb13b8674abb96d3f1aa87570380",
+        "id": "ed3923967c6f472ab3ee4d89f16cbc43",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_zw100_multisensor_6_sourcenodeid",
-    "last_changed": "2018-10-30T04:41:24.607000+00:00",
-    "last_updated": "2018-10-30T04:41:24.607000+00:00",
+    "last_changed": "2018-10-30T12:08:40.217842+00:00",
+    "last_updated": "2018-10-30T12:08:40.217842+00:00",
     "state": "0"
 }, {
     "attributes": {
@@ -3909,52 +3909,51 @@
         "value_instance": 1
     },
     "context": {
-        "id": "03fdbb10b17547b0825c441fd6da9d34",
+        "id": "1bf5b3f95ad0494aa35847e061065399",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_multisensor_burglar_living_room",
-    "last_changed": "2018-10-30T04:41:24.608923+00:00",
-    "last_updated": "2018-10-30T04:41:24.608923+00:00",
+    "last_changed": "2018-10-30T12:08:40.219619+00:00",
+    "last_updated": "2018-10-30T12:08:40.219619+00:00",
     "state": "0"
 }, {
     "attributes": {
-        "averageRequestRTT": 24,
-        "averageResponseRTT": 2519,
+        "averageRequestRTT": 0,
+        "averageResponseRTT": 0,
         "battery_level": 51,
-        "capabilities": ["routing", "beaming"],
+        "capabilities": ["beaming", "routing"],
         "friendly_name": "Bedroom Multisensor",
         "is_awake": false,
         "is_failed": false,
         "is_info_received": true,
-        "is_ready": true,
+        "is_ready": false,
         "is_zwave_plus": false,
-        "lastRequestRTT": 25,
-        "lastResponseRTT": 2682,
+        "lastRequestRTT": 0,
+        "lastResponseRTT": 0,
         "manufacturer_name": "Aeotec",
         "max_baud_rate": 40000,
-        "neighbors": [1, 5, 6, 7],
         "node_id": 10,
         "node_name": "Aeotec DSB05 Multisensor",
         "product_name": "DSB05 Multisensor",
-        "query_stage": "Complete",
-        "receivedCnt": 22,
+        "query_stage": "CacheLoad",
+        "receivedCnt": 0,
         "receivedDups": 0,
-        "receivedTS": "2018-10-29 23:40:13:007 ",
-        "receivedUnsolicited": 15,
+        "receivedTS": "2018-10-30 07:08:04:985 ",
+        "receivedUnsolicited": 0,
         "retries": 0,
-        "sentCnt": 12,
+        "sentCnt": 1,
         "sentFailed": 1,
-        "sentTS": "2018-10-29 23:40:13:022 ",
+        "sentTS": "2018-10-30 07:08:30:349 ",
         "wake_up_interval": 720
     },
     "context": {
-        "id": "f03ae28fcb514a65b98dd95d5b5d8dbc",
+        "id": "d634ee7e18b041efa27b497016d227cf",
         "user_id": null
     },
     "entity_id": "zwave.aeotec_multisensor_bedroom",
-    "last_changed": "2018-10-30T04:16:23.968541+00:00",
-    "last_updated": "2018-10-30T04:40:13.142170+00:00",
-    "state": "sleeping"
+    "last_changed": "2018-10-30T12:08:19.793614+00:00",
+    "last_updated": "2018-10-30T12:08:33.103541+00:00",
+    "state": "initializing"
 }, {
     "attributes": {
         "friendly_name": "Bedroom Mulitsensor Binary Sensor",
@@ -3964,13 +3963,13 @@
         "value_instance": 1
     },
     "context": {
-        "id": "64bb945520b84c9eb6d37cc238fcc62d",
+        "id": "2d6a043c5b6741c39e0706e30475c81e",
         "user_id": null
     },
     "entity_id": "binary_sensor.aeotec_multisensor_sensor_bedroom",
-    "last_changed": "2018-10-30T04:13:17.955501+00:00",
-    "last_updated": "2018-10-30T04:13:17.955501+00:00",
-    "state": "off"
+    "last_changed": "2018-10-30T12:08:19.717843+00:00",
+    "last_updated": "2018-10-30T12:08:19.717843+00:00",
+    "state": "on"
 }, {
     "attributes": {
         "friendly_name": "Bedroom Multisensor Temperature",
@@ -3981,13 +3980,13 @@
         "value_instance": 1
     },
     "context": {
-        "id": "e05bbb00f32e422ebfb6a09fcd010833",
+        "id": "51b56238a1d74d20976f6bcf949e35d3",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_multisensor_temperature_bedroom",
-    "last_changed": "2018-10-30T04:40:13.096048+00:00",
-    "last_updated": "2018-10-30T04:40:13.096048+00:00",
-    "state": "73.0"
+    "last_changed": "2018-10-30T12:08:19.856765+00:00",
+    "last_updated": "2018-10-30T12:08:19.856765+00:00",
+    "state": "72.4"
 }, {
     "attributes": {
         "friendly_name": "Bedroom Multisensor Luminance",
@@ -3998,13 +3997,13 @@
         "value_instance": 1
     },
     "context": {
-        "id": "3d1a45700c784a8a978fc31415801359",
+        "id": "4b4b6a4b1e7a402da5d404597e789bbc",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_multisensor_luminance_bedroom",
-    "last_changed": "2018-10-30T04:40:13.030536+00:00",
-    "last_updated": "2018-10-30T04:40:13.030536+00:00",
-    "state": "0.0"
+    "last_changed": "2018-10-30T12:08:19.959404+00:00",
+    "last_updated": "2018-10-30T12:08:19.959404+00:00",
+    "state": "9.0"
 }, {
     "attributes": {
         "friendly_name": "Bedroom Multisensor Relative Humidity",
@@ -4015,47 +4014,47 @@
         "value_instance": 1
     },
     "context": {
-        "id": "5f45930b15eb4b50871935edcff1aa84",
+        "id": "f3ba97591d7048f9a6ec6ef66bab642d",
         "user_id": null
     },
     "entity_id": "sensor.aeotec_multisensor_relative_humidity_bedroom",
-    "last_changed": "2018-10-30T04:40:13.069692+00:00",
-    "last_updated": "2018-10-30T04:40:13.069692+00:00",
-    "state": "53.0"
+    "last_changed": "2018-10-30T12:08:20.013565+00:00",
+    "last_updated": "2018-10-30T12:08:20.013565+00:00",
+    "state": "54.0"
 }, {
     "attributes": {
-        "averageRequestRTT": 27,
-        "averageResponseRTT": 4104,
+        "averageRequestRTT": 0,
+        "averageResponseRTT": 0,
         "capabilities": ["beaming"],
         "friendly_name": "Aeotec DSA03202 Minimote",
         "is_awake": false,
         "is_failed": false,
         "is_info_received": true,
-        "is_ready": true,
+        "is_ready": false,
         "is_zwave_plus": false,
-        "lastRequestRTT": 26,
-        "lastResponseRTT": 4104,
+        "lastRequestRTT": 0,
+        "lastResponseRTT": 0,
         "manufacturer_name": "Aeotec",
         "max_baud_rate": 40000,
         "node_id": 12,
         "node_name": "Aeotec DSA03202 Minimote",
         "product_name": "DSA03202 Minimote",
-        "query_stage": "Complete",
-        "receivedCnt": 2,
+        "query_stage": "CacheLoad",
+        "receivedCnt": 0,
         "receivedDups": 0,
-        "receivedTS": "2018-10-29 23:15:10:382 ",
-        "receivedUnsolicited": 1,
+        "receivedTS": "2018-10-30 07:08:04:986 ",
+        "receivedUnsolicited": 0,
         "retries": 0,
-        "sentCnt": 6,
-        "sentFailed": 2,
-        "sentTS": "2018-10-29 23:15:16:292 "
+        "sentCnt": 1,
+        "sentFailed": 1,
+        "sentTS": "2018-10-30 07:08:33:006 "
     },
     "context": {
-        "id": "5d7b77e4eef447b9842a8b7f2a5690b8",
+        "id": "e6130c3de01046549fe171e953f83c6c",
         "user_id": null
     },
     "entity_id": "zwave.aeotec_minimote_door_1",
-    "last_changed": "2018-10-30T04:15:16.516399+00:00",
-    "last_updated": "2018-10-30T04:15:16.516399+00:00",
-    "state": "sleeping"
+    "last_changed": "2018-10-30T12:08:20.901133+00:00",
+    "last_updated": "2018-10-30T12:08:33.230043+00:00",
+    "state": "initializing"
 }]

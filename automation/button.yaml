@@ -18,119 +18,36 @@
                         5: "script.imback",
                         6: "script.imback",
                         7: "script.goodnight",
-                        9: "script.goodnight"} %}
+                        8: "script.goodnight"} %}
           {{ map[trigger.event.data.scene_id|int] }}
     # - service: light.toggle
     #   entity_id: light.pop_socket_light
 
 # bedroom minimote
-- id: minimote_bedroom_button1_pushed
-  alias: Bedroom Minimote Button 1 Pushed
-  trigger:
-    - platform: mqtt
-      topic: "smartthings/Minimote Bedroom button 1/button"
-      payload: "pushed"
-  condition:
-    - condition: state
-      entity_id: input_boolean.mqtt_delay
-      state: "off"
-  action:
-    - service: light.toggle
-      entity_id: light.bedroom_canopy
-- id: minimote_bedroom_button1_held
-  alias: Bedroom Minimote Button 1 Pressed
-  trigger:
-    - platform: mqtt
-      topic: "smartthings/Minimote Bedroom button 1/button"
-      payload: "held"
-  condition:
-    - condition: state
-      entity_id: input_boolean.mqtt_delay
-      state: "off"
-  action:
-    - service:
-        script.bedtime
 
-- id: minimote_bedroom_button2_pushed
-  alias: Bedroom Minimote Button 2 Pushed
+- id: minimote_door
+  alias: Door Minimote Control
   trigger:
-    - platform: mqtt
-      topic: "smartthings/Minimote Bedroom button 2/button"
-      payload: "pushed"
-  condition:
-    - condition: state
-      entity_id: input_boolean.mqtt_delay
-      state: "off"
+    - platform: event
+      event_type: zwave.scene_activated
+      event_data:
+        entity_id:
+          zwave.aeotec_minimote_bedroom_door
   action:
-    - service: light.toggle
-      entity_id: light.bedroom_closet
-- id: minimote_bedroom_button2_held
-  alias: Bedroom Minimote Button 2 Pressed
-  trigger:
-    - platform: mqtt
-      topic: "smartthings/Minimote Bedroom button 2/button"
-      payload: "held"
-  condition:
-    - condition: state
-      entity_id: input_boolean.mqtt_delay
-      state: "off"
-  action:
-    - service:
-        script.goodmorning
-
-- id: minimote_bedroom_button3_pushed
-  alias: Bedroom Minimote Button 3 Pushed
-  trigger:
-    - platform: mqtt
-      topic: "smartthings/Minimote Bedroom button 3/button"
-      payload: "pushed"
-  condition:
-    - condition: state
-      entity_id: input_boolean.mqtt_delay
-      state: "off"
-  action:
-    - service: light.toggle
-      entity_id: light.bedroom_lamp
-# - id: minimote_bedroom_button3_held
-#   alias: Bedroom Minimote Button 3 Pressed
-#   trigger:
-#     - platform: mqtt
-#       topic: "smartthings/Minimote Bedroom button 3/button"
-#       payload: "held"
-#   condition:
-#     - condition: state
-#       entity_id: input_boolean.mqtt_delay
-#       state: "off"
-#   action:
-#     - service:
-#         script.getmellowed
-
-- id: minimote_bedroom_button4_pushed
-  alias: Bedroom Minimote Button 4 Pushed
-  trigger:
-    - platform: mqtt
-      topic: "smartthings/Minimote Bedroom button 4/button"
-      payload: "pushed"
-  condition:
-    - condition: state
-      entity_id: input_boolean.mqtt_delay
-      state: "off"
-  action:
-    - service: light.toggle
-      entity_id: light.camilles_desk_lamp
-# - id: minimote_bedroom_button4_held
-#   alias: Bedroom Minimote Button 4 Pressed
-#   trigger:
-#     - platform: mqtt
-#       topic: "smartthings/Minimote Bedroom button 4/button"
-#       payload: "held"
-#   condition:
-#     - condition: state
-#       entity_id: input_boolean.mqtt_delay
-#       state: "off"
-#   action:
-#     - service:
-#         script.getmellowed
+    - service: homeassistant.toggle
+      data_template:
+        entity_id: >
+          {% set map = {1: "script.light.bedroom_canopy",
+                        2: "script.bedtime",
+                        3: "light.bedroom_closet",
+                        4: "script.bedtime",
+                        5: "light.bedroom_lamp",
+                        6: "script.goodnight",
+                        7: "light.camilles_desk_lamp",
+                        8: "script.goodnight"} %}
+          {{ map[trigger.event.data.scene_id|int] }}
+    # - service: light.toggle
+    #   entity_id: light.pop_socket_light
 
 ## Camille's Minimote
 - id: minimote_camille_button1_pushed

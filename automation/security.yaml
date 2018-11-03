@@ -69,8 +69,9 @@
 - id: setup_cleaning
   alias: Turn on cleaning mode
   trigger:
-    - platform: time
-      at: "11:30:00"
+    - platform: template
+      value_template: {{ states.sensor.time.state == states.input_datetime.clean_start.state }}
+  # TODO change to value template to check against input_select.clean_day
   condition:
     condition: time
     weekday:
@@ -135,9 +136,24 @@
       data:
         entity_id: input_select.home_mode
         option: "Normal"
-    - condition: state
-      entity_id: input_select.presence
-      state: "Away"
     - service: notify.notify
       data:
         message: "The cleaner has left"
+
+- id: cleaner_no_show
+  alias: Cleaner Didn't Show
+  trigger:
+    - platform: template
+      value_template: {{ states.sensor.time.state == states.input_datetime.clean_end }}
+  condition:
+    - condition: state
+      entity_id: input_select.home_mode
+      state: "Cleaning"
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.home_mode
+        option: "Normal"
+    - service: notify.notify
+      data:
+        message: "The cleaner never showed"

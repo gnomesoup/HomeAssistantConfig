@@ -105,5 +105,5 @@
       friendly_name: Weekday
       value_template: >-
         {{ now().strftime("%A") }}
-      icon_tempate: >-
+      icon_template: 
         mdi:calendar

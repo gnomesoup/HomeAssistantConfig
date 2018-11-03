@@ -74,7 +74,7 @@
         {{ states.sensor.time.state == states.input_datetime.clean_start.state }}
   # TODO change to value template to check against input_select.clean_day
   condition:
-    - condition: state
+    - condition: template
       value_template: >-
         {{ states.sensor.weekday.state == states.input_select.clean_day.state }}
   action:

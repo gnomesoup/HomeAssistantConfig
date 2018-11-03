@@ -103,6 +103,7 @@
   sensors:
     weekday:
       friendly_name: Weekday
-      icon: mdi:calendar
       value_template: >-
         {{ now().strftime("%A") }}
+      icon_tempate: >-
+        mdi:calendar

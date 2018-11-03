@@ -145,7 +145,7 @@
   alias: Cleaner Didn't Show
   trigger:
     - platform: template
-      value_template: {{ states.sensor.time.state == states.input_datetime.clean_end.state }}
+      value_template: "{{ states.sensor.time.state == states.input_datetime.clean_end.state }}"
   condition:
     - condition: state
       entity_id: input_select.home_mode

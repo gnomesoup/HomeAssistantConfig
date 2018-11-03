@@ -74,14 +74,17 @@
         {{ states.sensor.time.state == states.input_datetime.clean_start.state }}
   # TODO change to value template to check against input_select.clean_day
   condition:
-    - condition: time
-      weekday:
-        - wed
+    - condition: state
+      value_template: >-
+        {{ states.sensor.weekday.state == states.input_select.clean_day.state }}
   action:
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode
         option: "Cleaning"
+    - service: notify.notify
+      data:
+        message: "Waiting for cleaner"
 
 # cleaning mode turn on all lights
 - id: cleaning_welcome

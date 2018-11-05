@@ -42,18 +42,24 @@
   alias: Send Alert When Motion And Away
   trigger:
     - platform: state
-      entity_id: binary_sensor.aeotec_multisensor_sensor_bedroom
+      entity_id:
+        - binary_sensor.aeotec_multisensor_sensor_living_room
+        - binary_sensor.aeotec_multisensor_sensor_bedroom
       to: "on"
-    - platform: numeric_state
-      entity_id: sensor.aeotec_multisensor_burglar_living_room
-      above: 2
-  # condition:
-  #   - condition: state
-  #     entity_id: input_select.presence
-  #     state: "Away"
+      for:
+        seconds: 30
+  condition:
+    - condition: state
+      entity_id: input_select.presence
+      state: "Away"
   action:
     - service: input_boolean.turn_on
-      entity_id: input_boolean.motion_alert
+      entity_id:
+        - input_boolean.motion_alert
+        - input_boolean.intruder_alert
+    - service: notify.notify
+      data:
+        message: "Motion Detected"
 
 # - id: alert_test
 #   alias: Testing motion sensors
@@ -64,6 +70,10 @@
 #   action:
 #     - service: input_boolean.toggle
 #       entity_id: input_boolean.testing
+
+####################################
+# cleaning mode turn on all lights #
+####################################
 
 ## select "Cleaning" mode when appropriate
 - id: setup_cleaning
@@ -86,7 +96,6 @@
       data:
         message: "Waiting for cleaner"
 
-# cleaning mode turn on all lights
 - id: cleaning_welcome
   alias: Welcome cleaner
   trigger:

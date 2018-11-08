@@ -5,7 +5,7 @@
 # states
 GET :hass-url/api/states
 Authorization: Bearer :hass-token
-Content-Type: application/json 
+Content-Type: application/json
 
 # services
 GET :hass-url/api/services
@@ -31,5 +31,10 @@ Content-Type: application/json
 
 # history
 POST :hass-url/api/history/period/2018-11-03T00:00:00+02:00
+Authorization: :hass-token
+Content-Type: application/json
+
+# humidity power sensor state
+GET :hass-url/api/states/sensor.aeotec_humidifier_bedroom_power
 Authorization: :hass-token
 Content-Type: application/json

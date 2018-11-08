@@ -219,10 +219,6 @@
 
 ## Humidity Control/Warning
 # TODO should this be an alert or should it trigger one?
-- id: climate_humidity_check_power
-  alias: Check the power of the humidifier
-  trigger: -
-
 
 - id: climate_humidity_nofify
   alias: Notify of humidity levels
@@ -235,26 +231,20 @@
       entity_id: input_select.home_mode
     - platform: state
       entity_id: input_select.presence
+      to: "Home"
   condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: sensor.aeotec_humidifier_bedroom_power
-        below: 300
-      - condition: state
-        entity_id: sensor.all_rooms_humidity
-        below: 45
-      - condition: state
-        entity_id: input_select.presence
-        state: "Home"
-      -  condition: or
-        conditions:
-          - condition: state
-            entity_id: input_select.home_mode
-            state: "Normal"
-          - condition: state
-            entity_id: input_select.home_mode
-            state: "Quiet"
+    - condition: numeric_state
+      entity_id: sensor.aeotec_humidifier_bedroom_power
+      below: 75
+    - condition: numeric_state
+      entity_id: sensor.all_rooms_humidity
+      below: 45
+    - condition: state
+      entity_id: input_select.presence
+      state: "Home"
+    - condition: template
+      value_template: >-
+        {{ is_state("input_select.home_mode", "Normal") or is_state("input_select.home_mode", "Quiet")}}
   action:
     - service: notify.notify
       data_template:

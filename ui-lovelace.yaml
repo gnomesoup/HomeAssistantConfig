@@ -272,7 +272,6 @@ views:
           - type: entities
             name: Inputs
             entities:
-              - input_boolean.testing
               - input_select.home_mode
               - input_select.presence
               - input_select.hvac_mode
@@ -301,9 +300,11 @@ views:
           - type: entities
             entities:
               - sensor.since_last_boot
-      - type: entity
+      - type: entities
+        name: Testing
         entities:
           - input_datetime.time_test
+          - input_boolean.testing
 
 
 

@@ -29,3 +29,7 @@ testing:
 cleaner_present:
   name: Cleaner Present
   icon: mdi:broom
+
+humitidy_low_alert:
+  name: Humidity Low Alert
+  icon: mdi:water-percent

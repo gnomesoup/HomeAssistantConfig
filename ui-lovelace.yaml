@@ -222,6 +222,7 @@ views:
         entities:
           - switch.aeotec_humidifier_bedroom
           - sensor.aeotec_humidifier_bedroom_power
+          - input_boolean.humidity_low_alert
 
   - icon: mdi:security
     title: Security

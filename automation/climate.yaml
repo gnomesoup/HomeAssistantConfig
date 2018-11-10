@@ -220,8 +220,8 @@
 ## Humidity Control/Warning
 # TODO should this be an alert or should it trigger one?
 
-- id: climate_humidity_nofify
-  alias: Humidity Level Notify On
+- id: climate_humidity_alert_on
+  alias: Humidity Level Alert On
   trigger:
     - platform: state
       entity_id: sensor.all_rooms_humidity
@@ -247,8 +247,8 @@
     - service: homeassistant.turn_on
       entity_id: input_boolean.humidity_low_alert
 
-- id: climate_humidity_notify_off
-  alias: Humidity Level Notify Off
+- id: climate_humidity_alert_off
+  alias: Humidity Level Alert Off
   trigger:
     - platform: state
       entity_id: sensor.all_rooms_humidity
@@ -269,3 +269,14 @@
   action:
     - service: homeassistant.turn_off
       entity_id: input_boolean.humidity_low_alert
+
+- id: climate_humidity_alert
+  alias: Humidity Level Alert
+  trigger:
+    - platform: state
+      entity_id: input_boolean.humidity_low_alert
+      to: "on"
+    - platform: template
+      value_template: >-
+        {{ (states.input_boolean.humidity_low_alert == "on") and
+          (((now() - states.input_boolean.humidity_low_alert.last_updated).seconds) % (60 * 60) == 0) }}

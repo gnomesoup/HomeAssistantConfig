@@ -6,3 +6,8 @@ clean_end:
   name: "End of cleaning window"
   has_date: false
   has_time: true
+
+time_test:
+  name: "Testing Time"
+  has_date: false
+  has_time: true

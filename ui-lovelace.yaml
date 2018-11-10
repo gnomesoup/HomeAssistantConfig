@@ -301,6 +301,9 @@ views:
           - type: entities
             entities:
               - sensor.since_last_boot
+      - type: entity
+        entities:
+          - input_datetime.time_test
 
 
 

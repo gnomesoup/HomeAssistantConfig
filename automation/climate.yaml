@@ -278,5 +278,9 @@
       to: "on"
     - platform: template
       value_template: >-
-        {{ (states.input_boolean.humidity_low_alert == "on") and
-          (((now() - states.input_boolean.humidity_low_alert.last_updated).seconds) % (60 * 60) == 0) }}
+        {{ (states.input_boolean.humitidy_low_alert.state == "off") and
+          (((now() - states.input_boolean.humitidy_low_alert.last_updated).seconds) % (10) == 0) }}
+  action:
+    service: notify.notify
+    data_template:
+      message: Check the humdifier! Humidity is {{ states.sensor.all_rooms_humidity.state }}%

@@ -1,4 +1,3 @@
-
 alert.intruder_alert
 automation.arm_home_when_away
 automation.bedroom_minimote_button_1_pressed

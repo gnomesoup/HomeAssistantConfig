@@ -34,3 +34,15 @@ clean_day:
     - "Saturday"
     - "Sunday"
   # initial: "Wednesday"
+
+test_day:
+  name: "Test Input Day"
+  options:
+    - "Monday"
+    - "Tuesday"
+    - "Wednesday"
+    - "Thursday"
+    - "Friday"
+    - "Saturday"
+    - "Sunday"
+  # initial: "Wednesday"

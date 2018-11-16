@@ -19,6 +19,9 @@
       from: "Away"
       to: "Home"
   action:
+    - service: homeassistant.turn_off
+      entity_id:
+        - input_boolean.motion_alert
     - service: ifttt.trigger
       data: {"event":"home_disarmed"}
     - service: notify.notify
@@ -66,6 +69,10 @@
     - platform: template
       value_template: >-
         {{ states.sensor.time.state == states.input_datetime.time_test.state[0:5] }}
+  condition:
+    - condition: template
+       value_template: >-
+         {{ states.input_select.test_day.state == states.sensor.weekday.state }}
   action:
     - service: input_boolean.toggle
       entity_id: input_boolean.testing
@@ -83,7 +90,7 @@
   trigger:
     - platform: template
       value_template: >-
-        {{ as_timestamp(states.sensor.time.state) == as_timestamp(states.input_datetime.clean_start.state[0:5]) }}
+        {{ states.sensor.time.state == states.input_datetime.clean_start.state[0:5] }}
   # TODO change to value template to check against input_select.clean_day
   condition:
     - condition: template

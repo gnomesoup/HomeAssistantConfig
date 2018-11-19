@@ -305,6 +305,7 @@ views:
         name: Testing
         entities:
           - input_datetime.time_test
+          - input_select.test_day
           - input_boolean.testing
 
 

@@ -1,132 +1,7 @@
 title: The Grand Ohio - Home Assistant
 # Include external resources
 resources:
-  - url: /local/my-custom-card.js
-    type: js
-  - url: /local/my-webfont.css
-    type: css
-
-# Optional background for all views. Check https://developer.mozilla.org/en-US/docs/Web/CSS/background for more examples.
-background: center / cover no-repeat url("/background.png") fixed
-# Exclude entities from "Unused entities" view
-# excluded_entities:
-#   - weblink.router
-views:
-    # View tab title.
-  - title: Home
-    # Optional unique id for direct access /lovelace/${id}
-    id: home
-    # Optional background (overwrites the global background).
-    # background: radial-gradient(crimson, skyblue)
-    # Each view can have a different theme applied. Theme should be defined in the frontend.
-    theme: dark-mode
-    # The cards to show on this view.
-    cards:
-        # The filter card will filter entities for their state
-      # - type: entity-filter
-      #   entities:
-      #     - device_tracker.ergisch
-      #     - device_tracker.angela_pfammatters_iphone
-      #   state_filter:
-      #     - 'home'
-      #   card:
-      #     type: glance
-      #     title: People that are home
-      - type: entities
-        title: Home Status
-        entities:
-          - input_select.home_mode
-          - input_select.presence
-          - input_select.hvac_mode
-      # - type: vertical-stack
-      #   cards:
-      - type: sensor
-        entity: sensor.all_rooms_temperature
-        name: Average Home Temparature
-      - type: sensor
-        entity: sensor.all_rooms_humidity
-        name: Average Home Humidity
-      - type: entities
-        title: Routines
-        entities:
-          - script.makecoffee
-          - script.goodmorning
-          - script.goodbye
-          - script.imback
-          - script.bedtime
-          - script.getmellowed
-          - script.goodnight
-      - type: vertical-stack
-        cards:
-          - type: media-control
-            entity: media_player.denon
-          - type: media-control
-            entity: media_player.living_room_speaker
-      # - type: vertical-stack
-      #   cards:
-      #     - type: conditional
-      #       conditions:
-      #         - entity: media_player.denon
-      #           state: "playing"
-      #       card:
-      #         type: media-control
-      #         entity: media_player.denon
-      #     - type: conditional
-      #       condition:
-      #         - entity: media_player.living_room_speaker
-      #           state: "playing"
-      #       card:
-      #         type: media-control
-      #         entity: media_player.living_room_speaker
-      - type: weather-forecast
-        entity: weather.dark_sky
-
-
-        # The picture entity card will represent an entity with a picture
-      # - type: picture-entity
-      #   image: https://www.home-assistant.io/images/default-social.png
-      #   entity: light.bed_light
-
-  - title: Living Room
-    id: living_room
-    theme: dark-mode
-    cards:
-      - type: sensor
-        entity: sensor.living_room_average_temperature
-      - type: glance
-        name: Living Room Status
-        entities:
-          - sensor.aeotec_multisensor_burglar_living_room
-          - sensor.aeotec_multisensor_temperature_living_room
-          - sensor.gocontrol_thermostat_living_room_temperature
-          - sensor.water_leak_sensor_temperature
-          - sensor.aeotec_multisensor_relative_humidity_living_room
-      - type: conditional
-        conditions:
-          - entity: input_select.hvac_mode
-            state: "cooling"
-        card:
-          type: entities
-          entities:
-            - climate.living_room_thermostat_cool
-      - type: conditional
-        conditions:
-          - entity: input_select.hvac_mode
-            state: "heating"
-        card:
-          type: entities
-          entities:
-            - climate.living_room_thermostat_heat
-      - type: media-control
-        entity: media_player.denon
-      - type: media-control
-        entity: media_player.living_room_speaker
-      - type: glance
-        entities:
-          - entity: light.aeotec_bathroom_light
-            name: Bathroom
-          - entity: light.aeotec_entry_light
-            name: Entry
+  - url: /local/my-custom name: Entry
           - entity: light.aeotec_kitchen_counter_light
             name: Counter
           - entity: light.closet_light
@@ -268,6 +143,12 @@ views:
     # Title of the view. Will be used as the tooltip for tab icon
     title: Settings
     cards:
+      - type: entities
+        name: Current Date & Time
+        entities:
+          - sensor.date
+          - sensor.weekday
+          - sensor.time
       - type: vertical-stack
         cards:
           - type: entities

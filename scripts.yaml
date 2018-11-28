@@ -17,11 +17,11 @@ makecoffee:
     - service: media_player.volume_set
       data:
         entity_id: media_player.living_room_speaker
-        volume_set: 0.8
+        volume_level: 0.8
     - service: media_player.volume_set
       data:
         entity_id: media_player.denon
-        volume_set: 0.5
+        volume_level: 0.5
 
 # routine for wakeup
 goodmorning:
@@ -56,15 +56,15 @@ goodmorning:
     - service: media_player.volume_set
       data:
         entity_id: media_player.living_room_speaker
-        volume_set: 0.8
+        volume_level: 0.8
     - service: media_player.volume_set
       data:
         entity_id: media_player.denon
-        volume_set: 0.7
+        volume_level: 0.7
     - service: media_player.volume_set
       data:
         entity_id: media_player.bedroom_speaker
-        volume_set: 0.8
+        volume_level: 0.8
     - service: notify.notify
       data:
         message: "Good Morning routine ran"
@@ -149,7 +149,7 @@ bedtime:
     - service: media_player.volume_set
       data:
         entity_id: media_player.bedroom_speaker
-        volume_set: 0.2
+        volume_level: 0.2
     - service: notify.notify
       data:
         message: "Bedtime for Camille"
@@ -184,11 +184,11 @@ getmellowed:
     - service: media_player.volume_set
       data:
         entity_id: media_player.living_room_speaker
-        volume_set: 0.3
+        volume_level: 0.3
     - service: media_player.volume_set
       data:
         entity_id: media_player.denon
-        volume_set: 0.3
+        volume_level: 0.3
     - service: notify.notify
       data:
         message: "Getting mellowed routine ran"
@@ -225,11 +225,11 @@ goodnight:
     - service: media_player.volume_set
       data:
         entity_id: media_player.living_room_speaker
-        volume_set: 0.3
+        volume_level: 0.3
     - service: media_player.volume_set
       data:
         entity_id: media_player.denon
-        volume_set: 0.3
+        volume_level: 0.3
     - service: media_player.media_stop
       data:
         entity_id: group.media

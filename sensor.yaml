@@ -104,6 +104,7 @@
     weekday:
       friendly_name: Weekday
       value_template: >-
-        {{ now().strftime("%A") }}
-      icon_template: 
+        {% set currentTime = strptime(states.sensor.date.state, "%Y-%m-%d") %}
+        {{ currentTime.strftime("%A") }}
+      icon_template:
         mdi:calendar

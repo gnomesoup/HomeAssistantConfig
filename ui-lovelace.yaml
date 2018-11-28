@@ -142,7 +142,19 @@ views:
 
   - title: Bedroom
     id: bedroom
-    theme: dark-mselect.hvac_mode
+    theme: dark-mode
+    cards:
+      - type: glance
+        title: Bedroom Status
+        entities:
+          - binary_sensor.aeotec_multisensor_sensor_bedroom
+          - sensor.bedroom_average_temperature
+          - sensor.aeotec_multisensor_temperature_bedroom
+          - sensor.aeotec_multisensor_relative_humidity_bedroom
+          - sensor.aeotec_multisensor_luminance_bedroom
+      - type: conditional
+        conditions:
+          - entity: input_select.hvac_mode
             state: "cooling"
         card:
           type: entities

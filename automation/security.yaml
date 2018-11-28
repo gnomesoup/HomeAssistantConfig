@@ -168,7 +168,7 @@
     - platform: state
       entity_id: sensor.time
   condition:
-    - platform: template
+    - condition: template
       value_template: >-
         {{ states.sensor.time.state == states.input_datetime.clean_end.state[0:5] and
           states.input_select.home_mode == "Cleaning" and

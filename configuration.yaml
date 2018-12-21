@@ -34,10 +34,9 @@ http:
   base_url: !secret http_url
   ssl_certificate: !secret http_certificate
   ssl_key: !secret http_key
-  api_password: !secret http_api_password
   trusted_networks:
-    - 10.0.0.32
-    - 38.88.49.10
+    - !secret trustedNetwork1
+    - !secret trustedNetwork2
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -72,7 +71,7 @@ sun:
 # weather with darksky
 weather:
   - platform: darksky
-    api_key: c978eaa37d82b4a0a2409bcf93e19f06
+    api_key: !secert darkskyApiKey
 
 
 # iOS app support
@@ -87,7 +86,7 @@ cloud:
 
 # MQTT
 mqtt:
-  broker: 192.168.40.237
+  broker: !secret trustedNetwork1
 
 # Arlo
 # arlo:

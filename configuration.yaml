@@ -71,7 +71,7 @@ sun:
 # weather with darksky
 weather:
   - platform: darksky
-    api_key: !secert darkskyApiKey
+    api_key: !secret darkskyApiKey
 
 
 # iOS app support

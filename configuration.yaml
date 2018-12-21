@@ -14,7 +14,6 @@ homeassistant:
   customize: !include customize.yaml
   auth_providers:
     - type: homeassistant
-    - type: legacy_api_password
     - type: trusted_networks
 
 # Show links to resources in log and frontend
@@ -86,7 +85,7 @@ cloud:
 
 # MQTT
 mqtt:
-  broker: !secret trustedNetwork1
+  broker: !secret mqttNetwork
 
 # Arlo
 # arlo:

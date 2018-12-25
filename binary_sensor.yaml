@@ -1,0 +1,17 @@
+- platform: template
+  sensors:
+    door_sensor_bedroom:
+      device_class: opening
+      friendly_name: "Bedroom Door Sensor"
+      value_template: >-
+        {{ states.sensor.linear_door_sensor_alarm_level_bedroom.state|float > 0 }}
+    door_sensor_front:
+      device_class: opening
+      friendly_name: "Front Door Sensor"
+      value_template: >-
+        {{ states.sensor.linear_door_sensor_alarm_level_front.state|float > 0 }}
+    door_sensor_patio:
+      device_class: patio
+      friendly_name: "Bedroom Door Sensor"
+      value_template: >-
+        {{ states.sensor.linear_door_sensor_alarm_level_patio.state|float > 0 }}

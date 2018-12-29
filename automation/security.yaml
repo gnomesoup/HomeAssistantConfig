@@ -66,19 +66,20 @@
 - id: time_test
   alias: Testing time trigger
   trigger:
-    - platform: template
-      value_template: >-
-        {{ states.sensor.time.state == states.input_datetime.time_test.state[0:5] }}
+    - platform: state
+      entity_id:
+        - sensor.time
   condition:
     - condition: template
-       value_template: >-
-         {{ states.input_select.test_day.state == states.sensor.weekday.state }}
+      value_template: >-
+        {{ states.input_select.test_day.state == states.sensor.weekday.state and
+          states.sensor.time.state == states.input_datetime.time_test.state[0:5] }}
   action:
     - service: input_boolean.toggle
       entity_id: input_boolean.testing
-    - service: notify.notify
-      data:
-        message: "Time test triggered"
+    # - service: notify.notify
+    #   data:
+    #     message: "Time test triggered"
 
 ####################################
 # cleaning mode turn on all lights #
@@ -88,14 +89,13 @@
 - id: setup_cleaning
   alias: Turn on cleaning mode
   trigger:
-    - platform: template
-      value_template: >-
-        {{ states.sensor.time.state == states.input_datetime.clean_start.state[0:5] }}
-  # TODO change to value template to check against input_select.clean_day
+    - platform: state
+      entity_id: sensor.time
   condition:
     - condition: template
       value_template: >-
-        {{ states.sensor.weekday.state == states.input_select.clean_day.state }}
+        {{ states.sensor.weekday.state == states.input_select.clean_day.state and
+          states.sensor.time.state == states.input_datetime.clean_start.state[0:5] }}
   action:
     - service: input_select.select_option
       data:
@@ -165,12 +165,14 @@
 - id: cleaner_no_show
   alias: Cleaner Didn't Show
   trigger:
-    - platform: template
-      value_template: "{{ states.sensor.time.state == states.input_datetime.clean_end.state[0:5] }}"
+    - platform: state
+      entity_id: sensor.time
   condition:
-    - condition: state
-      entity_id: input_select.home_mode
-      state: "Cleaning"
+    - condition: template
+      value_template: >-
+        {{ states.sensor.time.state == states.input_datetime.clean_end.state[0:5] and
+          states.input_select.home_mode == "Cleaning" and
+          states.input_boolean.cleaner_present == "off" }}
   action:
     - service: input_select.select_option
       data:

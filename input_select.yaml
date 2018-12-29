@@ -46,3 +46,11 @@ test_day:
     - "Saturday"
     - "Sunday"
   # initial: "Wednesday"
+
+mary_status:
+  name: "Mary's Status"
+  options:
+    - "Awake"
+    - "Asleep"
+    - "Bedtime Prep"
+    - "Alert"

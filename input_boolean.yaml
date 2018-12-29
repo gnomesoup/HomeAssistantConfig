@@ -36,3 +36,11 @@ humidity_low_alert:
 
 bedroom_motion_quiet_once:
   name: Bedroom Motion Toggle When Quiet
+
+mary_alert:
+  name: Mary's Alert
+  icon: mdi:account-alert
+
+mary_alert_suppress:
+  name: Silence Mary's Alert
+  icon: mdi:bell-off

@@ -186,7 +186,7 @@
 # sensor.linear_door_sensor_alarm_level_front
 # sensor.linear_door_sensor_alarm_level_patio
 - id: notify_bedroom_door
-  alais: Mary's Door Alert
+  alias: Mary's Door Alert
   trigger:
     - platform: template
       value_template: "{{ states.sensor.linear_door_sensor_alarm_level_bedroom.state|float > 0 }}"

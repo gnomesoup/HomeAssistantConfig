@@ -185,25 +185,25 @@
 # sensor.linear_door_sensor_alarm_level_bedroom
 # sensor.linear_door_sensor_alarm_level_front
 # sensor.linear_door_sensor_alarm_level_patio
-- id: notify_bedroom_door
-  alias: Mary's Door Alert
-  trigger:
-    - platform: template
-      value_template: "{{ states.sensor.linear_door_sensor_alarm_level_bedroom.state|float > 0 }}"
-  condition:
-    - condition: state
-      entity_id: input_select.mary_status
-      state: "Asleep"
-    - condition: state
-      entity_id: input_boolean.mary_alert_suppress
-      state: "off"
-  action:
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.mary_status
-        option: "Alert"
-    - service: input_boolean.toogle
-      entity_id: input_boolean.mary_alert
-    - service: notify.notify
-      data:
-        message: "Mary's door is open"
+# - id: notify_bedroom_door
+#   alias: Mary's Door Alert
+#   trigger:
+#     - platform: template
+#       value_template: "{{ states.sensor.linear_door_sensor_alarm_level_bedroom.state|float > 0 }}"
+#   condition:
+#     - condition: state
+#       entity_id: input_select.mary_status
+#       state: "Asleep"
+#     - condition: state
+#       entity_id: input_boolean.mary_alert_suppress
+#       state: "off"
+#   action:
+#     - service: input_select.select_option
+#       data:
+#         entity_id: input_select.mary_status
+#         option: "Alert"
+#     - service: input_boolean.toogle
+#       entity_id: input_boolean.mary_alert
+#     - service: notify.notify
+#       data:
+#         message: "Mary's door is open"

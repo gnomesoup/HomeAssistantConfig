@@ -103,9 +103,6 @@ ifttt:
 zwave:
   usb_path: /dev/ttyACM0
 
-tts:
-  - platform: google
-
 climate: !include climate.yaml
 switch: !include switch.yaml
 sensor: !include sensor.yaml

@@ -196,12 +196,14 @@
       entity_id: input_boolean.mary_alert_suppress
       state: "off"
   action:
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.mary_status
-        option: "Alert"
-    - service: input_boolean.turn_on
-      entity_id: input_boolean.mary_alert
+    # - service: input_select.select_option
+    #   data:
+    #     entity_id: input_select.mary_status
+    #     option: "Alert"
+    # - service: input_boolean.turn_on
+    #   entity_id: input_boolean.mary_alert
+    - service: script.turn_on
+      entity_id: script.maryalert
     - service: tts.google_say
       entity_id: media_player.bedroom_speaker
       data:
@@ -221,12 +223,14 @@
       entity_id: input_boolean.mary_alert_suppress
       state: "off"
   action:
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.mary_status
-        option: "Alert"
-    - service: input_boolean.turn_on
-      entity_id: input_boolean.mary_alert
+    # - service: input_select.select_option
+    #   data:
+    #     entity_id: input_select.mary_status
+    #     option: "Alert"
+    # - service: input_boolean.turn_on
+    #   entity_id: input_boolean.mary_alert
+    - service: script.turn_on
+      entity_id: script.maryalert
     - service: tts.google_say
       entity_id: media_player.bedroom_speaker
       data:

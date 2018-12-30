@@ -79,7 +79,7 @@ ios:
 # Text to speech
 tts:
   - platform: google
-    base_url: http://192.168.40.237:8123
+    base_url: https://192.168.40.237:8123
 
 # Cloud
 cloud:

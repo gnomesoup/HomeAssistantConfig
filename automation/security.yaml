@@ -189,7 +189,8 @@
   alias: Mary's Door Alert
   trigger:
     - platform: template
-      value_template: "{{ states.sensor.linear_door_sensor_alarm_level_bedroom.state|float > 0 }}"
+      value_template: >-
+        {{ states.sensor.linear_door_sensor_alarm_level_bedroom.state|float > 0 }}
   condition:
     - condition: state
       entity_id: input_select.mary_status
@@ -203,8 +204,7 @@
         entity_id: input_select.mary_status
         option: "Alert"
     - service: input_boolean.turn_on
-      data:
-        entity_id: input_boolean.mary_alert
+      entity_id: input_boolean.mary_alert
     - service: tts.google_say
       entity_id: media_player.bedroom_speaker
       data:
@@ -217,7 +217,8 @@
   alias: Front Door Alert
   trigger:
     - platform: template
-      value_template: "{{ states.sensor.linear_door_sensor_alarm_level_front.state|float > 0 }}"
+      value_template: >-
+        {{ states.sensor.linear_door_sensor_alarm_level_front.state|float > 0 }}
   condition:
     - condition: state
       entity_id: input_boolean.mary_alert_suppress
@@ -228,8 +229,7 @@
         entity_id: input_select.mary_status
         option: "Alert"
     - service: input_boolean.turn_on
-      data:
-        entity_id: input_boolean.mary_alert
+      entity_id: input_boolean.mary_alert
     - service: tts.google_say
       entity_id: media_player.bedroom_speaker
       data:

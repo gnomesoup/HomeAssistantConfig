@@ -2,11 +2,11 @@
 marydisarm:
   alias: Turn off Mary related alarms
   sequence:
-    - service: homeassistant.turn_off
+    - service: input_boolean.turn_off
       data:
         entity_id:
           - input_boolean.mary_alert
-    - service: homeassistant.turn_on
+    - service: input_boolean.turn_on
       data:
         entity_id:
           - input_boolean.mary_alert_suppress

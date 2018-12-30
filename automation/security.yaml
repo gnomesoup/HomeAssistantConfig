@@ -207,3 +207,14 @@
     - service: notify.notify
       data:
         message: "Mary's door is open"
+
+- id: notify_front_door
+  alias: Front Door Alert
+  trigger:
+    - platform: template
+      value_template: "{{ states.sensor.linear_door_sensor_alarm_level_front.state|float > 0 }}"
+  action:
+  - service: tts.google_say
+    entity_id: media_player.living_room_speaker
+    data:
+      message: "front door is open"

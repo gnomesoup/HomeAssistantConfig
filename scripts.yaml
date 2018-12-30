@@ -1,4 +1,16 @@
 #routine for early morning
+marydisarm:
+  alias: Turn off Mary related alarms
+  sequence:
+    - service: homeassistant.turn_off
+      data:
+        entity_id:
+          - input_boolean.mary_alert
+    - service: homeassistant.turn_on
+      data:
+        entity_id:
+          - input_boolean.mary_alert_suppress
+
 makecoffee:
   alias: Make the Coffee
   sequence:

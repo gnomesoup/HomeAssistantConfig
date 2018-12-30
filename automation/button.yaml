@@ -12,13 +12,13 @@
       data_template:
         entity_id: >
           {% set map = {1: "script.goodmorning",
-                        2: "script.goodmorning",
+                        2: "script.marydisarm",
                         3: "script.goodbye",
-                        4: "script.goodbye",
+                        4: "script.marydisarm,
                         5: "script.imback",
-                        6: "script.imback",
+                        6: "script.marydisarm",
                         7: "script.goodnight",
-                        8: "script.goodnight"} %}
+                        8: "script.marydisarm"} %}
           {{ map[trigger.event.data.scene_id|int] }}
 
 # bedroom minimote
@@ -35,14 +35,14 @@
     - service: homeassistant.toggle
       data_template:
         entity_id: >
-          {% set map = {1: "light.bedroom_canopy",
-                        2: "script.bedtime",
-                        3: "light.bedroom_closet",
-                        4: "script.bedtime",
-                        5: "light.bedroom_lamp",
-                        6: "script.goodnight",
-                        7: "light.camilles_desk_lamp",
-                        8: "script.goodnight"} %}
+          {% set map = {1: "script.goodmorning",
+                        2: "script.marydisarm",
+                        3: "script.goodbye",
+                        4: "script.marydisarm,
+                        5: "script.imback",
+                        6: "script.marydisarm",
+                        7: "script.goodnight",
+                        8: "script.marydisarm"} %}
           {{ map[trigger.event.data.scene_id|int] }}
 
 ## Camille's Minimote
@@ -68,4 +68,3 @@
                         7: "light.camilles_desk_lamp",
                         8: "script.bedtime"} %}
           {{ map[trigger.event.data.scene_id|int] }}
-

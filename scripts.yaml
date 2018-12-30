@@ -1,4 +1,42 @@
 #routine for early morning
+maryalert:
+  alias: Mary Alerts
+  sequence:
+    - service: light.toggle
+      data:
+        entity_id:
+          - light.bedroom_closet
+    - delay:
+        seconds: 1
+    - service: light.toggle
+      data:
+        entity_id:
+          - light.bedroom_closet
+    - delay:
+        seconds: 1
+    - service: light.toggle
+      data:
+        entity_id:
+          - light.bedroom_closet
+    - delay:
+        seconds: 1
+    - service: light.toggle
+      data:
+        entity_id:
+          - light.bedroom_closet
+    - delay:
+        seconds: 1
+    - service: light.toggle
+      data:
+        entity_id:
+          - light.bedroom_closet
+    - delay:
+        seconds: 1
+    - service: light.toggle
+      data:
+        entity_id:
+          - light.bedroom_closet
+
 marydisarm:
   alias: Turn off Mary related alarms
   sequence:

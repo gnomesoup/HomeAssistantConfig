@@ -5,71 +5,71 @@ maryalert:
     - service: light.toggle
       data:
         entity_id:
-          - light.bedroom_closet
-          - light.entry_light
+          - light.living_room_lamp
+          - light.metal_lamp
     - delay:
         seconds: 1
     - service: light.toggle
       data:
         entity_id:
-          - light.bedroom_closet
-          - light.entry_light
+          - light.living_room_lamp
+          - light.metal_lamp
     - delay:
         seconds: 1
     - service: light.toggle
       data:
         entity_id:
-          - light.bedroom_closet
-          - light.entry_light
+          - light.living_room_lamp
+          - light.metal_lamp
     - delay:
         seconds: 1
     - service: light.toggle
       data:
         entity_id:
-          - light.bedroom_closet
-          - light.entry_light
+          - light.living_room_lamp
+          - light.metal_lamp
     - delay:
         seconds: 1
     - service: light.toggle
       data:
         entity_id:
-          - light.bedroom_closet
-          - light.entry_light
+          - light.living_room_lamp
+          - light.metal_lamp
     - delay:
         seconds: 1
     - service: light.toggle
       data:
         entity_id:
-          - light.bedroom_closet
-          - light.entry_light
+          - light.living_room_lamp
+          - light.metal_lamp
     - delay:
         seconds: 1
     - service: light.toggle
       data:
         entity_id:
-          - light.bedroom_closet
-          - light.entry_light
+          - light.living_room_lamp
+          - light.metal_lamp
     - delay:
         seconds: 1
     - service: light.toggle
       data:
         entity_id:
-          - light.bedroom_closet
-          - light.entry_light
+          - light.living_room_lamp
+          - light.metal_lamp
     - delay:
         seconds: 1
     - service: light.toggle
       data:
         entity_id:
-          - light.bedroom_closet
-          - light.entry_light
+          - light.living_room_lamp
+          - light.metal_lamp
     - delay:
         seconds: 1
     - service: light.toggle
       data:
         entity_id:
-          - light.bedroom_closet
-          - light.entry_light
+          - light.living_room_lamp
+          - light.metal_lamp
 marydisarm:
   alias: Turn off Mary related alarms
   sequence:
@@ -89,8 +89,8 @@ makecoffee:
       data:
         brightness: 255
         entity_id:
-          - light.aeotec_entry_light
-          - light.pop_socket_light
+          - light.aeotec_metal_lamp
+          - light.christmas_tree_lights
           - light.aeotec_kitchen_counter_light
           - light.aeotec_bathroom_light
     - service: input_select.select_option
@@ -244,10 +244,8 @@ getmellowed:
     - service: light.turn_off
       data:
         entity_id:
-          - light.entry_light
-          - light.pop_socket_light
+          - light.christmas_tree_lights
           - light.metal_lamp
-          - light.closet_light
           - light.hallway_light
     - service: light.turn_on
       data:

@@ -24,10 +24,10 @@ Living Room:
     - sensor.living_room_average_temperature
     - sensor.aeotec_multisensor_relative_humidity_living_room
     - light.grandmas_lamp
-    - light.closet_light
+    - light.metal_lamp
     - light.hallway_light
     - light.metal_lamp
-    - light.pop_socket_light
+    - light.christmas_tree_lights
     - light.aeotec_entry_light
     - light.aeotec_kitchen_counter_light
     - light.aeotec_bathroom_light
@@ -42,7 +42,7 @@ Bedroom:
     - light.bedroom_canopy
     - light.bedroom_lamp
     - light.camilles_desk_lamp
-    - light.bedroom_closet
+    - light.living_room_lamp
     - sensor.bedroom_average_temperature
     # - climate.gocontrol_thermostat_bedroom_cooling
     # - climate.gocontrol_thermostat_bedroom_heating
@@ -58,14 +58,14 @@ Lights:
     - light.aeotec_entry_light
     - light.aeotec_kitchen_counter_light
     - light.bedroom_canopy
-    - light.bedroom_closet
+    - light.living_room_lamp
     - light.bedroom_lamp
     - light.camilles_desk_lamp
-    - light.closet_light
+    - light.metal_lamp
     - light.grandmas_lamp
     - light.hallway_light
     - light.metal_lamp
-    - light.pop_socket_light
+    - light.christmas_tree_lights
 
 Climate:
   view: yes
@@ -129,7 +129,7 @@ bedroomLights:
     - light.bedroom_canopy
     - light.bedroom_lamp
     - light.camilles_desk_lamp
-    - light.bedroom_closet
+    - light.living_room_lamp
 
 livingRoomLights:
   entities:
@@ -137,11 +137,11 @@ livingRoomLights:
     - light.aeotec_entry_light
     - light.aeotec_kitchen_counter_light
     - light.bedroom_canopy
-    - light.closet_light
+    - light.metal_lamp
     - light.grandmas_lamp
     - light.hallway_light
     - light.metal_lamp
-    - light.pop_socket_light
+    - light.christmas_tree_lights
 
 # Climate view
 livingRoomSensorClimate:

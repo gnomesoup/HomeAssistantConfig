@@ -61,7 +61,7 @@
         entity_id: >
           {% set map = {1: "light.bedroom_canopy",
                         2: "script.bedtime",
-                        3: "light.bedroom_closet",
+                        3: "light.living_room_lamp",
                         4: "script.bedtime",
                         5: "light.bedroom_lamp",
                         6: "script.bedtime",

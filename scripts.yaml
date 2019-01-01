@@ -85,6 +85,11 @@ maryarmdisarm:
 
 marydelay:
   alias: Delay front door alert
+  sequence:
+    - service: input_boolean.turn_on
+      data:
+        entity_id:
+          - input_boolean.mary_alert_suppress
 
 makecoffee:
   alias: Make the Coffee

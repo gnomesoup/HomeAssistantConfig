@@ -37,7 +37,7 @@
         entity_id: >
           {% set map = {1: "script.goodmorning",
                         2: "script.maryarmdisarm",
-                        3: "script.marymorning,
+                        3: "script.marymorning",
                         4: "script.maryarmdisarm",
                         5: "script.marybedtime",
                         6: "script.maryarmdisarm",

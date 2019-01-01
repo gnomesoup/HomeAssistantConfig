@@ -6,19 +6,19 @@
       event_type: zwave.scene_activated
       event_data:
         entity_id:
-          zwave.aeotec_minimote_door_1
+          zwave.aeotec_dsa03202_minimote
   action:
     - service: homeassistant.toggle
       data_template:
         entity_id: >
           {% set map = {1: "script.goodmorning",
-                        2: "script.marydisarm",
+                        2: "script.marydelay",
                         3: "script.goodbye",
-                        4: "script.marydisarm",
+                        4: "script.marydelay",
                         5: "script.imback",
-                        6: "script.marydisarm",
+                        6: "script.marydelay",
                         7: "script.goodnight",
-                        8: "script.marydisarm"} %}
+                        8: "script.maryarmdisarm"} %}
           {{ map[trigger.event.data.scene_id|int] }}
 
 # bedroom minimote
@@ -30,19 +30,19 @@
       event_type: zwave.scene_activated
       event_data:
         entity_id:
-          zwave.aeotec_minimote_bedroom_door
+          zwave.aeotec_dsa03202_minimote_2
   action:
     - service: homeassistant.toggle
       data_template:
         entity_id: >
           {% set map = {1: "script.goodmorning",
-                        2: "script.marydisarm",
+                        2: "script.maryarmdisarm",
                         3: "script.goodbye",
-                        4: "script.marydisarm",
+                        4: "script.maryarmdisarm",
                         5: "script.imback",
-                        6: "script.marydisarm",
+                        6: "script.maryarmdisarm",
                         7: "script.goodnight",
-                        8: "script.marydisarm"} %}
+                        8: "script.maryarmdisarm"} %}
           {{ map[trigger.event.data.scene_id|int] }}
 
 ## Camille's Minimote
@@ -61,10 +61,10 @@
         entity_id: >
           {% set map = {1: "light.bedroom_canopy",
                         2: "script.bedtime",
-                        3: "light.living_room_lamp",
+                        3: "light.grandmas_lamp",
                         4: "script.bedtime",
-                        5: "light.bedroom_lamp",
+                        5: "light.bedroom_canopy",
                         6: "script.bedtime",
-                        7: "light.camilles_desk_lamp",
+                        7: "light.grandmas_lamp",
                         8: "script.bedtime"} %}
           {{ map[trigger.event.data.scene_id|int] }}

@@ -247,4 +247,4 @@
       to: "on"
   action:
     - service: script.turn_on
-      entity_id: script.door_alert_delay
+      entity_id: script.reset_door_delay

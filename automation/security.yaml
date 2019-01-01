@@ -203,7 +203,7 @@
     # - service: input_boolean.turn_on
     #   entity_id: input_boolean.mary_alert
     - service: script.turn_on
-      entity_id: script.maryalert
+      entity_id: script.alert_lights_flash
     - service: tts.google_say
       entity_id: media_player.bedroom_speaker
       data:
@@ -223,14 +223,15 @@
       entity_id: input_boolean.door_alert_delay
       state: "off"
   action:
-    # - service: input_select.select_option
-    #   data:
-    #     entity_id: input_select.mary_status
-    #     option: "Alert"
-    # - service: input_boolean.turn_on
-    #   entity_id: input_boolean.mary_alert
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.mary_status
+        option: "Alert"
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.mary_alert
     - service: script.turn_on
-      entity_id: script.maryalert
+      entity_id: script.alert_lights_flash
+    - service: switch.turn_on
     - service: tts.google_say
       entity_id: media_player.bedroom_speaker
       data:
@@ -248,3 +249,15 @@
   action:
     - service: script.turn_on
       entity_id: script.reset_door_delay
+
+- id: alert_off
+  alias: Turn off alerts
+  trigger:
+    - platform: state
+      entity_id: input_boolean.mary_alert
+      to: "off"
+  action:
+    - service: homeassistant.turn_off
+      entity_id:
+        - script.alert_lights_flash
+        - switch.linear_siren_switch

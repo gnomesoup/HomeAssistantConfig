@@ -1,5 +1,5 @@
 #routine for early morning
-maryalert:
+alert_lights_flash:
   alias: Mary Alerts
   sequence:
     - service: light.toggle

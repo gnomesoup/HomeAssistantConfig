@@ -41,6 +41,6 @@ mary_alert:
   name: Mary's Alert
   icon: mdi:account-alert
 
-mary_alert_suppress:
-  name: Silence Mary's Alert
+door_alert_delay:
+  name: Door Alert Delay
   icon: mdi:bell-off

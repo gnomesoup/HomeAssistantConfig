@@ -81,15 +81,25 @@ maryarmdisarm:
     - service: input_boolean.turn_on
       data:
         entity_id:
-          - input_boolean.mary_alert_suppress
+          - input_boolean.door_alert_delay
 
-marydelay:
+dooralertdelay:
   alias: Delay front door alert
   sequence:
     - service: input_boolean.turn_on
       data:
         entity_id:
-          - input_boolean.mary_alert_suppress
+          - input_boolean.door_alert_delay
+
+reset_door_delay:
+  alias: Reset the door delay
+  sequence:
+    - delay:
+        seconds: 15
+    - service: input_boolean.turn_off
+      data:
+        entity_id:
+          - input_boolean.door_alert_delay
 
 makecoffee:
   alias: Make the Coffee

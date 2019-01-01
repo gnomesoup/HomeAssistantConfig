@@ -12,11 +12,11 @@
       data_template:
         entity_id: >
           {% set map = {1: "script.goodmorning",
-                        2: "script.marydelay",
+                        2: "script.dooralertdelay",
                         3: "script.goodbye",
-                        4: "script.marydelay",
+                        4: "script.dooralertdelay",
                         5: "script.imback",
-                        6: "script.marydelay",
+                        6: "script.dooralertdelay",
                         7: "script.goodnight",
                         8: "script.maryarmdisarm"} %}
           {{ map[trigger.event.data.scene_id|int] }}

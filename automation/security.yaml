@@ -193,7 +193,7 @@
       entity_id: input_select.mary_status
       state: "Asleep"
     - condition: state
-      entity_id: input_boolean.mary_alert_suppress
+      entity_id: input_boolean.door_alert_suppress
       state: "off"
   action:
     # - service: input_select.select_option
@@ -220,7 +220,7 @@
         {{ states.sensor.linear_door_sensor_alarm_level_front.state|float > 0 }}
   condition:
     - condition: state
-      entity_id: input_boolean.mary_alert_suppress
+      entity_id: input_boolean.door_alert_delay
       state: "off"
   action:
     # - service: input_select.select_option
@@ -238,3 +238,13 @@
     - service: notify.notify
       data:
         message: "The front door is open"
+
+- id: reset_door_delay
+  alias: Door Delay Reset
+  trigger:
+    - platform: state
+      entity_id: input_boolean.door_alert_delay
+      to: "on"
+  action:
+    - service: script.turn_on
+      entity_id: script.door_alert_delay

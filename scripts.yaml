@@ -83,6 +83,19 @@ maryarmdisarm:
         entity_id:
           - input_boolean.door_alert_delay
 
+trigger_alarm:
+  alais: Trigger alarm after delay
+  sequence:
+    - service: notify.notify
+      data:
+        message: "Alarm will sound in 15 seconds"
+    - delay:
+        seconds: 15
+    - service: homeassistant.turn_on
+        entity_id:
+          - switch.linear_siren_switch
+          - switch.alert_lights_flash
+
 ## Mary's Scripts
 goodmorning_mary:
   alias: Goodmorning Mary

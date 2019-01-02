@@ -232,10 +232,8 @@
         option: "Alert"
     - service: input_boolean.turn_on
       entity_id: input_boolean.mary_alert
-    - service: switch.turn_on
-      entity_id: switch.linear_siren_switch
-    - service: script.turn_on
-      entity_id: script.alert_lights_flash
+    - service: homeassistant.turn_on
+      entity_id: script.trigger_alarm
     - service: tts.google_say
       entity_id: media_player.bedroom_speaker
       data:
@@ -253,6 +251,11 @@
   action:
     - service: script.turn_on
       entity_id: script.reset_door_delay
+    - service: homeassistant.turn_off
+      entity_id:
+        - script.trigger_alarm
+        - script.alert_lights_flash
+        - switch.linear_siren_switch
 
 - id: alert_off
   alias: Turn off alerts
@@ -263,5 +266,6 @@
   action:
     - service: homeassistant.turn_off
       entity_id:
+        - script.trigger_alarm
         - script.alert_lights_flash
         - switch.linear_siren_switch

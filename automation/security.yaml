@@ -222,6 +222,9 @@
     - condition: state
       entity_id: input_boolean.door_alert_delay
       state: "off"
+    - condition: state
+      entity_id: input_select.mary_status
+      state: "Asleep"
   action:
     - service: input_select.select_option
       data:

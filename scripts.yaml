@@ -90,11 +90,7 @@ goodmorning_mary:
     - service: input_select.select_option
       data:
         entity_id: input_select.mary_status
-        option: "Asleep"
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.home_mode
-        option: "Quiet"
+        option: "Awake"
 
 goodnight_mary:
   alias: Goodnight Mary
@@ -102,7 +98,7 @@ goodnight_mary:
     - service: input_select.select_option
       data:
         entity_id: input_select.mary_status
-        option: "Awake"
+        option: "Asleep"
     - service: input_select.select_option
       data:
         entity_id: input_select.home_mode

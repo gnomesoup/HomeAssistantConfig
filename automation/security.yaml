@@ -229,9 +229,10 @@
         option: "Alert"
     - service: input_boolean.turn_on
       entity_id: input_boolean.mary_alert
+    - service: switch.turn_on
+      entity_id: switch.linear_siren_switch
     - service: script.turn_on
       entity_id: script.alert_lights_flash
-    - service: switch.turn_on
     - service: tts.google_say
       entity_id: media_player.bedroom_speaker
       data:

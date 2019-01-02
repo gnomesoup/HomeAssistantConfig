@@ -92,6 +92,7 @@ trigger_alarm:
     - delay:
         seconds: 15
     - service: homeassistant.turn_on
+      data:
         entity_id:
           - switch.linear_siren_switch
           - switch.alert_lights_flash

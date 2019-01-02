@@ -84,7 +84,7 @@ maryarmdisarm:
           - input_boolean.door_alert_delay
 
 trigger_alarm:
-  alais: Trigger alarm after delay
+  alias: Trigger alarm after delay
   sequence:
     - service: notify.notify
       data:

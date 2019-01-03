@@ -200,9 +200,9 @@
 - id: notify_bedroom_door
   alias: Mary's Door Alert
   trigger:
-    - platform: template
-      value_template: >-
-        {{ states("binary_sensor.door_sensor_bedroom")|float > 0 }}
+    - platform: state
+      entity_id: binary_sensor.door_sensor_bedroom
+      to: "off"
   condition:
     - condition: state
       entity_id: input_select.mary_status

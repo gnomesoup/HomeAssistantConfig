@@ -8,63 +8,21 @@ alert_lights_flash:
           - light.living_room_lamp
           - light.metal_lamp
     - delay:
-        seconds: 1
+        seconds: 3
     - service: light.toggle
       data:
         entity_id:
           - light.living_room_lamp
           - light.metal_lamp
     - delay:
-        seconds: 1
+        seconds: 3
     - service: light.toggle
       data:
         entity_id:
           - light.living_room_lamp
           - light.metal_lamp
     - delay:
-        seconds: 1
-    - service: light.toggle
-      data:
-        entity_id:
-          - light.living_room_lamp
-          - light.metal_lamp
-    - delay:
-        seconds: 1
-    - service: light.toggle
-      data:
-        entity_id:
-          - light.living_room_lamp
-          - light.metal_lamp
-    - delay:
-        seconds: 1
-    - service: light.toggle
-      data:
-        entity_id:
-          - light.living_room_lamp
-          - light.metal_lamp
-    - delay:
-        seconds: 1
-    - service: light.toggle
-      data:
-        entity_id:
-          - light.living_room_lamp
-          - light.metal_lamp
-    - delay:
-        seconds: 1
-    - service: light.toggle
-      data:
-        entity_id:
-          - light.living_room_lamp
-          - light.metal_lamp
-    - delay:
-        seconds: 1
-    - service: light.toggle
-      data:
-        entity_id:
-          - light.living_room_lamp
-          - light.metal_lamp
-    - delay:
-        seconds: 1
+        seconds: 3
     - service: light.toggle
       data:
         entity_id:
@@ -165,13 +123,13 @@ goodmorning:
     - service: light.turn_on
       data:
         entity_id:
-          - light.bedroom_canopy
-          - light.grandmas_lamp
-          - light.living_room_lamp
-          - light.christmas_tree_lights
+          # - light.bedroom_canopy
+          # - light.grandmas_lamp
+          # - light.living_room_lamp
+          # - light.christmas_tree_lights
           - light.bedroom_lamp
           - light.metal_lamp
-          - light.secretary_light
+          # - light.secretary_light
         brightness: 255
     # - service: climate.set_fan_mode
     #   entity_id:
@@ -365,28 +323,29 @@ goodnight:
     - service: light.turn_off
       data:
         entity_id:
-          - group.lights
-    - service: climate.set_fan_mode
-      entity_id:
-        - climate.gocontrol_thermostat_living_room_cooling_setpoint
-        - climate.gocontrol_thermostat_living_room_heating_setpoint
-      data:
-        fan_mode: "Auto Low"
-    - service: climate.set_fan_mode
-      entity_id:
-        - climate.gocontrol_thermostat_bedroom_cooling
-        - climate.gocontrol_thermostat_bedroom_heating
-      data_template:
-        fan_mode: >-
-          {% if is_state("input_select.hvac_mode", "cooling") %}
-            On Low
-          {% else %}
-            Auto Low
-          {% endif %}
-    - service: input_select.select_option
-      data:
-        entity_id: input_select.home_mode
-        option: "Sleep"
+          - light.bedroom_lamp
+          - light.metal_lamp
+    # - service: climate.set_fan_mode
+    #   entity_id:
+    #     - climate.gocontrol_thermostat_living_room_cooling_setpoint
+    #     - climate.gocontrol_thermostat_living_room_heating_setpoint
+    #   data:
+    #     fan_mode: "Auto Low"
+    # - service: climate.set_fan_mode
+    #   entity_id:
+    #     - climate.gocontrol_thermostat_bedroom_cooling
+    #     - climate.gocontrol_thermostat_bedroom_heating
+    #   data_template:
+    #     fan_mode: >-
+    #       {% if is_state("input_select.hvac_mode", "cooling") %}
+    #         On Low
+    #       {% else %}
+    #         Auto Low
+    #       {% endif %}
+    # - service: input_select.select_option
+    #   data:
+    #     entity_id: input_select.home_mode
+    #     option: "Sleep"
     - service: media_player.volume_set
       data:
         entity_id: media_player.living_room_speaker

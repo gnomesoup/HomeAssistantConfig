@@ -196,12 +196,12 @@
       entity_id: input_boolean.door_alert_suppress
       state: "off"
   action:
-    # - service: input_select.select_option
-    #   data:
-    #     entity_id: input_select.mary_status
-    #     option: "Alert"
-    # - service: input_boolean.turn_on
-    #   entity_id: input_boolean.mary_alert
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.mary_status
+        option: "Alert"
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.mary_alert
     - service: script.turn_on
       entity_id: script.alert_lights_flash
     - service: tts.google_say
@@ -212,7 +212,9 @@
       data:
         message: "Mary's door is open"
 
-- id: notify_front_door
+# - id: notify_front_door_day
+
+- id: notify_front_door_night
   alias: Front Door Alert
   trigger:
     - platform: template

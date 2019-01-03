@@ -182,6 +182,21 @@
       data:
         message: "The cleaner never showed"
 
+- id: notify_bedroom_door_day
+  Alais: Mary's Door Alert Daytime
+  trigger:
+    - platform: state
+      entity_id: sensor.linear_door_sensor_alarm_level_bedroom
+  condition:
+    - condition: template
+      value_template: >-
+        {{ states("input_select.mary_status") != "Asleep" }}
+  action:
+    service: notify.notify
+    data:
+      message: "Mary's Door"
+
+
 - id: notify_bedroom_door
   alias: Mary's Door Alert
   trigger:
@@ -204,16 +219,16 @@
       entity_id: input_boolean.mary_alert
     - service: script.turn_on
       entity_id: script.alert_lights_flash
-    - service: media_player.play_media
-      data:
-        entity_id: media_player.bedroom_speaker
-        media_content_id: "http://www.downloadfreesound.com/wp-content/uploads/2014/07/Beep_7.mp3"
-        media_content_type: "music"
-    - service: media_player.play_media
-      data:
-        entity_id: media_player.bedroom_speaker
-        media_content_id: "http://www.downloadfreesound.com/wp-content/uploads/2014/07/Beep_7.mp3"
-        media_content_type: "music"
+    # - service: media_player.play_media
+    #   data:
+    #     entity_id: media_player.bedroom_speaker
+    #     media_content_id: "http://www.downloadfreesound.com/wp-content/uploads/2014/07/Beep_7.mp3"
+    #     media_content_type: "music"
+    # - service: media_player.play_media
+    #   data:
+    #     entity_id: media_player.bedroom_speaker
+    #     media_content_id: "http://www.downloadfreesound.com/wp-content/uploads/2014/07/Beep_7.mp3"
+    #     media_content_type: "music"
     - service: notify.notify
       data:
         message: "Mary's door is open"

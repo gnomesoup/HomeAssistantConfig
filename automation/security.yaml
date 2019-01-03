@@ -183,7 +183,7 @@
         message: "The cleaner never showed"
 
 - id: notify_bedroom_door_day
-  Alais: Mary's Door Alert Daytime
+  alias: Mary's Door Alert Daytime
   trigger:
     - platform: state
       entity_id: sensor.linear_door_sensor_alarm_level_bedroom

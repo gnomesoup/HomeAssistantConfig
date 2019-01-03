@@ -204,10 +204,16 @@
       entity_id: input_boolean.mary_alert
     - service: script.turn_on
       entity_id: script.alert_lights_flash
-    - service: tts.google_say
-      entity_id: media_player.bedroom_speaker
+    - service: media_player.play_media
       data:
-        message: "mary's door is open"
+        entity_id: media_player.bedroom_speaker
+        media_content_id: "http://www.downloadfreesound.com/wp-content/uploads/2014/07/Beep_7.mp3"
+        media_content_type: "music"
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.bedroom_speaker
+        media_content_id: "http://www.downloadfreesound.com/wp-content/uploads/2014/07/Beep_7.mp3"
+        media_content_type: "music"
     - service: notify.notify
       data:
         message: "Mary's door is open"
@@ -236,10 +242,16 @@
       entity_id: input_boolean.mary_alert
     - service: homeassistant.turn_on
       entity_id: script.trigger_alarm
-    - service: tts.google_say
-      entity_id: media_player.bedroom_speaker
+    - service: media_player.play_media
       data:
-        message: "front door is open"
+        entity_id: media_player.bedroom_speaker
+        media_content_id: "http://www.downloadfreesound.com/wp-content/uploads/2014/07/Beep_7.mp3"
+        media_content_type: "music"
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.bedroom_speaker
+        media_content_id: "http://www.downloadfreesound.com/wp-content/uploads/2014/07/Beep_7.mp3"
+        media_content_type: "music"
     - service: notify.notify
       data:
         message: "The front door is open"

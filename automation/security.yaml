@@ -207,9 +207,9 @@
     - condition: state
       entity_id: input_select.mary_status
       state: "Asleep"
-    - condition: state
-      entity_id: input_boolean.door_alert_suppress
-      state: "off"
+    # - condition: state
+    #   entity_id: input_boolean.door_alert_suppress
+    #   state: "off"
   action:
     - service: input_select.select_option
       data:

@@ -39,9 +39,9 @@
                         2: "script.maryarmdisarm",
                         3: "script.goodnight",
                         4: "script.maryarmdisarm",
-                        5: "script.goodmorningmary",
+                        5: "script.goodmorning_mary",
                         6: "script.maryarmdisarm",
-                        7: "script.marybedtime",
+                        7: "script.goodnight_mary",
                         8: "script.maryarmdisarm"} %}
           {{ map[trigger.event.data.scene_id|int] }}
 

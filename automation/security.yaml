@@ -187,8 +187,9 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.door_sensor_patio
+      to: "on"
   condition:
-    - condition: template
+    - condition: state
       value_template: >-
         {{ states("input_select.mary_status") != "Asleep" }}
   action:

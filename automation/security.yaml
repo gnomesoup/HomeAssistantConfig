@@ -191,7 +191,7 @@
   condition:
     - condition: state
       value_template: >-
-        {{ states("input_select.mary_status") != "Asleep" }}
+        {{ states("input_select.mary_status") == "Asleep" }}
   action:
     - service: media_player.play_media
       data:

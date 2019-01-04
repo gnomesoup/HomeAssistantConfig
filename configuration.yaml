@@ -108,6 +108,9 @@ zwave:
 
 media_player:
   - platform: directv
+    host: 192.168.40.175
+    name: DirecTV Box
+    device: 0
 
 climate: !include climate.yaml
 switch: !include switch.yaml

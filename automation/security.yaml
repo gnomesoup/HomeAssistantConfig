@@ -182,20 +182,36 @@
       data:
         message: "The cleaner never showed"
 
-- id: notify_bedroom_door_day
-  alias: Mary's Door Alert Daytime
+- id: notify_patio_door
+  alias: Patio Door Alert
   trigger:
     - platform: state
-      entity_id: sensor.linear_door_sensor_alarm_level_bedroom
+      entity_id: binary_sensor.door_sensor_patio
   condition:
     - condition: template
       value_template: >-
         {{ states("input_select.mary_status") != "Asleep" }}
   action:
-    service: notify.notify
-    data:
-      message: "Mary's Door"
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.living_room_display
+        media_content_id: "http://www.downloadfreesound.com/wp-content/uploads/2014/07/Beep_7.mp3"
+        media_content_type: "music"
 
+
+- id: notify_bedroom_door_day
+  alias: Mary's Door Alert Daytime
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.door_sensor_bedroom
+  condition:
+    - condition: template
+      value_template: >-
+        {{ states("input_select.mary_status") != "Asleep" }}
+  action:
+    - service: notify.notify
+      data:
+        message: "Mary's Door"
 
 - id: notify_bedroom_door
   alias: Mary's Door Alert
@@ -207,9 +223,9 @@
     - condition: state
       entity_id: input_select.mary_status
       state: "Asleep"
-    # - condition: state
-    #   entity_id: input_boolean.door_alert_suppress
-    #   state: "off"
+    - condition: state
+      entity_id: input_boolean.door_alert_suppress
+      state: "off"
   action:
     - service: input_select.select_option
       data:

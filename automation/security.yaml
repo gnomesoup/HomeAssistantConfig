@@ -189,16 +189,20 @@
       entity_id: binary_sensor.door_sensor_patio
       to: "on"
   condition:
-    - condition: template
-      value_template: >-
-        {{ states("input_select.mary_status") == "Asleep" }}
+    - condition: state
+      entity_id: input_boolean.door_alert_suppress
   action:
     - service: media_player.play_media
       data:
-        entity_id: media_player.living_room_display
+        entity_id:
+          - media_player.living_room_display
+          - media_player.bedroom_speaker
         media_content_id: "http://www.downloadfreesound.com/wp-content/uploads/2014/07/Beep_7.mp3"
         media_content_type: "music"
-
+    - service: notify.notify
+      data:
+        title: Door Alert
+        message: "Patio door"
 
 - id: notify_bedroom_door_day
   alias: Mary's Door Alert Daytime
@@ -238,7 +242,7 @@
       entity_id: script.alert_lights_flash
     - service: media_player.play_media
       data:
-        entity_id: media_player.bedroom_speaker
+        entity_id: media_player.living_room_display
         media_content_id: "http://www.downloadfreesound.com/wp-content/uploads/2014/07/Beep_7.mp3"
         media_content_type: "music"
     # - service: media_player.play_media
@@ -246,9 +250,9 @@
     #     entity_id: media_player.bedroom_speaker
     #     media_content_id: "http://www.downloadfreesound.com/wp-content/uploads/2014/07/Beep_7.mp3"
     #     media_content_type: "music"
-    - service: notify.notify
-      data:
-        message: "Mary's door is open"
+    # - service: notify.notify
+    #   data:
+    #     message: "Mary's door is open"
 
 # - id: notify_front_door_day
 

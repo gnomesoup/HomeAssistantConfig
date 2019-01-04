@@ -262,10 +262,12 @@
   condition:
     - condition: template
       value_template: >-
-        {{ states("input_select.mary_status") != "Asleep" }}
+        {{ states("input_select.mary_status") == "Home" and
+           states("input_boolean.door_alert_delay") == "off"}}
   action:
     - service: notify.notify
       data:
+        title: "Door Alert"
         message: "Front Door"
 
 - id: notify_front_door_night

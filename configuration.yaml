@@ -106,6 +106,9 @@ ifttt:
 zwave:
   usb_path: /dev/ttyACM0
 
+media_player:
+  - platform: directv
+
 climate: !include climate.yaml
 switch: !include switch.yaml
 sensor: !include sensor.yaml

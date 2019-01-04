@@ -47,10 +47,30 @@ test_day:
     - "Sunday"
   # initial: "Wednesday"
 
+angela_status:
+  name: "Angela's Status"
+  options:
+    - "Home"
+    - "Asleep"
+    - "Away"
+
+camille_status:
+  name: "Camille's Status"
+  options:
+    - "Home"
+    - "Asleep"
+    - "Away"
+
 mary_status:
   name: "Mary's Status"
   options:
-    - "Awake"
+    - "Home"
     - "Asleep"
-    - "Bedtime Prep"
-    - "Alert"
+    - "Away"
+
+michael_status:
+  name: "Michael's Status"
+  options:
+    - "Home"
+    - "Asleep"
+    - "Away"

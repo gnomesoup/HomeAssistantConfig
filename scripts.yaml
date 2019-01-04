@@ -62,7 +62,7 @@ goodmorning_mary:
     - service: input_select.select_option
       data:
         entity_id: input_select.mary_status
-        option: "Awake"
+        option: "Home"
 
 goodnight_mary:
   alias: Goodnight Mary

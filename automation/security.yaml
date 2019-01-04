@@ -191,6 +191,7 @@
   condition:
     - condition: state
       entity_id: input_boolean.door_alert_suppress
+      state: "off"
   action:
     - service: media_player.play_media
       data:

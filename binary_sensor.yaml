@@ -15,3 +15,5 @@
       friendly_name: "Patio Door Sensor"
       value_template: >-
         {{ states.sensor.linear_door_sensor_alarm_level_patio.state|float > 0 }}
+
+- platform: flic

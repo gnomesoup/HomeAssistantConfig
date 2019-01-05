@@ -31,7 +31,7 @@
   retain: true
 
 - platform: mqtt
-  name: "Camille's Desk Lamp"
+  name: "Accordian Lamp"
   state_topic: "smartthings/Camille's Desk Lamp/switch"
   command_topic: "smartthings/Camille's Desk Lamp/switch"
   brightness_state_topic: "smartthings/Camille's Desk Lamp/level"

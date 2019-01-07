@@ -57,13 +57,13 @@ trigger_alarm:
 
 
 # routine for angela's bedtime
-goodmorning_angela:
-  alias: Goodmorning Angela
-  sequence:
-    - sevice: light.turn_on
-      data:
-        entity_id:
-          - group.light_master_bedroom
+# goodmorning_angela:
+#   alias: Goodmorning Angela
+#   sequence:
+#     - sevice: light.turn_on
+#       data:
+#         entity_id:
+#           - group.light_master_bedroom
 
 # routine for camille's bedtime
 goodmorning_camille:

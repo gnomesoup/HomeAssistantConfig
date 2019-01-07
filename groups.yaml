@@ -1,43 +1,17 @@
 ## Views
-default_view:
-  view: yes
-  name: Home
-  entities:
-    - device_tracker.ergisch
-    - device_tracker.angelapfammattersiphone
-    - sun.sun
-    - sensor.all_rooms_temperature
-    - sensor.all_rooms_humidity
-    - script.makethecoffee
-    - script.goodmorning
-    - script.goodbye
-    - script.imback
-    - script.goodnightcamille
-    - script.getmellowed
-    - script.bedtime
-    - group.homeStatus
-    - media_player.denon
-    - weather.dark_sky
-Living Room:
-  view: yes
+living_room:
   entities:
     - sensor.living_room_average_temperature
     - sensor.aeotec_multisensor_relative_humidity_living_room
-    - light.grandmas_lamp
-    - light.metal_lamp
-    - light.hallway_light
-    - light.metal_lamp
     - light.christmas_tree_lights
-    - light.aeotec_entry_light
-    - light.aeotec_kitchen_counter_light
-    - light.aeotec_bathroom_light
-    - group.livingRoomSensorClimate
+    # - light.aeotec_entry_light
+    # - light.aeotec_kitchen_counter_light
+    # - light.aeotec_bathroom_light
     - media_player.living_room_speaker
     - media_player.denon
     # - climate.living_room_thermostat_cool
     # - climate.living_room_thermostat_heat
-Bedroom:
-  view: yes
+master_bedroom:
   entities:
     - light.bedroom_canopy
     - light.bedroom_lamp
@@ -52,7 +26,6 @@ Bedroom:
     # - climate.bedroom_thermostat_heat
 
 Lights:
-  view: yes
   entities:
     - light.aeotec_bathroom_light
     - light.aeotec_entry_light

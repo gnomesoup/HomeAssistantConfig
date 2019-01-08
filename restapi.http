@@ -43,3 +43,8 @@ Content-Type: application/json
 GET :hass-url/api/dev-info
 Authorization: Bearer :hass-token
 Content-Type: application/json
+
+# entity state
+GET :hass-url/api/states/binary_sensor.linear_wapirz1_motion_sensor_sensor
+Authorization: Bearer :hass-token
+Content-Type: application/json

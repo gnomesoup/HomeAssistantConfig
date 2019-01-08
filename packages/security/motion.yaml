@@ -1,0 +1,15 @@
+binary_sensor:
+  - platform: template
+    sensors:
+      motion_mary_bedroom:
+        device_class: motion
+        friendly_name: "Mary's Bedroom Motion Sensor"
+        value_template: >-
+          {{ states("binary_sensor.linear_wapirz1_motion_sensor_sensor_2")|float > 0 }}
+  - platform: template
+    sensors:
+      motion_mary_bedroom:
+        device_class: motion
+        friendly_name: "Mary's Bedroom Motion Sensor"
+        value_template: >-
+          {{ states("binary_sensor.linear_wapirz1_motion_sensor_sensor")|float > 0 }}

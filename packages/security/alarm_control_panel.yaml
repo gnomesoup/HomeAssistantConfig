@@ -34,7 +34,6 @@ automation:
           title: "Test Alarm"
           message: "Triggered"
 
-
   - id: alarm_control_panel_disarm
     alias: Alarm Control Panel Disarm
     trigger:
@@ -48,3 +47,14 @@ automation:
         data:
           title: "Test Alarm"
           message: "Disarmed"
+
+  - id: alarm_contry_panel_notify_state
+    alais: Alarm Control Panel
+    trigger:
+      - platform: state
+        entity_id: alarm_control_panel.home_alarm
+    action:
+      - service: notify.ios_ergisch
+        data:
+          title: "Test Alarm"
+          message: "Home set to {{ states(alarm_control_panel.home_alarm) }}"

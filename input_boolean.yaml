@@ -44,3 +44,4 @@ mary_alert:
 door_alert_delay:
   name: Door Alert Delay
   icon: mdi:bell-off
+  initial: off

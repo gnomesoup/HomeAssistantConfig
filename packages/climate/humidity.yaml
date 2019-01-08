@@ -1,0 +1,9 @@
+- platform: template
+  sensors:
+    whole_house_humidity:
+      friendly_name: Average Humidity
+      value_template: >-
+        {{ ((states("sensor.aeotec_dsb05_multisensor_relative_humidity")|float +
+             states("sensor.aeotec_zw100_multisensor_6_relative_humidity")|float) / 2)|round(1)
+             }}
+      unit_of_measurement: "%"

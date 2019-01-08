@@ -40,6 +40,6 @@ Authorization: Bearer :hass-token
 Content-Type: application/json
 
 # humidity power sensor state
-GET :hass-url/api/states/sensor.aeotec_humidifier_bedroom_power
+GET :hass-url/api/dev-info
 Authorization: Bearer :hass-token
 Content-Type: application/json

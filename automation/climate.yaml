@@ -1,286 +1,286 @@
 # set temperatures on presence
 # TODO don't change states if not needed
-- id: climate_set_temperatures_cooling
-  alias: Set cooling temperature based on presence
-  trigger:
-    # - platform: homeassistant
-    #   event: start
-    - platform: state
-      entity_id: input_select.presence
-    - platform: state
-      entity_id: input_select.home_mode
-  condition:
-    condition: state
-    entity_id: input_select.hvac_mode
-    state: "cooling"
-  action:
-    - service: climate.set_temperature
-      entity_id: climate.living_room_thermostat_cool
-      data_template:
-        temperature: >-
-          {% if is_state('input_select.presence', 'Home') %}
-            {% if is_state('input_select.home_mode', 'Sleep') %}
-              {{ states.input_number.cool_away_living_room_asleep.state }}
-            {% else %}
-              {{ states.input_number.cool_home_living_room_awake.state }}
-            {% endif %}
-          {% else %}
-            {{ states.input_number.cool_away_living_room_away.state }}
-          {% endif %}
-    - service: climate.set_temperature
-      entity_id: climate.bedroom_thermostat_cool
-      data_template:
-        temperature: >-
-          {% if is_state('input_select.presence', 'Home') %}
-            {% if is_state('input_select.home_mode', 'Quiet') %}
-              {{ states.input_number.cool_home_bedroom_asleep.state }}
-            {% elif is_state('input_select.home_mode', 'Sleep') %}
-              {{ states.input_number.cool_home_bedroom_asleep.state }}
-            {% else %}
-              {{ states.input_number.cool_home_bedroom_awake.state }}
-            {% endif %}
-          {% else %}
-            {{ states.input_number.cool_away_bedroom_away.state }}
-          {% endif %}
+# - id: climate_set_temperatures_cooling
+#   alias: Set cooling temperature based on presence
+#   trigger:
+#     # - platform: homeassistant
+#     #   event: start
+#     - platform: state
+#       entity_id: input_select.presence
+#     - platform: state
+#       entity_id: input_select.home_mode
+#   condition:
+#     condition: state
+#     entity_id: input_select.hvac_mode
+#     state: "cooling"
+#   action:
+#     - service: climate.set_temperature
+#       entity_id: climate.living_room_thermostat_cool
+#       data_template:
+#         temperature: >-
+#           {% if is_state('input_select.presence', 'Home') %}
+#             {% if is_state('input_select.home_mode', 'Sleep') %}
+#               {{ states.input_number.cool_away_living_room_asleep.state }}
+#             {% else %}
+#               {{ states.input_number.cool_home_living_room_awake.state }}
+#             {% endif %}
+#           {% else %}
+#             {{ states.input_number.cool_away_living_room_away.state }}
+#           {% endif %}
+#     - service: climate.set_temperature
+#       entity_id: climate.bedroom_thermostat_cool
+#       data_template:
+#         temperature: >-
+#           {% if is_state('input_select.presence', 'Home') %}
+#             {% if is_state('input_select.home_mode', 'Quiet') %}
+#               {{ states.input_number.cool_home_bedroom_asleep.state }}
+#             {% elif is_state('input_select.home_mode', 'Sleep') %}
+#               {{ states.input_number.cool_home_bedroom_asleep.state }}
+#             {% else %}
+#               {{ states.input_number.cool_home_bedroom_awake.state }}
+#             {% endif %}
+#           {% else %}
+#             {{ states.input_number.cool_away_bedroom_away.state }}
+#           {% endif %}
 
-- id: climate_set_temperatures_heating
-  alias: Set heating temperature based on presence
-  trigger:
-    - platform: state
-      entity_id: input_select.presence
-    - platform: state
-      entity_id: input_select.home_mode
-  condition:
-    condition: state
-    entity_id: input_select.hvac_mode
-    state: "heating"
-  action:
-    - service: climate.set_temperature
-      entity_id: climate.living_room_thermostat_heat
-      data_template:
-        temperature: >-
-          {% if is_state('input_select.presence', 'Home') %}
-            {% if is_state('input_select.home_mode', 'Sleep') %}
-              {{ states.input_number.heat_away_living_room_asleep.state }}
-            {% else %}
-              {{ states.input_number.heat_home_living_room_awake.state }}
-            {% endif %}
-          {% else %}
-            {{ states.input_number.heat_away_bedroom_away.state }}
-          {% endif %}
-    - service: climate.set_temperature
-      entity_id: climate.bedroom_thermostat_heat
-      data_template:
-        temperature: >-
-          {% if is_state('input_select.presence', 'Home') %}
-            {% if is_state('input_select.home_mode', 'Quiet') %}
-              {{ states.input_number.heat_away_bedroom_asleep.state }}
-            {% elif is_state('input_select.home_mode', 'Sleep') %}
-              {{ states.input_number.heat_away_bedroom_asleep.state }}
-            {% else %}
-              {{ states.input_number.heat_home_bedroom_awake.state }}
-            {% endif %}
-          {% else %}
-            {{ states.input_number.heat_away_bedroom_away.state }}
-          {% endif %}
-# TODO If virtual setting more extreme use that instead of +-2
+# - id: climate_set_temperatures_heating
+#   alias: Set heating temperature based on presence
+#   trigger:
+#     - platform: state
+#       entity_id: input_select.presence
+#     - platform: state
+#       entity_id: input_select.home_mode
+#   condition:
+#     condition: state
+#     entity_id: input_select.hvac_mode
+#     state: "heating"
+#   action:
+#     - service: climate.set_temperature
+#       entity_id: climate.living_room_thermostat_heat
+#       data_template:
+#         temperature: >-
+#           {% if is_state('input_select.presence', 'Home') %}
+#             {% if is_state('input_select.home_mode', 'Sleep') %}
+#               {{ states.input_number.heat_away_living_room_asleep.state }}
+#             {% else %}
+#               {{ states.input_number.heat_home_living_room_awake.state }}
+#             {% endif %}
+#           {% else %}
+#             {{ states.input_number.heat_away_bedroom_away.state }}
+#           {% endif %}
+#     - service: climate.set_temperature
+#       entity_id: climate.bedroom_thermostat_heat
+#       data_template:
+#         temperature: >-
+#           {% if is_state('input_select.presence', 'Home') %}
+#             {% if is_state('input_select.home_mode', 'Quiet') %}
+#               {{ states.input_number.heat_away_bedroom_asleep.state }}
+#             {% elif is_state('input_select.home_mode', 'Sleep') %}
+#               {{ states.input_number.heat_away_bedroom_asleep.state }}
+#             {% else %}
+#               {{ states.input_number.heat_home_bedroom_awake.state }}
+#             {% endif %}
+#           {% else %}
+#             {{ states.input_number.heat_away_bedroom_away.state }}
+#           {% endif %}
+# # TODO If virtual setting more extreme use that instead of +-2
 
-# Livingroom cooling automation
-- id: climate_cool_from_remote_living_room
-  alias: Cool living room from remote sensor
-  trigger:
-    - platform: state
-      entity_id: sensor.living_room_average_temperature
-    - platform: state
-      entity_id: climate.living_room_thermostat_cool
-    - platform: state
-      entity_id: climate.gocontrol_thermostat_bedroom_heating_setpoint
-    - platform: state
-      entity_id: input_select.presence
-    - platform: state
-      entity_id: input_select.home_mode
-  condition:
-    condition: state
-    entity_id: input_select.hvac_mode
-    state: "cooling"
-  action:
-    - service: climate.set_temperature
-      entity_id: climate.gocontrol_thermostat_living_room_cooling_setpoint
-      data_template:
-        temperature: >-
-          {% if is_state('input_select.hvac_mode', 'cooling') %}
-            {% if is_state('climate.living_room_thermostat_cool', 'cool') %}
-              {{ float(states.climate.gocontrol_thermostat_living_room_cooling_setpoint.attributes.current_temperature) - 2 }}
-            {% else %}
-              {{ float(states.climate.gocontrol_thermostat_living_room_cooling_setpoint.attributes.current_temperature) + 2 }}
-            {% endif %}
-          {% else %}
-            85
-          {% endif %}
+# # Livingroom cooling automation
+# - id: climate_cool_from_remote_living_room
+#   alias: Cool living room from remote sensor
+#   trigger:
+#     - platform: state
+#       entity_id: sensor.living_room_average_temperature
+#     - platform: state
+#       entity_id: climate.living_room_thermostat_cool
+#     - platform: state
+#       entity_id: climate.gocontrol_thermostat_bedroom_heating_setpoint
+#     - platform: state
+#       entity_id: input_select.presence
+#     - platform: state
+#       entity_id: input_select.home_mode
+#   condition:
+#     condition: state
+#     entity_id: input_select.hvac_mode
+#     state: "cooling"
+#   action:
+#     - service: climate.set_temperature
+#       entity_id: climate.gocontrol_thermostat_living_room_cooling_setpoint
+#       data_template:
+#         temperature: >-
+#           {% if is_state('input_select.hvac_mode', 'cooling') %}
+#             {% if is_state('climate.living_room_thermostat_cool', 'cool') %}
+#               {{ float(states.climate.gocontrol_thermostat_living_room_cooling_setpoint.attributes.current_temperature) - 2 }}
+#             {% else %}
+#               {{ float(states.climate.gocontrol_thermostat_living_room_cooling_setpoint.attributes.current_temperature) + 2 }}
+#             {% endif %}
+#           {% else %}
+#             85
+#           {% endif %}
 
-# Livingroom heating automation
-- id: climate_heat_from_remote_living_room
-  alias: Heat living room from remote sensor
-  trigger:
-    - platform: state
-      entity_id: sensor.living_room_average_temperature
-    - platform: state
-      entity_id: climate.living_room_thermostat_heat
-    - platform: state
-      entity_id: climate.gocontrol_thermostat_living_room_heating_setpoint
-    - platform: state
-      entity_id: input_select.presence
-    - platform: state
-      entity_id: input_select.home_mode
-  condition:
-    - condition: state
-      entity_id: input_select.hvac_mode
-      state: "heating"
-    - condition: template
-      value_template: >-
-        {{ is_state('climate.living_room_thermostat_heat', 'heat') or
-           (not (is_state('climate.living_room_thermostat_heat', 'heat')) and
-             (state_attr("climate.gocontrol_thermostat_living_room_heating_setpoint", "temperature") >
-               state_attr("climate.gocontrol_thermostat_living_room_heating_setpoint", "current_temperature") - 2)) }}
-  action:
-    - service: climate.set_temperature
-      entity_id: climate.gocontrol_thermostat_living_room_heating_setpoint
-      data_template:
-        temperature: >-
-          {% if is_state('climate.living_room_thermostat_heat', 'heat') %}
-            {{ float(states.climate.gocontrol_thermostat_living_room_heating_setpoint.attributes.current_temperature) + 2 }}
-          {% else %}
-            {{ float(states.climate.gocontrol_thermostat_living_room_heating_setpoint.attributes.current_temperature) - 2 }}
-          {% endif %}
+# # Livingroom heating automation
+# - id: climate_heat_from_remote_living_room
+#   alias: Heat living room from remote sensor
+#   trigger:
+#     - platform: state
+#       entity_id: sensor.living_room_average_temperature
+#     - platform: state
+#       entity_id: climate.living_room_thermostat_heat
+#     - platform: state
+#       entity_id: climate.gocontrol_thermostat_living_room_heating_setpoint
+#     - platform: state
+#       entity_id: input_select.presence
+#     - platform: state
+#       entity_id: input_select.home_mode
+#   condition:
+#     - condition: state
+#       entity_id: input_select.hvac_mode
+#       state: "heating"
+#     - condition: template
+#       value_template: >-
+#         {{ is_state('climate.living_room_thermostat_heat', 'heat') or
+#            (not (is_state('climate.living_room_thermostat_heat', 'heat')) and
+#              (state_attr("climate.gocontrol_thermostat_living_room_heating_setpoint", "temperature") >
+#                state_attr("climate.gocontrol_thermostat_living_room_heating_setpoint", "current_temperature") - 2)) }}
+#   action:
+#     - service: climate.set_temperature
+#       entity_id: climate.gocontrol_thermostat_living_room_heating_setpoint
+#       data_template:
+#         temperature: >-
+#           {% if is_state('climate.living_room_thermostat_heat', 'heat') %}
+#             {{ float(states.climate.gocontrol_thermostat_living_room_heating_setpoint.attributes.current_temperature) + 2 }}
+#           {% else %}
+#             {{ float(states.climate.gocontrol_thermostat_living_room_heating_setpoint.attributes.current_temperature) - 2 }}
+#           {% endif %}
 
-# Bedroom cooling automation
-- id: climate_cool_from_remote_bedroom
-  alias: Cool living room from remote sensor
-  trigger:
-    - platform: state
-      entity_id: sensor.bedroom_average_temperature
-    - platform: state
-      entity_id: climate.bedroom_thermostat_cool
-    - platform: state
-      entity_id: input_select.presence
-    - platform: state
-      entity_id: input_select.home_mode
-  condition:
-    condition: state
-    entity_id: input_select.hvac_mode
-    state: "cooling"
-  action:
-    - service: climate.set_temperature
-      entity_id: climate.gocontrol_thermostat_bedroom_cooling
-      data_template:
-        temperature: >-
-          {% if is_state('input_select.hvac_mode', 'cooling') %}
-            {% if is_state('climate.bedroom_thermostat_cool', 'cool') %}
-              {{ float(states.climate.gocontrol_thermostat_bedroom_cooling.attributes.current_temperature) - 2 }}
-            {% else %}
-              {{ float(states.climate.gocontrol_thermostat_bedroom_cooling.attributes.current_temperature) + 2 }}
-            {% endif %}
-          {% else %}
-            85
-          {% endif %}
+# # Bedroom cooling automation
+# - id: climate_cool_from_remote_bedroom
+#   alias: Cool living room from remote sensor
+#   trigger:
+#     - platform: state
+#       entity_id: sensor.bedroom_average_temperature
+#     - platform: state
+#       entity_id: climate.bedroom_thermostat_cool
+#     - platform: state
+#       entity_id: input_select.presence
+#     - platform: state
+#       entity_id: input_select.home_mode
+#   condition:
+#     condition: state
+#     entity_id: input_select.hvac_mode
+#     state: "cooling"
+#   action:
+#     - service: climate.set_temperature
+#       entity_id: climate.gocontrol_thermostat_bedroom_cooling
+#       data_template:
+#         temperature: >-
+#           {% if is_state('input_select.hvac_mode', 'cooling') %}
+#             {% if is_state('climate.bedroom_thermostat_cool', 'cool') %}
+#               {{ float(states.climate.gocontrol_thermostat_bedroom_cooling.attributes.current_temperature) - 2 }}
+#             {% else %}
+#               {{ float(states.climate.gocontrol_thermostat_bedroom_cooling.attributes.current_temperature) + 2 }}
+#             {% endif %}
+#           {% else %}
+#             85
+#           {% endif %}
 
-# Bedroom heating automation
-- id: climate_heat_from_remote_bedroom
-  alias: Heat bedroom room from remote sensor
-  trigger:
-    - platform: state
-      entity_id: sensor.bedroom_average_temperature
-    - platform: state
-      entity_id: climate.bedroom_thermostat_heat
-    - platform: state
-      entity_id: input_select.presence
-    - platform: state
-      entity_id: input_select.home_mode
-  condition:
-    - condition: state
-      entity_id: input_select.hvac_mode
-      state: "heating"
-    - condition: template
-      value_template: >-
-        {{ is_state('climate.bedroom_thermostat_heat', 'heat') or
-           (not (is_state('climate.bedroom_thermostat_heat', 'heat')) and
-             (state_attr("climate.gocontrol_thermostat_bedroom_heating", "temperature") >
-               state_attr("climate.gocontrol_thermostat_bedroom_heating", "current_temperature") - 2)) }}
-  action:
-    - service: climate.set_temperature
-      entity_id: climate.gocontrol_thermostat_bedroom_heating
-      data_template:
-        temperature: >-
-          {% if is_state('climate.bedroom_thermostat_heat', 'heat') %}
-            {{ float(states.climate.gocontrol_thermostat_bedroom_heating.attributes.current_temperature) + 2 }}
-          {% else %}
-            {{ float(states.climate.gocontrol_thermostat_bedroom_heating.attributes.current_temperature) - 2 }}
-          {% endif %}
+# # Bedroom heating automation
+# - id: climate_heat_from_remote_bedroom
+#   alias: Heat bedroom room from remote sensor
+#   trigger:
+#     - platform: state
+#       entity_id: sensor.bedroom_average_temperature
+#     - platform: state
+#       entity_id: climate.bedroom_thermostat_heat
+#     - platform: state
+#       entity_id: input_select.presence
+#     - platform: state
+#       entity_id: input_select.home_mode
+#   condition:
+#     - condition: state
+#       entity_id: input_select.hvac_mode
+#       state: "heating"
+#     - condition: template
+#       value_template: >-
+#         {{ is_state('climate.bedroom_thermostat_heat', 'heat') or
+#            (not (is_state('climate.bedroom_thermostat_heat', 'heat')) and
+#              (state_attr("climate.gocontrol_thermostat_bedroom_heating", "temperature") >
+#                state_attr("climate.gocontrol_thermostat_bedroom_heating", "current_temperature") - 2)) }}
+#   action:
+#     - service: climate.set_temperature
+#       entity_id: climate.gocontrol_thermostat_bedroom_heating
+#       data_template:
+#         temperature: >-
+#           {% if is_state('climate.bedroom_thermostat_heat', 'heat') %}
+#             {{ float(states.climate.gocontrol_thermostat_bedroom_heating.attributes.current_temperature) + 2 }}
+#           {% else %}
+#             {{ float(states.climate.gocontrol_thermostat_bedroom_heating.attributes.current_temperature) - 2 }}
+#           {% endif %}
 
-## Humidity Control/Warning
-# TODO should this be an alert or should it trigger one?
+# ## Humidity Control/Warning
+# # TODO should this be an alert or should it trigger one?
 
-- id: climate_humidity_alert_on
-  alias: Humidity Level Alert On
-  trigger:
-    - platform: state
-      entity_id: sensor.all_rooms_humidity
-    - platform: state
-      entity_id: sensor.aeotec_humidifier_bedroom_power
-    - platform: state
-      entity_id: input_select.presence
-      to: "Home"
-  condition:
-    - condition: numeric_state
-      entity_id: sensor.aeotec_humidifier_bedroom_power
-      below: 75
-    - condition: numeric_state
-      entity_id: sensor.all_rooms_humidity
-      below: 45
-    - condition: state
-      entity_id: input_select.presence
-      state: "Home"
-    - condition: template
-      value_template: >-
-        {{ is_state("input_select.home_mode", "Normal") or is_state("input_select.home_mode", "Quiet")}}
-  action:
-    - service: homeassistant.turn_on
-      entity_id: input_boolean.humidity_low_alert
+# - id: climate_humidity_alert_on
+#   alias: Humidity Level Alert On
+#   trigger:
+#     - platform: state
+#       entity_id: sensor.all_rooms_humidity
+#     - platform: state
+#       entity_id: sensor.aeotec_humidifier_bedroom_power
+#     - platform: state
+#       entity_id: input_select.presence
+#       to: "Home"
+#   condition:
+#     - condition: numeric_state
+#       entity_id: sensor.aeotec_humidifier_bedroom_power
+#       below: 75
+#     - condition: numeric_state
+#       entity_id: sensor.all_rooms_humidity
+#       below: 45
+#     - condition: state
+#       entity_id: input_select.presence
+#       state: "Home"
+#     - condition: template
+#       value_template: >-
+#         {{ is_state("input_select.home_mode", "Normal") or is_state("input_select.home_mode", "Quiet")}}
+#   action:
+#     - service: homeassistant.turn_on
+#       entity_id: input_boolean.humidity_low_alert
 
-- id: climate_humidity_alert_off
-  alias: Humidity Level Alert Off
-  trigger:
-    - platform: state
-      entity_id: sensor.all_rooms_humidity
-    - platform: state
-      entity_id: sensor.aeotec_humidifier_bedroom_power
-    - platform: state
-      entity_id: input_select.presence
-  condition:
-    - condition: numeric_state
-      entity_id: sensor.aeotec_humidifier_bedroom_power
-      above: 75
-    - condition: numeric_state
-      entity_id: sensor.all_rooms_humidity
-      above: 44
-    - condition: state
-      entity_id: input_select.presence
-      state: "Away"
-  action:
-    - service: homeassistant.turn_off
-      entity_id: input_boolean.humidity_low_alert
+# - id: climate_humidity_alert_off
+#   alias: Humidity Level Alert Off
+#   trigger:
+#     - platform: state
+#       entity_id: sensor.all_rooms_humidity
+#     - platform: state
+#       entity_id: sensor.aeotec_humidifier_bedroom_power
+#     - platform: state
+#       entity_id: input_select.presence
+#   condition:
+#     - condition: numeric_state
+#       entity_id: sensor.aeotec_humidifier_bedroom_power
+#       above: 75
+#     - condition: numeric_state
+#       entity_id: sensor.all_rooms_humidity
+#       above: 44
+#     - condition: state
+#       entity_id: input_select.presence
+#       state: "Away"
+#   action:
+#     - service: homeassistant.turn_off
+#       entity_id: input_boolean.humidity_low_alert
 
-- id: climate_humidity_alert
-  alias: Humidity Level Alert
-  trigger:
-    - platform: state
-      entity_id: input_boolean.humidity_low_alert
-      to: "on"
-    - platform: template
-      value_template: >-
-        {{ (states.input_boolean.humitidy_low_alert.state == "off") and
-          (((now() - states.input_boolean.humitidy_low_alert.last_updated).seconds) % (10) == 0) }}
-  action:
-    service: notify.notify
-    data_template:
-      message: Check the humdifier! Humidity is {{ states.sensor.all_rooms_humidity.state }}%
+# - id: climate_humidity_alert
+#   alias: Humidity Level Alert
+#   trigger:
+#     - platform: state
+#       entity_id: input_boolean.humidity_low_alert
+#       to: "on"
+#     - platform: template
+#       value_template: >-
+#         {{ (states.input_boolean.humitidy_low_alert.state == "off") and
+#           (((now() - states.input_boolean.humitidy_low_alert.last_updated).seconds) % (10) == 0) }}
+#   action:
+#     service: notify.notify
+#     data_template:
+#       message: Check the humdifier! Humidity is {{ states.sensor.all_rooms_humidity.state }}%

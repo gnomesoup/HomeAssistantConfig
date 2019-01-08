@@ -4,16 +4,16 @@
       device_class: opening
       friendly_name: "Bedroom Door Sensor"
       value_template: >-
-        {{ states. binary_sensor.linear_wadwaz1_doorwindow_sensor_sensor_2.state|float > 0 }}
+        {{ states.sensor.linear_wadwaz1_doorwindow_sensor_alarm_level_2.state|float > 0 }}
     door_sensor_front:
       device_class: opening
       friendly_name: "Front Door Sensor"
       value_template: >-
-        {{ states. binary_sensor.linear_wadwaz1_doorwindow_sensor_sensor_3.state|float > 0 }}
+        {{ states.sensor.linear_wadwaz1_doorwindow_sensor_alarm_level_3.state|float > 0 }}
     door_sensor_patio:
       device_class: opening
       friendly_name: "Patio Door Sensor"
       value_template: >-
-        {{ states.binary_sensor.linear_wadwaz1_doorwindow_sensor_sensor.state|float > 0 }}
+        {{ states.sensor.linear_wadwaz1_doorwindow_sensor_alarm_level.state|float > 0 }}
 
 - platform: flic

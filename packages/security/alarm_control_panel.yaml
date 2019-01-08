@@ -28,6 +28,7 @@ automation:
       - platform: state
         entity_id: alarm_control_panel.home_alarm
         to: "triggered"
+    action:
       - service: notify.ios_ergisch
         data:
           title: "Test Alarm"

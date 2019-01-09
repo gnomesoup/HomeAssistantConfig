@@ -61,4 +61,5 @@ automation:
       - service: notify.ios_ergisch
         data:
           title: "Test Alarm"
-          message: "Home set to {{ states("alarm_control_panel.home_alarm") }}"
+          message_template: >-
+            Home set to {{ states("alarm_control_panel.home_alarm") }}

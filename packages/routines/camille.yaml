@@ -1,0 +1,52 @@
+automation:
+  - id: wakeup_camille
+    alias: Wakeup Camille
+    trigger:
+      - platform: time
+        at: "06:45:00"
+    action:
+      - service: script.turn_on
+        entity_id: script.goodmorning_camille
+      - service: media_player.play_media
+        data:
+          entity_id: media_player.camilles_speaker
+          media_content_id: "https://mclients.googleapis.com/music/mplay?mjck=Ttq2uszcaztntcgnllswbn4pnqy"
+          media_content_type: "music"
+
+scripts:
+  goodmorning_camille:
+    alias: Goodmorning Camille
+    sequence:
+      - service: light.turn_on
+        data:
+          entity_id:
+            - group.light_camille_bedroom
+      - service: media_player.volume_set
+        data:
+          entity_id: media_player.camilles_speaker
+          volume_level: 0.9
+
+  goodnight_camille:
+    alias: Good Night Camille
+    sequence:
+      - service: light.turn_off
+        data:
+          entity_id:
+            - light.grandmas_lamp
+            - light.bedroom_canopy
+      - service: media_player.volume_set
+        data:
+          entity_id: media_player.living_room_speaker
+          volume_level: 0.2
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.home_mode
+          option: "Quiet"
+      - service: media_player.volume_set
+        data:
+          entity_id: media_player.camilles_speaker
+          volume_level: 0.2
+      - service: notify.notify
+        data:
+          title: "Camille"
+          message: "Bedtime"

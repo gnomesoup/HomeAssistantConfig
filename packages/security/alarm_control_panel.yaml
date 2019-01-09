@@ -49,7 +49,7 @@ automation:
           message: "Disarmed"
 
   - id: alarm_contry_panel_notify_state
-    alais: Alarm Control Panel
+    alias: Alarm Control Panel
     trigger:
       - platform: state
         entity_id: alarm_control_panel.home_alarm

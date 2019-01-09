@@ -10,13 +10,17 @@ alarm_control_panel:
 input_boolean:
   alarm_control_panel_disarm:
     name: Alarm Control Panel Disarm
+  alarm_control_panel_trigger:
+    name: Alarm Control Panel Trigger Test
 
 automation:
   - id: alarm_control_panel_test
     alias: Alarm Control Panel Test
     trigger:
       - platform: state
-        entity_id: binary_sensor.aeotec_dsb05_multisensor_sensor
+        entity_id:
+          - binary_sensor.aeotec_dsb05_multisensor_sensor
+          - input_boolean.alarm_control_panel_trigger
         to: "on"
     action:
       - service: alarm_control_panel.alarm_trigger
@@ -57,4 +61,4 @@ automation:
       - service: notify.ios_ergisch
         data:
           title: "Test Alarm"
-          message: "Home set to {{ states(alarm_control_panel.home_alarm) }}"
+          message: "Home set to {{ states("alarm_control_panel.home_alarm") }}"

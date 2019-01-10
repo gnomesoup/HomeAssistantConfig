@@ -35,5 +35,5 @@ automation:
       - condition: state
         entity_id: input_select.home_mode
         state: "Sleep"
-  action:
-    - service: script.makecoffee
+    action:
+      - service: script.makecoffee

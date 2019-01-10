@@ -19,7 +19,6 @@ automation:
     trigger:
       - platform: state
         entity_id:
-          - binary_sensor.aeotec_dsb05_multisensor_sensor
           - input_boolean.alarm_control_panel_trigger
         to: "on"
     action:
@@ -46,7 +45,7 @@ automation:
         to: "on"
     action:
       - service: alarm_control_panel.alarm_disarm
-        entity_id: alarm_control_panel.house_alarm
+        entity_id: alarm_control_panel.home_alarm
       - service: notify.ios_ergisch
         data:
           title: "Test Alarm"

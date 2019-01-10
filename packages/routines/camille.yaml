@@ -21,10 +21,10 @@ automation:
       - service: media_player.play_media
         data:
           entity_id: media_player.camilles_speaker
-          media_content_id: "https://mclients.googleapis.com/music/mplay?mjck=Ttq2uszcaztntcgnllswbn4pnqy"
+          media_content_id: "https://dl.dropboxusercontent.com/s/mpdyuzl5svyuxmq/Rooster%20Crowing-SoundBible.com-43612401.mp3"
           media_content_type: "music"
 
-scripts:
+script:
   goodmorning_camille:
     alias: Goodmorning Camille
     sequence:

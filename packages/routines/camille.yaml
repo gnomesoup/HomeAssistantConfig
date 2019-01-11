@@ -33,7 +33,7 @@ automation:
 
 automation:
   - id: status_awake_camille
-    alias: Status: Camille Awake
+    alias: Set status for Camille to awake
     trigger:
       - platform: state
         entity_id: binary_sensor.motion_camille_bedroom
@@ -53,7 +53,7 @@ automation:
           option: "Home"
 
   - id: lights_bedroom_camille_on
-    alias: Lights: Camille's Bedroom
+    alias: Lights on in Camille's bedroom
     trigger:
       - platform: state
         entity_id: binary_sensor.motion_camille_bedroom

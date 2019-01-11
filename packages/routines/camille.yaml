@@ -1,13 +1,20 @@
+input_datetime:
+  alarm_time_camille:
+    name: Camille's Alarm Time
+    has_date: false
+    has_time: true
+
 automation:
   - id: wakeup_camille
     alias: Wakeup Camille
     trigger:
-      - platform: time
-        at: "06:45:00"
+      - platform: template
+        value_template: >-
+          {{ states.sensor.time.state == states.input_datetime.alarm_time_camille.state[0:5] }}
     condition:
-      - condition: state
-        entity_id: input_select.camille_status
-        state: "Asleep"
+      - condition: template
+        value_template: >-
+          {{ states("input_select.camille_status") != "Away" }}
       - condition: time
         weekday:
           - mon
@@ -23,6 +30,43 @@ automation:
           entity_id: media_player.camilles_speaker
           media_content_id: "https://dl.dropboxusercontent.com/s/mpdyuzl5svyuxmq/Rooster%20Crowing-SoundBible.com-43612401.mp3"
           media_content_type: "music"
+
+automation:
+  - id: status_awake_camille
+    alias: Status: Camille Awake
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.motion_camille_bedroom
+        to: "on"
+    condition:
+      - condition: template
+        value_template: >-
+          {{ states("input_select.camille_status") == "Asleep" }}
+      - condition: template
+        value_tempate: >-
+          {{ states("sensor.time") >= states("input_datetime.alarm_time_camille")[0:5] and
+             states("sensor.time") <= "14:00" }}
+    action:
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.camille_status
+          option: "Home"
+
+  - id: lights_bedroom_camille_on
+    alias: Lights: Camille's Bedroom
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.motion_camille_bedroom
+        to: "on"
+    condition:
+      - condition: template
+        value_template: >-
+          {{ states("input_select.camille_status") != "Asleep" }}
+    action:
+      - service: light.turn_on
+        data:
+          entity_id:
+            - group.light_camille_bedroom
 
 script:
   goodmorning_camille:

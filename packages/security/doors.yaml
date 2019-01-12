@@ -1,4 +1,6 @@
 binary_sensor:
+  platform: template
+  sensors:
       door_sensor_bedroom:
         device_class: opening
         friendly_name: "Bedroom Door"

@@ -1,6 +1,4 @@
 binary_sensor:
-  - platform: template
-    sensors:
       door_sensor_bedroom:
         device_class: opening
         friendly_name: "Bedroom Door"
@@ -77,7 +75,7 @@ automation:
         entity_id: alarm_control_panel.home_alarm
         state: "armed_home"
     action:
-      - platform: media_player.play_media
+      - service: media_player.play_media
         data:
           entity_id:
             - media_player.living_room_display

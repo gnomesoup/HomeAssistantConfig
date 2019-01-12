@@ -32,11 +32,14 @@ automation:
     action:
       - service: script.turn_on
         entity_id: script.reset_door_delay
-        - service: homeassistant.turn_off
-          entity_id:
-            - script.trigger_alarm
-            - script.alert_lights_flash
-            - switch.linear_siren_switch
+      - service: homeassistant.turn_off
+        entity_id:
+          - script.trigger_alarm
+          - script.alert_lights_flash
+          - switch.linear_siren_switch
+      - service: alarm_control_panel.alarm_disarm
+        entity_id: alarm_control_panel.home_alarm
+
 
   - id: notify_door
     alias: Patio Door Notify
@@ -74,7 +77,7 @@ automation:
         entity_id: alarm_control_panel.home_alarm
         state: "armed_home"
     action:
-      - platform: state
+      - platform: media_player.play_media
         data:
           entity_id:
             - media_player.living_room_display

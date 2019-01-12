@@ -31,7 +31,6 @@ automation:
           media_content_id: "https://dl.dropboxusercontent.com/s/mpdyuzl5svyuxmq/Rooster%20Crowing-SoundBible.com-43612401.mp3"
           media_content_type: "music"
 
-automation:
   - id: status_awake_camille
     alias: Set status for Camille to awake
     trigger:

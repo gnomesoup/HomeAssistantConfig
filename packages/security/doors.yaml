@@ -1,0 +1,84 @@
+binary_sensor:
+  - platform: template
+    sensors:
+      door_sensor_bedroom:
+        device_class: opening
+        friendly_name: "Bedroom Door"
+        value_template: >-
+          {{ states.sensor.linear_wadwaz1_doorwindow_sensor_alarm_level_3.state|float > 0 }}
+      door_sensor_front:
+        device_class: opening
+        friendly_name: "Front Door"
+        value_template: >-
+          {{ states.sensor.linear_wadwaz1_doorwindow_sensor_alarm_level_2.state|float > 0 }}
+      door_sensor_patio:
+        device_class: opening
+        friendly_name: "Patio Door"
+        value_template: >-
+          {{ states.sensor.linear_wadwaz1_doorwindow_sensor_alarm_level.state|float > 0 }}
+
+input_boolean:
+  door_alert_delay:
+    name: Door Alert Delay
+    icon: mdi:bell-off
+    initial: off
+
+automation:
+- id: reset_door_delay
+  alias: Door Delay Reset
+  trigger:
+    - platform: state
+      entity_id: input_boolean.door_alert_delay
+      to: "on"
+  action:
+    - service: script.turn_on
+      entity_id: script.reset_door_delay
+    - service: homeassistant.turn_off
+      entity_id:
+        - script.trigger_alarm
+        - script.alert_lights_flash
+        - switch.linear_siren_switch
+
+  - id: notify_door
+    alias: Patio Door Notify
+    trigger:
+      - platform: state
+        entity_id:
+          - binary_sensor.door_sensor_bedroom
+          - binary_sensor.door_sensor_front
+          - binary_sensor.door_sensor_patio
+        to: "on"
+    condition:
+      - condition: state
+        entity_id: input_boolean.door_alert_delay
+        state: "off"
+    action:
+      - service: notify.ios_ergisch
+        data_tempate:
+          title: "Door Alert"
+          message_template: >-
+            {{ state_attr(trigger.entity_id, "friendly_name") }}
+
+  - id: alert_door
+    alias: Door Alert
+    trigger:
+      - platform: state
+        entity_id:
+          - binary_sensor.door_sensor_bedroom
+          - binary_sensor.door_sensor_front
+          - binary_sensor.door_sensor_patio
+    condition:
+      - condition: state
+        entity_id: input_boolean.door_alert_delay
+        state: "off"
+      - condition: state
+        entity_id: alarm_control_panel.home_alarm
+        state: "armed_home"
+    action:
+      - platform: state
+        data:
+          entity_id:
+            - media_player.living_room_display
+            - media_player.bedroom_speaker
+          media_content_id: "http://www.downloadfreesound.com/wp-content/uploads/2014/07/Beep_7.mp3"
+          media_content_type: "music"

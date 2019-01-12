@@ -40,8 +40,3 @@ bedroom_motion_quiet_once:
 mary_alert:
   name: Mary's Alert
   icon: mdi:account-alert
-
-door_alert_delay:
-  name: Door Alert Delay
-  icon: mdi:bell-off
-  initial: off

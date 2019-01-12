@@ -6,22 +6,16 @@ binary_sensor:
         friendly_name: "Mary's Bedroom Motion Sensor"
         value_template: >-
           {{ states("sensor.linear_wapirz1_motion_sensor_alarm_level_2")|float > 0 }}
-  - platform: template
-    sensors:
       motion_hallway:
         device_class: motion
         friendly_name: "Hallway Motion"
         value_template: >-
           {{ states("sensor.linear_wapirz1_motion_sensor_alarm_level")|float > 0 }}
-  - platform: template
-    sensors:
       motion_camille_bedroom:
         device_class: motion
         friendly_name: "Camille's Bedroom Motion"
         value_template: >-
           {{ states("binary_sensor.aeotec_dsb05_multisensor_sensor") == "on" }}
-  - platform: template
-    sensors:
       motion_master_bedroom:
         device_class: motion
         friendly_name: "Master Bedroom Motion"

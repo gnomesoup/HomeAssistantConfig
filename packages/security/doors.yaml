@@ -22,22 +22,21 @@ input_boolean:
     name: Door Alert Delay
     icon: mdi:bell-off
     initial: off
-
 automation:
-- id: reset_door_delay
-  alias: Door Delay Reset
-  trigger:
-    - platform: state
-      entity_id: input_boolean.door_alert_delay
-      to: "on"
-  action:
-    - service: script.turn_on
-      entity_id: script.reset_door_delay
-    - service: homeassistant.turn_off
-      entity_id:
-        - script.trigger_alarm
-        - script.alert_lights_flash
-        - switch.linear_siren_switch
+  - id: reset_door_delay
+    alias: Door Delay Reset
+    trigger:
+      - platform: state
+        entity_id: input_boolean.door_alert_delay
+        to: "on"
+    action:
+      - service: script.turn_on
+        entity_id: script.reset_door_delay
+        - service: homeassistant.turn_off
+          entity_id:
+            - script.trigger_alarm
+            - script.alert_lights_flash
+            - switch.linear_siren_switch
 
   - id: notify_door
     alias: Patio Door Notify

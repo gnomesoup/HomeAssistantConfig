@@ -55,12 +55,11 @@ automation:
         entity_id: input_boolean.door_alert_delay
         state: "off"
     action:
-      - service: notify.ios_ergisch
+      - service: notify.notify
         data_template:
           title: "Door Alert"
           message: >-
-            {{ "Test" }}
-            # {{ state_attr(trigger.entity_id, "friendly_name") }}
+            {{ state_attr(trigger.entity_id, "friendly_name") }}
 
   - id: alert_door
     alias: Door Alert

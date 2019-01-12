@@ -56,7 +56,7 @@ automation:
         state: "off"
     action:
       - service: notify.ios_ergisch
-        data_tempate:
+        data_template:
           title: "Door Alert"
           message_template: >-
             {{ state_attr(trigger.entity_id, "friendly_name") }}

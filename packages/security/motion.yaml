@@ -38,7 +38,7 @@ automation:
     condition:
       - condition: template
           value_template: >-
-          {{ states("input_select.mary_status") == "Asleep" }}
+            {{ states("input_select.mary_status") == "Asleep" }}
     action:
       - service: notify.ios_ergisch
         data:

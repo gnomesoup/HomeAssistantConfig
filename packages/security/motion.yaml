@@ -27,3 +27,36 @@ binary_sensor:
         friendly_name: "Master Bedroom Motion"
         value_template: >-
           {{ states("binary_sensor.aeotec_zw100_multisensor_6_sensor") == "on" }}
+
+automation:
+  - id: notify_motion_mary
+    alias: Send notifications on motion in Mary's Room
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.motion_mary_bedroom
+        to: "on"
+    condition:
+      - condition: template
+          value_template: >-
+          {{ states("input_select.mary_status") == "Asleep" }}
+    action:
+      - service: notify.ios_ergisch
+        data:
+          title: "Motion Alert"
+          message: "Mary's Bedroom"
+
+  - id: notify_motion_hallway
+    alias: Send notification on motion in hallway
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.motion_hallway
+        to: "on"
+    condition:
+      - condition: state
+        entity_id: alarm_control_panel.home_alarm
+        state: "armed_home"
+    action:
+      - service: notify.ios_ergisch
+        data:
+          title: "Motion Alert"
+          message: "Hallway"

@@ -24,8 +24,7 @@ input_boolean:
     initial: off
 
 automation:
-  - id: reset_door_delay
-    alias: Door Delay Reset
+  - alias: Reset Door Delay
     trigger:
       - platform: state
         entity_id: input_boolean.door_alert_delay
@@ -41,8 +40,7 @@ automation:
       - service: alarm_control_panel.alarm_disarm
         entity_id: alarm_control_panel.home_alarm
 
-  - id: notify_door
-    alias: Standard Door Notifications
+  - alias: Notify Door
     trigger:
       - platform: state
         entity_id:
@@ -59,13 +57,11 @@ automation:
         state: "off"
     action:
       - service: notify.notify
-        data_template:
+        data_template: >-
+          {{ state_attr(trigger.entity_id, "friendly_name") }} is{%
+          if is_state(trigger.entity_id, "on") %} open {% else %} closed {% endif %}
 
-          message: "Testing"
-
-
-  - id: alert_door
-    alias: Door Alert
+  - alias: Alert Door
     trigger:
       - platform: state
         entity_id:

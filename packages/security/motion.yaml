@@ -23,8 +23,7 @@ binary_sensor:
           {{ states("binary_sensor.aeotec_zw100_multisensor_6_sensor") == "on" }}
 
 automation:
-  - id: notify_motion_mary
-    alias: Send notifications on motion in Mary's Room
+  - alias: Notify Motion Mary
     trigger:
       - platform: state
         entity_id: binary_sensor.motion_mary_bedroom
@@ -39,8 +38,7 @@ automation:
           title: "Motion Alert"
           message: "Mary's Bedroom"
 
-  - id: notify_motion_hallway
-    alias: Send notification on motion in hallway
+  - alias: Notify Motion Hallway
     trigger:
       - platform: state
         entity_id: binary_sensor.motion_hallway

@@ -58,7 +58,7 @@ automation:
         entity_id: input_boolean.door_alert_delay
         state: "off"
     action:
-      - service: notify.ios_ergisch
+      - service: notify.notify
         data_template:
           title: "Door Alert"
           message: >-

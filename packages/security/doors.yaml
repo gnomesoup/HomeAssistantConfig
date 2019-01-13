@@ -42,7 +42,7 @@ automation:
 
 
   - id: notify_door
-    alias: Patio Door Notify
+    alias: Standard Door Notifications
     trigger:
       - platform: state
         entity_id:

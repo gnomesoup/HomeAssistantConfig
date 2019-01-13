@@ -1,67 +1,45 @@
-- id: arm_when_away
-  alias: Arm Home When Away
-  trigger:
-    - platform: state
-      entity_id: input_select.presence
-      from: "Home"
-      to: "Away"
-  action:
-    - service: ifttt.trigger
-      data: {"event":"home_armed"}
-    - service: notify.notify
-      data:
-        message: "System is armed"
-- id: disarm_when_home
-  alias: Disarm Home When Home
-  trigger:
-    - platform: state
-      entity_id: input_select.presence
-      from: "Away"
-      to: "Home"
-  action:
-    - service: homeassistant.turn_off
-      entity_id:
-        - input_boolean.motion_alert
-    - service: ifttt.trigger
-      data: {"event":"home_disarmed"}
-    - service: notify.notify
-      data:
-        message: "System is disarmed"
+# - id: arm_when_away
+#   alias: Arm Home When Away
+#   trigger:
+#     - platform: state
+#       entity_id: input_select.presence
+#       from: "Home"
+#       to: "Away"
+#   action:
+#     - service: ifttt.trigger
+#       data: {"event":"home_armed"}
+#     - service: notify.notify
+#       data:
+#         message: "System is armed"
+# - id: disarm_when_home
+#   alias: Disarm Home When Home
+#   trigger:
+#     - platform: state
+#       entity_id: input_select.presence
+#       from: "Away"
+#       to: "Home"
+#   action:
+#     - service: homeassistant.turn_off
+#       entity_id:
+#         - input_boolean.motion_alert
+#     - service: ifttt.trigger
+#       data: {"event":"home_disarmed"}
+#     - service: notify.notify
+#       data:
+#         message: "System is disarmed"
 
-- id: alert_when_wet
-  alias: Send Alert When Water Detected
-  trigger:
-    - platform: state
-      entity_id: sensor.water_leak_sensor_water
-      from: 'dry'
-      to: 'wet'
-  action:
-    - service: notify.notify
-      data_template:
-        message: >-
-          {{ trigger.to_state.attributes.friendly }} detected water!
-
-- id: alert_when_motion
-  alias: Send Alert When Motion And Away
-  trigger:
-    - platform: state
-      entity_id:
-        - binary_sensor.aeotec_multisensor_sensor_living_room
-        - binary_sensor.aeotec_multisensor_sensor_bedroom
-      to: "on"
-      for:
-        seconds: 30
-  condition:
-    - condition: state
-      entity_id: input_select.presence
-      state: "Away"
-  action:
-    - service: input_boolean.turn_on
-      entity_id:
-        - input_boolean.motion_alert
-    - service: notify.notify
-      data:
-        message: "Motion Detected"
+# - id: alert_when_wet
+#   alias: Send Alert When Water Detected
+#   trigger:
+#     - platform: state
+#       entity_id: sensor.water_leak_sensor_water
+#       from: 'dry'
+#       to: 'wet'
+#   action:
+#     - service: notify.notify
+#       data_template:
+#         message: >-
+#           {{ trigger.to_state.attributes.friendly }} detected water!
 
 - id: time_test
   alias: Testing time trigger

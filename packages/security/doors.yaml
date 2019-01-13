@@ -60,10 +60,9 @@ automation:
     action:
       - service: notify.notify
         data_template:
-          title: "Door Alert"
-          message: >-
-            {{ state_attr(trigger.entity_id, "friendly_name") }} is{%
-               if is_state(trigger.entity_id, "on") %} open {% else %} closed {% endif %}
+
+          message: "Testing"
+
 
   - id: alert_door
     alias: Door Alert
@@ -96,6 +95,14 @@ script:
       - delay:
           seconds: 15
       - service: input_boolean.turn_off
+        data:
+          entity_id:
+            - input_boolean.door_alert_delay
+
+  door_alert_delay:
+    alias: Delay front door alert
+    sequence:
+      - service: input_boolean.turn_on
         data:
           entity_id:
             - input_boolean.door_alert_delay

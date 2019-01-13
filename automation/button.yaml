@@ -12,13 +12,13 @@
       data_template:
         entity_id: >
           {% set map = {1: "script.goodmorning",
-                        2: "script.dooralertdelay",
+                        2: "script.door_alert_delay",
                         3: "script.goodbye",
-                        4: "script.dooralertdelay",
+                        4: "script.door_alert_delay",
                         5: "script.imback",
-                        6: "script.dooralertdelay",
+                        6: "script.door_alert_delay",
                         7: "script.goodnight",
-                        8: "script.maryarmdisarm"} %}
+                        8: "script.door_alert_delay"} %}
           {{ map[trigger.event.data.scene_id|int] }}
 
 # bedroom minimote
@@ -36,13 +36,13 @@
       data_template:
         entity_id: >
           {% set map = {1: "script.goodmorning",
-                        2: "script.maryarmdisarm",
+                        2: "script.door_alert_delay",
                         3: "script.goodnight",
-                        4: "script.maryarmdisarm",
+                        4: "script.door_alert_delay",
                         5: "script.goodmorning_mary",
-                        6: "script.maryarmdisarm",
+                        6: "script.door_alert_delay",
                         7: "script.goodnight_mary",
-                        8: "script.maryarmdisarm"} %}
+                        8: "script.door_alert_delay"} %}
           {{ map[trigger.event.data.scene_id|int] }}
 
 ## Camille's Minimote

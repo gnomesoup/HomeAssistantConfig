@@ -29,33 +29,6 @@ alert_lights_flash:
           - light.living_room_lamp
           - light.metal_lamp
 
-maryarmdisarm:
-  alias: Arm or disarm Mary's alerts
-  sequence:
-    - service: input_boolean.turn_off
-      data:
-        entity_id:
-          - input_boolean.mary_alert
-    - service: input_boolean.turn_on
-      data:
-        entity_id:
-          - input_boolean.door_alert_delay
-
-trigger_alarm:
-  alias: Trigger alarm after delay
-  sequence:
-    - service: notify.notify
-      data:
-        message: "Alarm will sound in 15 seconds"
-    - delay:
-        seconds: 15
-    - service: homeassistant.turn_on
-      data:
-        entity_id:
-          - switch.linear_siren_switch
-          - switch.alert_lights_flash
-
-
 # routine for angela's bedtime
 # goodmorning_angela:
 #   alias: Goodmorning Angela
@@ -88,15 +61,6 @@ goodnight_mary:
         entity_id: input_select.home_mode
         option: "Quiet"
 
-
-
-dooralertdelay:
-  alias: Delay front door alert
-  sequence:
-    - service: input_boolean.turn_on
-      data:
-        entity_id:
-          - input_boolean.door_alert_delay
 
 # routine for wakeup
 goodmorning:

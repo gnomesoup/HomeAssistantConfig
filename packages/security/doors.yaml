@@ -62,9 +62,8 @@ automation:
         data_template:
           title: "Door Alert"
           message: >-
-            {{ state_attr(trigger.entity_id, "friendly_name") is
-               {% if is_state(trigger.entity_id, "on") %} open
-               {% else %} closed }}
+            {{ state_attr(trigger.entity_id, "friendly_name") }} is{%
+               if is_state(trigger.entity_id, "on") %} open {% else %} closed {% endif %}
 
   - id: alert_door
     alias: Door Alert

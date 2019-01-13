@@ -3,7 +3,7 @@ binary_sensor:
   sensors:
       door_sensor_bedroom:
         device_class: opening
-        friendly_name: "Bedroom Door"
+        friendly_name: "Mary's Door"
         value_template: >-
           {{ states.sensor.linear_wadwaz1_doorwindow_sensor_alarm_level_3.state|float > 0 }}
       door_sensor_front:
@@ -50,16 +50,21 @@ automation:
           - binary_sensor.door_sensor_front
           - binary_sensor.door_sensor_patio
         to: "on"
+      - platform: state
+        entity_id: binary_sensor.door_sensor_bedroom
+        to: "off"
     condition:
       - condition: state
         entity_id: input_boolean.door_alert_delay
         state: "off"
     action:
-      - service: notify.notify
+      - service: notify.ios_ergisch
         data_template:
           title: "Door Alert"
           message: >-
-            {{ state_attr(trigger.entity_id, "friendly_name") }}
+            {{ state_attr(trigger.entity_id, "friendly_name") is
+               {% if is_state(trigger.entity_id, "on") %} open
+               {% else %} closed }}
 
   - id: alert_door
     alias: Door Alert

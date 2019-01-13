@@ -98,17 +98,6 @@ dooralertdelay:
         entity_id:
           - input_boolean.door_alert_delay
 
-reset_door_delay:
-  alias: Reset the door delay
-  sequence:
-    - delay:
-        seconds: 15
-    - service: input_boolean.turn_off
-      data:
-        entity_id:
-          - input_boolean.door_alert_delay
-
-
 # routine for wakeup
 goodmorning:
   alias: Good Morning

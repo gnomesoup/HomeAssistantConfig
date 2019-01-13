@@ -19,7 +19,7 @@ binary_sensor:
 
 input_boolean:
   door_alert_delay:
-    name: Door Alert Delay
+    name: Door Alert Delay Test
     icon: mdi:bell-off
     initial: off
 
@@ -88,3 +88,14 @@ automation:
             - media_player.bedroom_speaker
           media_content_id: "http://www.downloadfreesound.com/wp-content/uploads/2014/07/Beep_7.mp3"
           media_content_type: "music"
+
+script:
+  reset_door_delay:
+    alias: Reset the door delay
+    sequence:
+      - delay:
+          seconds: 15
+      - service: input_boolean.turn_off
+        data:
+          entity_id:
+            - input_boolean.door_alert_delay
